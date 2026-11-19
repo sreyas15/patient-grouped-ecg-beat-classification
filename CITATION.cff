@@ -1,0 +1,22 @@
+cff-version: 1.2.0
+message: "Please cite the associated article and, once a DOI exists, this software record."
+title: "Reproducibility archive: Patient-Grouped Deep Learning for ECG Beat Classification: Explainability Components and External Evaluation on INCART"
+version: 1.0.0
+license: MIT
+authors:
+  - given-names: "Sreyas Sanil"
+    family-names: "Kumar"
+    affiliation: "Amrita School of Engineering, Amrita Vishwa Vidyapeetham, Chennai, India"
+  - given-names: "Kishore"
+    family-names: "N."
+    affiliation: "Amrita School of Engineering, Amrita Vishwa Vidyapeetham, Chennai, India"
+  - given-names: "Amritha Lakshmi"
+    family-names: "T. M."
+    affiliation: "Amrita School of Engineering, Amrita Vishwa Vidyapeetham, Chennai, India"
+  - given-names: "Rahul"
+    family-names: "S. G."
+    affiliation: "Amrita School of Engineering, Amrita Vishwa Vidyapeetham, Chennai, India"
+  - given-names: "Venkatasubramanian"
+    family-names: "K. B."
+    affiliation: "Department of Electrical and Computer Engineering, Mahindra University, Hyderabad, 500043, Telangana, India"
+keywords: [ECG, arrhythmia, MIT-BIH, INCART, patient-grouped cross-validation, calibration, reproducibility]

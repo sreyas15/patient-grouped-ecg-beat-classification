@@ -1,0 +1,41 @@
+{
+ "records": 48,
+ "subjects": 47,
+ "fs": [
+  360
+ ],
+ "ch0_names": {
+  "MLII": 45,
+  "V5": 3
+ },
+ "records_ch0_not_MLII": [
+  "102",
+  "104",
+  "114"
+ ],
+ "class_totals": {
+  "N": 90472,
+  "S": 2775,
+  "V": 7229,
+  "F": 802,
+  "Q": 8027
+ },
+ "total_beats": 109305,
+ "Q_beats_in_paced_records": 8012,
+ "Q_beats_in_nonpaced_records": 15,
+ "dropped_edge_window": 0,
+ "dropped_first2_last3": 189,
+ "unmapped_beatlike_total": {
+  "|": 132,
+  "x": 193,
+  "!": 472
+ },
+ "records_with_class": {
+  "N": 47,
+  "S": 32,
+  "V": 37,
+  "F": 17,
+  "Q": 9
+ },
+ "note": "RR<250 ms exclusion stated in the manuscript is NOT implemented in run_local.py or prep_data.py"
+}

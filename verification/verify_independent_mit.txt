@@ -1,0 +1,53 @@
+PASS A: pooled predictions = 109,305, every beat index exactly once (0..109304) 109305
+PASS A: stored labels / subjects / records equal the source data at those beat indices 
+PASS A: each fold's test subjects == locked fold k; subjects are disjoint across folds; 201/202 grouped as 201_202 [10, 10, 9, 9, 9]
+PASS A: every record belongs to exactly one subject (48 records, 47 subjects) (48, 47)
+PASS A: true-label counts == data-audit counts and == frozen protocol (N 90,472 / S 2,775 / V 7,229 / F 802 / Q 8,027) [90472, 2775, 7229, 802, 8027]
+PASS A: predicted-label counts [70475, 8933, 19075, 3843, 6979]
+PASS B: pooled predictions = 109,305, every beat index exactly once (0..109304) 109305
+PASS B: stored labels / subjects / records equal the source data at those beat indices 
+PASS B: each fold's test subjects == locked fold k; subjects are disjoint across folds; 201/202 grouped as 201_202 [10, 10, 9, 9, 9]
+PASS B: every record belongs to exactly one subject (48 records, 47 subjects) (48, 47)
+PASS B: true-label counts == data-audit counts and == frozen protocol (N 90,472 / S 2,775 / V 7,229 / F 802 / Q 8,027) [90472, 2775, 7229, 802, 8027]
+PASS B: predicted-label counts [70910, 10723, 13973, 6287, 7412]
+PASS C: pooled predictions = 109,305, every beat index exactly once (0..109304) 109305
+PASS C: stored labels / subjects / records equal the source data at those beat indices 
+PASS C: each fold's test subjects == locked fold k; subjects are disjoint across folds; 201/202 grouped as 201_202 [10, 10, 9, 9, 9]
+PASS C: every record belongs to exactly one subject (48 records, 47 subjects) (48, 47)
+PASS C: true-label counts == data-audit counts and == frozen protocol (N 90,472 / S 2,775 / V 7,229 / F 802 / Q 8,027) [90472, 2775, 7229, 802, 8027]
+PASS C: predicted-label counts [72969, 10654, 16605, 2550, 6527]
+PASS per-fold table (n, accuracy, macro-F1 over classes present, per-class sensitivity, per-class counts) == independent 
+PASS [mit_internal] A: point metrics (accuracy, macro-F1, balanced acc., macro AUROC/AUPRC, ECE, signed gap, MCE, class-wise ECE, Brier, NLL, raw-score calibration) == independent max abs diff 4.87e-11 over 17 metrics
+PASS [mit_internal] A: 5x5 confusion matrix == independent 109305
+PASS [mit_internal] A: row-normalised confusion matrix 
+PASS [mit_internal] A: reliability bins (n, confidence, accuracy, signed gap) 12
+PASS [mit_internal] A: per-class sensitivity, specificity, PPV, F1, AUROC, AUPRC, beat and cluster support, primary-macro flags == independent 
+PASS [mit_internal] B: point metrics (accuracy, macro-F1, balanced acc., macro AUROC/AUPRC, ECE, signed gap, MCE, class-wise ECE, Brier, NLL, raw-score calibration) == independent max abs diff 4.84e-11 over 17 metrics
+PASS [mit_internal] B: 5x5 confusion matrix == independent 109305
+PASS [mit_internal] B: row-normalised confusion matrix 
+PASS [mit_internal] B: reliability bins (n, confidence, accuracy, signed gap) 12
+PASS [mit_internal] B: per-class sensitivity, specificity, PPV, F1, AUROC, AUPRC, beat and cluster support, primary-macro flags == independent 
+PASS [mit_internal] C: point metrics (accuracy, macro-F1, balanced acc., macro AUROC/AUPRC, ECE, signed gap, MCE, class-wise ECE, Brier, NLL, raw-score calibration) == independent max abs diff 4.09e-11 over 17 metrics
+PASS [mit_internal] C: 5x5 confusion matrix == independent 109305
+PASS [mit_internal] C: row-normalised confusion matrix 
+PASS [mit_internal] C: reliability bins (n, confidence, accuracy, signed gap) 12
+PASS [mit_internal] C: per-class sensitivity, specificity, PPV, F1, AUROC, AUPRC, beat and cluster support, primary-macro flags == independent 
+   bootstrap 0/2000 (0s)
+   bootstrap 250/2000 (78s)
+   bootstrap 500/2000 (153s)
+   bootstrap 750/2000 (232s)
+   bootstrap 1000/2000 (308s)
+   bootstrap 1250/2000 (383s)
+   bootstrap 1500/2000 (459s)
+   bootstrap 1750/2000 (533s)
+PASS [mit_internal] A: 95% subject-cluster bootstrap CIs (accuracy, macro-F1, balanced acc., macro AUROC, ECE, signed gap, Brier) == independent bootstrap (B=2000) []
+PASS [mit_internal] A: per-class sensitivity / PPV / F1 CIs and number of valid resamples == independent []
+PASS [mit_internal] B: 95% subject-cluster bootstrap CIs (accuracy, macro-F1, balanced acc., macro AUROC, ECE, signed gap, Brier) == independent bootstrap (B=2000) []
+PASS [mit_internal] B: per-class sensitivity / PPV / F1 CIs and number of valid resamples == independent []
+PASS [mit_internal] C: 95% subject-cluster bootstrap CIs (accuracy, macro-F1, balanced acc., macro AUROC, ECE, signed gap, Brier) == independent bootstrap (B=2000) []
+PASS [mit_internal] C: per-class sensitivity / PPV / F1 CIs and number of valid resamples == independent []
+PASS [mit_internal] paired B - A: delta macro-F1 + paired CI, per-class delta-sensitivity CIs, McNemar discordant counts and exact p == independent n01=14196 n10=12749 p=1.24e-18
+FAIL [mit_internal] paired B - C: delta macro-F1 + paired CI, per-class delta-sensitivity CIs, McNemar discordant counts and exact p == independent n01=13012 n10=13473 p=0.0047
+PASS [mit_internal] paired C - A: delta macro-F1 + paired CI, per-class delta-sensitivity CIs, McNemar discordant counts and exact p == independent n01=10692 n10=8784 p=1.42e-42
+
+TOTAL checks 43 | FAILED 1 | 610s

@@ -1,0 +1,16 @@
+wfdb_symbol,description,intermediate_index,aami_class,beats_extracted
+N,Normal beat,0,N,74920
+L,Left bundle branch block beat,1,N,8063
+R,Right bundle branch block beat,2,N,7244
+e,Atrial escape beat,3,N,16
+j,Nodal (junctional) escape beat,4,N,229
+A,Atrial premature beat,5,S,2540
+a,Aberrated atrial premature beat,6,S,150
+J,Nodal (junctional) premature beat,7,S,83
+S,Supraventricular premature or ectopic beat,8,S,2
+V,Premature ventricular contraction,9,V,7123
+E,Ventricular escape beat,10,V,106
+F,Fusion of ventricular and normal beat,11,F,802
+/,Paced beat,12,Q,7012
+f,Fusion of paced and normal beat,13,Q,982
+Q,Unclassifiable beat,14,Q,33

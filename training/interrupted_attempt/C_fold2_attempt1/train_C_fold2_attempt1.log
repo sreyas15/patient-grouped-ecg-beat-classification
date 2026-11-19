@@ -1,0 +1,31 @@
+C 2 {'lr': 0.0001, 'best_val_macro_f1': 0.3581467183013298, 'best_epoch': 12, 'val_classes_used': ['N', 'S', 'V', 'F'], 'sec': 2285.1}
+Traceback (most recent call last):
+  File "D:\explainable_ai\revision\R2\experiments\06_train.py", line 29, in <module>
+    (f, ep, state), hist, vc = rc.train_one(m, Xs, ys, Xva, yva, lr, rc.CONFIG['epochs'][m], seed)
+                               ~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\explainable_ai\revision\R2\experiments\r2common.py", line 110, in train_one
+    idx = perm[i:i + bs]; loss = F.cross_entropy(model(Xg[idx]), yg[idx]); opt.zero_grad(); loss.backward(); opt.step(); tl += loss.item() * len(idx)
+                                                 ~~~~~^^^^^^^^^
+  File "C:\Python313\Lib\site-packages\torch\nn\modules\module.py", line 1739, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+           ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
+  File "C:\Python313\Lib\site-packages\torch\nn\modules\module.py", line 1750, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "D:\explainable_ai\Journel paper project\ECGTransForm\models.py", line 66, in forward
+    x1 = self.conv1(x_in)
+  File "C:\Python313\Lib\site-packages\torch\nn\modules\module.py", line 1739, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+           ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
+  File "C:\Python313\Lib\site-packages\torch\nn\modules\module.py", line 1750, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "C:\Python313\Lib\site-packages\torch\nn\modules\conv.py", line 375, in forward
+    return self._conv_forward(input, self.weight, self.bias)
+           ~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Python313\Lib\site-packages\torch\nn\modules\conv.py", line 370, in _conv_forward
+    return F.conv1d(
+           ~~~~~~~~^
+        input, weight, bias, self.stride, self.padding, self.dilation, self.groups
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+RuntimeError: cuDNN error: CUDNN_STATUS_EXECUTION_FAILED

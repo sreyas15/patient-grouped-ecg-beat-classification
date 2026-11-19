@@ -1,0 +1,33 @@
+{
+ "created": "2026-11-06T01:35:44",
+ "purpose": "Pre-scoring preparation record (approved preparation and static checks only; no scoring executed)",
+ "hashes_sha256": {
+  "experiments/07_score.py": "dfb163c4d6296c74002765aadbf2bf4d26ffbfce077f99c7003b683b378bdd90",
+  "experiments/08_evaluate.py": "5dd5f9e2a09eb5ed10665618c02b43aba9e41fb91db809d4899320c89219bd56",
+  "experiments/r2common.py": "19c422dddb0636415870d022e6ea0da7b9cbf2ff40bd4b92883d3aab3d9c5989",
+  "experiments/verify_lock.py": "66296e5752d68b17dd6cb3604209153ad329be0d35182bcc05d55d1f24cf6ba5",
+  "locked_protocol.json": "ed0717f26f2d7f86d5a49c69b03de44588d35112ab8c9177186b4c4e5b61478c",
+  "locked_protocol.sha256": "a35392b29ed5165960cd279bcb9ae553fa199a4ed1c7af4401344d81c0d553ac",
+  "experimental_protocol_LOCKED.md": "49fc7b15bbfc69fd0c63b169aade1ca37d6b2ec0cc23af962772716662fa1d6e",
+  "results/splits/folds_LOCKED.json": "ec15d8ce2f51ff42491dfff58844b9e965a1fd7ea99a0a47cf675efe8b912a3a",
+  "results/manifests/manifest_pre_resume.json": "6d564a8cb46fb89c99ad76e2781acd457bb7f63353346ab75311a62d0ca3f563",
+  "results/manifests/manifest_post_training.json": "ea03044b4c228f628d5a29b88531159dff33c1b825257ba71faccad5180939bb",
+  "results/audits/post_training_audit.md": "cfc5e38d714853a4d344d22118bb9fd628471098c90574fd9dfa4e0ee3b3e046",
+  "backup_pre_scoring/BACKUP_SHA256.txt": "59ae2ccee98d74f2e7f346b419a15e3392f1b0735cd9d660f1502f8b33879440",
+  "experiments/10_per_fold_diagnostics.py": "18f3e4c6853039c07deaf910c5f563d37257c05e0d53765cc4f6aad1d3bba9b8",
+  "experiments/pre_scoring_checks.py": "35fdd275d49a97920ec04329b55f008615586f44761e045ff29c7481980b72fa"
+ },
+ "frozen_scripts_match_lock": true,
+ "not_in_lock_note": "10_per_fold_diagnostics.py and pre_scoring_checks.py are new, unfrozen helper files, hashed here BEFORE any scoring; they are descriptive / read-only and are not read by 07 or 08.",
+ "checks_run": {
+  "pre07": "ALL PASSED (13 checks) at the time of this record",
+  "diagnostic_script_synthetic_test": "13/13 PASS (guards, scikit-learn equivalence, no overwrite, no INCART access)",
+  "backup": "137 files (135 run files + 2 manifests); hashes == source == post-training manifest; read-only attribute set; location backup_pre_scoring/"
+ },
+ "scoring_status": {
+  "results_scores_exists": false,
+  "results_evaluation_entries": 0,
+  "evaluation_supplementary_exists": false
+ },
+ "independent_mit_scoring_with_existing_code": "NOT POSSIBLE: 07_score.py has no options and loads/scores INCART unconditionally (lines 16, 23-24, 28); 08_evaluate.py main requires SCORED.json and the INCART files (lines 112, 129, 133)."
+}

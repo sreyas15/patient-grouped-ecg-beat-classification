@@ -1,0 +1,25 @@
+=== RESUME START 2026-11-05T12:23:23+05:30
+lock OK: ed0717f26f2d7f86d5a49c69b03de44588d35112ab8c9177186b4c4e5b61478c | 13 files verified
+=== START C fold2 free_RAM=12GB 2026-11-05T12:23:25+05:30
+=== END C fold2 rc=0 2026-11-05T14:17:06+05:30
+SELECTED {"model": "C", "fold": 2, "selected_lr": 0.0005, "selected_epoch": 9, "val_macro_f1": 0.3726842284562509, "val_classes_used": ["N", "S", "V", "F"], "temperature": 2.2873828411102295, "checkpoint": "ckpt_lr0.0005.pt"}
+=== FOLD 2 COMPLETE (A, B, C all have selected.json) 2026-11-05T14:17:06+05:30
+=== SKIP A fold3 (already complete)
+=== START B fold3 free_RAM=13GB 2026-11-05T14:17:07+05:30
+=== END B fold3 rc=0 2026-11-05T14:23:32+05:30
+SELECTED {"model": "B", "fold": 3, "selected_lr": 0.0005, "selected_epoch": 1, "val_macro_f1": 0.5083892950946766, "val_classes_used": ["N", "S", "V", "F", "Q"], "temperature": 1.8151487112045288, "checkpoint": "ckpt_lr0.0005.pt"}
+=== START C fold3 free_RAM=13GB 2026-11-05T14:23:33+05:30
+=== END C fold3 rc=0 2026-11-05T22:43:09+05:30
+SELECTED {"model": "C", "fold": 3, "selected_lr": 0.0005, "selected_epoch": 11, "val_macro_f1": 0.47436345813337777, "val_classes_used": ["N", "S", "V", "F", "Q"], "temperature": 2.6048412322998047, "checkpoint": "ckpt_lr0.0005.pt"}
+=== FOLD 3 COMPLETE (A, B, C all have selected.json) 2026-11-05T22:43:09+05:30
+=== START A fold4 free_RAM=13GB 2026-11-05T22:43:12+05:30
+=== END A fold4 rc=0 2026-11-05T22:44:36+05:30
+SELECTED {"model": "A", "fold": 4, "selected_lr": 0.001, "selected_epoch": 3, "val_macro_f1": 0.44188220345676743, "val_classes_used": ["N", "S", "V", "F", "Q"], "temperature": 1.827972173690796, "checkpoint": "ckpt_lr0.001.pt"}
+=== START B fold4 free_RAM=14GB 2026-11-05T22:44:38+05:30
+=== END B fold4 rc=0 2026-11-05T22:51:21+05:30
+SELECTED {"model": "B", "fold": 4, "selected_lr": 0.001, "selected_epoch": 4, "val_macro_f1": 0.5000703441941708, "val_classes_used": ["N", "S", "V", "F", "Q"], "temperature": 2.25559663772583, "checkpoint": "ckpt_lr0.001.pt"}
+=== START C fold4 free_RAM=13GB 2026-11-05T22:51:23+05:30
+=== END C fold4 rc=0 2026-11-06T00:50:47+05:30
+SELECTED {"model": "C", "fold": 4, "selected_lr": 0.001, "selected_epoch": 12, "val_macro_f1": 0.5153192378402367, "val_classes_used": ["N", "S", "V", "F", "Q"], "temperature": 2.3112642765045166, "checkpoint": "ckpt_lr0.001.pt"}
+=== FOLD 4 COMPLETE (A, B, C all have selected.json) 2026-11-06T00:50:48+05:30
+=== RESUME FINISHED: 15/15 runs complete 2026-11-06T00:50:48+05:30. Test scoring NOT run.

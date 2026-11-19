@@ -1,0 +1,106 @@
+{
+ "records": 48,
+ "subjects": 47,
+ "fs": [
+  360
+ ],
+ "ch0_names": {
+  "MLII": 45,
+  "V5": 3
+ },
+ "records_ch0_not_MLII": [
+  "102",
+  "104",
+  "114"
+ ],
+ "class_totals": {
+  "N": 90472,
+  "S": 2775,
+  "V": 7229,
+  "F": 802,
+  "Q": 8027
+ },
+ "total_beats": 109305,
+ "Q_beats_in_paced_records": 8012,
+ "Q_beats_in_nonpaced_records": 15,
+ "dropped_edge_window": 0,
+ "dropped_first2_last3": 189,
+ "unmapped_beatlike_total": {
+  "|": 132,
+  "x": 193,
+  "!": 472
+ },
+ "records_with_class": {
+  "N": 47,
+  "S": 32,
+  "V": 37,
+  "F": 17,
+  "Q": 9
+ },
+ "note": "RR<250 ms exclusion stated in the manuscript is NOT implemented in run_local.py or prep_data.py"
+}
+record subject  ch0  ch1  paced_record  n_N  n_S  n_V  n_F  n_Q  n_total  unmapped_beatlike
+   100     100 MLII   V5         False 2235   33    1    0    0     2269                 {}
+   101     101 MLII   V1         False 1856    3    0    0    2     1861           {'|': 4}
+   102     102   V5   V2          True   99    0    4    0 2080     2183                 {}
+   103     103 MLII   V2         False 2078    2    0    0    0     2080                 {}
+   104     104   V5   V2          True  163    0    2    0 2060     2225                 {}
+   105     105 MLII   V1         False 2522    0   41    0    5     2568          {'|': 30}
+   106     106 MLII   V1         False 1506    0  518    0    0     2024                 {}
+   107     107 MLII   V1          True    0    0   59    0 2074     2133                 {}
+   108     108 MLII   V1         False 1736    4   17    2    0     1759  {'x': 11, '|': 8}
+   109     109 MLII   V1         False 2488    0   38    2    0     2528                 {}
+   111     111 MLII   V1         False 2119    0    1    0    0     2120                 {}
+   112     112 MLII   V1         False 2533    2    0    0    0     2535                 {}
+   113     113 MLII   V1         False 1785    6    0    0    0     1791                 {}
+   114     114   V5 MLII         False 1816   12   43    4    0     1875           {'|': 1}
+   115     115 MLII   V1         False 1949    0    0    0    0     1949           {'|': 6}
+   116     116 MLII   V1         False 2298    1  109    0    0     2408                 {}
+   117     117 MLII   V2         False 1530    1    0    0    0     1531                 {}
+   118     118 MLII   V1         False 2163   95   16    0    0     2274          {'x': 10}
+   119     119 MLII   V1         False 1539    0  444    0    0     1983                 {}
+   121     121 MLII   V1         False 1857    1    1    0    0     1859                 {}
+   122     122 MLII   V1         False 2472    0    0    0    0     2472           {'|': 2}
+   123     123 MLII   V5         False 1511    0    3    0    0     1514                 {}
+   124     124 MLII   V4         False 1532   31   47    5    0     1615                 {}
+   200     200 MLII   V1         False 1740   30  825    2    0     2597                 {}
+   201 201_202 MLII   V1         False 1632  128  198    2    0     1960          {'x': 37}
+   202 201_202 MLII   V1         False 2057   55   19    1    0     2132           {'|': 2}
+   203     203 MLII   V1         False 2526    2  444    1    4     2977          {'|': 26}
+   205     205 MLII   V1         False 2567    3   71   11    0     2652           {'|': 1}
+   207     207 MLII   V1         False 1542  104  210    0    0     1856 {'!': 472, '|': 2}
+   208     208 MLII   V1         False 1584    2  991  372    2     2951           {'|': 8}
+   209     209 MLII   V1         False 2617  383    1    0    0     3001           {'|': 7}
+   210     210 MLII   V1         False 2420   22  194   10    0     2646           {'|': 1}
+   212     212 MLII   V1         False 2744    0    0    0    0     2744           {'|': 1}
+   213     213 MLII   V1         False 2637   28  220  362    0     3247                 {}
+   214     214 MLII   V1         False 1999    0  256    1    2     2258           {'|': 5}
+   215     215 MLII   V1         False 3191    3  164    1    0     3359                 {}
+   217     217 MLII   V1          True  244    0  162    0 1798     2204           {'|': 1}
+   219     219 MLII   V1         False 2078    7   64    1    0     2150         {'x': 133}
+   220     220 MLII   V1         False 1950   94    0    0    0     2044                 {}
+   221     221 MLII   V1         False 2027    0  396    0    0     2423                 {}
+   222     222 MLII   V1         False 2270  209    0    0    0     2479                 {}
+   223     223 MLII   V1         False 2041   73  473   14    0     2601                 {}
+   228     228 MLII   V1         False 1685    3  361    0    0     2049          {'|': 24}
+   230     230 MLII   V1         False 2251    0    1    0    0     2252           {'|': 1}
+   231     231 MLII   V1         False 1564    1    2    0    0     1567           {'x': 2}
+   232     232 MLII   V1         False  396 1380    0    0    0     1776                 {}
+   233     233 MLII   V1         False 2227    7  830   11    0     3075           {'|': 2}
+   234     234 MLII   V1         False 2696   50    3    0    0     2749                 {}
+wfdb_symbol                                description  intermediate_index aami_class  beats_extracted
+          N                                Normal beat                   0          N            74920
+          L              Left bundle branch block beat                   1          N             8063
+          R             Right bundle branch block beat                   2          N             7244
+          e                         Atrial escape beat                   3          N               16
+          j             Nodal (junctional) escape beat                   4          N              229
+          A                      Atrial premature beat                   5          S             2540
+          a            Aberrated atrial premature beat                   6          S              150
+          J          Nodal (junctional) premature beat                   7          S               83
+          S Supraventricular premature or ectopic beat                   8          S                2
+          V          Premature ventricular contraction                   9          V             7123
+          E                    Ventricular escape beat                  10          V              106
+          F      Fusion of ventricular and normal beat                  11          F              802
+          /                                 Paced beat                  12          Q             7012
+          f            Fusion of paced and normal beat                  13          Q              982
+          Q                        Unclassifiable beat                  14          Q               33

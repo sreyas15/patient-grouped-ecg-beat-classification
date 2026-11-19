@@ -1,0 +1,41 @@
+{
+ "model": "B",
+ "fold": 0,
+ "checkpoint": "ckpt_lr0.0005.pt",
+ "checkpoint_sha256": "9c7f02da80d5f8cfc19542b14ff51e7fb2531af1d6ff5ca450dfadf74206847d",
+ "selected_epoch": 11,
+ "examples": [
+  {
+   "max_abs_logit_diff_vs_saved": 0.0016384124755859375,
+   "beat_index": 13288,
+   "record": "106",
+   "true_class": "V",
+   "predicted_class": "V",
+   "softmax": [
+    0.24477194249629974,
+    0.10672813653945923,
+    0.6484920382499695,
+    1.9058056750509422e-06,
+    6.0188017414475325e-06
+   ],
+   "ig_sum": 0.6672430634498596,
+   "prob_difference_vs_zero_baseline": 0.6239042282104492
+  },
+  {
+   "max_abs_logit_diff_vs_saved": 0.004357695579528809,
+   "beat_index": 58478,
+   "record": "205",
+   "true_class": "F",
+   "predicted_class": "N",
+   "softmax": [
+    0.9992984533309937,
+    0.00019388018699828535,
+    1.4911171319909045e-06,
+    2.7599129680311307e-05,
+    0.0004783733456861228
+   ],
+   "ig_sum": 0.714805006980896,
+   "prob_difference_vs_zero_baseline": 0.7420234680175781
+  }
+ ]
+}

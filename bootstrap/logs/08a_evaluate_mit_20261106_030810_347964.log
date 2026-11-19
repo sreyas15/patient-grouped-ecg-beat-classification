@@ -1,0 +1,8 @@
+2026-11-06T03:08:10 log file: D:\explainable_ai\revision\R2\logs\08a_evaluate_mit_20261106_030810_347964.log
+2026-11-06T03:08:10 08a MIT-BIH-only evaluation | keep-awake: True | scores=D:\explainable_ai\revision\R2\results\scores_mit
+2026-11-06T03:08:10 lock OK: ed0717f26f2d7f86d5a49c69b03de44588d35112ab8c9177186b4c4e5b61478c
+2026-11-06T03:08:10 addendum A1 verified
+2026-11-06T03:08:10 manifest + backup verified
+2026-11-06T03:08:10 MIT-BIH scores verified against SCORED.json, lock and manifest
+2026-11-06T03:08:13 executing frozen 08_evaluate.py lines 114-127 (B=2000, seed=20261102)
+2026-11-06T03:26:44 DONE: D:\explainable_ai\revision\R2\results\evaluation_mit

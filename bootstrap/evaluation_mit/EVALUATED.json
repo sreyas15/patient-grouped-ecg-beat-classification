@@ -1,0 +1,31 @@
+{
+ "scope": "MIT-BIH",
+ "evaluated_at": "2026-11-06T03:26:44",
+ "seconds": 1111,
+ "lock_sha256": "ed0717f26f2d7f86d5a49c69b03de44588d35112ab8c9177186b4c4e5b61478c",
+ "addendum_sha256": "58e240f86d66d64a726a1db6266795cc333dc7ab9cb19f2cde2b6316a1d42c12",
+ "manifest_post_training_sha256": "ea03044b4c228f628d5a29b88531159dff33c1b825257ba71faccad5180939bb",
+ "scored_json_sha256": "637d27ffa42c58b347310a831f4321b0e89e3e5590252ddef7851349897d993e",
+ "frozen_08_evaluate_sha256": "5dd5f9e2a09eb5ed10665618c02b43aba9e41fb91db809d4899320c89219bd56",
+ "script_sha256": "219d83e355d590e0c324f15d0c11dcc70cb8ab77a71718e3a62dd816029e418a",
+ "bootstrap": {
+  "B": 2000,
+  "seed": 20261102
+ },
+ "output_files": {
+  "mit_internal_A_confusion_counts.csv": "623ee0cb825ecf3156346283310ddf32619bab96ff0fde92711142653c5fc476",
+  "mit_internal_A_confusion_rownorm.csv": "3050ca5d3c03e9f456b11c2dd588ee9a29c00f8b805ac988ba76ea2ab7f98506",
+  "mit_internal_A_reliability_bins.csv": "a8ea14c3214246b963554507b97d32373de9f20b8e0f7e05d5318caf85ea6b01",
+  "mit_internal_B_confusion_counts.csv": "3471a4ca3a1e7ba9b2f6725d5a270d937721a031389abef87b77b070ead829c5",
+  "mit_internal_B_confusion_rownorm.csv": "08081cb3ceb796722527a5c669a81254b1c47ff672e4d6567428a5ae8ff90b5e",
+  "mit_internal_B_reliability_bins.csv": "92eb05968cc16e88e95026ff658a8475db01fcfcd63c656638dc62c2c99d990c",
+  "mit_internal_C_confusion_counts.csv": "7caa48a4275f79d2e43c9f659750818338e58e4abf55fad73bc4eb7d92f90e8a",
+  "mit_internal_C_confusion_rownorm.csv": "4f81c9cb6c7f63da4164c425ddeffb2de1e4137c4f79266f1d231e5bf82c3e3b",
+  "mit_internal_C_reliability_bins.csv": "e5d534ed4ba451de0e3f7f5e9933ebfe5f4e9e730cf9ddc4bf19ed88a3c7fd32",
+  "mit_internal_comparisons.json": "7735ddf7a409d0a72275495e3c8ddf78cd8ccee090f936acecbdaf847769a021",
+  "mit_internal_per_class.csv": "4075b33456d86eff06525a67e1b14b789fb23052075b81314a9f43dd9a22cd52",
+  "mit_internal_per_fold.csv": "31fbee4fe0eaa3345f76f5a4bd96cbe35dcde2febc2a119c49b991dbd4848c04",
+  "mit_internal_summary.json": "6617d7c8be1ff3f30b94e0d8ebf93c951927fac771020ea01229c8061bcdae55"
+ },
+ "external_dataset_accessed": false
+}

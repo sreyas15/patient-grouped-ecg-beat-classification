@@ -1,0 +1,24 @@
+2026-11-06T03:04:20 log file: D:\explainable_ai\revision\R2\logs\07a_score_mit_20261106_030420_286722.log
+2026-11-06T03:04:20 07a MIT-BIH-only scoring | partition=test | keep-awake request held: True | final=D:\explainable_ai\revision\R2\results\scores_mit
+2026-11-06T03:04:20 lock OK (external file not hashed in this stage): ed0717f26f2d7f86d5a49c69b03de44588d35112ab8c9177186b4c4e5b61478c
+2026-11-06T03:04:20 addendum A1 verified
+2026-11-06T03:04:20 all 135 run files == manifest_post_training.json
+2026-11-06T03:04:20 backup verified: 137 files
+2026-11-06T03:04:22 scored A fold0: n=22821 (1s)
+2026-11-06T03:04:22 scored A fold1: n=21988 (0s)
+2026-11-06T03:04:22 scored A fold2: n=22367 (0s)
+2026-11-06T03:04:22 scored A fold3: n=21564 (0s)
+2026-11-06T03:04:23 scored A fold4: n=20565 (0s)
+2026-11-06T03:04:23 scored B fold0: n=22821 (0s)
+2026-11-06T03:04:23 scored B fold1: n=21988 (0s)
+2026-11-06T03:04:24 scored B fold2: n=22367 (0s)
+2026-11-06T03:04:24 scored B fold3: n=21564 (0s)
+2026-11-06T03:04:24 scored B fold4: n=20565 (0s)
+2026-11-06T03:05:07 scored C fold0: n=22821 (43s)
+2026-11-06T03:05:52 scored C fold1: n=21988 (46s)
+2026-11-06T03:06:40 scored C fold2: n=22367 (48s)
+2026-11-06T03:07:19 scored C fold3: n=21564 (39s)
+2026-11-06T03:07:58 scored C fold4: n=20565 (39s)
+2026-11-06T03:07:58 verifying all 15 staged files
+2026-11-06T03:07:58 coverage OK: 109305 beats, each exactly once
+2026-11-06T03:07:59 DONE: D:\explainable_ai\revision\R2\results\scores_mit

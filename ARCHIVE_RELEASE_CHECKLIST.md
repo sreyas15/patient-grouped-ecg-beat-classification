@@ -1,0 +1,12 @@
+# Archive release checklist
+
+Status at 2026-11-19 (V2 package): steps 2 (licence choice: MIT proposed, subject to the authors confirming ownership), 3 (metadata in `.zenodo.json` and `CITATION.cff`) and 5 (integrity run) are prepared locally; steps 1, 4, 6, 7 and 8 are NOT done. The archive must not be described as publicly available until step 6 is complete and a persistent identifier exists. Chosen route: GitHub repository archived through Zenodo.
+
+1. [ ] **Authors review.** Read `REPRODUCIBILITY_STATUS.md`; confirm that the exposed local path constants (`D:\explainable_ai\...` in frozen scripts/logs/manifests) are acceptable, or decide on a documented path-neutralised release (the hashes of any modified file would then differ from the locked manifest and must be re-listed).
+2. [ ] **Licences.** Choose a licence for the author-written code (for example MIT or Apache-2.0) and for the derived predictions/weights (for example CC BY 4.0 or the same as the code); add `LICENSE` and `CITATION.cff`. Keep `training/ecgtransform/LICENSE` (MIT, third-party). Confirm on the PhysioNet pages that the MIT-BIH and INCART licences permit redistributing derived per-beat outputs with attribution (they contain no signal samples).
+3. [ ] **Metadata.** Prepare title, authors with affiliations (and ORCID iDs if available), description, keywords, related identifiers (the manuscript when available), funding statement (none: no external funding was received, as confirmed by the authors).
+4. [ ] **Choose a repository.** Recommended: Zenodo (DOI, 50 GB per record) or the journal's supplementary-archive service. The archive is about 190 MB in 340+ files; GitHub is suitable for the code but not for a persistent archive of the data (use a GitHub release archived by Zenodo if GitHub is preferred).
+5. [ ] **Final integrity run.** `python verify_archive.py` on the exact folder that will be uploaded; re-generate `FILE_MANIFEST.csv` if any file changes.
+6. [ ] **Deposit** (manual): create the record, upload, publish, and record the DOI and URL.
+7. [ ] **Update the manuscript and response.** Insert the DOI/URL in the Data and code availability section of the manuscript, in the response letter and in the journal submission metadata; replace the sentence stating that the archive has not yet been deposited.
+8. [ ] **Re-verify from the public copy.** Download the deposited archive and run `python verify_archive.py` once more.

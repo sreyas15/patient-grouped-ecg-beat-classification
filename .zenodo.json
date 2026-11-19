@@ -1,0 +1,38 @@
+{
+ "title": "Reproducibility archive: Patient-Grouped Deep Learning for ECG Beat Classification: Explainability Components and External Evaluation on INCART",
+ "upload_type": "software",
+ "version": "1.0.0",
+ "license": "mit",
+ "description": "Frozen protocol, fold assignments, scripts, per-beat out-of-fold (MIT-BIH) and external (INCART) predictions, result manifests, verification outputs, model checkpoints and figure/table generation scripts accompanying the article \"Patient-Grouped Deep Learning for ECG Beat Classification: Explainability Components and External Evaluation on INCART\". Source ECG databases are not redistributed; see data_access/DATA_ACCESS.md. Third-party materials are listed in THIRD_PARTY_NOTICES.md.",
+ "creators": [
+  {
+   "name": "Sreyas Sanil Kumar",
+   "affiliation": "Amrita School of Engineering, Amrita Vishwa Vidyapeetham, Chennai, India"
+  },
+  {
+   "name": "Kishore N.",
+   "affiliation": "Amrita School of Engineering, Amrita Vishwa Vidyapeetham, Chennai, India"
+  },
+  {
+   "name": "Amritha Lakshmi T. M.",
+   "affiliation": "Amrita School of Engineering, Amrita Vishwa Vidyapeetham, Chennai, India"
+  },
+  {
+   "name": "Rahul S. G.",
+   "affiliation": "Amrita School of Engineering, Amrita Vishwa Vidyapeetham, Chennai, India"
+  },
+  {
+   "name": "Venkatasubramanian K. B.",
+   "affiliation": "Department of Electrical and Computer Engineering, Mahindra University, Hyderabad, 500043, Telangana, India"
+  }
+ ],
+ "keywords": [
+  "ECG",
+  "arrhythmia",
+  "MIT-BIH",
+  "INCART",
+  "patient-grouped cross-validation",
+  "calibration",
+  "reproducibility"
+ ]
+}

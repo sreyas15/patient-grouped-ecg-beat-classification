@@ -1,0 +1,18 @@
+{
+ "created": "2026-11-06T03:39:00",
+ "check": "[mit_internal] paired B - C",
+ "original_result": "FAIL at tolerance 1e-12 on the exact McNemar p-value",
+ "cause": "frozen evaluation outputs are written with pandas to_json (double_precision=10); the stored p-value 0.0047042146 differs from the exact 0.004704214593638442 by 4e-11 (> 1e-12). Pairs B-A and C-A passed because their p-values (1e-18, 1e-42) round to ~0.",
+ "components_compared": [
+  "delta macro-F1",
+  "paired CI (2)",
+  "McNemar discordant counts (2, exact integers)",
+  "exact p",
+  "per-class delta-sensitivity CIs (5 x 2)"
+ ],
+ "max_abs_difference_all_components": 4.8135894575862537e-11,
+ "discordant_counts_equal": true,
+ "tolerance_appropriate_for_stored_precision": 1e-09,
+ "resolved": true,
+ "statement": "All components agree with the independent computation to <= 4.5e-11 (storage rounding). The original check tolerance was too tight for the stored precision. verification_mit.json is preserved unchanged."
+}

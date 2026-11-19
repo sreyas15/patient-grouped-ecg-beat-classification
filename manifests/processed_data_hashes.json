@@ -1,0 +1,11 @@
+{
+ "note": "Processed beat arrays are NOT included (regenerate with preprocessing/04_extract_beats.py from PhysioNet); their SHA-256 values from the locked manifest are recorded here.",
+ "sha256": {
+  "mitbih_beats_r2.npz": "34d6101c910142a4aadfb2f8d7b452ab4f7ef6391603bcdf724da54d7ee828a9",
+  "incart_beats_r2.npz": "cb8a028200078db217ee7a98456f59b00c89ef170fb26856cad3419351f879b0"
+ },
+ "bytes": {
+  "mitbih_beats_r2.npz": 75812635,
+  "incart_beats_r2.npz": 227891021
+ }
+}

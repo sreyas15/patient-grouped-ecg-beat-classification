@@ -1,0 +1,16 @@
+# Packages relevant to this study as installed when the archive was assembled (pip metadata).
+# The training environment is in environment_at_training.json (PyWavelets: module 1.8.0 vs pip metadata 1.10.0 is a documented, unreconciled discrepancy).
+docx2pdf==0.1.8
+imbalanced-learn==0.14.2
+matplotlib==3.10.8
+numpy==2.5.2
+openpyxl==3.1.5
+pandas==2.3.3
+pillow==12.2.0
+pymupdf==1.28.2
+python-docx==1.2.0
+PyWavelets==1.10.0
+scikit-learn==1.7.2
+scipy==1.16.3
+torch==2.6.0+cu124
+wfdb==4.3.1

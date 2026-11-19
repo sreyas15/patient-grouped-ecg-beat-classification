@@ -1,0 +1,4 @@
+C 3 {'lr': 0.0001, 'best_val_macro_f1': 0.454484006142172, 'best_epoch': 7, 'val_classes_used': ['N', 'S', 'V', 'F', 'Q'], 'sec': 2270.3}
+C 3 {'lr': 0.0005, 'best_val_macro_f1': 0.47436345813337777, 'best_epoch': 11, 'val_classes_used': ['N', 'S', 'V', 'F', 'Q'], 'sec': 2268.3}
+C 3 {'lr': 0.001, 'best_val_macro_f1': 0.4726371180951513, 'best_epoch': 6, 'val_classes_used': ['N', 'S', 'V', 'F', 'Q'], 'sec': 25355.4}
+SELECTED {"model": "C", "fold": 3, "selected_lr": 0.0005, "selected_epoch": 11, "val_macro_f1": 0.47436345813337777, "val_classes_used": ["N", "S", "V", "F", "Q"], "temperature": 2.6048412322998047, "checkpoint": "ckpt_lr0.0005.pt"}

@@ -1,0 +1,9 @@
+2026-11-06T04:38:19 log file: D:\explainable_ai\revision\R2\logs\08b_evaluate_incart_20261106_043819_633723.log
+2026-11-06T04:38:19 08b INCART-only evaluation | keep-awake: True | scores=D:\explainable_ai\revision\R2\results\scores_incart
+2026-11-06T04:38:19 lock OK: ed0717f26f2d7f86d5a49c69b03de44588d35112ab8c9177186b4c4e5b61478c
+2026-11-06T04:38:19 addendum A1 verified
+2026-11-06T04:38:20 manifest + backup verified
+2026-11-06T04:38:20 INCART scores verified against SCORED.json, lock and manifest
+2026-11-06T04:38:20 MIT-BIH outputs unchanged since INCART scoring
+2026-11-06T04:38:22 executing frozen 08_evaluate.py lines 129-139 (B=2000, seed=20261102)
+2026-11-06T05:32:55 DONE: D:\explainable_ai\revision\R2\results\evaluation_incart

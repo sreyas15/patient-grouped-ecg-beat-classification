@@ -1,0 +1,115 @@
+{
+ "locked_at": "2026-11-02T14:26:40",
+ "status": "LOCKED",
+ "protocol": "experimental_protocol_LOCKED.md",
+ "primary_model": "B",
+ "comparators": [
+  "A",
+  "C"
+ ],
+ "prespecified_comparisons": [
+  "B-A",
+  "B-C"
+ ],
+ "exploratory": [
+  "C-A",
+  "any ranking of models"
+ ],
+ "internal_evaluation": "MIT-BIH, nested subject-grouped 5-fold CV, pooled out-of-fold predictions (internal; records previously exposed in earlier analyses)",
+ "external_evaluation": "INCART, ensemble of the five locked fold models, primary macro-F1 over N,S,V,F; as-given annotations primary, peak-recentred sensitivity",
+ "folds": {
+  "0": [
+   "106",
+   "116",
+   "117",
+   "205",
+   "207",
+   "210",
+   "217",
+   "219",
+   "223",
+   "234"
+  ],
+  "1": [
+   "107",
+   "108",
+   "112",
+   "122",
+   "123",
+   "221",
+   "228",
+   "230",
+   "232",
+   "233"
+  ],
+  "2": [
+   "100",
+   "102",
+   "111",
+   "113",
+   "115",
+   "208",
+   "209",
+   "212",
+   "215"
+  ],
+  "3": [
+   "103",
+   "105",
+   "109",
+   "114",
+   "118",
+   "119",
+   "200",
+   "201+202",
+   "231"
+  ],
+  "4": [
+   "101",
+   "104",
+   "121",
+   "124",
+   "203",
+   "213",
+   "214",
+   "220",
+   "222"
+  ]
+ },
+ "n_subjects": 47,
+ "fold_seeds": {
+  "0": 1000,
+  "1": 1001,
+  "2": 1002,
+  "3": 1003,
+  "4": 1004
+ },
+ "bootstrap": {
+  "resamples": 2000,
+  "seed": 20261102,
+  "unit": "subject/patient"
+ },
+ "decisions": [
+  "D1 identical 186-sample input",
+  "D2 SMOTE 20,000/class (compute; not optimised)",
+  "D3 MLII where available, V5 for 102/104",
+  "D4 INCART = ensemble of 5 fold models",
+  "D5 folds frozen, never redrawn",
+  "D6 INCART external, macro-F1 N,S,V,F",
+  "D7 as-given primary, recentred sensitivity"
+ ],
+ "environment": {
+  "python": "3.13.7",
+  "torch": "2.6.0+cu124",
+  "cuda": "12.4",
+  "gpu": "NVIDIA GeForce RTX 4060 Laptop GPU",
+  "numpy": "2.5.2",
+  "sklearn": "1.7.2",
+  "imblearn": "0.14.2",
+  "scipy": "1.16.3",
+  "wfdb": "4.3.1",
+  "pywt": "1.8.0"
+ }
+}
+frozen files: 13
+lock sha256: ed0717f26f2d7f86d5a49c69b03de44588d35112ab8c9177186b4c4e5b61478c

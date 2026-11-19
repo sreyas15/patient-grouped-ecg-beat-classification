@@ -1,0 +1,25 @@
+{
+ "created": "2026-11-06T03:27:51",
+ "script_sha256": "98a81cc362ecc092b97b4e6b3367bc58696f7602c4a7c464acecc153223b2322",
+ "lock_sha256": "ed0717f26f2d7f86d5a49c69b03de44588d35112ab8c9177186b4c4e5b61478c",
+ "input_test_logit_files_sha256": {
+  "mit_A_fold0.npz": "8ceac524936353100df2b1291e78656209f3e63fb121c300b7df892655f8cd9a",
+  "mit_A_fold1.npz": "1702bcd3ff9b1234be36b292799632ff1186f18b537338eda75bf41b51f96d12",
+  "mit_A_fold2.npz": "6d0a4b91df256ab6833fd40ec506f37da69fefc142b7e2cbe37dc4788560c7a5",
+  "mit_A_fold3.npz": "b45948a23b3dceaa7c956a8a1218a89edc4c9b6cd874c20a723d0e4180920ff2",
+  "mit_A_fold4.npz": "777b6ea54587bf26ef4ddc6205114a1fe5140359651e0e99de53c6d641f06625",
+  "mit_B_fold0.npz": "0c6797ae30d4117c6a0325f966bb54bbbd08d2f68e131a2b26b9d49577d82cf9",
+  "mit_B_fold1.npz": "05d480586d52afde92edc9136a2762fda3c8d9b536563077b31a48d188574aba",
+  "mit_B_fold2.npz": "ca523af148375407e08715c4f9bde77882bbdf4f6056efe54ba3ce9c063b48cd",
+  "mit_B_fold3.npz": "71c300760314bf829adfe388d63c7f7cb906a7698c0f33193e6117ff98ba45ba",
+  "mit_B_fold4.npz": "9d31888d630884a102a04ba340db84b1873f4a66f05e87ffcb1c5e2b8ae35d6d",
+  "mit_C_fold0.npz": "bbd145f1cae7ec306c995ed0318a28a0e68164d23e3754add0e71a0a670e31d3",
+  "mit_C_fold1.npz": "e435f003d8ccf161a58c7c0bfdb38b0ece2d6a96a0cf9e6e7618749c7bf0ef7f",
+  "mit_C_fold2.npz": "51ec7c728ca4c1e0b37a5697506725b8a45ede0d007438322a6a60a740d524fa",
+  "mit_C_fold3.npz": "4a97b235aad9ecdb14124c2327876f17311c49568cf83ff50a297a0b89d80801",
+  "mit_C_fold4.npz": "a6d763876f994d6a16a44d6a8869b2f3faa4494278b6e1e3c91031fad1b9fc13"
+ },
+ "scores_flag_sha256": "637d27ffa42c58b347310a831f4321b0e89e3e5590252ddef7851349897d993e",
+ "primary_evaluation_summary_sha256": "6617d7c8be1ff3f30b94e0d8ebf93c951927fac771020ea01229c8061bcdae55",
+ "statement": "descriptive only; no test, threshold, selection, calibration or protocol change; INCART files never opened"
+}

@@ -1,0 +1,23 @@
+{
+ "parameters_trainable": {
+  "A": 363653,
+  "B": 451361,
+  "C": 637689
+ },
+ "parameters_total": {
+  "A": 363653,
+  "B": 451745,
+  "C": 637689
+ },
+ "input_shape": [
+  1,
+  186
+ ],
+ "output_shape": [
+  1,
+  5
+ ],
+ "r2common_sha256": "19c422dddb0636415870d022e6ea0da7b9cbf2ff40bd4b92883d3aab3d9c5989",
+ "ecgtransform_models_py_sha256": "a168b2b8bdfeba73e362618d58d925ea593c0109ab3f7841bac1ebbf5b53fca0",
+ "note": "ECGTransForm models.py is imported read-only from the upstream code folder; its hash is pinned in the locked-protocol manifest (protocol_lock.frozen_files) and the hash recorded here is its current hash."
+}

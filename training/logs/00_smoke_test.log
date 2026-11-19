@@ -1,0 +1,16 @@
+  warnings.warn(
+  warnings.warn(
+  warnings.warn(
+A params 363653 out (4, 5)
+B params 451361 out (4, 5)
+C params 637689 out (4, 5)
+ModelB params at L=300 (port fidelity vs Keras 508,705): 508705
+fold0 beats tr/va/te 64496 21988 22821 subjects 27 10 10
+smote (100000, 186) [20000 20000 20000 20000 20000] 2.1s
+A smoke epoch ok f1=0.564 classes [0, 2, 4] 3.3s
+B smoke epoch ok f1=0.016 classes [0, 2, 4] 0.4s
+C smoke epoch ok f1=0.405 classes [0, 2, 4] 13.7s
+A full epoch 2s
+B full epoch 6s
+C full epoch 87s
+synthetic eval ok 1.0 (1.0, 1.0) (0.0, 0.0) nan

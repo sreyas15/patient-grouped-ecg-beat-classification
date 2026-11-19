@@ -1,0 +1,23 @@
+2026-11-06T03:39:44 log file: D:\explainable_ai\revision\R2\logs\07b_score_incart_20261106_033944_440188.log
+2026-11-06T03:39:44 07b INCART-only scoring | keep-awake: True | final=D:\explainable_ai\revision\R2\results\scores_incart
+2026-11-06T03:39:44 lock OK: ed0717f26f2d7f86d5a49c69b03de44588d35112ab8c9177186b4c4e5b61478c
+2026-11-06T03:39:44 addendum A1 verified
+2026-11-06T03:39:45 manifest + backup verified
+2026-11-06T03:39:45 MIT-BIH stage verified complete and unchanged
+2026-11-06T03:39:49 scored A fold0: n=175505 (3s)
+2026-11-06T03:39:50 scored A fold1: n=175505 (1s)
+2026-11-06T03:39:52 scored A fold2: n=175505 (1s)
+2026-11-06T03:39:53 scored A fold3: n=175505 (1s)
+2026-11-06T03:39:54 scored A fold4: n=175505 (1s)
+2026-11-06T03:39:56 scored B fold0: n=175505 (2s)
+2026-11-06T03:39:59 scored B fold1: n=175505 (2s)
+2026-11-06T03:40:01 scored B fold2: n=175505 (2s)
+2026-11-06T03:40:03 scored B fold3: n=175505 (2s)
+2026-11-06T03:40:05 scored B fold4: n=175505 (2s)
+2026-11-06T03:51:47 scored C fold0: n=175505 (702s)
+2026-11-06T04:03:03 scored C fold1: n=175505 (676s)
+2026-11-06T04:14:20 scored C fold2: n=175505 (677s)
+2026-11-06T04:25:28 scored C fold3: n=175505 (668s)
+2026-11-06T04:36:43 scored C fold4: n=175505 (675s)
+2026-11-06T04:36:43 verifying staged files
+2026-11-06T04:36:44 DONE: D:\explainable_ai\revision\R2\results\scores_incart

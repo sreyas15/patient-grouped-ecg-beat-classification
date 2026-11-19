@@ -1,0 +1,367 @@
+relative_path,size_bytes,sha256,description
+.zenodo.json,1638,d3bd131c4f41fbac9498ca63a3c620a0d16ad84753bcc536e04b171e8e338619,release addition
+ARCHIVE_RELEASE_CHECKLIST.md,2431,c4eb2dad580820d5c9d7587250d2b8ea510af4d694e38cff5a0f796d34c830b7,Steps required to publish the archive
+CITATION.cff,1189,55ff6976a547eafa1eb95486b98f4c17bb70465f4c14a8ac0496da3ebdfa7c19,release addition
+LICENSE,1315,24eec7e41909c50e3e8ee0a5a812ad5e8dac0dceb320c426ba6be196348dbfdd,release addition
+PATH_MAP.csv,48797,e52ef043c8e96a517a6d373c0b810844944f51718cce1a0c84b0048f7d702f8e,Mapping from archive paths to the original project layout (used by reconstruct_original_layout.py)
+README.md,7788,dc44cde3bb0a08fda07c883f49ef1cf8b0923aa38e18141f81deff2bc19f2cdd,"Archive overview, layout, reproduction steps"
+RELEASE_NOTES.md,720,0418470efd0eb7dc75de420a7148b7305d38c9ec6511f826d2c414290f0738ab,release addition
+REPRODUCIBILITY_STATUS.md,4676,a142005c5d1f53705875d028003dfa13cea2f6d071adc27b3aebcf8c8148091d,Status of every requested material: present / partial / restricted / absent / manual
+THIRD_PARTY_NOTICES.md,1295,de4d4ad9e201d75afdae0d34bd71a9094e5dda48ddecabfec34124d800c5b63b,release addition
+bootstrap/08_evaluate.py,10575,5dd5f9e2a09eb5ed10665618c02b43aba9e41fb91db809d4899320c89219bd56,"Frozen evaluation core: metrics, calibration, patient-cluster bootstrap (2000 resamples, seed 20261102), paired comparisons, McNemar"
+bootstrap/08a_evaluate_mit.py,5044,219d83e355d590e0c324f15d0c11dcc70cb8ab77a71718e3a62dd816029e418a,MIT-BIH evaluation stage
+bootstrap/08b_evaluate_incart.py,6117,9ed4fc2c458fbc06a4ac181852193a6a2399516d78ddde935a946cc47ebbade1,INCART evaluation stage
+bootstrap/09_class_driver_analysis.py,5006,9092046d21a1051a28fb847d3aa4d3ea567dd38ba6492fb7c9b118b9dd007811,Class-driver analysis (diagnostic)
+bootstrap/10_per_fold_diagnostics.py,9264,98a81cc362ecc092b97b4e6b3367bc58696f7602c4a7c464acecc153223b2322,Per-fold diagnostics (descriptive)
+bootstrap/evaluation_incart/EVALUATED.json,3897,1d11ca2722799c615d96d99fc8a360b4592dfafb89ffd17de9345db010c93675,"INCART evaluation output (metrics, CIs, confusion matrices, paired comparisons, recentred sensitivity analysis)"
+bootstrap/evaluation_incart/_STARTED.json,140,bcd8862c1943f2d5f80085eb26227f6aa34d57dbfc26f6e9c5823db6e0fb7fe6,"INCART evaluation output (metrics, CIs, confusion matrices, paired comparisons, recentred sensitivity analysis)"
+bootstrap/evaluation_incart/incart_external_A_confusion_counts.csv,167,34d0f9f58e95fccf221665f935987c10b835bf37735412afe430cdde0c8a927e,"INCART evaluation output (metrics, CIs, confusion matrices, paired comparisons, recentred sensitivity analysis)"
+bootstrap/evaluation_incart/incart_external_A_confusion_rownorm.csv,241,2f271fb4a35a9b1114bc74e3d86da33cfd7d817f6ef6e1ddee95cd37fb7b91ca,"INCART evaluation output (metrics, CIs, confusion matrices, paired comparisons, recentred sensitivity analysis)"
+bootstrap/evaluation_incart/incart_external_A_reliability_bins.csv,1175,00b776c9a208748a45a3edcecd8cd19d17433121d6e872116e980f3f6e330b41,"INCART evaluation output (metrics, CIs, confusion matrices, paired comparisons, recentred sensitivity analysis)"
+bootstrap/evaluation_incart/incart_external_B_confusion_counts.csv,170,da6a233e53ab5e368f6640633b4430b22614f109838a0f705c5c28ee0c05c7a8,"INCART evaluation output (metrics, CIs, confusion matrices, paired comparisons, recentred sensitivity analysis)"
+bootstrap/evaluation_incart/incart_external_B_confusion_rownorm.csv,242,aa5b29d855786419e1c75cba82ad24986a7042007f7e784a9810851bb0772afe,"INCART evaluation output (metrics, CIs, confusion matrices, paired comparisons, recentred sensitivity analysis)"
+bootstrap/evaluation_incart/incart_external_B_reliability_bins.csv,1147,a82bba22588f3f56c2a39860eb29ee7bd4fcb907c3a37756f3d6aee973795c10,"INCART evaluation output (metrics, CIs, confusion matrices, paired comparisons, recentred sensitivity analysis)"
+bootstrap/evaluation_incart/incart_external_C_confusion_counts.csv,172,733a02d98498d9cac4135f4dbfcfde8b722df87191ff05b3913f04e2114fdb80,"INCART evaluation output (metrics, CIs, confusion matrices, paired comparisons, recentred sensitivity analysis)"
+bootstrap/evaluation_incart/incart_external_C_confusion_rownorm.csv,238,39d6a8150e79e221b3793aa8a3ef24aff3003620eab4415bff801560500d0809,"INCART evaluation output (metrics, CIs, confusion matrices, paired comparisons, recentred sensitivity analysis)"
+bootstrap/evaluation_incart/incart_external_C_reliability_bins.csv,1179,145cc571f41a924a9f5cde5e90e1fdf09b62b596bc4d23e54adac45ad5ee0851,"INCART evaluation output (metrics, CIs, confusion matrices, paired comparisons, recentred sensitivity analysis)"
+bootstrap/evaluation_incart/incart_external_comparisons.json,2084,53b1a079e18fe1c484df6950d7b65b6f9d2e8e71bd4c638a450d64619abc0d6c,"INCART evaluation output (metrics, CIs, confusion matrices, paired comparisons, recentred sensitivity analysis)"
+bootstrap/evaluation_incart/incart_external_individual_fold_models.csv,1875,cf2c604cf55483c1720b9a1b5e2a0dc079be3b9f2d7581e9d04ad31089d12dad,"INCART evaluation output (metrics, CIs, confusion matrices, paired comparisons, recentred sensitivity analysis)"
+bootstrap/evaluation_incart/incart_external_per_class.csv,4068,7db1d331d5050c715e21a2bb7b82c0f203dd2c3946a116bc843aca9c16c2beae,"INCART evaluation output (metrics, CIs, confusion matrices, paired comparisons, recentred sensitivity analysis)"
+bootstrap/evaluation_incart/incart_external_recentred_A_confusion_counts.csv,168,a75c9e107184e767f26adce188c6e668ac66d35ec256ce578816acf60b5b6f58,"INCART evaluation output (metrics, CIs, confusion matrices, paired comparisons, recentred sensitivity analysis)"
+bootstrap/evaluation_incart/incart_external_recentred_A_confusion_rownorm.csv,242,43955f28e441e8edb8b1c015dd6520277f3d243a7d39c5ce52d090048d466f1f,"INCART evaluation output (metrics, CIs, confusion matrices, paired comparisons, recentred sensitivity analysis)"
+bootstrap/evaluation_incart/incart_external_recentred_A_reliability_bins.csv,1177,dc8b2f4bf588a5fb9a0af3a8cb0c3de427faf26a76a0dab2d91c964edba62347,"INCART evaluation output (metrics, CIs, confusion matrices, paired comparisons, recentred sensitivity analysis)"
+bootstrap/evaluation_incart/incart_external_recentred_B_confusion_counts.csv,169,77f9d8648dab6e0d713a3b9f6298f72667ea343be5f63e1197e97a5c43795d17,"INCART evaluation output (metrics, CIs, confusion matrices, paired comparisons, recentred sensitivity analysis)"
+bootstrap/evaluation_incart/incart_external_recentred_B_confusion_rownorm.csv,245,3d4cf6f5374eef0a96274c8c4fcc0b362173bc1625b941fe90a5dc4a6e955f01,"INCART evaluation output (metrics, CIs, confusion matrices, paired comparisons, recentred sensitivity analysis)"
+bootstrap/evaluation_incart/incart_external_recentred_B_reliability_bins.csv,1148,cb7e8d85318f211b54b6aa3c7aff32a58112b421d57d8cce66fdbdade2101da9,"INCART evaluation output (metrics, CIs, confusion matrices, paired comparisons, recentred sensitivity analysis)"
+bootstrap/evaluation_incart/incart_external_recentred_C_confusion_counts.csv,171,c40fb3fdff6a7abb892628a7771c4028370a2a0cfa9565c409d8a21b612c3a57,"INCART evaluation output (metrics, CIs, confusion matrices, paired comparisons, recentred sensitivity analysis)"
+bootstrap/evaluation_incart/incart_external_recentred_C_confusion_rownorm.csv,241,4dfa0d24f785d4f28817d07e36bd8ca146d166a820a7278cf26fe143ca66bfae,"INCART evaluation output (metrics, CIs, confusion matrices, paired comparisons, recentred sensitivity analysis)"
+bootstrap/evaluation_incart/incart_external_recentred_C_reliability_bins.csv,1179,32e5fb6853cbbef16047e7cf74832f2909d920720a435ae9a746bdeb4569fe88,"INCART evaluation output (metrics, CIs, confusion matrices, paired comparisons, recentred sensitivity analysis)"
+bootstrap/evaluation_incart/incart_external_recentred_comparisons.json,2086,73c018250e910fc8303792b32c75ae19cfb2885d34045d0d31eb2417fee4e421,"INCART evaluation output (metrics, CIs, confusion matrices, paired comparisons, recentred sensitivity analysis)"
+bootstrap/evaluation_incart/incart_external_recentred_individual_fold_models.csv,1878,869dc64c67b0e09f72917f5d1081fe6cd6b51d4836ef164bd6bad031627ca30e,"INCART evaluation output (metrics, CIs, confusion matrices, paired comparisons, recentred sensitivity analysis)"
+bootstrap/evaluation_incart/incart_external_recentred_per_class.csv,3899,49d3868072a2125db5c6d7792a671da1b3fb7b235edc3ff105ba6d1b365ef1de,"INCART evaluation output (metrics, CIs, confusion matrices, paired comparisons, recentred sensitivity analysis)"
+bootstrap/evaluation_incart/incart_external_recentred_summary.json,3124,34d32d8878a3d31fca65e470e281c4cf237542ffd59445c213086b8074d45309,"INCART evaluation output (metrics, CIs, confusion matrices, paired comparisons, recentred sensitivity analysis)"
+bootstrap/evaluation_incart/incart_external_summary.json,3118,f207775fe6a84f27fd7fb642a1f77447f026cbc9c481388cfab5fc4b6104b994,"INCART evaluation output (metrics, CIs, confusion matrices, paired comparisons, recentred sensitivity analysis)"
+bootstrap/evaluation_mit/EVALUATED.json,2156,1f40fb629e86482f511b2a8c1019120a81741714809f83a6b1b6602ef8e2df65,"MIT-BIH evaluation output (metrics, CIs, confusion matrices, paired comparisons)"
+bootstrap/evaluation_mit/_STARTED.json,140,9c8522675bab237ad81b74eb1d78a2ece1de05d4a2e3bb7c794250c2bfb38438,"MIT-BIH evaluation output (metrics, CIs, confusion matrices, paired comparisons)"
+bootstrap/evaluation_mit/mit_internal_A_confusion_counts.csv,180,623ee0cb825ecf3156346283310ddf32619bab96ff0fde92711142653c5fc476,"MIT-BIH evaluation output (metrics, CIs, confusion matrices, paired comparisons)"
+bootstrap/evaluation_mit/mit_internal_A_confusion_rownorm.csv,248,3050ca5d3c03e9f456b11c2dd588ee9a29c00f8b805ac988ba76ea2ab7f98506,"MIT-BIH evaluation output (metrics, CIs, confusion matrices, paired comparisons)"
+bootstrap/evaluation_mit/mit_internal_A_reliability_bins.csv,1182,a8ea14c3214246b963554507b97d32373de9f20b8e0f7e05d5318caf85ea6b01,"MIT-BIH evaluation output (metrics, CIs, confusion matrices, paired comparisons)"
+bootstrap/evaluation_mit/mit_internal_B_confusion_counts.csv,180,3471a4ca3a1e7ba9b2f6725d5a270d937721a031389abef87b77b070ead829c5,"MIT-BIH evaluation output (metrics, CIs, confusion matrices, paired comparisons)"
+bootstrap/evaluation_mit/mit_internal_B_confusion_rownorm.csv,247,08081cb3ceb796722527a5c669a81254b1c47ff672e4d6567428a5ae8ff90b5e,"MIT-BIH evaluation output (metrics, CIs, confusion matrices, paired comparisons)"
+bootstrap/evaluation_mit/mit_internal_B_reliability_bins.csv,1173,92eb05968cc16e88e95026ff658a8475db01fcfcd63c656638dc62c2c99d990c,"MIT-BIH evaluation output (metrics, CIs, confusion matrices, paired comparisons)"
+bootstrap/evaluation_mit/mit_internal_C_confusion_counts.csv,175,7caa48a4275f79d2e43c9f659750818338e58e4abf55fad73bc4eb7d92f90e8a,"MIT-BIH evaluation output (metrics, CIs, confusion matrices, paired comparisons)"
+bootstrap/evaluation_mit/mit_internal_C_confusion_rownorm.csv,250,4f81c9cb6c7f63da4164c425ddeffb2de1e4137c4f79266f1d231e5bf82c3e3b,"MIT-BIH evaluation output (metrics, CIs, confusion matrices, paired comparisons)"
+bootstrap/evaluation_mit/mit_internal_C_reliability_bins.csv,1196,e5d534ed4ba451de0e3f7f5e9933ebfe5f4e9e730cf9ddc4bf19ed88a3c7fd32,"MIT-BIH evaluation output (metrics, CIs, confusion matrices, paired comparisons)"
+bootstrap/evaluation_mit/mit_internal_comparisons.json,2166,7735ddf7a409d0a72275495e3c8ddf78cd8ccee090f936acecbdaf847769a021,"MIT-BIH evaluation output (metrics, CIs, confusion matrices, paired comparisons)"
+bootstrap/evaluation_mit/mit_internal_per_class.csv,4346,4075b33456d86eff06525a67e1b14b789fb23052075b81314a9f43dd9a22cd52,"MIT-BIH evaluation output (metrics, CIs, confusion matrices, paired comparisons)"
+bootstrap/evaluation_mit/mit_internal_per_fold.csv,2554,31fbee4fe0eaa3345f76f5a4bd96cbe35dcde2febc2a119c49b991dbd4848c04,"MIT-BIH evaluation output (metrics, CIs, confusion matrices, paired comparisons)"
+bootstrap/evaluation_mit/mit_internal_summary.json,3113,6617d7c8be1ff3f30b94e0d8ebf93c951927fac771020ea01229c8061bcdae55,"MIT-BIH evaluation output (metrics, CIs, confusion matrices, paired comparisons)"
+bootstrap/logs/08a_evaluate_mit_20261106_030810_347964.log,676,ab991b3ac5a9f2677e806334cee8aec06670df86133e3a47f0eb39334984f31c,Evaluation log
+bootstrap/logs/08a_stdout.txt,676,ab991b3ac5a9f2677e806334cee8aec06670df86133e3a47f0eb39334984f31c,Evaluation log
+bootstrap/logs/08b_evaluate_incart_20261106_043819_633723.log,751,ab208ae03969b524b4e893e7662e317cb250272641efd51dedb7941cd1cf2e00,Evaluation log
+bootstrap/logs/08b_stdout.txt,751,ab208ae03969b524b4e893e7662e317cb250272641efd51dedb7941cd1cf2e00,Evaluation log
+bootstrap/per_fold_diagnostics/DIAGNOSTICS_META.json,1926,7fe73e588b3b4e06f109e5aed4a8babc896a5ae813911c882dff7220d29b2308,Descriptive per-fold diagnostics
+bootstrap/per_fold_diagnostics/F_class_focus_fold3.json,6797,d403eceb0ab9ce62ee6e25146b5f44a3aa0792a0b94e6be7ff657337ad377a00,Descriptive per-fold diagnostics
+bootstrap/per_fold_diagnostics/per_fold_confusion_counts.csv,4620,3149086d92e071fe2623286270e4fa9af576ef6864dec0473c33c08056188358,Descriptive per-fold diagnostics
+bootstrap/per_fold_diagnostics/per_fold_diagnostics.json,54111,8fceb270f2857cb383e0f320feb9a1a1aa4f66c0f484bf1697ead838e5020865,Descriptive per-fold diagnostics
+bootstrap/per_fold_diagnostics/per_fold_per_class.csv,7791,0d2dad0dc85570072e58aeaa3c03e1c4dbb406cd1dd734b808ebfa8f252dca9b,Descriptive per-fold diagnostics
+bootstrap/per_fold_diagnostics/per_subject_class_counts.csv,17725,a8dbf4077edb5ed47084b92ecb7745309dd6163957f3c38a3df82eb16e356fb3,Descriptive per-fold diagnostics
+calibration/README.md,546,95a7e0ce8acb6f596e7e20aeb4056d764326323100dc9fa1e7f7a56ecfb49077,Pointer to the calibration code and outputs
+calibration/incart_external_A_reliability_bins.csv,1175,00b776c9a208748a45a3edcecd8cd19d17433121d6e872116e980f3f6e330b41,"Reliability bins, INCART, Model A"
+calibration/incart_external_B_reliability_bins.csv,1147,a82bba22588f3f56c2a39860eb29ee7bd4fcb907c3a37756f3d6aee973795c10,"Reliability bins, INCART, Model B"
+calibration/incart_external_C_reliability_bins.csv,1179,145cc571f41a924a9f5cde5e90e1fdf09b62b596bc4d23e54adac45ad5ee0851,"Reliability bins, INCART, Model C"
+calibration/mit_internal_A_reliability_bins.csv,1182,a8ea14c3214246b963554507b97d32373de9f20b8e0f7e05d5318caf85ea6b01,"Reliability bins, MIT-BIH pooled out-of-fold, Model A"
+calibration/mit_internal_B_reliability_bins.csv,1173,92eb05968cc16e88e95026ff658a8475db01fcfcd63c656638dc62c2c99d990c,"Reliability bins, MIT-BIH pooled out-of-fold, Model B"
+calibration/mit_internal_C_reliability_bins.csv,1196,e5d534ed4ba451de0e3f7f5e9933ebfe5f4e9e730cf9ddc4bf19ed88a3c7fd32,"Reliability bins, MIT-BIH pooled out-of-fold, Model C"
+checkpoints/A_fold0/ckpt_lr0.0001.pt,1458188,262f5b25be1efa04ea5a2952eb0dfbd765d6f027003da1242b90f6262eeccb12,Model checkpoint (PyTorch state_dict; weights trained on MIT-BIH folds)
+checkpoints/A_fold0/ckpt_lr0.0005.pt,1458188,38759e90c18d70f39e4117b10f42ec75e54913f109fe962016d2a3f7f23460b8,Model checkpoint (PyTorch state_dict; weights trained on MIT-BIH folds)
+checkpoints/A_fold0/ckpt_lr0.001.pt,1458174,3c4640e1a0d39eb47b05db43f3e646c2be54f15ed2dc2a7cba9597ade210aed2,Model checkpoint (PyTorch state_dict; weights trained on MIT-BIH folds)
+checkpoints/A_fold1/ckpt_lr0.0001.pt,1458188,333c659d9879fe1e9adcf0c1a3d93be68f26f39ddb698c0e4b635a8fda3b0646,Model checkpoint (PyTorch state_dict; weights trained on MIT-BIH folds)
+checkpoints/A_fold1/ckpt_lr0.0005.pt,1458188,5da23f4c9cc11b57f30b8ccc40f4d87cb487537747fbc7685e480c1fc4182ddd,Model checkpoint (PyTorch state_dict; weights trained on MIT-BIH folds)
+checkpoints/A_fold1/ckpt_lr0.001.pt,1458174,12e2fcab0ac7687d82c4218a52fc265ef393b3ae4b9af04ece25bee16ddc347f,Model checkpoint (PyTorch state_dict; weights trained on MIT-BIH folds)
+checkpoints/A_fold2/ckpt_lr0.0001.pt,1458188,97b340376b350bb453a8020801a1aeb01feeadddf15afb2f5c1e00dd7def7ee0,Model checkpoint (PyTorch state_dict; weights trained on MIT-BIH folds)
+checkpoints/A_fold2/ckpt_lr0.0005.pt,1458188,2e4dad05395d9a09555b462876de2b809b97c152a2fa789cdb1bb7dac58ff327,Model checkpoint (PyTorch state_dict; weights trained on MIT-BIH folds)
+checkpoints/A_fold2/ckpt_lr0.001.pt,1458174,0e16dfe97632cd2066d922ad19493cb55071d46fa5a94f7fdbac85ac89c30672,Model checkpoint (PyTorch state_dict; weights trained on MIT-BIH folds)
+checkpoints/A_fold3/ckpt_lr0.0001.pt,1458188,1dbcc3fb3c5b72cc431a1eb29801197ebd5e945ba8fb0aa1c65e70cf3579f3b7,Model checkpoint (PyTorch state_dict; weights trained on MIT-BIH folds)
+checkpoints/A_fold3/ckpt_lr0.0005.pt,1458188,92bfa6a71a5125c82e038af50c50942db6d125fb652289cb2964c7366c05eebe,Model checkpoint (PyTorch state_dict; weights trained on MIT-BIH folds)
+checkpoints/A_fold3/ckpt_lr0.001.pt,1458174,5ad001f9438529626131d963c0619d1ec29b16584d1aaffb400ae971491de9be,Model checkpoint (PyTorch state_dict; weights trained on MIT-BIH folds)
+checkpoints/A_fold4/ckpt_lr0.0001.pt,1458188,30c5646e430cb242cb54e430b06406cebc3a38ad497e1867b486fe252bea2c57,Model checkpoint (PyTorch state_dict; weights trained on MIT-BIH folds)
+checkpoints/A_fold4/ckpt_lr0.0005.pt,1458188,88729203fd4bfba7dc2cfe3b5afabe2ebe152efbd169fd6d0c843449d6d7cd52,Model checkpoint (PyTorch state_dict; weights trained on MIT-BIH folds)
+checkpoints/A_fold4/ckpt_lr0.001.pt,1458174,ecb17ed0af54b2fdb34755943de39ea72199d6f787a69c36e9d3641f50f05528,Model checkpoint (PyTorch state_dict; weights trained on MIT-BIH folds)
+checkpoints/B_fold0/ckpt_lr0.0001.pt,1817821,c7e50d757facb4005f2e456923e16ce5b3a67d0c08e3bfb44582b3eb2c59e50f,Model checkpoint (PyTorch state_dict; weights trained on MIT-BIH folds)
+checkpoints/B_fold0/ckpt_lr0.0005.pt,1817821,9c7f02da80d5f8cfc19542b14ff51e7fb2531af1d6ff5ca450dfadf74206847d,Model checkpoint (PyTorch state_dict; weights trained on MIT-BIH folds)
+checkpoints/B_fold0/ckpt_lr0.001.pt,1817780,db875f1885ca6eab5c96208574c3ac2082f6703a77790f91a920404ba6c0c7b0,Model checkpoint (PyTorch state_dict; weights trained on MIT-BIH folds)
+checkpoints/B_fold1/ckpt_lr0.0001.pt,1817821,5cd81bb99f37d30661a4939f438121ba4ff73a19ba35288a6fdcbf3213acb5a1,Model checkpoint (PyTorch state_dict; weights trained on MIT-BIH folds)
+checkpoints/B_fold1/ckpt_lr0.0005.pt,1817821,ad8a0e5a894a6791ad8b09c3a36cbf846d433f50b852db5d334ac51dc0fe8f1f,Model checkpoint (PyTorch state_dict; weights trained on MIT-BIH folds)
+checkpoints/B_fold1/ckpt_lr0.001.pt,1817780,db3bcad3f1939b61dbe594d5fac277b22a8de1a29295b0c37409bed8439e489a,Model checkpoint (PyTorch state_dict; weights trained on MIT-BIH folds)
+checkpoints/B_fold2/ckpt_lr0.0001.pt,1817821,6c5f9429a4431a2be5c94f646d43e14fd2bc6763d6556816d82d505e99fd5ee7,Model checkpoint (PyTorch state_dict; weights trained on MIT-BIH folds)
+checkpoints/B_fold2/ckpt_lr0.0005.pt,1817821,30eb8eb87c41ca591db4acded442be806e49f53eb4449324967be4c273ca5fbe,Model checkpoint (PyTorch state_dict; weights trained on MIT-BIH folds)
+checkpoints/B_fold2/ckpt_lr0.001.pt,1817780,63b57a5840998b44d7d31438e9b1dcbea6e583628b7ecd527a6990f28ee8dd30,Model checkpoint (PyTorch state_dict; weights trained on MIT-BIH folds)
+checkpoints/B_fold3/ckpt_lr0.0001.pt,1817821,e8e2f0439fa3175b6dee14becc45e48fc73be61d9b4e28aead791805b92dbc8c,Model checkpoint (PyTorch state_dict; weights trained on MIT-BIH folds)
+checkpoints/B_fold3/ckpt_lr0.0005.pt,1817821,8840f1a32e458219e27cb00ef871a0b531f25034d656d6a69dd787959c509f5c,Model checkpoint (PyTorch state_dict; weights trained on MIT-BIH folds)
+checkpoints/B_fold3/ckpt_lr0.001.pt,1817780,e85fb4bd4811bbbf9995271ca6912762023d0d0ca96b08da100781f2343ce936,Model checkpoint (PyTorch state_dict; weights trained on MIT-BIH folds)
+checkpoints/B_fold4/ckpt_lr0.0001.pt,1817821,8a7b751b6952038d37a71985a64805f9913ae697501f47c0c0b015dc9937aa72,Model checkpoint (PyTorch state_dict; weights trained on MIT-BIH folds)
+checkpoints/B_fold4/ckpt_lr0.0005.pt,1817821,8bb02c3d4c18df3a03be31d0bc88b9c6ba8f94d804e1a1e05aa01d02d7c51bc1,Model checkpoint (PyTorch state_dict; weights trained on MIT-BIH folds)
+checkpoints/B_fold4/ckpt_lr0.001.pt,1817780,cc59aa7c4014157459df80ffce0df05b6f4d7ae7343881e3381acd6bf6a1fd14,Model checkpoint (PyTorch state_dict; weights trained on MIT-BIH folds)
+checkpoints/CHECKPOINT_HASHES.csv,7695,40db258d266162e7e359496cab88dac518b265edb2b2d567059eaf139fffbbc9,All 45 checkpoint hashes: locked manifest vs recomputed now
+checkpoints/C_fold0/ckpt_lr0.0001.pt,2593826,15bc051f49e93ff6800b732ffe69fdb52907b9e2e44430b3b5fddc75f31b71d1,Model checkpoint (PyTorch state_dict; weights trained on MIT-BIH folds)
+checkpoints/C_fold0/ckpt_lr0.0005.pt,2593826,5b87bf7a517d63c2f6229dd278ca2531525e53bf2c25c34306f8284218d7e6a1,Model checkpoint (PyTorch state_dict; weights trained on MIT-BIH folds)
+checkpoints/C_fold0/ckpt_lr0.001.pt,2593704,3ec56605e28005b0af70eb30ce6227518dcb8c2c0f8f444bf864d09a7db6ff47,Model checkpoint (PyTorch state_dict; weights trained on MIT-BIH folds)
+checkpoints/C_fold1/ckpt_lr0.0001.pt,2593826,40f560ea277aa21482d6ac4d50c47f6518c355b56f42442a772cd6a424101afc,Model checkpoint (PyTorch state_dict; weights trained on MIT-BIH folds)
+checkpoints/C_fold1/ckpt_lr0.0005.pt,2593826,cf160d41097705a35d51200cf77f0472fc583bb9638cd5e6c6a6957f8ab0d931,Model checkpoint (PyTorch state_dict; weights trained on MIT-BIH folds)
+checkpoints/C_fold1/ckpt_lr0.001.pt,2593704,3b10ead6bcbd0e4ae4f9c744229b7b343223b567fae3de4d8947e9fb1b888b7b,Model checkpoint (PyTorch state_dict; weights trained on MIT-BIH folds)
+checkpoints/C_fold2/ckpt_lr0.0001.pt,2593826,6ea2090b1d04579ef0ac0f209a8aff7c5b266d301ff1337ad9af95f9cc8f304b,Model checkpoint (PyTorch state_dict; weights trained on MIT-BIH folds)
+checkpoints/C_fold2/ckpt_lr0.0005.pt,2593826,1d04dc155085b99417aa3d29da5181bc4f19aa4f1123338d4db34aa27187050f,Model checkpoint (PyTorch state_dict; weights trained on MIT-BIH folds)
+checkpoints/C_fold2/ckpt_lr0.001.pt,2593704,2903871496276159f45fb951cd07effcc2345ede82d4684bcd638e800de88e7a,Model checkpoint (PyTorch state_dict; weights trained on MIT-BIH folds)
+checkpoints/C_fold3/ckpt_lr0.0001.pt,2593826,da24a8ef04a259b96bd6abba06de62b450320d11bf07e861b4690675f71cf205,Model checkpoint (PyTorch state_dict; weights trained on MIT-BIH folds)
+checkpoints/C_fold3/ckpt_lr0.0005.pt,2593826,73ceb7dc61ce459ea7ac3294715ed74f5619d120724a618883786cc669937039,Model checkpoint (PyTorch state_dict; weights trained on MIT-BIH folds)
+checkpoints/C_fold3/ckpt_lr0.001.pt,2593704,f07f31008e88efe516ac6daa6e2b9ef66cb54701881624f894da8cbc2e5869b9,Model checkpoint (PyTorch state_dict; weights trained on MIT-BIH folds)
+checkpoints/C_fold4/ckpt_lr0.0001.pt,2593826,0d395ecf1d2b3142d2f566e0c818e7495d375e4ec56f6e9932ed6981a4c46e9d,Model checkpoint (PyTorch state_dict; weights trained on MIT-BIH folds)
+checkpoints/C_fold4/ckpt_lr0.0005.pt,2593826,567aba5348b47cc54b0adef00b8f4bf7310b8bbe5d5955cc748bffd25bec8fe9,Model checkpoint (PyTorch state_dict; weights trained on MIT-BIH folds)
+checkpoints/C_fold4/ckpt_lr0.001.pt,2593704,584bacf2722c998d2d8f80955380be75a508ac2fcd8624d6d4b3ddfb08b20ca7,Model checkpoint (PyTorch state_dict; weights trained on MIT-BIH folds)
+data_access/DATA_ACCESS.md,1232,1b751150c05238719bc4164b50c9980d01a42d2fa1a27783c6c86ef7ad19f25e,Dataset access instructions and citations
+environment/README.md,588,2181c3ede56b26cb7f55878b9235fc1e4228728412cd594cf2cd256c58ef5e1a,Environment notes
+environment/environment_at_training.json,1787,5ff7190ea8a954917e99202cfc289e16ea71d136d2d59959eeed3cfdf65826fa,Software/hardware environment recorded at training time (from the locked manifest; user path redacted)
+environment/requirements_relevant.txt,502,d7550ef0c2f2b468f2fe835701f32066e8f11eaa1ef9fa9c9ffb3dccb8cfe867,Relevant installed package versions (pip metadata)
+figure_table_generation/architecture/architecture_verification.json,641,e8786cf0f9e74b65cb73b1d323323a3e1eca7029f9960db4dd835e93d6739360,Programmatic parameter counts and source hashes for the three architectures
+figure_table_generation/architecture/make_architecture_figures.py,9483,44930a458d9c89137400764279c0d1a7a59c02f62b355bf3c9919d10d13af6c1,"Generates Figures 2-4 from the evaluated model objects (shape tracing, programmatic parameter counts, assertions); set R2_ROOT to the reconstructed original layout"
+figure_table_generation/check_manuscript_tables.py,5414,69f1a094e9815a1bb3029b6173446f35d99794598d6c29d0634945ce572466ec,Compares the manuscript tables and in-text numbers with the regenerated/locked values
+figure_table_generation/figures/Figure_1_beat_extraction.png,187458,b564ffb597e0a9da234811c56dcc4f83872d35d01daeca08d27d207a00ee7fa4,Final manuscript figure (PNG)
+figure_table_generation/figures/Figure_2_ModelA_architecture.png,128654,a14b612eb95dbcb296fc4b9e87062e7dd3fa14e83bcba0c58eabf463e0cb7059,Final manuscript figure (PNG)
+figure_table_generation/figures/Figure_3_ModelB_architecture.png,172239,fe314c87611cfa7a3cfe12683b9b16a5a6f8110131a25c50b459a8f6384d27cc,Final manuscript figure (PNG)
+figure_table_generation/figures/Figure_4_ModelC_architecture.png,217352,3f08421e2c6d58d33fc31f53a45dfbbfe716ae6b509e1515c34fa5b687acaa5f,Final manuscript figure (PNG)
+figure_table_generation/figures/Figure_5_IG_examples.png,247313,f836580d1382e95a810f95bd2d184297894e44b67ceaf6455e4580fad4d43402,Final manuscript figure (PNG)
+figure_table_generation/generate_tables.py,5444,5086518c39d30a5ef273cc829c4d0eca2ef0428f30f5a1ba78c1f9a54456c139,"Regenerates Tables 2, 4, 5, 7, 8, 9, 10 from the locked result files"
+figure_table_generation/ig_figure/figure5_provenance.json,1040,8022edf512a2fd99dcba50356943b21269212d9c7ec0d59ad6ea02183a0906fb,"Provenance of Figure 5 (checkpoint hash, beat indices, probabilities, IG sums)"
+figure_table_generation/ig_figure/make_figure5_ig.py,4445,872e03f5687a8202df761bb3571407649b1ffac56821fbfe1aabae3761247fc4,"Generates Figure 5 (Integrated Gradients, locked Model B fold-0 checkpoint) and its provenance JSON; set R2_ROOT to the reconstructed original layout"
+figure_table_generation/make_figure1_beat_extraction.py,3553,506f75291b70a7ac4945cecea92fc3da9c82482c35a65f0712634fda90f87740,Generates Figure 1 from the locked preprocessing (set MITBIH_DIR to the PhysioNet MIT-BIH folder)
+figure_table_generation/qa_manuscript.py,5345,e23d16fe5a50c68fdcb1e5c5f9208b1c850128f28b634bc36a0ac937ac436ff4,Cross-reference / numbering / residual-term check of the manuscript DOCX
+figure_table_generation/tables_generated/Table_10_INCART_ensembles.csv,352,0b319b528ffa32c96eb9f5dc46cbcf90753b47ea2b26ba241e31df06ca1b0434,Table regenerated from the locked result files by generate_tables.py (numbers as printed in the manuscript table)
+figure_table_generation/tables_generated/Table_2_class_distribution.csv,334,7176a215859a84e08dd32900beb061941dd6def74490c45ee4b594fdb519704a,Table regenerated from the locked result files by generate_tables.py (numbers as printed in the manuscript table)
+figure_table_generation/tables_generated/Table_4_parameters.csv,67,6e5e5acaf05d718d45d7877606b9dc3a740a8feb65ce0c5b04680b35177c4f28,Table regenerated from the locked result files by generate_tables.py (numbers as printed in the manuscript table)
+figure_table_generation/tables_generated/Table_5_calibration.csv,286,858d77bd688d920436ff8279cbe65237b0abde36074a8cfe57272306b6755eb9,Table regenerated from the locked result files by generate_tables.py (numbers as printed in the manuscript table)
+figure_table_generation/tables_generated/Table_7_ModelB_MITBIH.csv,655,ad58a35b91c68974e8af1b5c4aab4b2d5e5e0cf0271b3ed20d053681fd577ca0,Table regenerated from the locked result files by generate_tables.py (numbers as printed in the manuscript table)
+figure_table_generation/tables_generated/Table_8_ModelsAC_MITBIH.csv,1228,c5f3b78de3699a482a833e8f7e886e3b7f51648a561cd3def1da3858e33286d0,Table regenerated from the locked result files by generate_tables.py (numbers as printed in the manuscript table)
+figure_table_generation/tables_generated/Table_9_ModelB_INCART.csv,658,d69e3792856e943793b58c2f9b84e8c27aa90e72a06407da413f26da7a2b59ea,Table regenerated from the locked result files by generate_tables.py (numbers as printed in the manuscript table)
+fold_assignments/02_design_splits.py,4388,e1b77289022a244170e9ee702d48ca5182a8ac3516ee433ece54d74417c8b390,Script that designed the patient-grouped fold assignment (seed 20261102)
+fold_assignments/folds_LOCKED.json,990,ec15d8ce2f51ff42491dfff58844b9e965a1fd7ea99a0a47cf675efe8b912a3a,Locked patient/record-to-fold assignment (5 folds; records 201+202 are one patient)
+fold_assignments/per_subject_class_counts.csv,17725,a8dbf4077edb5ed47084b92ecb7745309dd6163957f3c38a3df82eb16e356fb3,Per-patient class counts (actual/predicted) per model and fold
+fold_assignments/proposed_fold_class_support.csv,1619,5599c6a74da74f1ac813ce274d8c2a0eee42c208532e6bc03cb92e461f98f989,Class support per fold of the proposed (then locked) assignment
+fold_assignments/proposed_folds.json,958,6dbab065795a4d8fd26177b5f762ee42484ae1603e9b93100add5a6a3e256e2b,Fold assignment as proposed before locking
+legacy_demo_notice/README_clinical_ai_PUBLIC.md,958,0167ea9514a9ec2c24885a71324890d193a2c0d4a4bf81592c604940b9be2003,release addition
+manifests/BACKUP_SHA256.txt,14589,59ae2ccee98d74f2e7f346b419a15e3392f1b0735cd9d660f1502f8b33879440,SHA-256 list of the pre-scoring backup
+manifests/REDACTION_NOTE.md,1415,4a17026b56204338b835f33fdcbacf142383da569e7c9554fe25c03d89cade57,Documents the single redaction applied to two manifests
+manifests/final_results_manifest.json,24687,aef68eb22758154a04d042751733d420ca4909714a46106d35856a800a296e5d,Final results manifest: SHA-256 of 153 locked files
+manifests/manifest_post_training.json,146472,c55fbdad2a96c29a3f2adc42e49126d678c3d4231d79caf701f3e8c3134e712f,Post-training manifest with checkpoint hashes (REDACTED COPY: user-profile path replaced)
+manifests/manifest_pre_resume.json,39239,8ffe0bc35dc95e56c72b456c71464d5471d9050b5d0f67e8094bae19df573e9b,Pre-resume manifest (REDACTED COPY: user-profile path replaced)
+manifests/processed_data_hashes.json,484,8b1535a2f3fd37fd0c2a8a9d76db783a1d59fefafdb1adbcdd3309016fdb537c,SHA-256 of the processed (not redistributed) beat arrays
+predictions/incart/SCORED.json,8907,3072a9697b01c041c237de06a179df61155206487922e001b63abbb09acf9c5b,"INCART logits per beat for each fold model (and incart_labels.npz: labels, patient, record)"
+predictions/incart/_STARTED.json,211,77f25c7a905d89f2494f3abc1c7ea30f0cf40c9ca1044e30bfe390763ee10648,"INCART logits per beat for each fold model (and incart_labels.npz: labels, patient, record)"
+predictions/incart/incart_A_fold0.npz,6467602,e02c1abae0afbb7351dc11fd106c541d9aacbd3018792b8bd8e5c6bec9a1f744,"INCART logits per beat for each fold model (and incart_labels.npz: labels, patient, record)"
+predictions/incart/incart_A_fold1.npz,6478884,6ddb552ef99f9e7c91f3d3c7d56ec8a3866c00e5add391617eecaad7d3828de6,"INCART logits per beat for each fold model (and incart_labels.npz: labels, patient, record)"
+predictions/incart/incart_A_fold2.npz,6444980,e9e77c66ac576e0dd1d47297427216d35598420a46c3bdaf685734e771bf1f93,"INCART logits per beat for each fold model (and incart_labels.npz: labels, patient, record)"
+predictions/incart/incart_A_fold3.npz,6439304,b9bb78e598790c990488c74d0ceaa5c6010f44e9a46f09b05ed2f55dd19b6df1,"INCART logits per beat for each fold model (and incart_labels.npz: labels, patient, record)"
+predictions/incart/incart_A_fold4.npz,6454269,0256ff190cac5308f58c2337db61772c01b4cc09ef5f77b3393623eb45c4bed6,"INCART logits per beat for each fold model (and incart_labels.npz: labels, patient, record)"
+predictions/incart/incart_B_fold0.npz,6409435,d306b20306fc3e0982edbe90e96a07674f1a40e3f115c65048674fdc9ddfb2ac,"INCART logits per beat for each fold model (and incart_labels.npz: labels, patient, record)"
+predictions/incart/incart_B_fold1.npz,6434023,0c25cec8622c1924ebfe65c48a4d270acb1662cece5f158ea0827fd9419cece7,"INCART logits per beat for each fold model (and incart_labels.npz: labels, patient, record)"
+predictions/incart/incart_B_fold2.npz,6429587,01da0d79ed47478bedd5f37840bdc1bf966bef8c3cb779d378f26e72b26b7d8f,"INCART logits per beat for each fold model (and incart_labels.npz: labels, patient, record)"
+predictions/incart/incart_B_fold3.npz,6477040,b911a38181464a588765a9679b8e23413cff60ee7e3461e5f9c7b510905289c8,"INCART logits per beat for each fold model (and incart_labels.npz: labels, patient, record)"
+predictions/incart/incart_B_fold4.npz,6455663,7d4eed68b221d0ff2f20ff6234c1210b1753beba45172182d3c0c076ba28a547,"INCART logits per beat for each fold model (and incart_labels.npz: labels, patient, record)"
+predictions/incart/incart_C_fold0.npz,6467844,5b586195c0d21c59dded1c57694cf8f815d699f148db8706d4106c7c844a45c8,"INCART logits per beat for each fold model (and incart_labels.npz: labels, patient, record)"
+predictions/incart/incart_C_fold1.npz,6450967,b59b02ee58ae43fc52742f98a1942e46882778b5eac72b7e97b798f12128a4c3,"INCART logits per beat for each fold model (and incart_labels.npz: labels, patient, record)"
+predictions/incart/incart_C_fold2.npz,6431984,d2ffade2a0903dc1ef1fa6c7f09e6c27e20114b7c25b72300ec46b7b898457a8,"INCART logits per beat for each fold model (and incart_labels.npz: labels, patient, record)"
+predictions/incart/incart_C_fold3.npz,6420405,8eb24d6f65eb254ac096598b0dcbf971e972e1b2786935c6e7f32b162d6d8a12,"INCART logits per beat for each fold model (and incart_labels.npz: labels, patient, record)"
+predictions/incart/incart_C_fold4.npz,6450445,7fa24c61dce1d6bee7436053b13a3f4c303447dfced1dcdb445a78aa5dde762a,"INCART logits per beat for each fold model (and incart_labels.npz: labels, patient, record)"
+predictions/incart/incart_labels.npz,24344,81ceda062e575ab792c3e2aa17f6673eff9c28b5678c2a4a19a742f5f084631a,"INCART logits per beat for each fold model (and incart_labels.npz: labels, patient, record)"
+predictions/mitbih/SCORED.json,5519,637d27ffa42c58b347310a831f4321b0e89e3e5590252ddef7851349897d993e,"MIT-BIH out-of-fold logits per beat (arrays: logits, y, subject, record, beat_index, T), one file per model and test fold"
+predictions/mitbih/_STARTED.json,234,e4f7cf54023c269f7961f734455640c639951b80f5aa6310019dc4dddec0c986,"MIT-BIH out-of-fold logits per beat (arrays: logits, y, subject, record, beat_index, T), one file per model and test fold"
+predictions/mitbih/mit_A_fold0.npz,460224,8ceac524936353100df2b1291e78656209f3e63fb121c300b7df892655f8cd9a,"MIT-BIH out-of-fold logits per beat (arrays: logits, y, subject, record, beat_index, T), one file per model and test fold"
+predictions/mitbih/mit_A_fold1.npz,443538,1702bcd3ff9b1234be36b292799632ff1186f18b537338eda75bf41b51f96d12,"MIT-BIH out-of-fold logits per beat (arrays: logits, y, subject, record, beat_index, T), one file per model and test fold"
+predictions/mitbih/mit_A_fold2.npz,449325,6d0a4b91df256ab6833fd40ec506f37da69fefc142b7e2cbe37dc4788560c7a5,"MIT-BIH out-of-fold logits per beat (arrays: logits, y, subject, record, beat_index, T), one file per model and test fold"
+predictions/mitbih/mit_A_fold3.npz,432704,b45948a23b3dceaa7c956a8a1218a89edc4c9b6cd874c20a723d0e4180920ff2,"MIT-BIH out-of-fold logits per beat (arrays: logits, y, subject, record, beat_index, T), one file per model and test fold"
+predictions/mitbih/mit_A_fold4.npz,415219,777b6ea54587bf26ef4ddc6205114a1fe5140359651e0e99de53c6d641f06625,"MIT-BIH out-of-fold logits per beat (arrays: logits, y, subject, record, beat_index, T), one file per model and test fold"
+predictions/mitbih/mit_B_fold0.npz,455206,0c6797ae30d4117c6a0325f966bb54bbbd08d2f68e131a2b26b9d49577d82cf9,"MIT-BIH out-of-fold logits per beat (arrays: logits, y, subject, record, beat_index, T), one file per model and test fold"
+predictions/mitbih/mit_B_fold1.npz,435982,05d480586d52afde92edc9136a2762fda3c8d9b536563077b31a48d188574aba,"MIT-BIH out-of-fold logits per beat (arrays: logits, y, subject, record, beat_index, T), one file per model and test fold"
+predictions/mitbih/mit_B_fold2.npz,445718,ca523af148375407e08715c4f9bde77882bbdf4f6056efe54ba3ce9c063b48cd,"MIT-BIH out-of-fold logits per beat (arrays: logits, y, subject, record, beat_index, T), one file per model and test fold"
+predictions/mitbih/mit_B_fold3.npz,433239,71c300760314bf829adfe388d63c7f7cb906a7698c0f33193e6117ff98ba45ba,"MIT-BIH out-of-fold logits per beat (arrays: logits, y, subject, record, beat_index, T), one file per model and test fold"
+predictions/mitbih/mit_B_fold4.npz,413199,9d31888d630884a102a04ba340db84b1873f4a66f05e87ffcb1c5e2b8ae35d6d,"MIT-BIH out-of-fold logits per beat (arrays: logits, y, subject, record, beat_index, T), one file per model and test fold"
+predictions/mitbih/mit_C_fold0.npz,460677,bbd145f1cae7ec306c995ed0318a28a0e68164d23e3754add0e71a0a670e31d3,"MIT-BIH out-of-fold logits per beat (arrays: logits, y, subject, record, beat_index, T), one file per model and test fold"
+predictions/mitbih/mit_C_fold1.npz,443040,e435f003d8ccf161a58c7c0bfdb38b0ece2d6a96a0cf9e6e7618749c7bf0ef7f,"MIT-BIH out-of-fold logits per beat (arrays: logits, y, subject, record, beat_index, T), one file per model and test fold"
+predictions/mitbih/mit_C_fold2.npz,447077,51ec7c728ca4c1e0b37a5697506725b8a45ede0d007438322a6a60a740d524fa,"MIT-BIH out-of-fold logits per beat (arrays: logits, y, subject, record, beat_index, T), one file per model and test fold"
+predictions/mitbih/mit_C_fold3.npz,432917,4a97b235aad9ecdb14124c2327876f17311c49568cf83ff50a297a0b89d80801,"MIT-BIH out-of-fold logits per beat (arrays: logits, y, subject, record, beat_index, T), one file per model and test fold"
+predictions/mitbih/mit_C_fold4.npz,415813,a6d763876f994d6a16a44d6a8869b2f3faa4494278b6e1e3c91031fad1b9fc13,"MIT-BIH out-of-fold logits per beat (arrays: logits, y, subject, record, beat_index, T), one file per model and test fold"
+preprocessing/01_audit_mitbih.py,5711,882fc8046e5b644d905a54525f603691f37ecb1208f93c0ae7d96f9769dcb4c5,MIT-BIH data audit
+preprocessing/03_audit_incart.py,6594,e780e5e13c7adcc618caa3c2798e284ea1bfe4c97ea134a0f979bac52c49a9d8,INCART data audit
+preprocessing/03b_mitbih_alignment_by_class.py,1297,2df38ca8bd4e65c294ff6c2d967942b53ccfa69548105d674ca1c58f189f63e3,MIT-BIH R-peak alignment audit by class
+preprocessing/04_extract_beats.py,6314,d277bd5f2b30afd45f22da11324112e177fb0187eea6d28e68dc4cc7b0d01c92,"Locked preprocessing: db5 denoising, per-record z-score, R-99..R+200 window, resampling to 186 samples (MIT-BIH and INCART)"
+preprocessing/data_audit/extract_summary.json,610,f44d6d2ac8d50e4462c2539b58aef5c66455e10894ad23ec77d653071b40a547,Data-audit / extraction summary output
+preprocessing/data_audit/incart_records.csv,16426,41257f85bbca5f6b2dced84427afe14cd6b67d2150925e3cc710f0cc29d7cec2,Data-audit / extraction summary output
+preprocessing/data_audit/incart_summary.json,1865,3a6de903538165f6fd459925c2e170f9f99b9a05147595dc44a9b696bb908d6c,Data-audit / extraction summary output
+preprocessing/data_audit/incart_symbol_counts.csv,4055,4e59166c98f8cf895e236718d775f063f7e9347a64fa9e0702bfaca9cff6955d,Data-audit / extraction summary output
+preprocessing/data_audit/mitbih_alignment_by_class.json,549,3933e978765f8d7ecbbad0b7c68eddea6da55fd3193c3fff1ccbe1bbee5d4ce8,Data-audit / extraction summary output
+preprocessing/data_audit/mitbih_label_mapping.csv,656,e290e3f909978043f8659a8636478639aaf4d876714b5aad9493402911ed0b8e,Data-audit / extraction summary output
+preprocessing/data_audit/mitbih_records.csv,9279,d320d94c52e2afe813f351e86f3c29ce47a7f7abcc037cc724e737228f8ecbef,Data-audit / extraction summary output
+preprocessing/data_audit/mitbih_summary.json,693,7f72f9c2d72823b7f99ac36641ee9208ebee2b10a6c4638edb8834e1a229c6a7,Data-audit / extraction summary output
+preprocessing/data_audit/mitbih_symbol_counts.csv,5013,a362508bacba898efe93c36ec1e02fc90fcdd7ce3af8c94ee2f71dd1b780e874,Data-audit / extraction summary output
+preprocessing/logs/01_audit_mitbih.log,6916,cf23af6b3a1bfaee12af1b05ab62cc897ae2e6b4f397acf47b5d66c3bd31ef1c,Run log
+preprocessing/logs/03_audit_incart.log,26433,4e0152d1b03917955e718ce99943aa840242d8e9534add58847a8b7e587b9bcb,Run log
+preprocessing/logs/03b_mitbih_alignment.log,551,eb7407157279d0fb6fd485d3a93f8a9c8841de3b75f996a21e4b7492d856433a,Run log
+preprocessing/logs/04_extract_beats.log,612,1e5c06c323bfc1f8ee9f660b7d1dac0283ca3a78ac59f217d3bc76ca2b166a95,Run log
+protocol/experimental_protocol_LOCKED.md,21752,49fc7b15bbfc69fd0c63b169aade1ca37d6b2ec0cc23af962772716662fa1d6e,Locked experimental protocol (human-readable)
+protocol/locked_protocol.json,4372,ed0717f26f2d7f86d5a49c69b03de44588d35112ab8c9177186b4c4e5b61478c,Machine-readable locked protocol (SHA-256 recorded in locked_protocol.sha256)
+protocol/locked_protocol.sha256,88,a35392b29ed5165960cd279bcb9ae553fa199a4ed1c7af4401344d81c0d553ac,SHA-256 of locked_protocol.json
+protocol/protocol_addendum_A1.json,2188,58e240f86d66d64a726a1db6266795cc333dc7ab9cb19f2cde2b6316a1d42c12,Machine-readable addendum A1
+protocol/protocol_addendum_A1.md,9766,ca37926185b82a2462d32a42cfee0ced0b6cd03af493e0b70aada90ecd273e62,Protocol addendum A1 (separation of MIT-BIH and INCART scoring/evaluation stages)
+protocol/protocol_addendum_A1.sha256,93,5529ebfe7af1bc50cef34e72fdf54be2cec1098b3553f41c062e672ef5326854,SHA-256 of protocol_addendum_A1.json
+reconstruct_original_layout.py,706,d0f708c080fab89c208fc9d9cd31c36e45b81bfc81b158eee747b5d9f16aa8e3,Rebuilds the original folder layout from the archive
+scoring/07_score.py,2364,dfb163c4d6296c74002765aadbf2bf4d26ffbfce077f99c7003b683b378bdd90,Scoring driver (guarded)
+scoring/07a_score_mit.py,7158,e19b6c648045df3091876dd61fc39f4b8861e755ac04c7e73801fbae2a92712f,Scores MIT-BIH out-of-fold test folds with the selected fold models
+scoring/07b_score_incart.py,7612,f6e9b405d883eaff4e5a10c6aceccce099c558718a1c0390abc3e8b2ba49928b,Scores INCART with the five fold models of each architecture
+scoring/a1common.py,11758,9eabce2a66fac5d658eabb480339a7d16f7102f3a45385bbbddf52aa0bc1e154,Addendum A1 shared helpers
+scoring/logs/07a_score_mit_20261106_030420_286722.log,1503,52e580cab139fa7c5426d7a5692e1166a54d13fa63eee2beec4570f0935d54c4,Scoring log
+scoring/logs/07b_score_incart_20261106_033944_440188.log,1384,1ca6d2ec11939c7efb48866d0ebc7ea91aabf3fa2bb33036a850a0f86887f4f6,Scoring log
+scoring/logs/07b_stdout.txt,1384,1ca6d2ec11939c7efb48866d0ebc7ea91aabf3fa2bb33036a850a0f86887f4f6,Scoring log
+scoring/pre_scoring_checks.py,6409,fdc99690fe781fabf7aee8a3ef3284076a0692cb4b27200e97ea0a2f447ea4d5,Pre-scoring integrity checks
+scoring/pre_scoring_preparation.json,2648,05d2b794c68184f04a587ee7dd0daf425f9768f159a00dc466825472e7d0977b,Pre-scoring preparation record
+training/05_lock_protocol.py,3525,851e6184f7972dc688e0f1a2736e48a284ec7b7a0c15b31eaa5ea410e258217c,Protocol locking script
+training/06_train.py,3194,cb7ebee5b7f49abdf4e94c3c3a27d0aabcff6632a2172bd59e199c45833e0eaa,Training driver (one model x fold; learning-rate grid; checkpoint selection on validation fold)
+training/ecgtransform/LICENSE,1095,c88d70568d5c71b2af301ee4e45d2fc6dc89e98a70dfc7bce006b9dfeb7a42e5,"Upstream ECGTransForm licence (MIT, E. Eldele 2023)"
+training/ecgtransform/configs/data_configs.py,1338,04dd867e88b4053ae43cb5790ef80b14b4966cb30ca0b9831b35f597a73334a2,"Upstream ECGTransForm data configuration (mit(): 186 samples, 5 classes)"
+training/ecgtransform/configs/hparams.py,557,0292a448cbbffe42097a98f8fd14d54ec89ccbfbfb39038278a4ed348beb77bb,Upstream ECGTransForm hyper-parameters (feature_dim)
+training/ecgtransform/models.py,5184,a168b2b8bdfeba73e362618d58d925ea593c0109ab3f7841bac1ebbf5b53fca0,"ECGTransForm model (Model C), upstream code (MIT licence), imported read-only by r2common.build"
+training/interrupted_attempt/C_fold2_attempt1/README.md,977,63eb93b7c7481421776ca14033171c14df1f3a42d10579fbd1b475396c079c7d,"Documentation of an interrupted, unused training attempt (Model C fold 2); the run was repeated from scratch under the locked protocol"
+training/interrupted_attempt/C_fold2_attempt1/config.json,1808,c19640017a14b2e3a1b3326439ae9d1772b179b8f31a3faf780696fba2d988b3,"Documentation of an interrupted, unused training attempt (Model C fold 2); the run was repeated from scratch under the locked protocol"
+training/interrupted_attempt/C_fold2_attempt1/history_lr0.0001.json,4194,edf984f66b11532b17800b21e616c0d3af530974168eac8fdf3aa1cad146bdfe,"Documentation of an interrupted, unused training attempt (Model C fold 2); the run was repeated from scratch under the locked protocol"
+training/interrupted_attempt/C_fold2_attempt1/run_training_attempt1.log,2893,ce79eb209958bed7895478966346600ffc937f1820fe210696cde0cea2d8f583,"Documentation of an interrupted, unused training attempt (Model C fold 2); the run was repeated from scratch under the locked protocol"
+training/interrupted_attempt/C_fold2_attempt1/train_C_fold2_attempt1.log,2129,db05a8ac95760699eeced64e33f7d2eb28c5d179282e8d934607fa627dfa491d,"Documentation of an interrupted, unused training attempt (Model C fold 2); the run was repeated from scratch under the locked protocol"
+training/logs/00_smoke_test.log,555,b754423627518914d57793d1403df33b749f5f6b392dea3ccb7e950434c180cf,Training / locking log
+training/logs/02_design_splits.log,1661,ae5813b7393d2a37b95ccfd9853c8ca970f0359a9bdb2d5aa4e4fbea29b8c704,Training / locking log
+training/logs/05_lock_protocol.log,2136,83ff377bf8d6ae9555ca66f4fabf168197f5384f3801bca442b8515775792af6,Training / locking log
+training/logs/run_training.log,2893,ce79eb209958bed7895478966346600ffc937f1820fe210696cde0cea2d8f583,Training / locking log
+training/logs/run_training_resume.log,2512,df92ebe66ad1c3f9127543306c6a6698694b2ace86d17773f13ab4028288d277,Training / locking log
+training/logs/train_A_fold0.log,642,53357764f50b2d380a8200c6c2b450b5dd2e881aef16641316e7d0cf184f02d6,Training / locking log
+training/logs/train_A_fold1.log,644,701b123c3fbb2fc47d2f486b7a559c636df033f93c60845e1ec145125c672167,Training / locking log
+training/logs/train_A_fold2.log,625,ad94a05d8e991ce7d283e643b6f5f437cb5b4cc6d788736b39acce062eaa0bb8,Training / locking log
+training/logs/train_A_fold3.log,644,20eacd8e02d49fc76af350bd119c4b7435d3c6d34a5c35c5f9d6468e20344246,Training / locking log
+training/logs/train_A_fold4.log,645,93c4199b81d5665fedefabd682d7dffadff07eb34fdbbd96e089c09296dd2b47,Training / locking log
+training/logs/train_B_fold0.log,651,49434018e45d6f26c82d4b569094ad842ad797bdb07a6166edfc2888ef57e8ad,Training / locking log
+training/logs/train_B_fold1.log,649,67c9013535a2570b312374bc788ac1ba07a382f1dd6cf7f0a11be3e702b2f2f3,Training / locking log
+training/logs/train_B_fold2.log,630,ff55fc6f44db3cb31773f58215317412af46cca9147d0f53dbccb8cb6d1b44ba,Training / locking log
+training/logs/train_B_fold3.log,652,443e98fc38d741c5163a510e1312110b0458ca0395adeb71376ba998bd2454b4,Training / locking log
+training/logs/train_B_fold4.log,646,1d995443a3aeb78a8fdaf85a793e35d74cb0cb5e31c624fa1e0dcaa75c50fa9f,Training / locking log
+training/logs/train_C_fold0.log,652,95ffb6b95bd8b7476bbdfa8a1bb271a1d46baec0ec044c4e14c39e147f02e589,Training / locking log
+training/logs/train_C_fold1.log,648,22b497dc52bc25b59f9d3243634d6ed0e6e966730f5e58435419846f79d77ec9,Training / locking log
+training/logs/train_C_fold2.log,632,aadcd001ff0f78c09759c44313be2a924e10eb658988b5ac59dbbf33c3af9f54,Training / locking log
+training/logs/train_C_fold3.log,655,44c65eae41208a10ab75c16cbc37bbdaefc7f752f82a9e138eb1bedce533a4a5,Training / locking log
+training/logs/train_C_fold4.log,651,2086dceeb2ee60160c7138d10e5847bed62098c2913d85e7e2794e765ec373ee,Training / locking log
+training/r2common.py,7914,19c422dddb0636415870d022e6ea0da7b9cbf2ff40bd4b92883d3aab3d9c5989,"Shared code: data access, locked partitions, SMOTE (training partition only), Models A/B/C, training loop, temperature fitting (fit_T)"
+training/run_after_training.sh,995,3c1e9167ed2f78c73a7c88157b319749d475dde3d5c398caa507ec1faed90d3a,Post-training launcher
+training/run_metadata/A_fold0/config.json,1802,a66486b21b9729c3df5206eebf75e8c4d8e2aa8222c2549f82dfce657f7a5fdf,Per-run configuration / history / selection / validation logits
+training/run_metadata/A_fold0/history_lr0.0001.json,4304,762cc6e44f36233495234587530cdfdb4bdc23864abb3534023c300adae26d78,Per-run configuration / history / selection / validation logits
+training/run_metadata/A_fold0/history_lr0.0005.json,4302,4ee924fe6dd9b238289d551a8f1e1baa19af994467725febb19dfbbc0a2be6d1,Per-run configuration / history / selection / validation logits
+training/run_metadata/A_fold0/history_lr0.001.json,4339,9782fed272be473182c50d2fb56b9d71e4d97ebf2bfbce5f87f92814b4fbeddb,Per-run configuration / history / selection / validation logits
+training/run_metadata/A_fold0/selected.json,850,283762d7ec888a5c282ba8920df214ec6a077dcec4bdf303b6d09f5c5df75dfb,Per-run configuration / history / selection / validation logits
+training/run_metadata/A_fold0/val_logits.npz,408855,32ebdf49141c9888fd5a9f6d223d3da5c71b8b4979012a1e10a218d421b4e52f,Per-run configuration / history / selection / validation logits
+training/run_metadata/A_fold1/config.json,1801,11ae92c4d377a289b2c519a20525dd4097900cb93e3394d75d4b58e6663bcc03,Per-run configuration / history / selection / validation logits
+training/run_metadata/A_fold1/history_lr0.0001.json,4286,f559598483738f9605ee29d0c335cb0472ffa7fb1dbfa9a0895c09a122f4c85e,Per-run configuration / history / selection / validation logits
+training/run_metadata/A_fold1/history_lr0.0005.json,4277,8ea5a2d197e16c85c1f8cbc779fda15c4b51d08a9739b80d374be16c1f93ddb8,Per-run configuration / history / selection / validation logits
+training/run_metadata/A_fold1/history_lr0.001.json,4294,10a896c34470021e48d6d8e544f8b55fc23dd0d7777177ec65df56144a9cb246,Per-run configuration / history / selection / validation logits
+training/run_metadata/A_fold1/selected.json,852,3855eaffc630b37eef1bb3bcd86dc33d0f5c7875cc159cb8e21788cd5874fac5,Per-run configuration / history / selection / validation logits
+training/run_metadata/A_fold1/val_logits.npz,415440,494994f7d4d46c7ce9a06970cacc37ba3895954201dcd653f3a3ff837ed399a6,Per-run configuration / history / selection / validation logits
+training/run_metadata/A_fold2/config.json,1808,a75a3e7e85617eec620d743f43c1e6c95c4503ac578f7ff78f0020cd8aafc5cf,Per-run configuration / history / selection / validation logits
+training/run_metadata/A_fold2/history_lr0.0001.json,4245,ac11bf365ea0877b0c4c5d6ab0a434a00154d41994595e16e86bc4041dcea726,Per-run configuration / history / selection / validation logits
+training/run_metadata/A_fold2/history_lr0.0005.json,4113,5326aa030e24d839986bf8e62cae3f1986b36b77ec6b7bde5027c6be7c285be6,Per-run configuration / history / selection / validation logits
+training/run_metadata/A_fold2/history_lr0.001.json,4022,c8d5498c3ea6537628fa83417cd22b9c2092348e59a19650423500b2721458e2,Per-run configuration / history / selection / validation logits
+training/run_metadata/A_fold2/selected.json,815,5060284e5b1f9a907a5ebc71bfa8f9fcc058a2a8baf48ef3f18ae96bf4b5438e,Per-run configuration / history / selection / validation logits
+training/run_metadata/A_fold2/val_logits.npz,401933,c7b65fa7ed4972b9ad12285cfab609071047a187818a4b7781e56db81e1b010e,Per-run configuration / history / selection / validation logits
+training/run_metadata/A_fold3/config.json,1807,49390735780ac46755026a570f412087d9b9de0f229a1fbdbd2acda25f2f16fd,Per-run configuration / history / selection / validation logits
+training/run_metadata/A_fold3/history_lr0.0001.json,4264,a969a0269f3fe814efe839c9673964547f43cf4c2c53cd342c6bf59ac7a9d29b,Per-run configuration / history / selection / validation logits
+training/run_metadata/A_fold3/history_lr0.0005.json,4323,990a4a22d209c95c989329f7254241c99c2f8d44ab78b84482c0c6e996912a53,Per-run configuration / history / selection / validation logits
+training/run_metadata/A_fold3/history_lr0.001.json,4290,e1cc0a22e8070f6b6ef8810a4ca280d31ece0e81d7aa193cc2b482c69aaa70c1,Per-run configuration / history / selection / validation logits
+training/run_metadata/A_fold3/selected.json,852,c6f52a69f88da24758a3c85df842934832fa861b6e3ae7f4c9b09ef22e186504,Per-run configuration / history / selection / validation logits
+training/run_metadata/A_fold3/val_logits.npz,381061,e0e866ad52ccdd983ae0a358de3c3d2f0ec79ecc62281c87acad2c26a0ec872a,Per-run configuration / history / selection / validation logits
+training/run_metadata/A_fold4/config.json,1811,4a286596e7363734e71e334a476e87dedf53ce252936bcde4a0d654ddc191268,Per-run configuration / history / selection / validation logits
+training/run_metadata/A_fold4/history_lr0.0001.json,4316,69cd4f2401db3b9936f72c5ec142a18599efc4b7bfe4e006b6573d2cf8ce785e,Per-run configuration / history / selection / validation logits
+training/run_metadata/A_fold4/history_lr0.0005.json,4355,7a357d2dd4d1bc70c4449e6e2f5d9bc7a418affd3d806b0c3c704c47304c8232,Per-run configuration / history / selection / validation logits
+training/run_metadata/A_fold4/history_lr0.001.json,4331,4617aaf101f87d7681a50b8a27d152aba04a3dd149a9be1d8d4a8c50bb0e0f26,Per-run configuration / history / selection / validation logits
+training/run_metadata/A_fold4/selected.json,853,1637f40efad9b8ced99aa77cdbfde8868bcc203392878e686c14cba6d8326f3d,Per-run configuration / history / selection / validation logits
+training/run_metadata/A_fold4/val_logits.npz,422659,3ef3cb57a31ded5351130bc9ce48731f3da43a32c27ee2d4185aad8e437fd385,Per-run configuration / history / selection / validation logits
+training/run_metadata/B_fold0/config.json,1802,4a0260a5f5b19c86da4d1eaf763e75983f0420cbe58b96bd71b025d4bc4d506c,Per-run configuration / history / selection / validation logits
+training/run_metadata/B_fold0/history_lr0.0001.json,5735,45bff2ff646b49bd2fff323931599cc8039f8a3390fcda95180502c26b9a1171,Per-run configuration / history / selection / validation logits
+training/run_metadata/B_fold0/history_lr0.0005.json,5670,6e76729c89c4b02b524247f6bb22af164ecef609df1359c48735a7b747472049,Per-run configuration / history / selection / validation logits
+training/run_metadata/B_fold0/history_lr0.001.json,5698,6f82301e8287fc1997e839bed59ae7807953ddeb0f9cec98467921d5903ede7e,Per-run configuration / history / selection / validation logits
+training/run_metadata/B_fold0/selected.json,859,a92efde9e4479af0d3ca61261f86cfd8a4cb2d58635f354e100d33139a31207c,Per-run configuration / history / selection / validation logits
+training/run_metadata/B_fold0/val_logits.npz,403019,6ff5ab1bccbf5ec34558c2b668072842bbbcdebaac4d788cb93d9ab801729ebf,Per-run configuration / history / selection / validation logits
+training/run_metadata/B_fold1/config.json,1801,2bbd34b8b05ebc23b438e4141d3c59a1d8c6ed99c6c6acdde7c6fe7342b211d8,Per-run configuration / history / selection / validation logits
+training/run_metadata/B_fold1/history_lr0.0001.json,5748,2497bc8a20a8e968b6d768fac97cc39b65c273c9da9526167308fd488702dfeb,Per-run configuration / history / selection / validation logits
+training/run_metadata/B_fold1/history_lr0.0005.json,5764,5836b356ba897bbe367352455e4bd04456a2536ce73fc5d97192b492dba01c18,Per-run configuration / history / selection / validation logits
+training/run_metadata/B_fold1/history_lr0.001.json,5744,f63bf8262a7e84ead4088dad93a0dfc6a6611f2b7106e28ab73e4bcf66ab0745,Per-run configuration / history / selection / validation logits
+training/run_metadata/B_fold1/selected.json,857,c65815115c48e3bca6cb01d68deda4a77db0e7cbf42d3c49903acd29118ddeb3,Per-run configuration / history / selection / validation logits
+training/run_metadata/B_fold1/val_logits.npz,410556,5ea1f2e1f0abaff77dc73dc36de1a82873cb99668426717f98b7641ee55d2129,Per-run configuration / history / selection / validation logits
+training/run_metadata/B_fold2/config.json,1808,597fdfad80c116dd846ed5e38b048ca00847351eb4b50b13835e53e736fba6bd,Per-run configuration / history / selection / validation logits
+training/run_metadata/B_fold2/history_lr0.0001.json,5522,d46c5a059e5d4c7fc098fd2a675e1bd7a69141fc26555dcb5d9f02de0cdd76f9,Per-run configuration / history / selection / validation logits
+training/run_metadata/B_fold2/history_lr0.0005.json,5247,1b6488ed9bbf49a6a7f3785b50d2b93865cad47e37f75ea30d0aa8fb76478386,Per-run configuration / history / selection / validation logits
+training/run_metadata/B_fold2/history_lr0.001.json,5308,0c6372350e753ec2db3bcb05a7a51a99629bef179be2dca17328969e18b60e7a,Per-run configuration / history / selection / validation logits
+training/run_metadata/B_fold2/selected.json,820,09b7f518a8efc119604336bfc06df6b214064aa7c3caa0da981ec1a0956c7eee,Per-run configuration / history / selection / validation logits
+training/run_metadata/B_fold2/val_logits.npz,396338,e58a28419e8da8a1b735c281e9613f0636358e270f761ff1ab3fb764b0443c22,Per-run configuration / history / selection / validation logits
+training/run_metadata/B_fold3/config.json,1807,e13c96a7dcbe6eb3445f03dc80ca5b0bd8bac21e0b57f36d2842602369ab9eb3,Per-run configuration / history / selection / validation logits
+training/run_metadata/B_fold3/history_lr0.0001.json,5747,7504da9f572f75765631873291012074141987fa5757f2d8ac08ff531d7520e5,Per-run configuration / history / selection / validation logits
+training/run_metadata/B_fold3/history_lr0.0005.json,5731,dd19486044ea026d3cfb9a42d00cff7241590cce2639ad4c5a16d2acd1cbd874,Per-run configuration / history / selection / validation logits
+training/run_metadata/B_fold3/history_lr0.001.json,5726,8d333b49ef46b2fd596a6dd5779e38d2f131ca6ab9d8b5e60aa91c08633327ff,Per-run configuration / history / selection / validation logits
+training/run_metadata/B_fold3/selected.json,860,bf756a0cbf574b623bedb855dc5cebd830e1c59b3da80411f0833a7d482d190c,Per-run configuration / history / selection / validation logits
+training/run_metadata/B_fold3/val_logits.npz,382474,87437e62141d51ac71386bcb68fc418a840276f40fd0f27f12b3fd0ec7e101a5,Per-run configuration / history / selection / validation logits
+training/run_metadata/B_fold4/config.json,1811,eaa8f0e113dbda4114d6c0d7db13b35e73e04754f9002a600019ef810f645c98,Per-run configuration / history / selection / validation logits
+training/run_metadata/B_fold4/history_lr0.0001.json,5780,d03d9f98402133931494ca5e5bcb5167139c44fb3c0b6a3c881165820aa66111,Per-run configuration / history / selection / validation logits
+training/run_metadata/B_fold4/history_lr0.0005.json,5767,a9308f3e4104a4b424dba52f61491d791348c37fcdb6644635db7fd8ec160b6f,Per-run configuration / history / selection / validation logits
+training/run_metadata/B_fold4/history_lr0.001.json,5765,5798100f28f864c61423a2160c70f32228734a2f3bc10f093dbb61726556aa68,Per-run configuration / history / selection / validation logits
+training/run_metadata/B_fold4/selected.json,854,cf3ee29b4085d445dd1bef7e5e5ddfa8838e46fbaac2b6d59c8a3512b9f80c3f,Per-run configuration / history / selection / validation logits
+training/run_metadata/B_fold4/val_logits.npz,423344,eb4a2a699ebbb99842926597250785d82cb62978ad6af95c04c1bbbff39493aa,Per-run configuration / history / selection / validation logits
+training/run_metadata/C_fold0/config.json,1802,5ae638eb305248d7c119bb981bf20b6e0f0b4c3147729d3b9f488f884a0e12d3,Per-run configuration / history / selection / validation logits
+training/run_metadata/C_fold0/history_lr0.0001.json,4323,5c56440b49ab7fe32f258ce040966a0c7dfcb229b85cd5a959f49bc7769d829a,Per-run configuration / history / selection / validation logits
+training/run_metadata/C_fold0/history_lr0.0005.json,4311,dd5736deb5cf0e5b80795706f2406924f2ee9480f5a9d8d9be61b4220a759879,Per-run configuration / history / selection / validation logits
+training/run_metadata/C_fold0/history_lr0.001.json,4293,a941e50df0aa0f85a51bb1459c71d2193b4fc1ee8f0889112cabd453fd5f82a5,Per-run configuration / history / selection / validation logits
+training/run_metadata/C_fold0/selected.json,860,b692e298f1eac2a01ac68a31c96c3666c40885c407425f01439ad232535ef1cb,Per-run configuration / history / selection / validation logits
+training/run_metadata/C_fold0/val_logits.npz,409251,9640acbe79edacc7164c2ce7f55bb09c6e2b228783deaa1c7aeb2ccbe731734d,Per-run configuration / history / selection / validation logits
+training/run_metadata/C_fold1/config.json,1801,1ed29bc51028823d534cb56cfdebc2e9db763b915838c576bfbe13e6bbfeae47,Per-run configuration / history / selection / validation logits
+training/run_metadata/C_fold1/history_lr0.0001.json,4314,eddb76d76c00d9b6e46396c1cd72a36f395f0159fedc17b217cd38d26a8b1c2b,Per-run configuration / history / selection / validation logits
+training/run_metadata/C_fold1/history_lr0.0005.json,4295,b66c08a14b9221ee80a2033db7ccee53d5466496efee415a157164fb983dff81,Per-run configuration / history / selection / validation logits
+training/run_metadata/C_fold1/history_lr0.001.json,4292,cc24daecefef13f2684a0ea2752dad7f85fb29a8e5e4e16ad05562a6cb3cd135,Per-run configuration / history / selection / validation logits
+training/run_metadata/C_fold1/selected.json,856,a2d881538c47a82ac0312310ddf3feac6377da9187e8cc2a15cf58523ea038b4,Per-run configuration / history / selection / validation logits
+training/run_metadata/C_fold1/val_logits.npz,413145,17d33217a63c8627be176f0cf0943cc9182aebfb200597873a7099f1647a7cb1,Per-run configuration / history / selection / validation logits
+training/run_metadata/C_fold2/config.json,1808,c19640017a14b2e3a1b3326439ae9d1772b179b8f31a3faf780696fba2d988b3,Per-run configuration / history / selection / validation logits
+training/run_metadata/C_fold2/history_lr0.0001.json,4194,edf984f66b11532b17800b21e616c0d3af530974168eac8fdf3aa1cad146bdfe,Per-run configuration / history / selection / validation logits
+training/run_metadata/C_fold2/history_lr0.0005.json,4000,4e0d4f7c96dadc4f3d4939d5e5b3b2278123a4f8117e808872ae7f688cfe0604,Per-run configuration / history / selection / validation logits
+training/run_metadata/C_fold2/history_lr0.001.json,4020,f64f06de0c7b91d13e86deb0cf4c9a85efa00952f67a20c5e271cc38660fc136,Per-run configuration / history / selection / validation logits
+training/run_metadata/C_fold2/selected.json,822,e727e87c07b1f710448dffb2a08ac38b3917af0719e06661b31281800476b882,Per-run configuration / history / selection / validation logits
+training/run_metadata/C_fold2/val_logits.npz,399984,de392dd35ceaf7860a8606c4d9a597b52ca879d7e379508359fbbe41b439d7fb,Per-run configuration / history / selection / validation logits
+training/run_metadata/C_fold3/config.json,1807,24338b04c55d9a228a0a63d28e8f394ddc0e0abd5db582e27577ec8837e27e35,Per-run configuration / history / selection / validation logits
+training/run_metadata/C_fold3/history_lr0.0001.json,4293,c853e0362fdcaf80e1cb6c163a3b1224e1e90912b7bf8faad40958840926b141,Per-run configuration / history / selection / validation logits
+training/run_metadata/C_fold3/history_lr0.0005.json,4322,699e778d51287e9d52cc3f0b732cc34445cfd4ca166e4ffcee8ed0520b5573b9,Per-run configuration / history / selection / validation logits
+training/run_metadata/C_fold3/history_lr0.001.json,4302,eafb498e9148e092c73af9588fdb5f6464aae8f6165244e4f6afca3a03024f99,Per-run configuration / history / selection / validation logits
+training/run_metadata/C_fold3/selected.json,863,d9b3ee0d26e5ee4736f8832a52dfae07be88bc34f371144a1bc945430ec1981c,Per-run configuration / history / selection / validation logits
+training/run_metadata/C_fold3/val_logits.npz,382984,d2b7ea0cc74929f19f05f36a19e4e0f8d4e794ea3257e0bda24d9a18b5336896,Per-run configuration / history / selection / validation logits
+training/run_metadata/C_fold4/config.json,1811,2f5948804775fb7428c5bd8e0965670439164a2ca66d737d7cdd344e741a6934,Per-run configuration / history / selection / validation logits
+training/run_metadata/C_fold4/history_lr0.0001.json,4320,1226ce3bfe0e0885b02a1877f1f42dd5954c0c0a80715d61097a7168fe8c0208,Per-run configuration / history / selection / validation logits
+training/run_metadata/C_fold4/history_lr0.0005.json,4221,e3490a48dc52c85b1569c373892cf4943f887043f343f93f57e9e4ff7bd87fd9,Per-run configuration / history / selection / validation logits
+training/run_metadata/C_fold4/history_lr0.001.json,4258,3208f4d0576b22e48bcea301e0401efb33bb965812fc20a078197452b78a5593,Per-run configuration / history / selection / validation logits
+training/run_metadata/C_fold4/selected.json,859,599c6c207909b4cea7696a564539cda3993c790c3b37c29981801ec6ecbc3c00,Per-run configuration / history / selection / validation logits
+training/run_metadata/C_fold4/val_logits.npz,423678,e96087e46d9835e75ec9b39f43d90b114321308d41fa94b6926d585eff761c50,Per-run configuration / history / selection / validation logits
+training/run_training.sh,540,f49871abbf0b148c820863ac046a9ceb4ff27044524a4397acdfcdd44f55e812,Training launcher
+training/run_training_resume.sh,2693,d8cd66026d214312b039b02b16bbfea305d393bda018710bbe5ebce1ddb47564,Resume launcher
+training/verify_lock.py,1180,66296e5752d68b17dd6cb3604209153ad329be0d35182bcc05d55d1f24cf6ba5,Lock verification used before every scoring/evaluation stage
+verification/audits/incart_scoring_evaluation_audit.md,21600,9518a3dfa7d687e3be53a3f47363de344da291abf8591d77d27d569e042fcc9a,Stage audit reports
+verification/audits/mit_scoring_evaluation_audit.md,21715,8592c88534581c56174339e205f8c0a3b287d4d720c17c75bf63d36e3c4f691b,Stage audit reports
+verification/audits/post_training_audit.md,18569,cfc5e38d714853a4d344d22118bb9fd628471098c90574fd9dfa4e0ee3b3e046,Stage audit reports
+verification/final/final_results_report.md,3564,baaacde75e0a178a86ecf7ede9a4fb9587591a9d590ce38824f669ff526c14d6,Final locked results summary / report
+verification/final/final_results_summary.json,56948,d03b45632c7c75bfa67a1db5942f1fe8b7c45f8198136b78c53ff1c976070195,Final locked results summary / report
+verification/final/plots/confusion_incart_external.png,75817,f8233152dd920d7ef5bdd2b6aea02dcc5358e763b066f19f04111fbddaab9d48,"Final result plots (confusion matrices, reliability diagrams)"
+verification/final/plots/confusion_mit_internal.png,78637,f8db0bb1c5b2648c168509f227a7bf6600a6b0c0fa9c03e5ec901361210ec60f,"Final result plots (confusion matrices, reliability diagrams)"
+verification/final/plots/reliability_incart_external.png,81197,5ace541cbb4bc0ee52fe6971cb39d203795087ee3f5f0c77dbedb6c898f2c730,"Final result plots (confusion matrices, reliability diagrams)"
+verification/final/plots/reliability_mit_internal.png,84482,8e9abc83ad454e16f42fb89ff595a06dbaae9ce5113b13e9e131bce67adf44c3,"Final result plots (confusion matrices, reliability diagrams)"
+verification/verification_incart/verification_incart.json,27678,d02f5ef2f50fc54e9123901925875320288088f89de709ccbc34d477e18839fd,Independent recomputation of all INCART metrics
+verification/verification_mit/discrepancy_B_minus_C_resolution.json,1003,ae1c1c5c1480567beaf88a2cc975f20b720e53bddfb890b04d34aaa48235c12b,Independent recomputation of all MIT-BIH metrics
+verification/verification_mit/verification_mit.json,16645,3e6722f3cbeeacf3a47dfbf127665339d02fac1ecbbd5cfb623fe20a9da5dc37,Independent recomputation of all MIT-BIH metrics
+verification/verify_independent.py,15965,327d7b32132cb98977630f9ff740e393290d434fc057bc2095d534b586624b91,Independent recomputation script (own implementations of all metrics and the bootstrap)
+verification/verify_independent_mit.txt,5324,23d2e9d1541c81049f0b59df9e64517e6686b8cbc48713d56db5423e31f79186,Console output of the independent MIT-BIH verification
+verify_archive.py,2258,e1b3fee995dee76511f1b96a75b858e23c0c8b507e7bd8c820af779f2119b6f4,"Verifies file hashes, the protocol lock, frozen-file hashes and checkpoint hashes"
+FILE_MANIFEST.csv,,,this file (not self-hashed)

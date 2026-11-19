@@ -1,0 +1,103 @@
+{
+ "records": 75,
+ "patients": 32,
+ "patients_with_class": {
+  "N": 32,
+  "S": 19,
+  "V": 31,
+  "F": 14,
+  "Q": 4
+ },
+ "fs": [
+  257
+ ],
+ "duration_min": [
+  30.0
+ ],
+ "lead_sets": {
+  "I,II,III,AVR,AVL,AVF,V1,V2,V3,V4,V5,V6": 75
+ },
+ "lead_II_in_all": true,
+ "class_totals": {
+  "N": 153676,
+  "S": 1960,
+  "V": 20013,
+  "F": 219,
+  "Q": 6
+ },
+ "total_mapped": 175874,
+ "records_with_class": {
+  "N": 75,
+  "S": 36,
+  "V": 70,
+  "F": 22,
+  "Q": 5
+ },
+ "unmapped_symbol_totals": {
+  "n": 32,
+  "B": 1,
+  "+": 12
+ },
+ "paced_symbols_present": 0,
+ "r_alignment_ms": {
+  "MITBIH_ch0_360Hz_reference": {
+   "p05": -8.33,
+   "median": 0.0,
+   "p95": 8.33,
+   "mean": 1.71,
+   "frac_abs_le_14ms": 0.937,
+   "n": 109491
+  },
+  "INCART_leadII_resampled_360Hz": {
+   "p05": -19.44,
+   "median": 0.0,
+   "p95": 22.22,
+   "mean": 1.36,
+   "frac_abs_le_14ms": 0.816,
+   "n": 175856
+  },
+  "INCART_by_class": {
+   "N": {
+    "p05": -19.44,
+    "median": 0.0,
+    "p95": 19.44,
+    "mean": -0.41,
+    "frac_abs_le_14ms": 0.853,
+    "n": 153661
+   },
+   "V": {
+    "p05": -16.67,
+    "median": 13.89,
+    "p95": 75.0,
+    "mean": 15.38,
+    "frac_abs_le_14ms": 0.514,
+    "n": 20011
+   },
+   "S": {
+    "p05": -11.11,
+    "median": -5.56,
+    "p95": 2.78,
+    "mean": -3.51,
+    "frac_abs_le_14ms": 0.974,
+    "n": 1959
+   },
+   "F": {
+    "p05": -19.44,
+    "median": 5.56,
+    "p95": 27.78,
+    "mean": 5.19,
+    "frac_abs_le_14ms": 0.658,
+    "n": 219
+   },
+   "Q": {
+    "p05": -75.0,
+    "median": -23.61,
+    "p95": 41.67,
+    "mean": -23.61,
+    "frac_abs_le_14ms": 0.333,
+    "n": 6
+   }
+  }
+ },
+ "alignment_note": "offset = argmax |x - median| within +-75 ms of the annotation, minus annotation position; positive = peak after annotation; 14 ms = 5 samples at 360 Hz"
+}

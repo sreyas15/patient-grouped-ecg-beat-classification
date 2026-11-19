@@ -1,0 +1,1170 @@
+{
+ "mode": "incart",
+ "created": "2026-11-06T06:01:36",
+ "seconds": 1699,
+ "n_checks": 51,
+ "n_failed": 0,
+ "checks": [
+  {
+   "check": "INCART: labels, patients, records present; counts",
+   "ok": true,
+   "detail": "(175505, 32, 75, [153343, 1957, 19980, 219, 6])"
+  },
+  {
+   "check": "[incart_external] A: point metrics (accuracy, macro-F1, balanced acc., macro AUROC/AUPRC, ECE, signed gap, MCE, class-wise ECE, Brier, NLL, raw-score calibration) == independent",
+   "ok": true,
+   "detail": "max abs diff 4.64e-11 over 17 metrics"
+  },
+  {
+   "check": "[incart_external] A: 5x5 confusion matrix == independent",
+   "ok": true,
+   "detail": "175505"
+  },
+  {
+   "check": "[incart_external] A: row-normalised confusion matrix",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "check": "[incart_external] A: reliability bins (n, confidence, accuracy, signed gap)",
+   "ok": true,
+   "detail": "12"
+  },
+  {
+   "check": "[incart_external] A: per-class sensitivity, specificity, PPV, F1, AUROC, AUPRC, beat and cluster support, primary-macro flags == independent",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "check": "[incart_external] B: point metrics (accuracy, macro-F1, balanced acc., macro AUROC/AUPRC, ECE, signed gap, MCE, class-wise ECE, Brier, NLL, raw-score calibration) == independent",
+   "ok": true,
+   "detail": "max abs diff 4.88e-11 over 17 metrics"
+  },
+  {
+   "check": "[incart_external] B: 5x5 confusion matrix == independent",
+   "ok": true,
+   "detail": "175505"
+  },
+  {
+   "check": "[incart_external] B: row-normalised confusion matrix",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "check": "[incart_external] B: reliability bins (n, confidence, accuracy, signed gap)",
+   "ok": true,
+   "detail": "12"
+  },
+  {
+   "check": "[incart_external] B: per-class sensitivity, specificity, PPV, F1, AUROC, AUPRC, beat and cluster support, primary-macro flags == independent",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "check": "[incart_external] C: point metrics (accuracy, macro-F1, balanced acc., macro AUROC/AUPRC, ECE, signed gap, MCE, class-wise ECE, Brier, NLL, raw-score calibration) == independent",
+   "ok": true,
+   "detail": "max abs diff 4.65e-11 over 17 metrics"
+  },
+  {
+   "check": "[incart_external] C: 5x5 confusion matrix == independent",
+   "ok": true,
+   "detail": "175505"
+  },
+  {
+   "check": "[incart_external] C: row-normalised confusion matrix",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "check": "[incart_external] C: reliability bins (n, confidence, accuracy, signed gap)",
+   "ok": true,
+   "detail": "12"
+  },
+  {
+   "check": "[incart_external] C: per-class sensitivity, specificity, PPV, F1, AUROC, AUPRC, beat and cluster support, primary-macro flags == independent",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "check": "[incart_external] A: 95% subject-cluster bootstrap CIs (accuracy, macro-F1, balanced acc., macro AUROC, ECE, signed gap, Brier) == independent bootstrap (B=2000)",
+   "ok": true,
+   "detail": "[]"
+  },
+  {
+   "check": "[incart_external] A: per-class sensitivity / PPV / F1 CIs and number of valid resamples == independent",
+   "ok": true,
+   "detail": "[]"
+  },
+  {
+   "check": "[incart_external] B: 95% subject-cluster bootstrap CIs (accuracy, macro-F1, balanced acc., macro AUROC, ECE, signed gap, Brier) == independent bootstrap (B=2000)",
+   "ok": true,
+   "detail": "[]"
+  },
+  {
+   "check": "[incart_external] B: per-class sensitivity / PPV / F1 CIs and number of valid resamples == independent",
+   "ok": true,
+   "detail": "[]"
+  },
+  {
+   "check": "[incart_external] C: 95% subject-cluster bootstrap CIs (accuracy, macro-F1, balanced acc., macro AUROC, ECE, signed gap, Brier) == independent bootstrap (B=2000)",
+   "ok": true,
+   "detail": "[]"
+  },
+  {
+   "check": "[incart_external] C: per-class sensitivity / PPV / F1 CIs and number of valid resamples == independent",
+   "ok": true,
+   "detail": "[]"
+  },
+  {
+   "check": "[incart_external] paired B - A: delta macro-F1 + paired CI, per-class delta-sensitivity CIs, McNemar discordant counts and exact p == independent",
+   "ok": true,
+   "detail": "n01=3187 n10=40406 p=0"
+  },
+  {
+   "check": "[incart_external] paired B - C: delta macro-F1 + paired CI, per-class delta-sensitivity CIs, McNemar discordant counts and exact p == independent",
+   "ok": true,
+   "detail": "n01=18966 n10=31871 p=0"
+  },
+  {
+   "check": "[incart_external] paired C - A: delta macro-F1 + paired CI, per-class delta-sensitivity CIs, McNemar discordant counts and exact p == independent",
+   "ok": true,
+   "detail": "n01=11673 n10=35987 p=0"
+  },
+  {
+   "check": "[incart_external] individual fold-model macro-F1 over N,S,V,F == independent",
+   "ok": true,
+   "detail": "[]"
+  },
+  {
+   "check": "[incart_external_recentred] A: point metrics (accuracy, macro-F1, balanced acc., macro AUROC/AUPRC, ECE, signed gap, MCE, class-wise ECE, Brier, NLL, raw-score calibration) == independent",
+   "ok": true,
+   "detail": "max abs diff 4.90e-11 over 17 metrics"
+  },
+  {
+   "check": "[incart_external_recentred] A: 5x5 confusion matrix == independent",
+   "ok": true,
+   "detail": "175505"
+  },
+  {
+   "check": "[incart_external_recentred] A: row-normalised confusion matrix",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "check": "[incart_external_recentred] A: reliability bins (n, confidence, accuracy, signed gap)",
+   "ok": true,
+   "detail": "12"
+  },
+  {
+   "check": "[incart_external_recentred] A: per-class sensitivity, specificity, PPV, F1, AUROC, AUPRC, beat and cluster support, primary-macro flags == independent",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "check": "[incart_external_recentred] B: point metrics (accuracy, macro-F1, balanced acc., macro AUROC/AUPRC, ECE, signed gap, MCE, class-wise ECE, Brier, NLL, raw-score calibration) == independent",
+   "ok": true,
+   "detail": "max abs diff 4.34e-11 over 17 metrics"
+  },
+  {
+   "check": "[incart_external_recentred] B: 5x5 confusion matrix == independent",
+   "ok": true,
+   "detail": "175505"
+  },
+  {
+   "check": "[incart_external_recentred] B: row-normalised confusion matrix",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "check": "[incart_external_recentred] B: reliability bins (n, confidence, accuracy, signed gap)",
+   "ok": true,
+   "detail": "12"
+  },
+  {
+   "check": "[incart_external_recentred] B: per-class sensitivity, specificity, PPV, F1, AUROC, AUPRC, beat and cluster support, primary-macro flags == independent",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "check": "[incart_external_recentred] C: point metrics (accuracy, macro-F1, balanced acc., macro AUROC/AUPRC, ECE, signed gap, MCE, class-wise ECE, Brier, NLL, raw-score calibration) == independent",
+   "ok": true,
+   "detail": "max abs diff 4.39e-11 over 17 metrics"
+  },
+  {
+   "check": "[incart_external_recentred] C: 5x5 confusion matrix == independent",
+   "ok": true,
+   "detail": "175505"
+  },
+  {
+   "check": "[incart_external_recentred] C: row-normalised confusion matrix",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "check": "[incart_external_recentred] C: reliability bins (n, confidence, accuracy, signed gap)",
+   "ok": true,
+   "detail": "12"
+  },
+  {
+   "check": "[incart_external_recentred] C: per-class sensitivity, specificity, PPV, F1, AUROC, AUPRC, beat and cluster support, primary-macro flags == independent",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "check": "[incart_external_recentred] A: 95% subject-cluster bootstrap CIs (accuracy, macro-F1, balanced acc., macro AUROC, ECE, signed gap, Brier) == independent bootstrap (B=2000)",
+   "ok": true,
+   "detail": "[]"
+  },
+  {
+   "check": "[incart_external_recentred] A: per-class sensitivity / PPV / F1 CIs and number of valid resamples == independent",
+   "ok": true,
+   "detail": "[]"
+  },
+  {
+   "check": "[incart_external_recentred] B: 95% subject-cluster bootstrap CIs (accuracy, macro-F1, balanced acc., macro AUROC, ECE, signed gap, Brier) == independent bootstrap (B=2000)",
+   "ok": true,
+   "detail": "[]"
+  },
+  {
+   "check": "[incart_external_recentred] B: per-class sensitivity / PPV / F1 CIs and number of valid resamples == independent",
+   "ok": true,
+   "detail": "[]"
+  },
+  {
+   "check": "[incart_external_recentred] C: 95% subject-cluster bootstrap CIs (accuracy, macro-F1, balanced acc., macro AUROC, ECE, signed gap, Brier) == independent bootstrap (B=2000)",
+   "ok": true,
+   "detail": "[]"
+  },
+  {
+   "check": "[incart_external_recentred] C: per-class sensitivity / PPV / F1 CIs and number of valid resamples == independent",
+   "ok": true,
+   "detail": "[]"
+  },
+  {
+   "check": "[incart_external_recentred] paired B - A: delta macro-F1 + paired CI, per-class delta-sensitivity CIs, McNemar discordant counts and exact p == independent",
+   "ok": true,
+   "detail": "n01=5445 n10=41900 p=0"
+  },
+  {
+   "check": "[incart_external_recentred] paired B - C: delta macro-F1 + paired CI, per-class delta-sensitivity CIs, McNemar discordant counts and exact p == independent",
+   "ok": true,
+   "detail": "n01=17653 n10=31361 p=0"
+  },
+  {
+   "check": "[incart_external_recentred] paired C - A: delta macro-F1 + paired CI, per-class delta-sensitivity CIs, McNemar discordant counts and exact p == independent",
+   "ok": true,
+   "detail": "n01=11308 n10=34055 p=0"
+  },
+  {
+   "check": "[incart_external_recentred] individual fold-model macro-F1 over N,S,V,F == independent",
+   "ok": true,
+   "detail": "[]"
+  }
+ ],
+ "independent_results": {
+  "incart_external": {
+   "A": {
+    "point": {
+     "accuracy": 0.8173955157972708,
+     "macro_f1": 0.35877618962278585,
+     "balanced_accuracy": 0.43145079145868814,
+     "macro_auroc": 0.8127599423660763,
+     "macro_auprc": 0.41904759141175174,
+     "ece_top": 0.36506428986678274,
+     "signed_gap": -0.36451224243415736,
+     "mce": 0.4279475940158869,
+     "ece_classwise": 0.18668812510316318,
+     "brier": 0.46329736049285636,
+     "nll": 0.9077481627464294,
+     "raw_ece_top": 0.1800168123256379,
+     "raw_signed_gap": -0.18001681519133395,
+     "raw_mce": 0.23885468090159812,
+     "raw_ece_classwise": 0.14624342771338356,
+     "raw_brier": 0.393135274663065,
+     "raw_nll": 0.7558862566947937
+    },
+    "cm": [
+     [
+      136915,
+      8290,
+      2799,
+      4954,
+      385
+     ],
+     [
+      1211,
+      646,
+      81,
+      18,
+      1
+     ],
+     [
+      12020,
+      750,
+      5850,
+      846,
+      514
+     ],
+     [
+      152,
+      2,
+      18,
+      46,
+      1
+     ],
+     [
+      2,
+      1,
+      3,
+      0,
+      0
+     ]
+    ],
+    "per_class": {
+     "sens": [
+      0.8928676235628623,
+      0.3300970873786408,
+      0.2927927927927928,
+      0.2100456621004566,
+      0.0
+     ],
+     "spec": [
+      0.3960382636946124,
+      0.9478933782008435,
+      0.9813470503134545,
+      0.9668085300594457,
+      0.9948660676129208
+     ],
+     "ppv": [
+      0.9109447771124418,
+      0.06667354732170502,
+      0.668495029139527,
+      0.007844474761255117,
+      0.0
+     ],
+     "f1": [
+      0.901815618999944,
+      0.11093937832732269,
+      0.4072256447739376,
+      0.015124116389939175,
+      0.0
+     ],
+     "auroc": [
+      0.7986862215644065,
+      0.8059877193598807,
+      0.8823940635700803,
+      0.763971764969938,
+      0.6741073548377293
+     ],
+     "auprc": [
+      0.9621763944091241,
+      0.13817809841633072,
+      0.5676947663220444,
+      0.008141106499507725,
+      0.00011718368945747164
+     ]
+    },
+    "support": [
+     153343,
+     1957,
+     19980,
+     219,
+     6
+    ],
+    "ci": {
+     "accuracy": [
+      0.7661600615837898,
+      0.8640994369547599
+     ],
+     "macro_f1": [
+      0.3052590633541885,
+      0.4212544502718147
+     ],
+     "balanced_accuracy": [
+      0.36557337398274853,
+      0.48972788427863173
+     ],
+     "macro_auroc": [
+      0.7392871520612067,
+      0.8475876570143749
+     ],
+     "ece_top": [
+      0.3153185734136403,
+      0.4115579835185107
+     ],
+     "signed_gap": [
+      -0.4113871234748571,
+      -0.31372837852035834
+     ],
+     "brier": [
+      0.41909555380818775,
+      0.507794193619886
+     ]
+    }
+   },
+   "B": {
+    "point": {
+     "accuracy": 0.6053274835474772,
+     "macro_f1": 0.292706241861044,
+     "balanced_accuracy": 0.4152805505633408,
+     "macro_auroc": 0.6847925277895237,
+     "macro_auprc": 0.3879725101574288,
+     "ece_top": 0.21754919361098227,
+     "signed_gap": -0.2175491715796275,
+     "mce": 0.37395218026685906,
+     "ece_classwise": 0.21331639094879606,
+     "brier": 0.573593129292117,
+     "nll": 1.122025728225708,
+     "raw_ece_top": 0.09506311956975085,
+     "raw_signed_gap": -0.05703111660826565,
+     "raw_mce": 0.22045174710337978,
+     "raw_ece_classwise": 0.17966179776046226,
+     "raw_brier": 0.5303069146669814,
+     "raw_nll": 1.0073152780532837
+    },
+    "cm": [
+     [
+      101188,
+      19111,
+      420,
+      26266,
+      6358
+     ],
+     [
+      910,
+      938,
+      15,
+      68,
+      26
+     ],
+     [
+      13471,
+      532,
+      4042,
+      1521,
+      414
+     ],
+     [
+      132,
+      10,
+      4,
+      70,
+      3
+     ],
+     [
+      3,
+      1,
+      2,
+      0,
+      0
+     ]
+    ],
+    "per_class": {
+     "sens": [
+      0.6598801379913005,
+      0.4793050587634134,
+      0.2023023023023023,
+      0.319634703196347,
+      0.0
+     ],
+     "spec": [
+      0.3450049634509521,
+      0.886751792011432,
+      0.9971644430155924,
+      0.841088278584713,
+      0.961247642436709
+     ],
+     "ppv": [
+      0.8745419345917168,
+      0.04555167055167055,
+      0.9016283738567923,
+      0.002506714413607878,
+      0.0
+     ],
+     "f1": [
+      0.7521957130166849,
+      0.08319659408399485,
+      0.3304582430609492,
+      0.004974417282546902,
+      0.0
+     ],
+     "auroc": [
+      0.5260264031933549,
+      0.7610175710144157,
+      0.854376442348151,
+      0.5977496946021732,
+      0.27674326729307097
+     ],
+     "auprc": [
+      0.8985008179513078,
+      0.09156387670689953,
+      0.5595514764919606,
+      0.002273869479547456,
+      2.626539861035274e-05
+     ]
+    },
+    "support": [
+     153343,
+     1957,
+     19980,
+     219,
+     6
+    ],
+    "ci": {
+     "accuracy": [
+      0.5450211445388172,
+      0.6638029449293019
+     ],
+     "macro_f1": [
+      0.2441420496590006,
+      0.34889744510433474
+     ],
+     "balanced_accuracy": [
+      0.32694455473135553,
+      0.4588001372796024
+     ],
+     "macro_auroc": [
+      0.6132016651274289,
+      0.7270718973975832
+     ],
+     "ece_top": [
+      0.18264663696800493,
+      0.2601276630523093
+     ],
+     "signed_gap": [
+      -0.25878678749744116,
+      -0.17510220405095195
+     ],
+     "brier": [
+      0.5291720835627108,
+      0.616539066279546
+     ]
+    }
+   },
+   "C": {
+    "point": {
+     "accuracy": 0.6788581521893963,
+     "macro_f1": 0.35339032635698026,
+     "balanced_accuracy": 0.3999085262928711,
+     "macro_auroc": 0.7620156308917062,
+     "macro_auprc": 0.41065188251612755,
+     "ece_top": 0.17291548831425976,
+     "signed_gap": -0.17291544989600027,
+     "mce": 0.28331413146779416,
+     "ece_classwise": 0.17687740052280587,
+     "brier": 0.4584247978456412,
+     "nll": 0.8846135139465332,
+     "raw_ece_top": 0.0571542024408656,
+     "raw_signed_gap": -0.03359968096933952,
+     "raw_mce": 0.1371288781174037,
+     "raw_ece_classwise": 0.15061002902788162,
+     "raw_brier": 0.4466690743582049,
+     "raw_nll": 0.8273631930351257
+    },
+    "cm": [
+     [
+      108577,
+      22398,
+      5101,
+      10349,
+      6918
+     ],
+     [
+      1586,
+      209,
+      107,
+      8,
+      47
+     ],
+     [
+      4995,
+      3185,
+      10297,
+      883,
+      620
+     ],
+     [
+      90,
+      32,
+      33,
+      59,
+      5
+     ],
+     [
+      3,
+      0,
+      2,
+      0,
+      1
+     ]
+    ],
+    "per_class": {
+     "sens": [
+      0.7080662306072009,
+      0.10679611650485436,
+      0.5153653653653654,
+      0.2694063926940639,
+      0.16666666666666666
+     ],
+     "spec": [
+      0.6988538940528833,
+      0.8524039458824072,
+      0.9662883780742646,
+      0.9358762251406273,
+      0.9567518903241614
+     ],
+     "ppv": [
+      0.9420916087495987,
+      0.008093246592317225,
+      0.6626126126126126,
+      0.005221701035489867,
+      0.00013173494928204451
+     ],
+     "f1": [
+      0.8084841805848232,
+      0.015046254634462403,
+      0.5797860360360361,
+      0.01024483417259941,
+      0.00026326181387389757
+     ],
+     "auroc": [
+      0.7862425201975919,
+      0.6649645943575473,
+      0.9039834935401565,
+      0.6928719154715292,
+      0.5839548943298822
+     ],
+     "auprc": [
+      0.9590631861180706,
+      0.019379372293360293,
+      0.6612792002981437,
+      0.0028857713549357987,
+      6.216152671905786e-05
+     ]
+    },
+    "support": [
+     153343,
+     1957,
+     19980,
+     219,
+     6
+    ],
+    "ci": {
+     "accuracy": [
+      0.5998238690638888,
+      0.7468062213252024
+     ],
+     "macro_f1": [
+      0.31002099679309525,
+      0.39255220595262436
+     ],
+     "balanced_accuracy": [
+      0.338430373457944,
+      0.46853426789743796
+     ],
+     "macro_auroc": [
+      0.698777045960522,
+      0.8124815100160089
+     ],
+     "ece_top": [
+      0.12044861053236842,
+      0.2172439853412524
+     ],
+     "signed_gap": [
+      -0.21724396742543503,
+      -0.1193519774457027
+     ],
+     "brier": [
+      0.4006433796391566,
+      0.5184941139411797
+     ]
+    }
+   },
+   "B-A": {
+    "delta_macro_f1": -0.06606994776174185,
+    "ci": [
+     -0.09614787372334908,
+     -0.035092991895792694
+    ],
+    "n01": 3187,
+    "n10": 40406,
+    "mcnemar_p": 0.0,
+    "kind": "pre-specified"
+   },
+   "B-C": {
+    "delta_macro_f1": -0.060684084495936264,
+    "ci": [
+     -0.1041239039413938,
+     -0.009631434146750578
+    ],
+    "n01": 18966,
+    "n10": 31871,
+    "mcnemar_p": 0.0,
+    "kind": "pre-specified"
+   },
+   "C-A": {
+    "delta_macro_f1": -0.0053858632658055905,
+    "ci": [
+     -0.05700319499880624,
+     0.03712598498053054
+    ],
+    "n01": 11673,
+    "n10": 35987,
+    "mcnemar_p": 0.0,
+    "kind": "exploratory"
+   }
+  },
+  "incart_external_recentred": {
+   "A": {
+    "point": {
+     "accuracy": 0.8201475741431868,
+     "macro_f1": 0.3746472541104368,
+     "balanced_accuracy": 0.4297835799795027,
+     "macro_auroc": 0.7888316460107255,
+     "macro_auprc": 0.42066350171934336,
+     "ece_top": 0.367945314876164,
+     "signed_gap": -0.36794531364895466,
+     "mce": 0.43596023870400546,
+     "ece_classwise": 0.18652828276120018,
+     "brier": 0.4657157072342527,
+     "nll": 0.9077951908111572,
+     "raw_ece_top": 0.1850475323199886,
+     "raw_signed_gap": -0.18504751829478694,
+     "raw_mce": 0.2804492246624035,
+     "raw_ece_classwise": 0.14896205922015654,
+     "raw_brier": 0.3927083347515688,
+     "raw_nll": 0.7489045858383179
+    },
+    "cm": [
+     [
+      136387,
+      7675,
+      2094,
+      6521,
+      666
+     ],
+     [
+      1243,
+      637,
+      45,
+      22,
+      10
+     ],
+     [
+      11613,
+      949,
+      6881,
+      354,
+      183
+     ],
+     [
+      167,
+      3,
+      14,
+      35,
+      0
+     ],
+     [
+      4,
+      1,
+      1,
+      0,
+      0
+     ]
+    ],
+    "per_class": {
+     "sens": [
+      0.8894243623771545,
+      0.3254982115482882,
+      0.3443943943943944,
+      0.1598173515981735,
+      0.0
+     ],
+     "spec": [
+      0.41219204042956414,
+      0.9502846474750501,
+      0.9861501366339817,
+      0.960652875871433,
+      0.9951053852158702
+     ],
+     "ppv": [
+      0.9128127216994392,
+      0.06875337290879655,
+      0.7615938018815717,
+      0.005049047893825736,
+      0.0
+     ],
+     "f1": [
+      0.9009667819406323,
+      0.11352700053466405,
+      0.47430639324487334,
+      0.009788840721577402,
+      0.0
+     ],
+     "auroc": [
+      0.7684307814466621,
+      0.7939283810678758,
+      0.893136572354383,
+      0.6998308491739814,
+      0.570582548428576
+     ],
+     "auprc": [
+      0.9560282070543376,
+      0.0935911019298037,
+      0.6280201006191304,
+      0.0050145972741018315,
+      5.227755311165588e-05
+     ]
+    },
+    "support": [
+     153343,
+     1957,
+     19980,
+     219,
+     6
+    ],
+    "ci": {
+     "accuracy": [
+      0.777578339347242,
+      0.8607193269123204
+     ],
+     "macro_f1": [
+      0.3262809120744244,
+      0.42317585115219974
+     ],
+     "balanced_accuracy": [
+      0.3612841660556278,
+      0.4937124877796974
+     ],
+     "macro_auroc": [
+      0.7140473772786475,
+      0.8253000675111721
+     ],
+     "ece_top": [
+      0.3267159792607263,
+      0.4099688132744654
+     ],
+     "signed_gap": [
+      -0.4099688286215216,
+      -0.32671598586814826
+     ],
+     "brier": [
+      0.42159936460646696,
+      0.5107788497436125
+     ]
+    }
+   },
+   "B": {
+    "point": {
+     "accuracy": 0.6124326942252357,
+     "macro_f1": 0.3140327890194291,
+     "balanced_accuracy": 0.42917004092008604,
+     "macro_auroc": 0.691458822703244,
+     "macro_auprc": 0.4014531851155911,
+     "ece_top": 0.22552007501381613,
+     "signed_gap": -0.22472838142387463,
+     "mce": 0.3916891764434064,
+     "ece_classwise": 0.2142835895901217,
+     "brier": 0.5691443012916729,
+     "nll": 1.1136702299118042,
+     "raw_ece_top": 0.10621888413785452,
+     "raw_signed_gap": -0.068870938903555,
+     "raw_mce": 0.23637468760660973,
+     "raw_ece_classwise": 0.18026786069268566,
+     "raw_brier": 0.5221760949169513,
+     "raw_nll": 0.9923146963119507
+    },
+    "cm": [
+     [
+      100994,
+      19618,
+      981,
+      25480,
+      6270
+     ],
+     [
+      892,
+      944,
+      32,
+      68,
+      21
+     ],
+     [
+      12147,
+      417,
+      5481,
+      1580,
+      355
+     ],
+     [
+      137,
+      9,
+      4,
+      66,
+      3
+     ],
+     [
+      4,
+      1,
+      1,
+      0,
+      0
+     ]
+    ],
+    "per_class": {
+     "sens": [
+      0.658615000358673,
+      0.4823709759836484,
+      0.2743243243243243,
+      0.3013698630136986,
+      0.0
+     ],
+     "spec": [
+      0.4052883313780345,
+      0.8844988130085049,
+      0.9934544285484649,
+      0.8452357860867382,
+      0.9621137442378589
+     ],
+     "ppv": [
+      0.8845621595109219,
+      0.044975939777978945,
+      0.8433605170026158,
+      0.0024270059571964405,
+      0.0
+     ],
+     "f1": [
+      0.7550473427856921,
+      0.08228013597141114,
+      0.4139884436723441,
+      0.004815233648269069,
+      0.0
+     ],
+     "auroc": [
+      0.5429271877226495,
+      0.7612947698706555,
+      0.8702222748387353,
+      0.5913910583809359,
+      0.29668070283401426
+     ],
+     "auprc": [
+      0.9042565425920559,
+      0.08594533723331475,
+      0.6133837188943579,
+      0.002227141742635561,
+      2.6954359323708862e-05
+     ]
+    },
+    "support": [
+     153343,
+     1957,
+     19980,
+     219,
+     6
+    ],
+    "ci": {
+     "accuracy": [
+      0.5532496267362313,
+      0.6701572649521722
+     ],
+     "macro_f1": [
+      0.2652376554947933,
+      0.36334690088781724
+     ],
+     "balanced_accuracy": [
+      0.34015790300528653,
+      0.476141314150246
+     ],
+     "macro_auroc": [
+      0.6209172641022552,
+      0.7321309467259012
+     ],
+     "ece_top": [
+      0.19242291167437578,
+      0.26558776785297195
+     ],
+     "signed_gap": [
+      -0.26510880571878487,
+      -0.18427675175253874
+     ],
+     "brier": [
+      0.5240520763182911,
+      0.6131189826236089
+     ]
+    }
+   },
+   "C": {
+    "point": {
+     "accuracy": 0.6905387310902823,
+     "macro_f1": 0.336433174598409,
+     "balanced_accuracy": 0.31956542743103283,
+     "macro_auroc": 0.7355034395871562,
+     "macro_auprc": 0.39917040264317694,
+     "ece_top": 0.17769999359581923,
+     "signed_gap": -0.17769995021030793,
+     "mce": 0.2951233068315109,
+     "ece_classwise": 0.169299908527364,
+     "brier": 0.4531533473909825,
+     "nll": 0.8789229393005371,
+     "raw_ece_top": 0.059066466229148254,
+     "raw_signed_gap": -0.04267046613328629,
+     "raw_mce": 0.13919940134387898,
+     "raw_ece_classwise": 0.14532714078182413,
+     "raw_brier": 0.4421804447777303,
+     "raw_nll": 0.8362568020820618
+    },
+    "cm": [
+     [
+      112616,
+      20182,
+      4227,
+      9807,
+      6511
+     ],
+     [
+      1723,
+      131,
+      52,
+      10,
+      41
+     ],
+     [
+      7702,
+      2579,
+      8434,
+      612,
+      653
+     ],
+     [
+      156,
+      22,
+      25,
+      12,
+      4
+     ],
+     [
+      5,
+      0,
+      1,
+      0,
+      0
+     ]
+    ],
+    "per_class": {
+     "sens": [
+      0.7344058744122653,
+      0.06693919264179868,
+      0.42212212212212213,
+      0.0547945205479452,
+      0.0
+     ],
+     "spec": [
+      0.5674578106669074,
+      0.8687221978933782,
+      0.9723195627712586,
+      0.940502949465445,
+      0.9589228428652015
+     ],
+     "ppv": [
+      0.9215561120112601,
+      0.005717028890634547,
+      0.6620613862940576,
+      0.001149315199693516,
+      0.0
+     ],
+     "f1": [
+      0.8174055054528299,
+      0.01053435728358329,
+      0.5155414285277667,
+      0.00225140712945591,
+      0.0
+     ],
+     "auroc": [
+      0.7201162844061559,
+      0.6497131763552279,
+      0.8879687634910268,
+      0.6842155340962144,
+      0.5994279169681879
+     ],
+     "auprc": [
+      0.9460666312893711,
+      0.01738125130499019,
+      0.6310341784481465,
+      0.0021995495301999684,
+      5.2938650179794966e-05
+     ]
+    },
+    "support": [
+     153343,
+     1957,
+     19980,
+     219,
+     6
+    ],
+    "ci": {
+     "accuracy": [
+      0.6154590231191216,
+      0.7556156851324767
+     ],
+     "macro_f1": [
+      0.2975626721459951,
+      0.3720410308026844
+     ],
+     "balanced_accuracy": [
+      0.2796028671580699,
+      0.37319570561166676
+     ],
+     "macro_auroc": [
+      0.6749195865134462,
+      0.779685843034998
+     ],
+     "ece_top": [
+      0.13114496525316605,
+      0.21930216584117673
+     ],
+     "signed_gap": [
+      -0.21930215112882268,
+      -0.13114498429072785
+     ],
+     "brier": [
+      0.39357363444989696,
+      0.5140254563393452
+     ]
+    }
+   },
+   "B-A": {
+    "delta_macro_f1": -0.06061446509100771,
+    "ci": [
+     -0.08613731984989471,
+     -0.035775585118994736
+    ],
+    "n01": 5445,
+    "n10": 41900,
+    "mcnemar_p": 0.0,
+    "kind": "pre-specified"
+   },
+   "B-C": {
+    "delta_macro_f1": -0.022400385578979887,
+    "ci": [
+     -0.05600908764072848,
+     0.020848914225423825
+    ],
+    "n01": 17653,
+    "n10": 31361,
+    "mcnemar_p": 0.0,
+    "kind": "pre-specified"
+   },
+   "C-A": {
+    "delta_macro_f1": -0.03821407951202782,
+    "ci": [
+     -0.08009565915160655,
+     -0.003108348171745258
+    ],
+    "n01": 11308,
+    "n10": 34055,
+    "mcnemar_p": 0.0,
+    "kind": "exploratory"
+   }
+  }
+ }
+}

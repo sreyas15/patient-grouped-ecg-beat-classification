@@ -1,0 +1,5410 @@
+{
+ "created": "2026-11-06T01:23:48",
+ "purpose": "Post-training manifest: 15/15 runs, after the resumed training chain finished (RESUME FINISHED 2026-11-06T00:50:48+05:30)",
+ "audit_verdict": "PASS WITH WARNINGS",
+ "audit_report": "results/audits/post_training_audit.md",
+ "protocol_lock": {
+  "lock_file_sha256": "ed0717f26f2d7f86d5a49c69b03de44588d35112ab8c9177186b4c4e5b61478c",
+  "frozen_files": {
+   "experimental_protocol_LOCKED.md": "49fc7b15bbfc69fd0c63b169aade1ca37d6b2ec0cc23af962772716662fa1d6e",
+   "results/splits/folds_LOCKED.json": "ec15d8ce2f51ff42491dfff58844b9e965a1fd7ea99a0a47cf675efe8b912a3a",
+   "data/mitbih_beats_r2.npz": "34d6101c910142a4aadfb2f8d7b452ab4f7ef6391603bcdf724da54d7ee828a9",
+   "data/incart_beats_r2.npz": "cb8a028200078db217ee7a98456f59b00c89ef170fb26856cad3419351f879b0",
+   "experiments/04_extract_beats.py": "d277bd5f2b30afd45f22da11324112e177fb0187eea6d28e68dc4cc7b0d01c92",
+   "experiments/r2common.py": "19c422dddb0636415870d022e6ea0da7b9cbf2ff40bd4b92883d3aab3d9c5989",
+   "experiments/06_train.py": "cb7ebee5b7f49abdf4e94c3c3a27d0aabcff6632a2172bd59e199c45833e0eaa",
+   "experiments/07_score.py": "dfb163c4d6296c74002765aadbf2bf4d26ffbfce077f99c7003b683b378bdd90",
+   "experiments/08_evaluate.py": "5dd5f9e2a09eb5ed10665618c02b43aba9e41fb91db809d4899320c89219bd56",
+   "experiments/verify_lock.py": "66296e5752d68b17dd6cb3604209153ad329be0d35182bcc05d55d1f24cf6ba5",
+   "D:\\explainable_ai\\Journel paper project\\ECGTransForm\\models.py": "a168b2b8bdfeba73e362618d58d925ea593c0109ab3f7841bac1ebbf5b53fca0",
+   "D:\\explainable_ai\\Journel paper project\\ECGTransForm\\configs\\data_configs.py": "04dd867e88b4053ae43cb5790ef80b14b4966cb30ca0b9831b35f597a73334a2",
+   "D:\\explainable_ai\\Journel paper project\\ECGTransForm\\configs\\hparams.py": "0292a448cbbffe42097a98f8fd14d54ec89ccbfbfb39038278a4ed348beb77bb"
+  },
+  "verify_lock": "passed (13 files, lock self-hash)",
+  "locked_at": "2026-11-02T14:26:40",
+  "fold_seeds": {
+   "0": 1000,
+   "1": 1001,
+   "2": 1002,
+   "3": 1003,
+   "4": 1004
+  },
+  "bootstrap": {
+   "resamples": 2000,
+   "seed": 20261102,
+   "unit": "subject/patient"
+  },
+  "config": {
+   "input_len": 186,
+   "smote_target": 20000,
+   "smote_k": 5,
+   "loss": "unweighted cross-entropy",
+   "optimizer": "Adam",
+   "batch_size": 128,
+   "weight_decay": 0.0001,
+   "lr_grid": [
+    0.0001,
+    0.0005,
+    0.001
+   ],
+   "epochs": {
+    "A": 15,
+    "B": 20,
+    "C": 15
+   },
+   "fold_seed_base": 1000,
+   "checkpoint_rule": "max validation macro-F1 over classes with >=10 validation beats (per epoch); lr chosen by the same criterion",
+   "temperature": "single scalar T, NLL on the selected checkpoint validation logits (LBFGS on log T)",
+   "primary_model": "B",
+   "comparators": [
+    "A",
+    "C"
+   ],
+   "primary_model_reason": "Model B is the backbone of the manuscript clinical pipeline (pre-specified before any R2 result)",
+   "scheme": "outer fold k: test=fold k, val=fold (k+1)%5, train=other 3 folds"
+  }
+ },
+ "environment": {
+  "as_seen_by_training_interpreter": {
+   "interpreter": "C:\\Python313\\python.exe",
+   "python": "3.13.7",
+   "user_site_enabled": true,
+   "numpy": {
+    "version": "2.5.2",
+    "file": "<user-site-packages>\\numpy\\__init__.py"
+   },
+   "torch": "2.6.0+cu124",
+   "cuda": "12.4",
+   "cudnn": 90100,
+   "sklearn": "1.7.2",
+   "imblearn": "0.14.2",
+   "scipy": "1.16.3",
+   "wfdb": "4.3.1",
+   "pywt_module_version": "1.8.0"
+  },
+  "pip_metadata_versions": {
+   "numpy": "2.5.2",
+   "torch": "2.6.0+cu124",
+   "scikit-learn": "1.7.2",
+   "imbalanced-learn": "0.14.2",
+   "scipy": "1.16.3",
+   "wfdb": "4.3.1",
+   "PyWavelets": "1.10.0"
+  },
+  "gpu": {
+   "name": "NVIDIA GeForce RTX 4060 Laptop GPU",
+   "driver": "617.42",
+   "memory_total": "8188 MiB"
+  },
+  "lock_environment_block": {
+   "python": "3.13.7",
+   "torch": "2.6.0+cu124",
+   "cuda": "12.4",
+   "gpu": "NVIDIA GeForce RTX 4060 Laptop GPU",
+   "numpy": "2.5.2",
+   "sklearn": "1.7.2",
+   "imblearn": "0.14.2",
+   "scipy": "1.16.3",
+   "wfdb": "4.3.1",
+   "pywt": "1.8.0"
+  },
+  "discrepancies": [
+   "PyWavelets: module pywt.__version__ = 1.8.0 (matches the lock) but pip metadata reports 1.10.0; not reconciled; preprocessing outputs are hash-frozen so training is unaffected.",
+   "NumPy 2.5.2 is loaded from the per-user site-packages and shadows the system-wide numpy 2.4.4 (C:\\Python313\\Lib\\site-packages). Matches the lock; isolated mode (-I) or PYTHONNOUSERSITE would load 2.4.4 instead.",
+   "Per-run config.json files record the lock hash, seed and configuration but not package versions; the NVIDIA driver version is not in the lock (617.42 at manifest time, identical to the pre-resume manifest)."
+  ],
+  "package_changes_since_2026_11_01": "none (no entry in either site-packages directory modified)"
+ },
+ "pre_resume_manifest": {
+  "path": "results/manifests/manifest_pre_resume.json",
+  "sha256": "6d564a8cb46fb89c99ad76e2781acd457bb7f63353346ab75311a62d0ca3f563",
+  "bytes": 40949,
+  "mtime": "2026-11-05T12:22:30",
+  "n_hashes_rechecked": 87,
+  "status": "preserved unchanged; all recorded hashes of the 9 earlier runs and the interrupted attempt re-verified against current files"
+ },
+ "completed_runs": {
+  "count": 15,
+  "total_checkpoints": 45,
+  "selection_files": 15,
+  "val_logit_files": 15,
+  "runs": [
+   {
+    "run": "A_fold0",
+    "model": "A",
+    "fold": 0,
+    "status": "COMPLETE (selected.json, 3 checkpoints, history x3, val_logits, config, train log present)",
+    "seed": 1000,
+    "selection": {
+     "selected_lr": 0.0001,
+     "selected_epoch": 1,
+     "val_macro_f1": 0.54870167647823,
+     "temperature": 1.0049266815185547,
+     "checkpoint": "ckpt_lr0.0001.pt",
+     "val_classes_used": [
+      "N",
+      "S",
+      "V",
+      "F",
+      "Q"
+     ],
+     "grid_best_f1_epoch": {
+      "0.0001": [
+       0.54870167647823,
+       1
+      ],
+      "0.0005": [
+       0.5193422870635354,
+       4
+      ],
+      "0.001": [
+       0.48874921821607364,
+       3
+      ]
+     }
+    },
+    "val_class_counts_N_S_V_F_Q": [
+     16838,
+     1396,
+     1667,
+     13,
+     2074
+    ],
+    "n_val": 21988,
+    "lr_secs_from_log": [
+     26.8,
+     24.3,
+     23.2
+    ],
+    "cpu_recompute_of_selected_checkpoint_on_validation": {
+     "max_abs_logit_diff": 0.0015736222267150879,
+     "argmax_agreement": 1.0,
+     "f1_cpu": 0.54870167647823,
+     "f1_recorded": 0.54870167647823,
+     "f1_abs_diff": 0.0,
+     "sec": 0.7
+    },
+    "files": {
+     "ckpt_lr0.0001.pt": {
+      "sha256": "262f5b25be1efa04ea5a2952eb0dfbd765d6f027003da1242b90f6262eeccb12",
+      "bytes": 1458188,
+      "mtime": "2026-11-02T14:27:28"
+     },
+     "ckpt_lr0.0005.pt": {
+      "sha256": "38759e90c18d70f39e4117b10f42ec75e54913f109fe962016d2a3f7f23460b8",
+      "bytes": 1458188,
+      "mtime": "2026-11-02T14:27:52"
+     },
+     "ckpt_lr0.001.pt": {
+      "sha256": "3c4640e1a0d39eb47b05db43f3e646c2be54f15ed2dc2a7cba9597ade210aed2",
+      "bytes": 1458174,
+      "mtime": "2026-11-02T14:28:15"
+     },
+     "config.json": {
+      "sha256": "a66486b21b9729c3df5206eebf75e8c4d8e2aa8222c2549f82dfce657f7a5fdf",
+      "bytes": 1802,
+      "mtime": "2026-11-02T14:27:01"
+     },
+     "history_lr0.0001.json": {
+      "sha256": "762cc6e44f36233495234587530cdfdb4bdc23864abb3534023c300adae26d78",
+      "bytes": 4304,
+      "mtime": "2026-11-02T14:27:28"
+     },
+     "history_lr0.0005.json": {
+      "sha256": "4ee924fe6dd9b238289d551a8f1e1baa19af994467725febb19dfbbc0a2be6d1",
+      "bytes": 4302,
+      "mtime": "2026-11-02T14:27:52"
+     },
+     "history_lr0.001.json": {
+      "sha256": "9782fed272be473182c50d2fb56b9d71e4d97ebf2bfbce5f87f92814b4fbeddb",
+      "bytes": 4339,
+      "mtime": "2026-11-02T14:28:15"
+     },
+     "selected.json": {
+      "sha256": "283762d7ec888a5c282ba8920df214ec6a077dcec4bdf303b6d09f5c5df75dfb",
+      "bytes": 850,
+      "mtime": "2026-11-02T14:28:15"
+     },
+     "val_logits.npz": {
+      "sha256": "32ebdf49141c9888fd5a9f6d223d3da5c71b8b4979012a1e10a218d421b4e52f",
+      "bytes": 408855,
+      "mtime": "2026-11-02T14:28:15"
+     }
+    },
+    "train_log": {
+     "name": "train_A_fold0.log",
+     "bytes": 642,
+     "sha256": "53357764f50b2d380a8200c6c2b450b5dd2e881aef16641316e7d0cf184f02d6"
+    }
+   },
+   {
+    "run": "A_fold1",
+    "model": "A",
+    "fold": 1,
+    "status": "COMPLETE (selected.json, 3 checkpoints, history x3, val_logits, config, train log present)",
+    "seed": 1001,
+    "selection": {
+     "selected_lr": 0.001,
+     "selected_epoch": 4,
+     "val_macro_f1": 0.5554381604300532,
+     "temperature": 3.6086792945861816,
+     "checkpoint": "ckpt_lr0.001.pt",
+     "val_classes_used": [
+      "N",
+      "S",
+      "V",
+      "F",
+      "Q"
+     ],
+     "grid_best_f1_epoch": {
+      "0.0001": [
+       0.4690842009959188,
+       1
+      ],
+      "0.0005": [
+       0.5311862891186967,
+       13
+      ],
+      "0.001": [
+       0.5554381604300532,
+       4
+      ]
+     }
+    },
+    "val_class_counts_N_S_V_F_Q": [
+     18323,
+     427,
+     1162,
+     373,
+     2082
+    ],
+    "n_val": 22367,
+    "lr_secs_from_log": [
+     25.7,
+     21.6,
+     22.4
+    ],
+    "cpu_recompute_of_selected_checkpoint_on_validation": {
+     "max_abs_logit_diff": 0.005603790283203125,
+     "argmax_agreement": 0.9999552912773282,
+     "f1_cpu": 0.5554483859720454,
+     "f1_recorded": 0.5554381604300532,
+     "f1_abs_diff": 1.0225541992148202e-05,
+     "sec": 1.3
+    },
+    "files": {
+     "ckpt_lr0.0001.pt": {
+      "sha256": "333c659d9879fe1e9adcf0c1a3d93be68f26f39ddb698c0e4b635a8fda3b0646",
+      "bytes": 1458188,
+      "mtime": "2026-11-02T16:36:04"
+     },
+     "ckpt_lr0.0005.pt": {
+      "sha256": "5da23f4c9cc11b57f30b8ccc40f4d87cb487537747fbc7685e480c1fc4182ddd",
+      "bytes": 1458188,
+      "mtime": "2026-11-02T16:36:26"
+     },
+     "ckpt_lr0.001.pt": {
+      "sha256": "12e2fcab0ac7687d82c4218a52fc265ef393b3ae4b9af04ece25bee16ddc347f",
+      "bytes": 1458174,
+      "mtime": "2026-11-02T16:36:48"
+     },
+     "config.json": {
+      "sha256": "11ae92c4d377a289b2c519a20525dd4097900cb93e3394d75d4b58e6663bcc03",
+      "bytes": 1801,
+      "mtime": "2026-11-02T16:35:39"
+     },
+     "history_lr0.0001.json": {
+      "sha256": "f559598483738f9605ee29d0c335cb0472ffa7fb1dbfa9a0895c09a122f4c85e",
+      "bytes": 4286,
+      "mtime": "2026-11-02T16:36:04"
+     },
+     "history_lr0.0005.json": {
+      "sha256": "8ea5a2d197e16c85c1f8cbc779fda15c4b51d08a9739b80d374be16c1f93ddb8",
+      "bytes": 4277,
+      "mtime": "2026-11-02T16:36:26"
+     },
+     "history_lr0.001.json": {
+      "sha256": "10a896c34470021e48d6d8e544f8b55fc23dd0d7777177ec65df56144a9cb246",
+      "bytes": 4294,
+      "mtime": "2026-11-02T16:36:48"
+     },
+     "selected.json": {
+      "sha256": "3855eaffc630b37eef1bb3bcd86dc33d0f5c7875cc159cb8e21788cd5874fac5",
+      "bytes": 852,
+      "mtime": "2026-11-02T16:36:49"
+     },
+     "val_logits.npz": {
+      "sha256": "494994f7d4d46c7ce9a06970cacc37ba3895954201dcd653f3a3ff837ed399a6",
+      "bytes": 415440,
+      "mtime": "2026-11-02T16:36:49"
+     }
+    },
+    "train_log": {
+     "name": "train_A_fold1.log",
+     "bytes": 644,
+     "sha256": "701b123c3fbb2fc47d2f486b7a559c636df033f93c60845e1ec145125c672167"
+    }
+   },
+   {
+    "run": "A_fold2",
+    "model": "A",
+    "fold": 2,
+    "status": "COMPLETE (selected.json, 3 checkpoints, history x3, val_logits, config, train log present)",
+    "seed": 1002,
+    "selection": {
+     "selected_lr": 0.001,
+     "selected_epoch": 3,
+     "val_macro_f1": 0.4259137845733672,
+     "temperature": 1.8478223085403442,
+     "checkpoint": "ckpt_lr0.001.pt",
+     "val_classes_used": [
+      "N",
+      "S",
+      "V",
+      "F"
+     ],
+     "grid_best_f1_epoch": {
+      "0.0001": [
+       0.35733037657474553,
+       1
+      ],
+      "0.0005": [
+       0.3969463289201581,
+       15
+      ],
+      "0.001": [
+       0.4259137845733672,
+       3
+      ]
+     }
+    },
+    "val_class_counts_N_S_V_F_Q": [
+     19599,
+     323,
+     1626,
+     11,
+     5
+    ],
+    "n_val": 21564,
+    "lr_secs_from_log": [
+     26.9,
+     25.8,
+     25.4
+    ],
+    "cpu_recompute_of_selected_checkpoint_on_validation": {
+     "max_abs_logit_diff": 0.0059356689453125,
+     "argmax_agreement": 0.9999072528287887,
+     "f1_cpu": 0.42589801179019104,
+     "f1_recorded": 0.4259137845733672,
+     "f1_abs_diff": 1.5772783176160043e-05,
+     "sec": 1.2
+    },
+    "files": {
+     "ckpt_lr0.0001.pt": {
+      "sha256": "97b340376b350bb453a8020801a1aeb01feeadddf15afb2f5c1e00dd7def7ee0",
+      "bytes": 1458188,
+      "mtime": "2026-11-02T18:54:58"
+     },
+     "ckpt_lr0.0005.pt": {
+      "sha256": "2e4dad05395d9a09555b462876de2b809b97c152a2fa789cdb1bb7dac58ff327",
+      "bytes": 1458188,
+      "mtime": "2026-11-02T18:55:23"
+     },
+     "ckpt_lr0.001.pt": {
+      "sha256": "0e16dfe97632cd2066d922ad19493cb55071d46fa5a94f7fdbac85ac89c30672",
+      "bytes": 1458174,
+      "mtime": "2026-11-02T18:55:49"
+     },
+     "config.json": {
+      "sha256": "a75a3e7e85617eec620d743f43c1e6c95c4503ac578f7ff78f0020cd8aafc5cf",
+      "bytes": 1808,
+      "mtime": "2026-11-02T18:54:31"
+     },
+     "history_lr0.0001.json": {
+      "sha256": "ac11bf365ea0877b0c4c5d6ab0a434a00154d41994595e16e86bc4041dcea726",
+      "bytes": 4245,
+      "mtime": "2026-11-02T18:54:58"
+     },
+     "history_lr0.0005.json": {
+      "sha256": "5326aa030e24d839986bf8e62cae3f1986b36b77ec6b7bde5027c6be7c285be6",
+      "bytes": 4113,
+      "mtime": "2026-11-02T18:55:23"
+     },
+     "history_lr0.001.json": {
+      "sha256": "c8d5498c3ea6537628fa83417cd22b9c2092348e59a19650423500b2721458e2",
+      "bytes": 4022,
+      "mtime": "2026-11-02T18:55:49"
+     },
+     "selected.json": {
+      "sha256": "5060284e5b1f9a907a5ebc71bfa8f9fcc058a2a8baf48ef3f18ae96bf4b5438e",
+      "bytes": 815,
+      "mtime": "2026-11-02T18:55:49"
+     },
+     "val_logits.npz": {
+      "sha256": "c7b65fa7ed4972b9ad12285cfab609071047a187818a4b7781e56db81e1b010e",
+      "bytes": 401933,
+      "mtime": "2026-11-02T18:55:49"
+     }
+    },
+    "train_log": {
+     "name": "train_A_fold2.log",
+     "bytes": 625,
+     "sha256": "ad94a05d8e991ce7d283e643b6f5f437cb5b4cc6d788736b39acce062eaa0bb8"
+    }
+   },
+   {
+    "run": "A_fold3",
+    "model": "A",
+    "fold": 3,
+    "status": "COMPLETE (selected.json, 3 checkpoints, history x3, val_logits, config, train log present)",
+    "seed": 1003,
+    "selection": {
+     "selected_lr": 0.001,
+     "selected_epoch": 13,
+     "val_macro_f1": 0.4730452743930333,
+     "temperature": 5.150179862976074,
+     "checkpoint": "ckpt_lr0.001.pt",
+     "val_classes_used": [
+      "N",
+      "S",
+      "V",
+      "F",
+      "Q"
+     ],
+     "grid_best_f1_epoch": {
+      "0.0001": [
+       0.4473974668343038,
+       1
+      ],
+      "0.0005": [
+       0.4605745346215996,
+       5
+      ],
+      "0.001": [
+       0.4730452743930333,
+       13
+      ]
+     }
+    },
+    "val_class_counts_N_S_V_F_Q": [
+     16790,
+     368,
+     970,
+     369,
+     2068
+    ],
+    "n_val": 20565,
+    "lr_secs_from_log": [
+     27.1,
+     37.5,
+     98.5
+    ],
+    "cpu_recompute_of_selected_checkpoint_on_validation": {
+     "max_abs_logit_diff": 0.00604248046875,
+     "argmax_agreement": 1.0,
+     "f1_cpu": 0.4730452743930333,
+     "f1_recorded": 0.4730452743930333,
+     "f1_abs_diff": 0.0,
+     "sec": 2.9
+    },
+    "files": {
+     "ckpt_lr0.0001.pt": {
+      "sha256": "1dbcc3fb3c5b72cc431a1eb29801197ebd5e945ba8fb0aa1c65e70cf3579f3b7",
+      "bytes": 1458188,
+      "mtime": "2026-11-03T13:45:55"
+     },
+     "ckpt_lr0.0005.pt": {
+      "sha256": "92bfa6a71a5125c82e038af50c50942db6d125fb652289cb2964c7366c05eebe",
+      "bytes": 1458188,
+      "mtime": "2026-11-03T13:46:32"
+     },
+     "ckpt_lr0.001.pt": {
+      "sha256": "5ad001f9438529626131d963c0619d1ec29b16584d1aaffb400ae971491de9be",
+      "bytes": 1458174,
+      "mtime": "2026-11-03T13:48:11"
+     },
+     "config.json": {
+      "sha256": "49390735780ac46755026a570f412087d9b9de0f229a1fbdbd2acda25f2f16fd",
+      "bytes": 1807,
+      "mtime": "2026-11-03T13:45:28"
+     },
+     "history_lr0.0001.json": {
+      "sha256": "a969a0269f3fe814efe839c9673964547f43cf4c2c53cd342c6bf59ac7a9d29b",
+      "bytes": 4264,
+      "mtime": "2026-11-03T13:45:55"
+     },
+     "history_lr0.0005.json": {
+      "sha256": "990a4a22d209c95c989329f7254241c99c2f8d44ab78b84482c0c6e996912a53",
+      "bytes": 4323,
+      "mtime": "2026-11-03T13:46:32"
+     },
+     "history_lr0.001.json": {
+      "sha256": "e1cc0a22e8070f6b6ef8810a4ca280d31ece0e81d7aa193cc2b482c69aaa70c1",
+      "bytes": 4290,
+      "mtime": "2026-11-03T13:48:11"
+     },
+     "selected.json": {
+      "sha256": "c6f52a69f88da24758a3c85df842934832fa861b6e3ae7f4c9b09ef22e186504",
+      "bytes": 852,
+      "mtime": "2026-11-03T13:48:12"
+     },
+     "val_logits.npz": {
+      "sha256": "e0e866ad52ccdd983ae0a358de3c3d2f0ec79ecc62281c87acad2c26a0ec872a",
+      "bytes": 381061,
+      "mtime": "2026-11-03T13:48:12"
+     }
+    },
+    "train_log": {
+     "name": "train_A_fold3.log",
+     "bytes": 644,
+     "sha256": "20eacd8e02d49fc76af350bd119c4b7435d3c6d34a5c35c5f9d6468e20344246"
+    }
+   },
+   {
+    "run": "A_fold4",
+    "model": "A",
+    "fold": 4,
+    "status": "COMPLETE (selected.json, 3 checkpoints, history x3, val_logits, config, train log present)",
+    "seed": 1004,
+    "selection": {
+     "selected_lr": 0.001,
+     "selected_epoch": 3,
+     "val_macro_f1": 0.44188220345676743,
+     "temperature": 1.827972173690796,
+     "checkpoint": "ckpt_lr0.001.pt",
+     "val_classes_used": [
+      "N",
+      "S",
+      "V",
+      "F",
+      "Q"
+     ],
+     "grid_best_f1_epoch": {
+      "0.0001": [
+       0.3092308036486254,
+       2
+      ],
+      "0.0005": [
+       0.3944977077147551,
+       14
+      ],
+      "0.001": [
+       0.44188220345676743,
+       3
+      ]
+     }
+    },
+    "val_class_counts_N_S_V_F_Q": [
+     18922,
+     261,
+     1804,
+     36,
+     1798
+    ],
+    "n_val": 22821,
+    "lr_secs_from_log": [
+     25.6,
+     26.4,
+     25.5
+    ],
+    "cpu_recompute_of_selected_checkpoint_on_validation": {
+     "max_abs_logit_diff": 0.00493621826171875,
+     "argmax_agreement": 0.9999561807107489,
+     "f1_cpu": 0.4419532250371292,
+     "f1_recorded": 0.44188220345676743,
+     "f1_abs_diff": 7.102158036176309e-05,
+     "sec": 1.2
+    },
+    "files": {
+     "ckpt_lr0.0001.pt": {
+      "sha256": "30c5646e430cb242cb54e430b06406cebc3a38ad497e1867b486fe252bea2c57",
+      "bytes": 1458188,
+      "mtime": "2026-11-05T22:43:43"
+     },
+     "ckpt_lr0.0005.pt": {
+      "sha256": "88729203fd4bfba7dc2cfe3b5afabe2ebe152efbd169fd6d0c843449d6d7cd52",
+      "bytes": 1458188,
+      "mtime": "2026-11-05T22:44:10"
+     },
+     "ckpt_lr0.001.pt": {
+      "sha256": "ecb17ed0af54b2fdb34755943de39ea72199d6f787a69c36e9d3641f50f05528",
+      "bytes": 1458174,
+      "mtime": "2026-11-05T22:44:35"
+     },
+     "config.json": {
+      "sha256": "4a286596e7363734e71e334a476e87dedf53ce252936bcde4a0d654ddc191268",
+      "bytes": 1811,
+      "mtime": "2026-11-05T22:43:18"
+     },
+     "history_lr0.0001.json": {
+      "sha256": "69cd4f2401db3b9936f72c5ec142a18599efc4b7bfe4e006b6573d2cf8ce785e",
+      "bytes": 4316,
+      "mtime": "2026-11-05T22:43:43"
+     },
+     "history_lr0.0005.json": {
+      "sha256": "7a357d2dd4d1bc70c4449e6e2f5d9bc7a418affd3d806b0c3c704c47304c8232",
+      "bytes": 4355,
+      "mtime": "2026-11-05T22:44:10"
+     },
+     "history_lr0.001.json": {
+      "sha256": "4617aaf101f87d7681a50b8a27d152aba04a3dd149a9be1d8d4a8c50bb0e0f26",
+      "bytes": 4331,
+      "mtime": "2026-11-05T22:44:35"
+     },
+     "selected.json": {
+      "sha256": "1637f40efad9b8ced99aa77cdbfde8868bcc203392878e686c14cba6d8326f3d",
+      "bytes": 853,
+      "mtime": "2026-11-05T22:44:35"
+     },
+     "val_logits.npz": {
+      "sha256": "3ef3cb57a31ded5351130bc9ce48731f3da43a32c27ee2d4185aad8e437fd385",
+      "bytes": 422659,
+      "mtime": "2026-11-05T22:44:35"
+     }
+    },
+    "train_log": {
+     "name": "train_A_fold4.log",
+     "bytes": 645,
+     "sha256": "93c4199b81d5665fedefabd682d7dffadff07eb34fdbbd96e089c09296dd2b47"
+    }
+   },
+   {
+    "run": "B_fold0",
+    "model": "B",
+    "fold": 0,
+    "status": "COMPLETE (selected.json, 3 checkpoints, history x3, val_logits, config, train log present)",
+    "seed": 1000,
+    "selection": {
+     "selected_lr": 0.0005,
+     "selected_epoch": 11,
+     "val_macro_f1": 0.5605127158358785,
+     "temperature": 2.3070614337921143,
+     "checkpoint": "ckpt_lr0.0005.pt",
+     "val_classes_used": [
+      "N",
+      "S",
+      "V",
+      "F",
+      "Q"
+     ],
+     "grid_best_f1_epoch": {
+      "0.0001": [
+       0.5141695377434752,
+       19
+      ],
+      "0.0005": [
+       0.5605127158358785,
+       11
+      ],
+      "0.001": [
+       0.5450125259302919,
+       2
+      ]
+     }
+    },
+    "val_class_counts_N_S_V_F_Q": [
+     16838,
+     1396,
+     1667,
+     13,
+     2074
+    ],
+    "n_val": 21988,
+    "lr_secs_from_log": [
+     122.3,
+     121.3,
+     120.0
+    ],
+    "cpu_recompute_of_selected_checkpoint_on_validation": {
+     "max_abs_logit_diff": 0.011884093284606934,
+     "argmax_agreement": 1.0,
+     "f1_cpu": 0.5605127158358785,
+     "f1_recorded": 0.5605127158358785,
+     "f1_abs_diff": 0.0,
+     "sec": 7.3
+    },
+    "files": {
+     "ckpt_lr0.0001.pt": {
+      "sha256": "c7e50d757facb4005f2e456923e16ce5b3a67d0c08e3bfb44582b3eb2c59e50f",
+      "bytes": 1817821,
+      "mtime": "2026-11-02T14:30:23"
+     },
+     "ckpt_lr0.0005.pt": {
+      "sha256": "9c7f02da80d5f8cfc19542b14ff51e7fb2531af1d6ff5ca450dfadf74206847d",
+      "bytes": 1817821,
+      "mtime": "2026-11-02T14:32:25"
+     },
+     "ckpt_lr0.001.pt": {
+      "sha256": "db875f1885ca6eab5c96208574c3ac2082f6703a77790f91a920404ba6c0c7b0",
+      "bytes": 1817780,
+      "mtime": "2026-11-02T14:34:24"
+     },
+     "config.json": {
+      "sha256": "4a0260a5f5b19c86da4d1eaf763e75983f0420cbe58b96bd71b025d4bc4d506c",
+      "bytes": 1802,
+      "mtime": "2026-11-02T14:28:21"
+     },
+     "history_lr0.0001.json": {
+      "sha256": "45bff2ff646b49bd2fff323931599cc8039f8a3390fcda95180502c26b9a1171",
+      "bytes": 5735,
+      "mtime": "2026-11-02T14:30:23"
+     },
+     "history_lr0.0005.json": {
+      "sha256": "6e76729c89c4b02b524247f6bb22af164ecef609df1359c48735a7b747472049",
+      "bytes": 5670,
+      "mtime": "2026-11-02T14:32:25"
+     },
+     "history_lr0.001.json": {
+      "sha256": "6f82301e8287fc1997e839bed59ae7807953ddeb0f9cec98467921d5903ede7e",
+      "bytes": 5698,
+      "mtime": "2026-11-02T14:34:24"
+     },
+     "selected.json": {
+      "sha256": "a92efde9e4479af0d3ca61261f86cfd8a4cb2d58635f354e100d33139a31207c",
+      "bytes": 859,
+      "mtime": "2026-11-02T14:34:25"
+     },
+     "val_logits.npz": {
+      "sha256": "6ff5ab1bccbf5ec34558c2b668072842bbbcdebaac4d788cb93d9ab801729ebf",
+      "bytes": 403019,
+      "mtime": "2026-11-02T14:34:25"
+     }
+    },
+    "train_log": {
+     "name": "train_B_fold0.log",
+     "bytes": 651,
+     "sha256": "49434018e45d6f26c82d4b569094ad842ad797bdb07a6166edfc2888ef57e8ad"
+    }
+   },
+   {
+    "run": "B_fold1",
+    "model": "B",
+    "fold": 1,
+    "status": "COMPLETE (selected.json, 3 checkpoints, history x3, val_logits, config, train log present)",
+    "seed": 1001,
+    "selection": {
+     "selected_lr": 0.001,
+     "selected_epoch": 20,
+     "val_macro_f1": 0.4661048835896702,
+     "temperature": 3.201087236404419,
+     "checkpoint": "ckpt_lr0.001.pt",
+     "val_classes_used": [
+      "N",
+      "S",
+      "V",
+      "F",
+      "Q"
+     ],
+     "grid_best_f1_epoch": {
+      "0.0001": [
+       0.36994528048979325,
+       1
+      ],
+      "0.0005": [
+       0.3869704917594503,
+       16
+      ],
+      "0.001": [
+       0.4661048835896702,
+       20
+      ]
+     }
+    },
+    "val_class_counts_N_S_V_F_Q": [
+     18323,
+     427,
+     1162,
+     373,
+     2082
+    ],
+    "n_val": 22367,
+    "lr_secs_from_log": [
+     117.7,
+     119.3,
+     119.1
+    ],
+    "cpu_recompute_of_selected_checkpoint_on_validation": {
+     "max_abs_logit_diff": 0.015065908432006836,
+     "argmax_agreement": 0.9998658738319847,
+     "f1_cpu": 0.46598668213949096,
+     "f1_recorded": 0.4661048835896702,
+     "f1_abs_diff": 0.0001182014501792672,
+     "sec": 5.3
+    },
+    "files": {
+     "ckpt_lr0.0001.pt": {
+      "sha256": "5cd81bb99f37d30661a4939f438121ba4ff73a19ba35288a6fdcbf3213acb5a1",
+      "bytes": 1817821,
+      "mtime": "2026-11-02T16:38:52"
+     },
+     "ckpt_lr0.0005.pt": {
+      "sha256": "ad8a0e5a894a6791ad8b09c3a36cbf846d433f50b852db5d334ac51dc0fe8f1f",
+      "bytes": 1817821,
+      "mtime": "2026-11-02T16:40:51"
+     },
+     "ckpt_lr0.001.pt": {
+      "sha256": "db3bcad3f1939b61dbe594d5fac277b22a8de1a29295b0c37409bed8439e489a",
+      "bytes": 1817780,
+      "mtime": "2026-11-02T16:42:50"
+     },
+     "config.json": {
+      "sha256": "2bbd34b8b05ebc23b438e4141d3c59a1d8c6ed99c6c6acdde7c6fe7342b211d8",
+      "bytes": 1801,
+      "mtime": "2026-11-02T16:36:54"
+     },
+     "history_lr0.0001.json": {
+      "sha256": "2497bc8a20a8e968b6d768fac97cc39b65c273c9da9526167308fd488702dfeb",
+      "bytes": 5748,
+      "mtime": "2026-11-02T16:38:52"
+     },
+     "history_lr0.0005.json": {
+      "sha256": "5836b356ba897bbe367352455e4bd04456a2536ce73fc5d97192b492dba01c18",
+      "bytes": 5764,
+      "mtime": "2026-11-02T16:40:51"
+     },
+     "history_lr0.001.json": {
+      "sha256": "f63bf8262a7e84ead4088dad93a0dfc6a6611f2b7106e28ab73e4bcf66ab0745",
+      "bytes": 5744,
+      "mtime": "2026-11-02T16:42:50"
+     },
+     "selected.json": {
+      "sha256": "c65815115c48e3bca6cb01d68deda4a77db0e7cbf42d3c49903acd29118ddeb3",
+      "bytes": 857,
+      "mtime": "2026-11-02T16:42:51"
+     },
+     "val_logits.npz": {
+      "sha256": "5ea1f2e1f0abaff77dc73dc36de1a82873cb99668426717f98b7641ee55d2129",
+      "bytes": 410556,
+      "mtime": "2026-11-02T16:42:51"
+     }
+    },
+    "train_log": {
+     "name": "train_B_fold1.log",
+     "bytes": 649,
+     "sha256": "67c9013535a2570b312374bc788ac1ba07a382f1dd6cf7f0a11be3e702b2f2f3"
+    }
+   },
+   {
+    "run": "B_fold2",
+    "model": "B",
+    "fold": 2,
+    "status": "COMPLETE (selected.json, 3 checkpoints, history x3, val_logits, config, train log present)",
+    "seed": 1002,
+    "selection": {
+     "selected_lr": 0.001,
+     "selected_epoch": 15,
+     "val_macro_f1": 0.3794903776305491,
+     "temperature": 3.009483575820923,
+     "checkpoint": "ckpt_lr0.001.pt",
+     "val_classes_used": [
+      "N",
+      "S",
+      "V",
+      "F"
+     ],
+     "grid_best_f1_epoch": {
+      "0.0001": [
+       0.3644546161761794,
+       17
+      ],
+      "0.0005": [
+       0.36962033280873685,
+       17
+      ],
+      "0.001": [
+       0.3794903776305491,
+       15
+      ]
+     }
+    },
+    "val_class_counts_N_S_V_F_Q": [
+     19599,
+     323,
+     1626,
+     11,
+     5
+    ],
+    "n_val": 21564,
+    "lr_secs_from_log": [
+     125.1,
+     125.4,
+     124.0
+    ],
+    "cpu_recompute_of_selected_checkpoint_on_validation": {
+     "max_abs_logit_diff": 0.010248899459838867,
+     "argmax_agreement": 1.0,
+     "f1_cpu": 0.3794903776305491,
+     "f1_recorded": 0.3794903776305491,
+     "f1_abs_diff": 0.0,
+     "sec": 7.0
+    },
+    "files": {
+     "ckpt_lr0.0001.pt": {
+      "sha256": "6c5f9429a4431a2be5c94f646d43e14fd2bc6763d6556816d82d505e99fd5ee7",
+      "bytes": 1817821,
+      "mtime": "2026-11-02T18:58:00"
+     },
+     "ckpt_lr0.0005.pt": {
+      "sha256": "30eb8eb87c41ca591db4acded442be806e49f53eb4449324967be4c273ca5fbe",
+      "bytes": 1817821,
+      "mtime": "2026-11-02T19:00:05"
+     },
+     "ckpt_lr0.001.pt": {
+      "sha256": "63b57a5840998b44d7d31438e9b1dcbea6e583628b7ecd527a6990f28ee8dd30",
+      "bytes": 1817780,
+      "mtime": "2026-11-02T19:02:09"
+     },
+     "config.json": {
+      "sha256": "597fdfad80c116dd846ed5e38b048ca00847351eb4b50b13835e53e736fba6bd",
+      "bytes": 1808,
+      "mtime": "2026-11-02T18:55:55"
+     },
+     "history_lr0.0001.json": {
+      "sha256": "d46c5a059e5d4c7fc098fd2a675e1bd7a69141fc26555dcb5d9f02de0cdd76f9",
+      "bytes": 5522,
+      "mtime": "2026-11-02T18:58:00"
+     },
+     "history_lr0.0005.json": {
+      "sha256": "1b6488ed9bbf49a6a7f3785b50d2b93865cad47e37f75ea30d0aa8fb76478386",
+      "bytes": 5247,
+      "mtime": "2026-11-02T19:00:05"
+     },
+     "history_lr0.001.json": {
+      "sha256": "0c6372350e753ec2db3bcb05a7a51a99629bef179be2dca17328969e18b60e7a",
+      "bytes": 5308,
+      "mtime": "2026-11-02T19:02:09"
+     },
+     "selected.json": {
+      "sha256": "09b7f518a8efc119604336bfc06df6b214064aa7c3caa0da981ec1a0956c7eee",
+      "bytes": 820,
+      "mtime": "2026-11-02T19:02:09"
+     },
+     "val_logits.npz": {
+      "sha256": "e58a28419e8da8a1b735c281e9613f0636358e270f761ff1ab3fb764b0443c22",
+      "bytes": 396338,
+      "mtime": "2026-11-02T19:02:09"
+     }
+    },
+    "train_log": {
+     "name": "train_B_fold2.log",
+     "bytes": 630,
+     "sha256": "ff55fc6f44db3cb31773f58215317412af46cca9147d0f53dbccb8cb6d1b44ba"
+    }
+   },
+   {
+    "run": "B_fold3",
+    "model": "B",
+    "fold": 3,
+    "status": "COMPLETE (selected.json, 3 checkpoints, history x3, val_logits, config, train log present)",
+    "seed": 1003,
+    "selection": {
+     "selected_lr": 0.0005,
+     "selected_epoch": 1,
+     "val_macro_f1": 0.5083892950946766,
+     "temperature": 1.8151487112045288,
+     "checkpoint": "ckpt_lr0.0005.pt",
+     "val_classes_used": [
+      "N",
+      "S",
+      "V",
+      "F",
+      "Q"
+     ],
+     "grid_best_f1_epoch": {
+      "0.0001": [
+       0.45387269130592395,
+       18
+      ],
+      "0.0005": [
+       0.5083892950946766,
+       1
+      ],
+      "0.001": [
+       0.47819338958523555,
+       10
+      ]
+     }
+    },
+    "val_class_counts_N_S_V_F_Q": [
+     16790,
+     368,
+     970,
+     369,
+     2068
+    ],
+    "n_val": 20565,
+    "lr_secs_from_log": [
+     128.2,
+     124.8,
+     125.0
+    ],
+    "cpu_recompute_of_selected_checkpoint_on_validation": {
+     "max_abs_logit_diff": 0.0045514702796936035,
+     "argmax_agreement": 1.0,
+     "f1_cpu": 0.5083892950946766,
+     "f1_recorded": 0.5083892950946766,
+     "f1_abs_diff": 0.0,
+     "sec": 1.7
+    },
+    "files": {
+     "ckpt_lr0.0001.pt": {
+      "sha256": "e8e2f0439fa3175b6dee14becc45e48fc73be61d9b4e28aead791805b92dbc8c",
+      "bytes": 1817821,
+      "mtime": "2026-11-05T14:19:21"
+     },
+     "ckpt_lr0.0005.pt": {
+      "sha256": "8840f1a32e458219e27cb00ef871a0b531f25034d656d6a69dd787959c509f5c",
+      "bytes": 1817821,
+      "mtime": "2026-11-05T14:21:25"
+     },
+     "ckpt_lr0.001.pt": {
+      "sha256": "e85fb4bd4811bbbf9995271ca6912762023d0d0ca96b08da100781f2343ce936",
+      "bytes": 1817780,
+      "mtime": "2026-11-05T14:23:30"
+     },
+     "config.json": {
+      "sha256": "e13c96a7dcbe6eb3445f03dc80ca5b0bd8bac21e0b57f36d2842602369ab9eb3",
+      "bytes": 1807,
+      "mtime": "2026-11-05T14:17:12"
+     },
+     "history_lr0.0001.json": {
+      "sha256": "7504da9f572f75765631873291012074141987fa5757f2d8ac08ff531d7520e5",
+      "bytes": 5747,
+      "mtime": "2026-11-05T14:19:21"
+     },
+     "history_lr0.0005.json": {
+      "sha256": "dd19486044ea026d3cfb9a42d00cff7241590cce2639ad4c5a16d2acd1cbd874",
+      "bytes": 5731,
+      "mtime": "2026-11-05T14:21:25"
+     },
+     "history_lr0.001.json": {
+      "sha256": "8d333b49ef46b2fd596a6dd5779e38d2f131ca6ab9d8b5e60aa91c08633327ff",
+      "bytes": 5726,
+      "mtime": "2026-11-05T14:23:30"
+     },
+     "selected.json": {
+      "sha256": "bf756a0cbf574b623bedb855dc5cebd830e1c59b3da80411f0833a7d482d190c",
+      "bytes": 860,
+      "mtime": "2026-11-05T14:23:31"
+     },
+     "val_logits.npz": {
+      "sha256": "87437e62141d51ac71386bcb68fc418a840276f40fd0f27f12b3fd0ec7e101a5",
+      "bytes": 382474,
+      "mtime": "2026-11-05T14:23:31"
+     }
+    },
+    "train_log": {
+     "name": "train_B_fold3.log",
+     "bytes": 652,
+     "sha256": "443e98fc38d741c5163a510e1312110b0458ca0395adeb71376ba998bd2454b4"
+    }
+   },
+   {
+    "run": "B_fold4",
+    "model": "B",
+    "fold": 4,
+    "status": "COMPLETE (selected.json, 3 checkpoints, history x3, val_logits, config, train log present)",
+    "seed": 1004,
+    "selection": {
+     "selected_lr": 0.001,
+     "selected_epoch": 4,
+     "val_macro_f1": 0.5000703441941708,
+     "temperature": 2.25559663772583,
+     "checkpoint": "ckpt_lr0.001.pt",
+     "val_classes_used": [
+      "N",
+      "S",
+      "V",
+      "F",
+      "Q"
+     ],
+     "grid_best_f1_epoch": {
+      "0.0001": [
+       0.44966086012035883,
+       15
+      ],
+      "0.0005": [
+       0.4622111877084379,
+       2
+      ],
+      "0.001": [
+       0.5000703441941708,
+       4
+      ]
+     }
+    },
+    "val_class_counts_N_S_V_F_Q": [
+     18922,
+     261,
+     1804,
+     36,
+     1798
+    ],
+    "n_val": 22821,
+    "lr_secs_from_log": [
+     127.2,
+     142.8,
+     126.6
+    ],
+    "cpu_recompute_of_selected_checkpoint_on_validation": {
+     "max_abs_logit_diff": 0.006611824035644531,
+     "argmax_agreement": 1.0,
+     "f1_cpu": 0.5000703441941708,
+     "f1_recorded": 0.5000703441941708,
+     "f1_abs_diff": 0.0,
+     "sec": 4.5
+    },
+    "files": {
+     "ckpt_lr0.0001.pt": {
+      "sha256": "8a7b751b6952038d37a71985a64805f9913ae697501f47c0c0b015dc9937aa72",
+      "bytes": 1817821,
+      "mtime": "2026-11-05T22:46:50"
+     },
+     "ckpt_lr0.0005.pt": {
+      "sha256": "8bb02c3d4c18df3a03be31d0bc88b9c6ba8f94d804e1a1e05aa01d02d7c51bc1",
+      "bytes": 1817821,
+      "mtime": "2026-11-05T22:49:13"
+     },
+     "ckpt_lr0.001.pt": {
+      "sha256": "cc59aa7c4014157459df80ffce0df05b6f4d7ae7343881e3381acd6bf6a1fd14",
+      "bytes": 1817780,
+      "mtime": "2026-11-05T22:51:20"
+     },
+     "config.json": {
+      "sha256": "eaa8f0e113dbda4114d6c0d7db13b35e73e04754f9002a600019ef810f645c98",
+      "bytes": 1811,
+      "mtime": "2026-11-05T22:44:43"
+     },
+     "history_lr0.0001.json": {
+      "sha256": "d03d9f98402133931494ca5e5bcb5167139c44fb3c0b6a3c881165820aa66111",
+      "bytes": 5780,
+      "mtime": "2026-11-05T22:46:50"
+     },
+     "history_lr0.0005.json": {
+      "sha256": "a9308f3e4104a4b424dba52f61491d791348c37fcdb6644635db7fd8ec160b6f",
+      "bytes": 5767,
+      "mtime": "2026-11-05T22:49:13"
+     },
+     "history_lr0.001.json": {
+      "sha256": "5798100f28f864c61423a2160c70f32228734a2f3bc10f093dbb61726556aa68",
+      "bytes": 5765,
+      "mtime": "2026-11-05T22:51:20"
+     },
+     "selected.json": {
+      "sha256": "cf3ee29b4085d445dd1bef7e5e5ddfa8838e46fbaac2b6d59c8a3512b9f80c3f",
+      "bytes": 854,
+      "mtime": "2026-11-05T22:51:20"
+     },
+     "val_logits.npz": {
+      "sha256": "eb4a2a699ebbb99842926597250785d82cb62978ad6af95c04c1bbbff39493aa",
+      "bytes": 423344,
+      "mtime": "2026-11-05T22:51:20"
+     }
+    },
+    "train_log": {
+     "name": "train_B_fold4.log",
+     "bytes": 646,
+     "sha256": "1d995443a3aeb78a8fdaf85a793e35d74cb0cb5e31c624fa1e0dcaa75c50fa9f"
+    }
+   },
+   {
+    "run": "C_fold0",
+    "model": "C",
+    "fold": 0,
+    "status": "COMPLETE (selected.json, 3 checkpoints, history x3, val_logits, config, train log present)",
+    "seed": 1000,
+    "selection": {
+     "selected_lr": 0.0005,
+     "selected_epoch": 14,
+     "val_macro_f1": 0.5231559992182344,
+     "temperature": 3.230752944946289,
+     "checkpoint": "ckpt_lr0.0005.pt",
+     "val_classes_used": [
+      "N",
+      "S",
+      "V",
+      "F",
+      "Q"
+     ],
+     "grid_best_f1_epoch": {
+      "0.0001": [
+       0.5170918462677687,
+       1
+      ],
+      "0.0005": [
+       0.5231559992182344,
+       14
+      ],
+      "0.001": [
+       0.5117146608763444,
+       2
+      ]
+     }
+    },
+    "val_class_counts_N_S_V_F_Q": [
+     16838,
+     1396,
+     1667,
+     13,
+     2074
+    ],
+    "n_val": 21988,
+    "lr_secs_from_log": [
+     2393.9,
+     2394.4,
+     2390.5
+    ],
+    "cpu_recompute_of_selected_checkpoint_on_validation": {
+     "max_abs_logit_diff": 0.012319564819335938,
+     "argmax_agreement": 0.999863561942878,
+     "f1_cpu": 0.5231994830391018,
+     "f1_recorded": 0.5231559992182344,
+     "f1_abs_diff": 4.348382086738489e-05,
+     "sec": 209.0
+    },
+    "files": {
+     "ckpt_lr0.0001.pt": {
+      "sha256": "15bc051f49e93ff6800b732ffe69fdb52907b9e2e44430b3b5fddc75f31b71d1",
+      "bytes": 2593826,
+      "mtime": "2026-11-02T15:14:25"
+     },
+     "ckpt_lr0.0005.pt": {
+      "sha256": "5b87bf7a517d63c2f6229dd278ca2531525e53bf2c25c34306f8284218d7e6a1",
+      "bytes": 2593826,
+      "mtime": "2026-11-02T15:54:19"
+     },
+     "ckpt_lr0.001.pt": {
+      "sha256": "3ec56605e28005b0af70eb30ce6227518dcb8c2c0f8f444bf864d09a7db6ff47",
+      "bytes": 2593704,
+      "mtime": "2026-11-02T16:34:10"
+     },
+     "config.json": {
+      "sha256": "5ae638eb305248d7c119bb981bf20b6e0f0b4c3147729d3b9f488f884a0e12d3",
+      "bytes": 1802,
+      "mtime": "2026-11-02T14:34:31"
+     },
+     "history_lr0.0001.json": {
+      "sha256": "5c56440b49ab7fe32f258ce040966a0c7dfcb229b85cd5a959f49bc7769d829a",
+      "bytes": 4323,
+      "mtime": "2026-11-02T15:14:25"
+     },
+     "history_lr0.0005.json": {
+      "sha256": "dd5736deb5cf0e5b80795706f2406924f2ee9480f5a9d8d9be61b4220a759879",
+      "bytes": 4311,
+      "mtime": "2026-11-02T15:54:19"
+     },
+     "history_lr0.001.json": {
+      "sha256": "a941e50df0aa0f85a51bb1459c71d2193b4fc1ee8f0889112cabd453fd5f82a5",
+      "bytes": 4293,
+      "mtime": "2026-11-02T16:34:10"
+     },
+     "selected.json": {
+      "sha256": "b692e298f1eac2a01ac68a31c96c3666c40885c407425f01439ad232535ef1cb",
+      "bytes": 860,
+      "mtime": "2026-11-02T16:35:32"
+     },
+     "val_logits.npz": {
+      "sha256": "9640acbe79edacc7164c2ce7f55bb09c6e2b228783deaa1c7aeb2ccbe731734d",
+      "bytes": 409251,
+      "mtime": "2026-11-02T16:35:32"
+     }
+    },
+    "train_log": {
+     "name": "train_C_fold0.log",
+     "bytes": 652,
+     "sha256": "95ffb6b95bd8b7476bbdfa8a1bb271a1d46baec0ec044c4e14c39e147f02e589"
+    }
+   },
+   {
+    "run": "C_fold1",
+    "model": "C",
+    "fold": 1,
+    "status": "COMPLETE (selected.json, 3 checkpoints, history x3, val_logits, config, train log present)",
+    "seed": 1001,
+    "selection": {
+     "selected_lr": 0.001,
+     "selected_epoch": 8,
+     "val_macro_f1": 0.5624468443844342,
+     "temperature": 4.088082790374756,
+     "checkpoint": "ckpt_lr0.001.pt",
+     "val_classes_used": [
+      "N",
+      "S",
+      "V",
+      "F",
+      "Q"
+     ],
+     "grid_best_f1_epoch": {
+      "0.0001": [
+       0.5196052046232197,
+       1
+      ],
+      "0.0005": [
+       0.508277101635439,
+       11
+      ],
+      "0.001": [
+       0.5624468443844342,
+       8
+      ]
+     }
+    },
+    "val_class_counts_N_S_V_F_Q": [
+     18323,
+     427,
+     1162,
+     373,
+     2082
+    ],
+    "n_val": 22367,
+    "lr_secs_from_log": [
+     2628.2,
+     2581.6,
+     2582.1
+    ],
+    "cpu_recompute_of_selected_checkpoint_on_validation": {
+     "max_abs_logit_diff": 0.007450103759765625,
+     "argmax_agreement": 0.9999105825546564,
+     "f1_cpu": 0.562380594865066,
+     "f1_recorded": 0.5624468443844342,
+     "f1_abs_diff": 6.62495193681778e-05,
+     "sec": 179.0
+    },
+    "files": {
+     "ckpt_lr0.0001.pt": {
+      "sha256": "40f560ea277aa21482d6ac4d50c47f6518c355b56f42442a772cd6a424101afc",
+      "bytes": 2593826,
+      "mtime": "2026-11-02T17:26:45"
+     },
+     "ckpt_lr0.0005.pt": {
+      "sha256": "cf160d41097705a35d51200cf77f0472fc583bb9638cd5e6c6a6957f8ab0d931",
+      "bytes": 2593826,
+      "mtime": "2026-11-02T18:09:46"
+     },
+     "ckpt_lr0.001.pt": {
+      "sha256": "3b10ead6bcbd0e4ae4f9c744229b7b343223b567fae3de4d8947e9fb1b888b7b",
+      "bytes": 2593704,
+      "mtime": "2026-11-02T18:52:49"
+     },
+     "config.json": {
+      "sha256": "1ed29bc51028823d534cb56cfdebc2e9db763b915838c576bfbe13e6bbfeae47",
+      "bytes": 1801,
+      "mtime": "2026-11-02T16:42:57"
+     },
+     "history_lr0.0001.json": {
+      "sha256": "eddb76d76c00d9b6e46396c1cd72a36f395f0159fedc17b217cd38d26a8b1c2b",
+      "bytes": 4314,
+      "mtime": "2026-11-02T17:26:45"
+     },
+     "history_lr0.0005.json": {
+      "sha256": "b66c08a14b9221ee80a2033db7ccee53d5466496efee415a157164fb983dff81",
+      "bytes": 4295,
+      "mtime": "2026-11-02T18:09:46"
+     },
+     "history_lr0.001.json": {
+      "sha256": "cc24daecefef13f2684a0ea2752dad7f85fb29a8e5e4e16ad05562a6cb3cd135",
+      "bytes": 4292,
+      "mtime": "2026-11-02T18:52:49"
+     },
+     "selected.json": {
+      "sha256": "a2d881538c47a82ac0312310ddf3feac6377da9187e8cc2a15cf58523ea038b4",
+      "bytes": 856,
+      "mtime": "2026-11-02T18:54:24"
+     },
+     "val_logits.npz": {
+      "sha256": "17d33217a63c8627be176f0cf0943cc9182aebfb200597873a7099f1647a7cb1",
+      "bytes": 413145,
+      "mtime": "2026-11-02T18:54:24"
+     }
+    },
+    "train_log": {
+     "name": "train_C_fold1.log",
+     "bytes": 648,
+     "sha256": "22b497dc52bc25b59f9d3243634d6ed0e6e966730f5e58435419846f79d77ec9"
+    }
+   },
+   {
+    "run": "C_fold2",
+    "model": "C",
+    "fold": 2,
+    "status": "COMPLETE (selected.json, 3 checkpoints, history x3, val_logits, config, train log present)",
+    "seed": 1002,
+    "selection": {
+     "selected_lr": 0.0005,
+     "selected_epoch": 9,
+     "val_macro_f1": 0.3726842284562509,
+     "temperature": 2.2873828411102295,
+     "checkpoint": "ckpt_lr0.0005.pt",
+     "val_classes_used": [
+      "N",
+      "S",
+      "V",
+      "F"
+     ],
+     "grid_best_f1_epoch": {
+      "0.0001": [
+       0.3581467183013298,
+       12
+      ],
+      "0.0005": [
+       0.3726842284562509,
+       9
+      ],
+      "0.001": [
+       0.3608843562630475,
+       3
+      ]
+     }
+    },
+    "val_class_counts_N_S_V_F_Q": [
+     19599,
+     323,
+     1626,
+     11,
+     5
+    ],
+    "n_val": 21564,
+    "lr_secs_from_log": [
+     2255.7,
+     2242.1,
+     2244.2
+    ],
+    "cpu_recompute_of_selected_checkpoint_on_validation": {
+     "max_abs_logit_diff": 0.009582996368408203,
+     "argmax_agreement": 0.9999072528287887,
+     "f1_cpu": 0.3726105645473553,
+     "f1_recorded": 0.3726842284562509,
+     "f1_abs_diff": 7.36639088955715e-05,
+     "sec": 135.3
+    },
+    "files": {
+     "ckpt_lr0.0001.pt": {
+      "sha256": "6ea2090b1d04579ef0ac0f209a8aff7c5b266d301ff1337ad9af95f9cc8f304b",
+      "bytes": 2593826,
+      "mtime": "2026-11-05T13:01:06"
+     },
+     "ckpt_lr0.0005.pt": {
+      "sha256": "1d04dc155085b99417aa3d29da5181bc4f19aa4f1123338d4db34aa27187050f",
+      "bytes": 2593826,
+      "mtime": "2026-11-05T13:38:28"
+     },
+     "ckpt_lr0.001.pt": {
+      "sha256": "2903871496276159f45fb951cd07effcc2345ede82d4684bcd638e800de88e7a",
+      "bytes": 2593704,
+      "mtime": "2026-11-05T14:15:52"
+     },
+     "config.json": {
+      "sha256": "c19640017a14b2e3a1b3326439ae9d1772b179b8f31a3faf780696fba2d988b3",
+      "bytes": 1808,
+      "mtime": "2026-11-05T12:23:30"
+     },
+     "history_lr0.0001.json": {
+      "sha256": "edf984f66b11532b17800b21e616c0d3af530974168eac8fdf3aa1cad146bdfe",
+      "bytes": 4194,
+      "mtime": "2026-11-05T13:01:06"
+     },
+     "history_lr0.0005.json": {
+      "sha256": "4e0d4f7c96dadc4f3d4939d5e5b3b2278123a4f8117e808872ae7f688cfe0604",
+      "bytes": 4000,
+      "mtime": "2026-11-05T13:38:28"
+     },
+     "history_lr0.001.json": {
+      "sha256": "f64f06de0c7b91d13e86deb0cf4c9a85efa00952f67a20c5e271cc38660fc136",
+      "bytes": 4020,
+      "mtime": "2026-11-05T14:15:52"
+     },
+     "selected.json": {
+      "sha256": "e727e87c07b1f710448dffb2a08ac38b3917af0719e06661b31281800476b882",
+      "bytes": 822,
+      "mtime": "2026-11-05T14:17:04"
+     },
+     "val_logits.npz": {
+      "sha256": "de392dd35ceaf7860a8606c4d9a597b52ca879d7e379508359fbbe41b439d7fb",
+      "bytes": 399984,
+      "mtime": "2026-11-05T14:17:04"
+     }
+    },
+    "train_log": {
+     "name": "train_C_fold2.log",
+     "bytes": 632,
+     "sha256": "aadcd001ff0f78c09759c44313be2a924e10eb658988b5ac59dbbf33c3af9f54"
+    }
+   },
+   {
+    "run": "C_fold3",
+    "model": "C",
+    "fold": 3,
+    "status": "COMPLETE (selected.json, 3 checkpoints, history x3, val_logits, config, train log present)",
+    "seed": 1003,
+    "selection": {
+     "selected_lr": 0.0005,
+     "selected_epoch": 11,
+     "val_macro_f1": 0.47436345813337777,
+     "temperature": 2.6048412322998047,
+     "checkpoint": "ckpt_lr0.0005.pt",
+     "val_classes_used": [
+      "N",
+      "S",
+      "V",
+      "F",
+      "Q"
+     ],
+     "grid_best_f1_epoch": {
+      "0.0001": [
+       0.454484006142172,
+       7
+      ],
+      "0.0005": [
+       0.47436345813337777,
+       11
+      ],
+      "0.001": [
+       0.4726371180951513,
+       6
+      ]
+     }
+    },
+    "val_class_counts_N_S_V_F_Q": [
+     16790,
+     368,
+     970,
+     369,
+     2068
+    ],
+    "n_val": 20565,
+    "lr_secs_from_log": [
+     2270.3,
+     2268.3,
+     25355.4
+    ],
+    "cpu_recompute_of_selected_checkpoint_on_validation": {
+     "max_abs_logit_diff": 0.006409168243408203,
+     "argmax_agreement": 0.999902747386336,
+     "f1_cpu": 0.47436706299763304,
+     "f1_recorded": 0.47436345813337777,
+     "f1_abs_diff": 3.604864255268847e-06,
+     "sec": 178.5
+    },
+    "files": {
+     "ckpt_lr0.0001.pt": {
+      "sha256": "da24a8ef04a259b96bd6abba06de62b450320d11bf07e861b4690675f71cf205",
+      "bytes": 2593826,
+      "mtime": "2026-11-05T15:01:28"
+     },
+     "ckpt_lr0.0005.pt": {
+      "sha256": "73ceb7dc61ce459ea7ac3294715ed74f5619d120724a618883786cc669937039",
+      "bytes": 2593826,
+      "mtime": "2026-11-05T15:39:16"
+     },
+     "ckpt_lr0.001.pt": {
+      "sha256": "f07f31008e88efe516ac6daa6e2b9ef66cb54701881624f894da8cbc2e5869b9",
+      "bytes": 2593704,
+      "mtime": "2026-11-05T22:41:52"
+     },
+     "config.json": {
+      "sha256": "24338b04c55d9a228a0a63d28e8f394ddc0e0abd5db582e27577ec8837e27e35",
+      "bytes": 1807,
+      "mtime": "2026-11-05T14:23:38"
+     },
+     "history_lr0.0001.json": {
+      "sha256": "c853e0362fdcaf80e1cb6c163a3b1224e1e90912b7bf8faad40958840926b141",
+      "bytes": 4293,
+      "mtime": "2026-11-05T15:01:28"
+     },
+     "history_lr0.0005.json": {
+      "sha256": "699e778d51287e9d52cc3f0b732cc34445cfd4ca166e4ffcee8ed0520b5573b9",
+      "bytes": 4322,
+      "mtime": "2026-11-05T15:39:16"
+     },
+     "history_lr0.001.json": {
+      "sha256": "eafb498e9148e092c73af9588fdb5f6464aae8f6165244e4f6afca3a03024f99",
+      "bytes": 4302,
+      "mtime": "2026-11-05T22:41:52"
+     },
+     "selected.json": {
+      "sha256": "d9b3ee0d26e5ee4736f8832a52dfae07be88bc34f371144a1bc945430ec1981c",
+      "bytes": 863,
+      "mtime": "2026-11-05T22:43:06"
+     },
+     "val_logits.npz": {
+      "sha256": "d2b7ea0cc74929f19f05f36a19e4e0f8d4e794ea3257e0bda24d9a18b5336896",
+      "bytes": 382984,
+      "mtime": "2026-11-05T22:43:06"
+     }
+    },
+    "train_log": {
+     "name": "train_C_fold3.log",
+     "bytes": 655,
+     "sha256": "44c65eae41208a10ab75c16cbc37bbdaefc7f752f82a9e138eb1bedce533a4a5"
+    }
+   },
+   {
+    "run": "C_fold4",
+    "model": "C",
+    "fold": 4,
+    "status": "COMPLETE (selected.json, 3 checkpoints, history x3, val_logits, config, train log present)",
+    "seed": 1004,
+    "selection": {
+     "selected_lr": 0.001,
+     "selected_epoch": 12,
+     "val_macro_f1": 0.5153192378402367,
+     "temperature": 2.3112642765045166,
+     "checkpoint": "ckpt_lr0.001.pt",
+     "val_classes_used": [
+      "N",
+      "S",
+      "V",
+      "F",
+      "Q"
+     ],
+     "grid_best_f1_epoch": {
+      "0.0001": [
+       0.4837631498916653,
+       11
+      ],
+      "0.0005": [
+       0.496118065209453,
+       3
+      ],
+      "0.001": [
+       0.5153192378402367,
+       12
+      ]
+     }
+    },
+    "val_class_counts_N_S_V_F_Q": [
+     18922,
+     261,
+     1804,
+     36,
+     1798
+    ],
+    "n_val": 22821,
+    "lr_secs_from_log": [
+     2362.5,
+     2358.7,
+     2356.2
+    ],
+    "cpu_recompute_of_selected_checkpoint_on_validation": {
+     "max_abs_logit_diff": 0.0053255558013916016,
+     "argmax_agreement": 1.0,
+     "f1_cpu": 0.5153192378402367,
+     "f1_recorded": 0.5153192378402367,
+     "f1_abs_diff": 0.0,
+     "sec": 248.1
+    },
+    "files": {
+     "ckpt_lr0.0001.pt": {
+      "sha256": "0d395ecf1d2b3142d2f566e0c818e7495d375e4ec56f6e9932ed6981a4c46e9d",
+      "bytes": 2593826,
+      "mtime": "2026-11-05T23:30:51"
+     },
+     "ckpt_lr0.0005.pt": {
+      "sha256": "567aba5348b47cc54b0adef00b8f4bf7310b8bbe5d5955cc748bffd25bec8fe9",
+      "bytes": 2593826,
+      "mtime": "2026-11-06T00:10:09"
+     },
+     "ckpt_lr0.001.pt": {
+      "sha256": "584bacf2722c998d2d8f80955380be75a508ac2fcd8624d6d4b3ddfb08b20ca7",
+      "bytes": 2593704,
+      "mtime": "2026-11-06T00:49:26"
+     },
+     "config.json": {
+      "sha256": "2f5948804775fb7428c5bd8e0965670439164a2ca66d737d7cdd344e741a6934",
+      "bytes": 1811,
+      "mtime": "2026-11-05T22:51:28"
+     },
+     "history_lr0.0001.json": {
+      "sha256": "1226ce3bfe0e0885b02a1877f1f42dd5954c0c0a80715d61097a7168fe8c0208",
+      "bytes": 4320,
+      "mtime": "2026-11-05T23:30:51"
+     },
+     "history_lr0.0005.json": {
+      "sha256": "e3490a48dc52c85b1569c373892cf4943f887043f343f93f57e9e4ff7bd87fd9",
+      "bytes": 4221,
+      "mtime": "2026-11-06T00:10:09"
+     },
+     "history_lr0.001.json": {
+      "sha256": "3208f4d0576b22e48bcea301e0401efb33bb965812fc20a078197452b78a5593",
+      "bytes": 4258,
+      "mtime": "2026-11-06T00:49:26"
+     },
+     "selected.json": {
+      "sha256": "599c6c207909b4cea7696a564539cda3993c790c3b37c29981801ec6ecbc3c00",
+      "bytes": 859,
+      "mtime": "2026-11-06T00:50:46"
+     },
+     "val_logits.npz": {
+      "sha256": "e96087e46d9835e75ec9b39f43d90b114321308d41fa94b6926d585eff761c50",
+      "bytes": 423678,
+      "mtime": "2026-11-06T00:50:46"
+     }
+    },
+    "train_log": {
+     "name": "train_C_fold4.log",
+     "bytes": 651,
+     "sha256": "2086dceeb2ee60160c7138d10e5847bed62098c2913d85e7e2794e765ec373ee"
+    }
+   }
+  ]
+ },
+ "c_fold3_suspension": {
+  "recorded_wall_sec_lr_1e_3": 25355.4,
+  "clock_jump_sleep_sec": 14510.482,
+  "clock_jump_hibernate_sec": 8544.798,
+  "estimated_compute_sec": 2300.1,
+  "note": "estimated compute = recorded wall time minus the two clock jumps logged by Windows; result files are unaffected",
+  "events": [
+   {
+    "time": "2026-11-05 15:55:08",
+    "id": 42,
+    "what": "System entering sleep (Sleep Reason: System Idle) -- 3 min after the keep-awake wrapper was reaped by Claude Code under memory pressure"
+   },
+   {
+    "time": "2026-11-05 19:57:05",
+    "id": 1,
+    "what": "System clock jumped +14,510,482 ms (4.03 h) on resume from sleep"
+   },
+   {
+    "time": "2026-11-05 19:57:09",
+    "id": 42,
+    "what": "Entering sleep again (Sleep Reason: Hibernate from Sleep - Fixed Timeout)"
+   },
+   {
+    "time": "2026-11-05 22:19:51",
+    "id": 1,
+    "what": "System clock jumped +8,544,798 ms (2.37 h) on resume from hibernate"
+   },
+   {
+    "time": "2026-11-05 22:19:57",
+    "id": 1,
+    "what": "Power-Troubleshooter: returned from low power state"
+   },
+   {
+    "time": "n/a",
+    "id": 153,
+    "what": "No nvlddmkm GPU-reset events (id 153) occurred in the 2026-11-05 12:00 - 2026-11-06 01:30 window"
+   }
+  ]
+ },
+ "interrupted_attempt": {
+  "path": "results/runs_interrupted/C_fold2_attempt1",
+  "status": "preserved, not used",
+  "files": [
+   {
+    "file": "results/runs_interrupted/C_fold2_attempt1/README.md",
+    "bytes": 977,
+    "sha256": "63eb93b7c7481421776ca14033171c14df1f3a42d10579fbd1b475396c079c7d",
+    "mtime": "2026-11-03T13:48:41"
+   },
+   {
+    "file": "results/runs_interrupted/C_fold2_attempt1/ckpt_lr0.0001.pt",
+    "bytes": 2593826,
+    "sha256": "6ea2090b1d04579ef0ac0f209a8aff7c5b266d301ff1337ad9af95f9cc8f304b",
+    "mtime": "2026-11-02T19:40:20"
+   },
+   {
+    "file": "results/runs_interrupted/C_fold2_attempt1/config.json",
+    "bytes": 1808,
+    "sha256": "c19640017a14b2e3a1b3326439ae9d1772b179b8f31a3faf780696fba2d988b3",
+    "mtime": "2026-11-02T19:02:15"
+   },
+   {
+    "file": "results/runs_interrupted/C_fold2_attempt1/history_lr0.0001.json",
+    "bytes": 4194,
+    "sha256": "edf984f66b11532b17800b21e616c0d3af530974168eac8fdf3aa1cad146bdfe",
+    "mtime": "2026-11-02T19:40:20"
+   },
+   {
+    "file": "results/runs_interrupted/C_fold2_attempt1/run_training_attempt1.log",
+    "bytes": 2893,
+    "sha256": "ce79eb209958bed7895478966346600ffc937f1820fe210696cde0cea2d8f583",
+    "mtime": "2026-11-03T13:48:41"
+   },
+   {
+    "file": "results/runs_interrupted/C_fold2_attempt1/train_C_fold2_attempt1.log",
+    "bytes": 2129,
+    "sha256": "db05a8ac95760699eeced64e33f7d2eb28c5d179282e8d934607fa627dfa491d",
+    "mtime": "2026-11-03T13:45:17"
+   }
+  ],
+  "reproducibility": "new C_fold2 lr=1e-4 history is identical to the attempt-1 history and its checkpoint is byte-identical (same seed, locked code, data and environment)"
+ },
+ "other_files_hashed": [
+  {
+   "file": "logs/00_smoke_test.log",
+   "bytes": 555,
+   "sha256": "b754423627518914d57793d1403df33b749f5f6b392dea3ccb7e950434c180cf",
+   "mtime": "2026-11-02T14:25:14"
+  },
+  {
+   "file": "logs/01_audit_mitbih.log",
+   "bytes": 6916,
+   "sha256": "cf23af6b3a1bfaee12af1b05ab62cc897ae2e6b4f397acf47b5d66c3bd31ef1c",
+   "mtime": "2026-11-02T13:50:09"
+  },
+  {
+   "file": "logs/02_design_splits.log",
+   "bytes": 1661,
+   "sha256": "ae5813b7393d2a37b95ccfd9853c8ca970f0359a9bdb2d5aa4e4fbea29b8c704",
+   "mtime": "2026-11-02T13:52:42"
+  },
+  {
+   "file": "logs/03_audit_incart.log",
+   "bytes": 26433,
+   "sha256": "4e0152d1b03917955e718ce99943aa840242d8e9534add58847a8b7e587b9bcb",
+   "mtime": "2026-11-02T13:56:58"
+  },
+  {
+   "file": "logs/03b_mitbih_alignment.log",
+   "bytes": 551,
+   "sha256": "eb7407157279d0fb6fd485d3a93f8a9c8841de3b75f996a21e4b7492d856433a",
+   "mtime": "2026-11-02T13:57:23"
+  },
+  {
+   "file": "logs/04_extract_beats.log",
+   "bytes": 612,
+   "sha256": "1e5c06c323bfc1f8ee9f660b7d1dac0283ca3a78ac59f217d3bc76ca2b166a95",
+   "mtime": "2026-11-02T14:20:40"
+  },
+  {
+   "file": "logs/05_lock_protocol.log",
+   "bytes": 2136,
+   "sha256": "83ff377bf8d6ae9555ca66f4fabf168197f5384f3801bca442b8515775792af6",
+   "mtime": "2026-11-02T14:26:42"
+  },
+  {
+   "file": "logs/diag_memory.log",
+   "bytes": 1997,
+   "sha256": "1dcb1fbcd10f4760dcafcb8a20b3fb1945476313443ba555772a462905dbd1f9",
+   "mtime": "2026-11-03T13:59:03"
+  },
+  {
+   "file": "logs/resume_monitor.log",
+   "bytes": 14725,
+   "sha256": "c3ac0f68348803e0b3e16f02b794a48e6036c0b8dc09cc5e7a82cd2b783b3e72",
+   "mtime": "2026-11-05T15:54:36"
+  },
+  {
+   "file": "logs/resume_stdout.log",
+   "bytes": 2512,
+   "sha256": "df92ebe66ad1c3f9127543306c6a6698694b2ace86d17773f13ab4028288d277",
+   "mtime": "2026-11-06T00:50:48"
+  },
+  {
+   "file": "logs/resume_wrapper.log",
+   "bytes": 95,
+   "sha256": "31e338e39c0fbbac57d624bafcccbc0d499838b9f5dfa3890961ab6ef0f649ed",
+   "mtime": "2026-11-05T12:23:23"
+  },
+  {
+   "file": "logs/run_after_training.log",
+   "bytes": 0,
+   "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+   "mtime": "2026-11-02T17:03:30"
+  },
+  {
+   "file": "logs/run_training.log",
+   "bytes": 2893,
+   "sha256": "ce79eb209958bed7895478966346600ffc937f1820fe210696cde0cea2d8f583",
+   "mtime": "2026-11-03T13:45:20"
+  },
+  {
+   "file": "logs/run_training_resume.log",
+   "bytes": 2512,
+   "sha256": "df92ebe66ad1c3f9127543306c6a6698694b2ace86d17773f13ab4028288d277",
+   "mtime": "2026-11-06T00:50:48"
+  },
+  {
+   "file": "logs/train_A_fold0.log",
+   "bytes": 642,
+   "sha256": "53357764f50b2d380a8200c6c2b450b5dd2e881aef16641316e7d0cf184f02d6",
+   "mtime": "2026-11-02T14:28:15"
+  },
+  {
+   "file": "logs/train_A_fold1.log",
+   "bytes": 644,
+   "sha256": "701b123c3fbb2fc47d2f486b7a559c636df033f93c60845e1ec145125c672167",
+   "mtime": "2026-11-02T16:36:49"
+  },
+  {
+   "file": "logs/train_A_fold2.log",
+   "bytes": 625,
+   "sha256": "ad94a05d8e991ce7d283e643b6f5f437cb5b4cc6d788736b39acce062eaa0bb8",
+   "mtime": "2026-11-02T18:55:49"
+  },
+  {
+   "file": "logs/train_A_fold3.log",
+   "bytes": 644,
+   "sha256": "20eacd8e02d49fc76af350bd119c4b7435d3c6d34a5c35c5f9d6468e20344246",
+   "mtime": "2026-11-03T13:48:12"
+  },
+  {
+   "file": "logs/train_A_fold4.log",
+   "bytes": 645,
+   "sha256": "93c4199b81d5665fedefabd682d7dffadff07eb34fdbbd96e089c09296dd2b47",
+   "mtime": "2026-11-05T22:44:35"
+  },
+  {
+   "file": "logs/train_B_fold0.log",
+   "bytes": 651,
+   "sha256": "49434018e45d6f26c82d4b569094ad842ad797bdb07a6166edfc2888ef57e8ad",
+   "mtime": "2026-11-02T14:34:25"
+  },
+  {
+   "file": "logs/train_B_fold1.log",
+   "bytes": 649,
+   "sha256": "67c9013535a2570b312374bc788ac1ba07a382f1dd6cf7f0a11be3e702b2f2f3",
+   "mtime": "2026-11-02T16:42:51"
+  },
+  {
+   "file": "logs/train_B_fold2.log",
+   "bytes": 630,
+   "sha256": "ff55fc6f44db3cb31773f58215317412af46cca9147d0f53dbccb8cb6d1b44ba",
+   "mtime": "2026-11-02T19:02:09"
+  },
+  {
+   "file": "logs/train_B_fold3.log",
+   "bytes": 652,
+   "sha256": "443e98fc38d741c5163a510e1312110b0458ca0395adeb71376ba998bd2454b4",
+   "mtime": "2026-11-05T14:23:31"
+  },
+  {
+   "file": "logs/train_B_fold4.log",
+   "bytes": 646,
+   "sha256": "1d995443a3aeb78a8fdaf85a793e35d74cb0cb5e31c624fa1e0dcaa75c50fa9f",
+   "mtime": "2026-11-05T22:51:20"
+  },
+  {
+   "file": "logs/train_C_fold0.log",
+   "bytes": 652,
+   "sha256": "95ffb6b95bd8b7476bbdfa8a1bb271a1d46baec0ec044c4e14c39e147f02e589",
+   "mtime": "2026-11-02T16:35:32"
+  },
+  {
+   "file": "logs/train_C_fold1.log",
+   "bytes": 648,
+   "sha256": "22b497dc52bc25b59f9d3243634d6ed0e6e966730f5e58435419846f79d77ec9",
+   "mtime": "2026-11-02T18:54:24"
+  },
+  {
+   "file": "logs/train_C_fold2.log",
+   "bytes": 632,
+   "sha256": "aadcd001ff0f78c09759c44313be2a924e10eb658988b5ac59dbbf33c3af9f54",
+   "mtime": "2026-11-05T14:17:04"
+  },
+  {
+   "file": "logs/train_C_fold3.log",
+   "bytes": 655,
+   "sha256": "44c65eae41208a10ab75c16cbc37bbdaefc7f752f82a9e138eb1bedce533a4a5",
+   "mtime": "2026-11-05T22:43:06"
+  },
+  {
+   "file": "logs/train_C_fold4.log",
+   "bytes": 651,
+   "sha256": "2086dceeb2ee60160c7138d10e5847bed62098c2913d85e7e2794e765ec373ee",
+   "mtime": "2026-11-06T00:50:46"
+  },
+  {
+   "file": "experiments/01_audit_mitbih.py",
+   "bytes": 5711,
+   "sha256": "882fc8046e5b644d905a54525f603691f37ecb1208f93c0ae7d96f9769dcb4c5",
+   "mtime": "2026-11-02T13:50:05"
+  },
+  {
+   "file": "experiments/02_design_splits.py",
+   "bytes": 4388,
+   "sha256": "e1b77289022a244170e9ee702d48ca5182a8ac3516ee433ece54d74417c8b390",
+   "mtime": "2026-11-02T13:52:40"
+  },
+  {
+   "file": "experiments/03_audit_incart.py",
+   "bytes": 6594,
+   "sha256": "e780e5e13c7adcc618caa3c2798e284ea1bfe4c97ea134a0f979bac52c49a9d8",
+   "mtime": "2026-11-02T13:56:49"
+  },
+  {
+   "file": "experiments/03b_mitbih_alignment_by_class.py",
+   "bytes": 1297,
+   "sha256": "2df38ca8bd4e65c294ff6c2d967942b53ccfa69548105d674ca1c58f189f63e3",
+   "mtime": "2026-11-02T13:57:20"
+  },
+  {
+   "file": "experiments/04_extract_beats.py",
+   "bytes": 6314,
+   "sha256": "d277bd5f2b30afd45f22da11324112e177fb0187eea6d28e68dc4cc7b0d01c92",
+   "mtime": "2026-11-02T14:20:12"
+  },
+  {
+   "file": "experiments/05_lock_protocol.py",
+   "bytes": 3525,
+   "sha256": "851e6184f7972dc688e0f1a2736e48a284ec7b7a0c15b31eaa5ea410e258217c",
+   "mtime": "2026-11-02T14:26:34"
+  },
+  {
+   "file": "experiments/06_train.py",
+   "bytes": 3194,
+   "sha256": "cb7ebee5b7f49abdf4e94c3c3a27d0aabcff6632a2172bd59e199c45833e0eaa",
+   "mtime": "2026-11-02T14:21:45"
+  },
+  {
+   "file": "experiments/07_score.py",
+   "bytes": 2364,
+   "sha256": "dfb163c4d6296c74002765aadbf2bf4d26ffbfce077f99c7003b683b378bdd90",
+   "mtime": "2026-11-02T14:21:58"
+  },
+  {
+   "file": "experiments/08_evaluate.py",
+   "bytes": 10575,
+   "sha256": "5dd5f9e2a09eb5ed10665618c02b43aba9e41fb91db809d4899320c89219bd56",
+   "mtime": "2026-11-02T14:22:50"
+  },
+  {
+   "file": "experiments/09_class_driver_analysis.py",
+   "bytes": 5006,
+   "sha256": "9092046d21a1051a28fb847d3aa4d3ea567dd38ba6492fb7c9b118b9dd007811",
+   "mtime": "2026-11-02T17:03:20"
+  },
+  {
+   "file": "experiments/diag_memory.py",
+   "bytes": 3196,
+   "sha256": "bc8d01652e78f6bb4865be30380a535237945fad3a93e1d70583f4664a21d9ec",
+   "mtime": "2026-11-03T13:49:21"
+  },
+  {
+   "file": "experiments/make_manifest_pre_resume.py",
+   "bytes": 6589,
+   "sha256": "a2c4ab23364b229e9d51ed0b522f2266f2227f261992cf30fc679f4f63b29e8e",
+   "mtime": "2026-11-05T12:22:19"
+  },
+  {
+   "file": "experiments/r2common.py",
+   "bytes": 7914,
+   "sha256": "19c422dddb0636415870d022e6ea0da7b9cbf2ff40bd4b92883d3aab3d9c5989",
+   "mtime": "2026-11-02T14:21:28"
+  },
+  {
+   "file": "experiments/verify_lock.py",
+   "bytes": 1180,
+   "sha256": "66296e5752d68b17dd6cb3604209153ad329be0d35182bcc05d55d1f24cf6ba5",
+   "mtime": "2026-11-02T14:26:34"
+  },
+  {
+   "file": "experiments/run_after_training.sh",
+   "bytes": 995,
+   "sha256": "3c1e9167ed2f78c73a7c88157b319749d475dde3d5c398caa507ec1faed90d3a",
+   "mtime": "2026-11-02T17:03:30"
+  },
+  {
+   "file": "experiments/run_training.sh",
+   "bytes": 540,
+   "sha256": "f49871abbf0b148c820863ac046a9ceb4ff27044524a4397acdfcdd44f55e812",
+   "mtime": "2026-11-02T14:26:56"
+  },
+  {
+   "file": "experiments/run_training_resume.sh",
+   "bytes": 2693,
+   "sha256": "d8cd66026d214312b039b02b16bbfea305d393bda018710bbe5ebce1ddb47564",
+   "mtime": "2026-11-05T12:21:16"
+  },
+  {
+   "file": "experiments/monitor_resume.ps1",
+   "bytes": 1435,
+   "sha256": "1fab242e8642dfdaf3e90d6ad31340f3c523384fdbf401365f75ca0ec87625df",
+   "mtime": "2026-11-05T12:23:15"
+  },
+  {
+   "file": "experiments/run_resume_with_awake.ps1",
+   "bytes": 1255,
+   "sha256": "5f187925eb67db3559aa0a75e8858dfdd378a9ef37b552027c5719e1537fee47",
+   "mtime": "2026-11-05T12:23:15"
+  },
+  {
+   "file": "results/splits/folds_LOCKED.json",
+   "bytes": 990,
+   "sha256": "ec15d8ce2f51ff42491dfff58844b9e965a1fd7ea99a0a47cf675efe8b912a3a",
+   "mtime": "2026-11-02T14:26:40"
+  },
+  {
+   "file": "results/splits/proposed_fold_class_support.csv",
+   "bytes": 1619,
+   "sha256": "5599c6a74da74f1ac813ce274d8c2a0eee42c208532e6bc03cb92e461f98f989",
+   "mtime": "2026-11-02T13:52:42"
+  },
+  {
+   "file": "results/splits/proposed_folds.json",
+   "bytes": 958,
+   "sha256": "6dbab065795a4d8fd26177b5f762ee42484ae1603e9b93100add5a6a3e256e2b",
+   "mtime": "2026-11-02T13:52:42"
+  },
+  {
+   "file": "results/data_audit/extract_summary.json",
+   "bytes": 610,
+   "sha256": "f44d6d2ac8d50e4462c2539b58aef5c66455e10894ad23ec77d653071b40a547",
+   "mtime": "2026-11-02T14:20:40"
+  },
+  {
+   "file": "results/data_audit/incart_records.csv",
+   "bytes": 16426,
+   "sha256": "41257f85bbca5f6b2dced84427afe14cd6b67d2150925e3cc710f0cc29d7cec2",
+   "mtime": "2026-11-02T13:56:58"
+  },
+  {
+   "file": "results/data_audit/incart_summary.json",
+   "bytes": 1865,
+   "sha256": "3a6de903538165f6fd459925c2e170f9f99b9a05147595dc44a9b696bb908d6c",
+   "mtime": "2026-11-02T13:56:58"
+  },
+  {
+   "file": "results/data_audit/incart_symbol_counts.csv",
+   "bytes": 4055,
+   "sha256": "4e59166c98f8cf895e236718d775f063f7e9347a64fa9e0702bfaca9cff6955d",
+   "mtime": "2026-11-02T13:56:58"
+  },
+  {
+   "file": "results/data_audit/mitbih_alignment_by_class.json",
+   "bytes": 549,
+   "sha256": "3933e978765f8d7ecbbad0b7c68eddea6da55fd3193c3fff1ccbe1bbee5d4ce8",
+   "mtime": "2026-11-02T13:57:23"
+  },
+  {
+   "file": "results/data_audit/mitbih_label_mapping.csv",
+   "bytes": 656,
+   "sha256": "e290e3f909978043f8659a8636478639aaf4d876714b5aad9493402911ed0b8e",
+   "mtime": "2026-11-02T13:50:09"
+  },
+  {
+   "file": "results/data_audit/mitbih_records.csv",
+   "bytes": 9279,
+   "sha256": "d320d94c52e2afe813f351e86f3c29ce47a7f7abcc037cc724e737228f8ecbef",
+   "mtime": "2026-11-02T13:50:09"
+  },
+  {
+   "file": "results/data_audit/mitbih_summary.json",
+   "bytes": 693,
+   "sha256": "7f72f9c2d72823b7f99ac36641ee9208ebee2b10a6c4638edb8834e1a229c6a7",
+   "mtime": "2026-11-02T13:50:09"
+  },
+  {
+   "file": "results/data_audit/mitbih_symbol_counts.csv",
+   "bytes": 5013,
+   "sha256": "a362508bacba898efe93c36ec1e02fc90fcdd7ce3af8c94ee2f71dd1b780e874",
+   "mtime": "2026-11-02T13:50:09"
+  },
+  {
+   "file": "results/diagnostics/memory_diag.json",
+   "bytes": 3190,
+   "sha256": "ffa24a61f285b651e6b612c4d94ac8f83e0390d76d68bf33fa033c5d1605301a",
+   "mtime": "2026-11-03T13:59:03"
+  },
+  {
+   "file": "results/manifests/manifest_pre_resume.json",
+   "bytes": 40949,
+   "sha256": "6d564a8cb46fb89c99ad76e2781acd457bb7f63353346ab75311a62d0ca3f563",
+   "mtime": "2026-11-05T12:22:30"
+  },
+  {
+   "file": "locked_protocol.json",
+   "bytes": 4372,
+   "sha256": "ed0717f26f2d7f86d5a49c69b03de44588d35112ab8c9177186b4c4e5b61478c",
+   "mtime": "2026-11-02T14:26:42"
+  },
+  {
+   "file": "locked_protocol.sha256",
+   "bytes": 88,
+   "sha256": "a35392b29ed5165960cd279bcb9ae553fa199a4ed1c7af4401344d81c0d553ac",
+   "mtime": "2026-11-02T14:26:42"
+  },
+  {
+   "file": "experimental_protocol_LOCKED.md",
+   "bytes": 21752,
+   "sha256": "49fc7b15bbfc69fd0c63b169aade1ca37d6b2ec0cc23af962772716662fa1d6e",
+   "mtime": "2026-11-02T14:26:40"
+  }
+ ],
+ "evaluation_status": {
+  "results_scores_exists": false,
+  "scored_flag_exists": false,
+  "results_evaluation_entries": 0,
+  "note": "test folds and INCART not scored; no MIT-BIH out-of-fold test predictions exist; one-time evaluation flag unused"
+ },
+ "preservation": {
+  "files_outside_R2_modified_after_2026_10_13": [
+   [
+    "D:\\explainable_ai\\Journel paper project\\ECGTransForm\\.git\\objects\\pack\\pack-ad33710dd6224e69c890092da376a076942df1de.pack",
+    "2026-11-02T13:17:08"
+   ],
+   [
+    "D:\\explainable_ai\\revision\\reviewer_audit.md",
+    "2026-11-02T13:23:45"
+   ]
+  ],
+  "new_or_modified_files_in_R2_after_lock": {
+   "locked_protocol.json": [
+    "locked_protocol.json"
+   ],
+   "locked_protocol.sha256": [
+    "locked_protocol.sha256"
+   ],
+   "experiments/09_class_driver_analysis.py": [
+    "experiments/09_class_driver_analysis.py"
+   ],
+   "experiments/diag_memory.py": [
+    "experiments/diag_memory.py"
+   ],
+   "experiments/make_manifest_pre_resume.py": [
+    "experiments/make_manifest_pre_resume.py"
+   ],
+   "experiments/monitor_resume.ps1": [
+    "experiments/monitor_resume.ps1"
+   ],
+   "experiments/run_after_training.sh": [
+    "experiments/run_after_training.sh"
+   ],
+   "experiments/run_resume_with_awake.ps1": [
+    "experiments/run_resume_with_awake.ps1"
+   ],
+   "experiments/run_training.sh": [
+    "experiments/run_training.sh"
+   ],
+   "experiments/run_training_resume.sh": [
+    "experiments/run_training_resume.sh"
+   ],
+   "logs": [
+    "logs/05_lock_protocol.log",
+    "logs/diag_memory.log",
+    "logs/resume_monitor.log",
+    "logs/resume_stdout.log",
+    "logs/resume_wrapper.log",
+    "logs/run_after_training.log",
+    "logs/run_training.log",
+    "logs/run_training_resume.log",
+    "logs/train_A_fold0.log",
+    "logs/train_A_fold1.log",
+    "logs/train_A_fold2.log",
+    "logs/train_A_fold3.log",
+    "logs/train_A_fold4.log",
+    "logs/train_B_fold0.log",
+    "logs/train_B_fold1.log",
+    "logs/train_B_fold2.log",
+    "logs/train_B_fold3.log",
+    "logs/train_B_fold4.log",
+    "logs/train_C_fold0.log",
+    "logs/train_C_fold1.log",
+    "logs/train_C_fold2.log",
+    "logs/train_C_fold3.log",
+    "logs/train_C_fold4.log"
+   ],
+   "results/diagnostics": [
+    "results/diagnostics/memory_diag.json"
+   ],
+   "results/manifests": [
+    "results/manifests/manifest_pre_resume.json"
+   ],
+   "results/runs": [
+    "results/runs/A_fold0/ckpt_lr0.0001.pt",
+    "results/runs/A_fold0/ckpt_lr0.0005.pt",
+    "results/runs/A_fold0/ckpt_lr0.001.pt",
+    "results/runs/A_fold0/config.json",
+    "results/runs/A_fold0/history_lr0.0001.json",
+    "results/runs/A_fold0/history_lr0.0005.json",
+    "results/runs/A_fold0/history_lr0.001.json",
+    "results/runs/A_fold0/selected.json",
+    "results/runs/A_fold0/val_logits.npz",
+    "results/runs/A_fold1/ckpt_lr0.0001.pt",
+    "results/runs/A_fold1/ckpt_lr0.0005.pt",
+    "results/runs/A_fold1/ckpt_lr0.001.pt",
+    "results/runs/A_fold1/config.json",
+    "results/runs/A_fold1/history_lr0.0001.json",
+    "results/runs/A_fold1/history_lr0.0005.json",
+    "results/runs/A_fold1/history_lr0.001.json",
+    "results/runs/A_fold1/selected.json",
+    "results/runs/A_fold1/val_logits.npz",
+    "results/runs/A_fold2/ckpt_lr0.0001.pt",
+    "results/runs/A_fold2/ckpt_lr0.0005.pt",
+    "results/runs/A_fold2/ckpt_lr0.001.pt",
+    "results/runs/A_fold2/config.json",
+    "results/runs/A_fold2/history_lr0.0001.json",
+    "results/runs/A_fold2/history_lr0.0005.json",
+    "results/runs/A_fold2/history_lr0.001.json",
+    "results/runs/A_fold2/selected.json",
+    "results/runs/A_fold2/val_logits.npz",
+    "results/runs/A_fold3/ckpt_lr0.0001.pt",
+    "results/runs/A_fold3/ckpt_lr0.0005.pt",
+    "results/runs/A_fold3/ckpt_lr0.001.pt",
+    "results/runs/A_fold3/config.json",
+    "results/runs/A_fold3/history_lr0.0001.json",
+    "results/runs/A_fold3/history_lr0.0005.json",
+    "results/runs/A_fold3/history_lr0.001.json",
+    "results/runs/A_fold3/selected.json",
+    "results/runs/A_fold3/val_logits.npz",
+    "results/runs/A_fold4/ckpt_lr0.0001.pt",
+    "results/runs/A_fold4/ckpt_lr0.0005.pt",
+    "results/runs/A_fold4/ckpt_lr0.001.pt",
+    "results/runs/A_fold4/config.json",
+    "results/runs/A_fold4/history_lr0.0001.json",
+    "results/runs/A_fold4/history_lr0.0005.json",
+    "results/runs/A_fold4/history_lr0.001.json",
+    "results/runs/A_fold4/selected.json",
+    "results/runs/A_fold4/val_logits.npz",
+    "results/runs/B_fold0/ckpt_lr0.0001.pt",
+    "results/runs/B_fold0/ckpt_lr0.0005.pt",
+    "results/runs/B_fold0/ckpt_lr0.001.pt",
+    "results/runs/B_fold0/config.json",
+    "results/runs/B_fold0/history_lr0.0001.json",
+    "results/runs/B_fold0/history_lr0.0005.json",
+    "results/runs/B_fold0/history_lr0.001.json",
+    "results/runs/B_fold0/selected.json",
+    "results/runs/B_fold0/val_logits.npz",
+    "results/runs/B_fold1/ckpt_lr0.0001.pt",
+    "results/runs/B_fold1/ckpt_lr0.0005.pt",
+    "results/runs/B_fold1/ckpt_lr0.001.pt",
+    "results/runs/B_fold1/config.json",
+    "results/runs/B_fold1/history_lr0.0001.json",
+    "results/runs/B_fold1/history_lr0.0005.json",
+    "results/runs/B_fold1/history_lr0.001.json",
+    "results/runs/B_fold1/selected.json",
+    "results/runs/B_fold1/val_logits.npz",
+    "results/runs/B_fold2/ckpt_lr0.0001.pt",
+    "results/runs/B_fold2/ckpt_lr0.0005.pt",
+    "results/runs/B_fold2/ckpt_lr0.001.pt",
+    "results/runs/B_fold2/config.json",
+    "results/runs/B_fold2/history_lr0.0001.json",
+    "results/runs/B_fold2/history_lr0.0005.json",
+    "results/runs/B_fold2/history_lr0.001.json",
+    "results/runs/B_fold2/selected.json",
+    "results/runs/B_fold2/val_logits.npz",
+    "results/runs/B_fold3/ckpt_lr0.0001.pt",
+    "results/runs/B_fold3/ckpt_lr0.0005.pt",
+    "results/runs/B_fold3/ckpt_lr0.001.pt",
+    "results/runs/B_fold3/config.json",
+    "results/runs/B_fold3/history_lr0.0001.json",
+    "results/runs/B_fold3/history_lr0.0005.json",
+    "results/runs/B_fold3/history_lr0.001.json",
+    "results/runs/B_fold3/selected.json",
+    "results/runs/B_fold3/val_logits.npz",
+    "results/runs/B_fold4/ckpt_lr0.0001.pt",
+    "results/runs/B_fold4/ckpt_lr0.0005.pt",
+    "results/runs/B_fold4/ckpt_lr0.001.pt",
+    "results/runs/B_fold4/config.json",
+    "results/runs/B_fold4/history_lr0.0001.json",
+    "results/runs/B_fold4/history_lr0.0005.json",
+    "results/runs/B_fold4/history_lr0.001.json",
+    "results/runs/B_fold4/selected.json",
+    "results/runs/B_fold4/val_logits.npz",
+    "results/runs/C_fold0/ckpt_lr0.0001.pt",
+    "results/runs/C_fold0/ckpt_lr0.0005.pt",
+    "results/runs/C_fold0/ckpt_lr0.001.pt",
+    "results/runs/C_fold0/config.json",
+    "results/runs/C_fold0/history_lr0.0001.json",
+    "results/runs/C_fold0/history_lr0.0005.json",
+    "results/runs/C_fold0/history_lr0.001.json",
+    "results/runs/C_fold0/selected.json",
+    "results/runs/C_fold0/val_logits.npz",
+    "results/runs/C_fold1/ckpt_lr0.0001.pt",
+    "results/runs/C_fold1/ckpt_lr0.0005.pt",
+    "results/runs/C_fold1/ckpt_lr0.001.pt",
+    "results/runs/C_fold1/config.json",
+    "results/runs/C_fold1/history_lr0.0001.json",
+    "results/runs/C_fold1/history_lr0.0005.json",
+    "results/runs/C_fold1/history_lr0.001.json",
+    "results/runs/C_fold1/selected.json",
+    "results/runs/C_fold1/val_logits.npz",
+    "results/runs/C_fold2/ckpt_lr0.0001.pt",
+    "results/runs/C_fold2/ckpt_lr0.0005.pt",
+    "results/runs/C_fold2/ckpt_lr0.001.pt",
+    "results/runs/C_fold2/config.json",
+    "results/runs/C_fold2/history_lr0.0001.json",
+    "results/runs/C_fold2/history_lr0.0005.json",
+    "results/runs/C_fold2/history_lr0.001.json",
+    "results/runs/C_fold2/selected.json",
+    "results/runs/C_fold2/val_logits.npz",
+    "results/runs/C_fold3/ckpt_lr0.0001.pt",
+    "results/runs/C_fold3/ckpt_lr0.0005.pt",
+    "results/runs/C_fold3/ckpt_lr0.001.pt",
+    "results/runs/C_fold3/config.json",
+    "results/runs/C_fold3/history_lr0.0001.json",
+    "results/runs/C_fold3/history_lr0.0005.json",
+    "results/runs/C_fold3/history_lr0.001.json",
+    "results/runs/C_fold3/selected.json",
+    "results/runs/C_fold3/val_logits.npz",
+    "results/runs/C_fold4/ckpt_lr0.0001.pt",
+    "results/runs/C_fold4/ckpt_lr0.0005.pt",
+    "results/runs/C_fold4/ckpt_lr0.001.pt",
+    "results/runs/C_fold4/config.json",
+    "results/runs/C_fold4/history_lr0.0001.json",
+    "results/runs/C_fold4/history_lr0.0005.json",
+    "results/runs/C_fold4/history_lr0.001.json",
+    "results/runs/C_fold4/selected.json",
+    "results/runs/C_fold4/val_logits.npz"
+   ],
+   "results/runs_interrupted": [
+    "results/runs_interrupted/C_fold2_attempt1/ckpt_lr0.0001.pt",
+    "results/runs_interrupted/C_fold2_attempt1/config.json",
+    "results/runs_interrupted/C_fold2_attempt1/history_lr0.0001.json",
+    "results/runs_interrupted/C_fold2_attempt1/README.md",
+    "results/runs_interrupted/C_fold2_attempt1/run_training_attempt1.log",
+    "results/runs_interrupted/C_fold2_attempt1/train_C_fold2_attempt1.log"
+   ]
+  }
+ },
+ "audit_checks": {
+  "total": 492,
+  "passed": 492,
+  "failed": 0,
+  "checks": [
+   {
+    "run": "GLOBAL",
+    "check": "verify_lock (13 frozen files + lock self-hash)",
+    "ok": true,
+    "detail": "ed0717f26f2d7f86d5a49c69b03de44588d35112ab8c9177186b4c4e5b61478c"
+   },
+   {
+    "run": "GLOBAL",
+    "check": "locked_protocol.folds == folds_LOCKED.folds",
+    "ok": true,
+    "detail": ""
+   },
+   {
+    "run": "GLOBAL",
+    "check": "201 and 202 grouped as one unit",
+    "ok": true,
+    "detail": "{'201_202': ['201', '202']}"
+   },
+   {
+    "run": "GLOBAL",
+    "check": "47 units, 5 folds, disjoint",
+    "ok": true,
+    "detail": ""
+   },
+   {
+    "run": "GLOBAL",
+    "check": "locked fold seeds 1000..1004",
+    "ok": true,
+    "detail": ""
+   },
+   {
+    "run": "GLOBAL",
+    "check": "lock config == r2common.CONFIG (as loaded now)",
+    "ok": true,
+    "detail": ""
+   },
+   {
+    "run": "A_fold0",
+    "check": "all 9 expected files present",
+    "ok": true,
+    "detail": "[]"
+   },
+   {
+    "run": "A_fold0",
+    "check": "seed == 1000+fold",
+    "ok": true,
+    "detail": "1000"
+   },
+   {
+    "run": "A_fold0",
+    "check": "config.json lock hash == current lock",
+    "ok": true,
+    "detail": ""
+   },
+   {
+    "run": "A_fold0",
+    "check": "config.json CONFIG == locked CONFIG",
+    "ok": true,
+    "detail": ""
+   },
+   {
+    "run": "A_fold0",
+    "check": "test_partition_used == \"no\"; SMOTE on training only",
+    "ok": true,
+    "detail": ""
+   },
+   {
+    "run": "A_fold0",
+    "check": "post-SMOTE train counts == 20000 x 5",
+    "ok": true,
+    "detail": "[20000, 20000, 20000, 20000, 20000]"
+   },
+   {
+    "run": "A_fold0",
+    "check": "train/val subjects == locked-fold definition",
+    "ok": true,
+    "detail": ""
+   },
+   {
+    "run": "A_fold0",
+    "check": "train, val, test subject sets pairwise disjoint",
+    "ok": true,
+    "detail": ""
+   },
+   {
+    "run": "A_fold0",
+    "check": "train subjects exclude test fold",
+    "ok": true,
+    "detail": ""
+   },
+   {
+    "run": "A_fold0",
+    "check": "val class counts == config.json",
+    "ok": true,
+    "detail": "[16838, 1396, 1667, 13, 2074]"
+   },
+   {
+    "run": "A_fold0",
+    "check": "val_classes_used == classes with >=10 val beats",
+    "ok": true,
+    "detail": "(['N', 'S', 'V', 'F', 'Q'], [16838, 1396, 1667, 13, 2074])"
+   },
+   {
+    "run": "A_fold0",
+    "check": "history lr=0.0001: full 15 epochs, contiguous (no early stop / truncation)",
+    "ok": true,
+    "detail": "15"
+   },
+   {
+    "run": "A_fold0",
+    "check": "history lr=0.0001: finite losses and F1",
+    "ok": true,
+    "detail": ""
+   },
+   {
+    "run": "A_fold0",
+    "check": "history lr=0.0001: val_macro_f1 == mean(per-class F1 over val classes)",
+    "ok": true,
+    "detail": ""
+   },
+   {
+    "run": "A_fold0",
+    "check": "history lr=0.0005: full 15 epochs, contiguous (no early stop / truncation)",
+    "ok": true,
+    "detail": "15"
+   },
+   {
+    "run": "A_fold0",
+    "check": "history lr=0.0005: finite losses and F1",
+    "ok": true,
+    "detail": ""
+   },
+   {
+    "run": "A_fold0",
+    "check": "history lr=0.0005: val_macro_f1 == mean(per-class F1 over val classes)",
+    "ok": true,
+    "detail": ""
+   },
+   {
+    "run": "A_fold0",
+    "check": "history lr=0.001: full 15 epochs, contiguous (no early stop / truncation)",
+    "ok": true,
+    "detail": "15"
+   },
+   {
+    "run": "A_fold0",
+    "check": "history lr=0.001: finite losses and F1",
+    "ok": true,
+    "detail": ""
+   },
+   {
+    "run": "A_fold0",
+    "check": "history lr=0.001: val_macro_f1 == mean(per-class F1 over val classes)",
+    "ok": true,
+    "detail": ""
+   },
+   {
+    "run": "A_fold0",
+    "check": "selected.json grid == recomputed (best F1, first-max epoch) per lr",
+    "ok": true,
+    "detail": "{0.0001: (0.54870167647823, 1), 0.0005: (0.5193422870635354, 4), 0.001: (0.48874921821607364, 3)}"
+   },
+   {
+    "run": "A_fold0",
+    "check": "selected lr/epoch == argmax over (lr, epoch) of VALIDATION macro-F1 (ties -> first)",
+    "ok": true,
+    "detail": "(0.0001, 1, 0.54870167647823)"
+   },
+   {
+    "run": "A_fold0",
+    "check": "selected checkpoint filename matches selected lr",
+    "ok": true,
+    "detail": ""
+   },
+   {
+    "run": "A_fold0",
+    "check": "checkpoint lr=0.0001 loads (weights_only), keys/shapes match model, finite",
+    "ok": true,
+    "detail": ""
+   },
+   {
+    "run": "A_fold0",
+    "check": "checkpoint lr=0.0005 loads (weights_only), keys/shapes match model, finite",
+    "ok": true,
+    "detail": ""
+   },
+   {
+    "run": "A_fold0",
+    "check": "checkpoint lr=0.001 loads (weights_only), keys/shapes match model, finite",
+    "ok": true,
+    "detail": ""
+   },
+   {
+    "run": "A_fold0",
+    "check": "val_logits.npz loads; shape (n_val,5); finite",
+    "ok": true,
+    "detail": "(21988, 5)"
+   },
+   {
+    "run": "A_fold0",
+    "check": "val_logits labels/subject/record == data[val partition]",
+    "ok": true,
+    "detail": ""
+   },
+   {
+    "run": "A_fold0",
+    "check": "macro-F1 recomputed from saved selected-checkpoint val logits == recorded best val macro-F1",
+    "ok": true,
+    "detail": "(0.54870167647823, 0.54870167647823)"
+   },
+   {
+    "run": "A_fold0",
+    "check": "temperature re-fit from saved val logits == recorded T",
+    "ok": true,
+    "detail": "(1.0049266815185547, 1.0049266815185547)"
+   },
+   {
+    "run": "A_fold0",
+    "check": "train log present, 3 per-lr lines + SELECTED line",
+    "ok": true,
+    "detail": ""
+   },
+   {
+    "run": "A_fold1",
+    "check": "all 9 expected files present",
+    "ok": true,
+    "detail": "[]"
+   },
+   {
+    "run": "A_fold1",
+    "check": "seed == 1000+fold",
+    "ok": true,
+    "detail": "1001"
+   },
+   {
+    "run": "A_fold1",
+    "check": "config.json lock hash == current lock",
+    "ok": true,
+    "detail": ""
+   },
+   {
+    "run": "A_fold1",
+    "check": "config.json CONFIG == locked CONFIG",
+    "ok": true,
+    "detail": ""
+   },
+   {
+    "run": "A_fold1",
+    "check": "test_partition_used == \"no\"; SMOTE on training only",
+    "ok": true,
+    "detail": ""
+   },
+   {
+    "run": "A_fold1",
+    "check": "post-SMOTE train counts == 20000 x 5",
+    "ok": true,
+    "detail": "[20000, 20000, 20000, 20000, 20000]"
+   },
+   {
+    "run": "A_fold1",
+    "check": "train/val subjects == locked-fold definition",
+    "ok": true,
+    "detail": ""
+   },
+   {
+    "run": "A_fold1",
+    "check": "train, val, test subject sets pairwise disjoint",
+    "ok": true,
+    "detail": ""
+   },
+   {
+    "run": "A_fold1",
+    "check": "train subjects exclude test fold",
+    "ok": true,
+    "detail": ""
+   },
+   {
+    "run": "A_fold1",
+    "check": "val class counts == config.json",
+    "ok": true,
+    "detail": "[18323, 427, 1162, 373, 2082]"
+   },
+   {
+    "run": "A_fold1",
+    "check": "val_classes_used == classes with >=10 val beats",
+    "ok": true,
+    "detail": "(['N', 'S', 'V', 'F', 'Q'], [18323, 427, 1162, 373, 2082])"
+   },
+   {
+    "run": "A_fold1",
+    "check": "history lr=0.0001: full 15 epochs, contiguous (no early stop / truncation)",
+    "ok": true,
+    "detail": "15"
+   },
+   {
+    "run": "A_fold1",
+    "check": "history lr=0.0001: finite losses and F1",
+    "ok": true,
+    "detail": ""
+   },
+   {
+    "run": "A_fold1",
+    "check": "history lr=0.0001: val_macro_f1 == mean(per-class F1 over val classes)",
+    "ok": true,
+    "detail": ""
+   },
+   {
+    "run": "A_fold1",
+    "check": "history lr=0.0005: full 15 epochs, contiguous (no early stop / truncation)",
+    "ok": true,
+    "detail": "15"
+   },
+   {
+    "run": "A_fold1",
+    "check": "history lr=0.0005: finite losses and F1",
+    "ok": true,
+    "detail": ""
+   },
+   {
+    "run": "A_fold1",
+    "check": "history lr=0.0005: val_macro_f1 == mean(per-class F1 over val classes)",
+    "ok": true,
+    "detail": ""
+   },
+   {
+    "run": "A_fold1",
+    "check": "history lr=0.001: full 15 epochs, contiguous (no early stop / truncation)",
+    "ok": true,
+    "detail": "15"
+   },
+   {
+    "run": "A_fold1",
+    "check": "history lr=0.001: finite losses and F1",
+    "ok": true,
+    "detail": ""
+   },
+   {
+    "run": "A_fold1",
+    "check": "history lr=0.001: val_macro_f1 == mean(per-class F1 over val classes)",
+    "ok": true,
+    "detail": ""
+   },
+   {
+    "run": "A_fold1",
+    "check": "selected.json grid == recomputed (best F1, first-max epoch) per lr",
+    "ok": true,
+    "detail": "{0.0001: (0.4690842009959188, 1), 0.0005: (0.5311862891186967, 13), 0.001: (0.5554381604300532, 4)}"
+   },
+   {
+    "run": "A_fold1",
+    "check": "selected lr/epoch == argmax over (lr, epoch) of VALIDATION macro-F1 (ties -> first)",
+    "ok": true,
+    "detail": "(0.001, 4, 0.5554381604300532)"
+   },
+   {
+    "run": "A_fold1",
+    "check": "selected checkpoint filename matches selected lr",
+    "ok": true,
+    "detail": ""
+   },
+   {
+    "run": "A_fold1",
+    "check": "checkpoint lr=0.0001 loads (weights_only), keys/shapes match model, finite",
+    "ok": true,
+    "detail": ""
+   },
+   {
+    "run": "A_fold1",
+    "check": "checkpoint lr=0.0005 loads (weights_only), keys/shapes match model, finite",
+    "ok": true,
+    "detail": ""
+   },
+   {
+    "run": "A_fold1",
+    "check": "checkpoint lr=0.001 loads (weights_only), keys/shapes match model, finite",
+    "ok": true,
+    "detail": ""
+   },
+   {
+    "run": "A_fold1",
+    "check": "val_logits.npz loads; shape (n_val,5); finite",
+    "ok": true,
+    "detail": "(22367, 5)"
+   },
+   {
+    "run": "A_fold1",
+    "check": "val_logits labels/subject/record == data[val partition]",
+    "ok": true,
+    "detail": ""
+   },
+   {
+    "run": "A_fold1",
+    "check": "macro-F1 recomputed from saved selected-checkpoint val logits == recorded best val macro-F1",
+    "ok": true,
+    "detail": "(0.5554381604300532, 0.5554381604300532)"
+   },
+   {
+    "run": "A_fold1",
+    "check": "temperature re-fit from saved val logits == recorded T",
+    "ok": true,
+    "detail": "(3.6086792945861816, 3.6086792945861816)"
+   },
+   {
+    "run": "A_fold1",
+    "check": "train log present, 3 per-lr lines + SELECTED line",
+    "ok": true,
+    "detail": ""
+   },
+   {
+    "run": "A_fold2",
+    "check": "all 9 expected files present",
+    "ok": true,
+    "detail": "[]"
+   },
+   {
+    "run": "A_fold2",
+    "check": "seed == 1000+fold",
+    "ok": true,
+    "detail": "1002"
+   },
+   {
+    "run": "A_fold2",
+    "check": "config.json lock hash == current lock",
+    "ok": true,
+    "detail": ""
+   },
+   {
+    "run": "A_fold2",
+    "check": "config.json CONFIG == locked CONFIG",
+    "ok": true,
+    "detail": ""
+   },
+   {
+    "run": "A_fold2",
+    "check": "test_partition_used == \"no\"; SMOTE on training only",
+    "ok": true,
+    "detail": ""
+   },
+   {
+    "run": "A_fold2",
+    "check": "post-SMOTE train counts == 20000 x 5",
+    "ok": true,
+    "detail": "[20000, 20000, 20000, 20000, 20000]"
+   },
+   {
+    "run": "A_fold2",
+    "check": "train/val subjects == locked-fold definition",
+    "ok": true,
+    "detail": ""
+   },
+   {
+    "run": "A_fold2",
+    "check": "train, val, test subject sets pairwise disjoint",
+    "ok": true,
+    "detail": ""
+   },
+   {
+    "run": "A_fold2",
+    "check": "train subjects exclude test fold",
+    "ok": true,
+    "detail": ""
+   },
+   {
+    "run": "A_fold2",
+    "check": "val class counts == config.json",
+    "ok": true,
+    "detail": "[19599, 323, 1626, 11, 5]"
+   },
+   {
+    "run": "A_fold2",
+    "check": "val_classes_used == classes with >=10 val beats",
+    "ok": true,
+    "detail": "(['N', 'S', 'V', 'F'], [19599, 323, 1626, 11, 5])"
+   },
+   {
+    "run": "A_fold2",
+    "check": "history lr=0.0001: full 15 epochs, contiguous (no early stop / truncation)",
+    "ok": true,
+    "detail": "15"
+   },
+   {
+    "run": "A_fold2",
+    "check": "history lr=0.0001: finite losses and F1",
+    "ok": true,
+    "detail": ""
+   },
+   {
+    "run": "A_fold2",
+    "check": "history lr=0.0001: val_macro_f1 == mean(per-class F1 over val classes)",
+    "ok": true,
+    "detail": ""
+   },
+   {
+    "run": "A_fold2",
+    "check": "history lr=0.0005: full 15 epochs, contiguous (no early stop / truncation)",
+    "ok": true,
+    "detail": "15"
+   },
+   {
+    "run": "A_fold2",
+    "check": "history lr=0.0005: finite losses and F1",
+    "ok": true,
+    "detail": ""
+   },
+   {
+    "run": "A_fold2",
+    "check": "history lr=0.0005: val_macro_f1 == mean(per-class F1 over val classes)",
+    "ok": true,
+    "detail": ""
+   },
+   {
+    "run": "A_fold2",
+    "check": "history lr=0.001: full 15 epochs, contiguous (no early stop / truncation)",
+    "ok": true,
+    "detail": "15"
+   },
+   {
+    "run": "A_fold2",
+    "check": "history lr=0.001: finite losses and F1",
+    "ok": true,
+    "detail": ""
+   },
+   {
+    "run": "A_fold2",
+    "check": "history lr=0.001: val_macro_f1 == mean(per-class F1 over val classes)",
+    "ok": true,
+    "detail": ""
+   },
+   {
+    "run": "A_fold2",
+    "check": "selected.json grid == recomputed (best F1, first-max epoch) per lr",
+    "ok": true,
+    "detail": "{0.0001: (0.35733037657474553, 1), 0.0005: (0.3969463289201581, 15), 0.001: (0.4259137845733672, 3)}"
+   },
+   {
+    "run": "A_fold2",
+    "check": "selected lr/epoch == argmax over (lr, epoch) of VALIDATION macro-F1 (ties -> first)",
+    "ok": true,
+    "detail": "(0.001, 3, 0.4259137845733672)"
+   },
+   {
+    "run": "A_fold2",
+    "check": "selected checkpoint filename matches selected lr",
+    "ok": true,
+    "detail": ""
+   },
+   {
+    "run": "A_fold2",
+    "check": "checkpoint lr=0.0001 loads (weights_only), keys/shapes match model, finite",
+    "ok": true,
+    "detail": ""
+   },
+   {
+    "run": "A_fold2",
+    "check": "checkpoint lr=0.0005 loads (weights_only), keys/shapes match model, finite",
+    "ok": true,
+    "detail": ""
+   },
+   {
+    "run": "A_fold2",
+    "check": "checkpoint lr=0.001 loads (weights_only), keys/shapes match model, finite",
+    "ok": true,
+    "detail": ""
+   },
+   {
+    "run": "A_fold2",
+    "check": "val_logits.npz loads; shape (n_val,5); finite",
+    "ok": true,
+    "detail": "(21564, 5)"
+   },
+   {
+    "run": "A_fold2",
+    "check": "val_logits labels/subject/record == data[val partition]",
+    "ok": true,
+    "detail": ""
+   },
+   {
+    "run": "A_fold2",
+    "check": "macro-F1 recomputed from saved selected-checkpoint val logits == recorded best val macro-F1",
+    "ok": true,
+    "detail": "(0.4259137845733672, 0.4259137845733672)"
+   },
+   {
+    "run": "A_fold2",
+    "check": "temperature re-fit from saved val logits == recorded T",
+    "ok": true,
+    "detail": "(1.8478223085403442, 1.8478223085403442)"
+   },
+   {
+    "run": "A_fold2",
+    "check": "train log present, 3 per-lr lines + SELECTED line",
+    "ok": true,
+    "detail": ""
+   },
+   {
+    "run": "A_fold3",
+    "check": "all 9 expected files present",
+    "ok": true,
+    "detail": "[]"
+   },
+   {
+    "run": "A_fold3",
+    "check": "seed == 1000+fold",
+    "ok": true,
+    "detail": "1003"
+   },
+   {
+    "run": "A_fold3",
+    "check": "config.json lock hash == current lock",
+    "ok": true,
+    "detail": ""
+   },
+   {
+    "run": "A_fold3",
+    "check": "config.json CONFIG == locked CONFIG",
+    "ok": true,
+    "detail": ""
+   },
+   {
+    "run": "A_fold3",
+    "check": "test_partition_used == \"no\"; SMOTE on training only",
+    "ok": true,
+    "detail": ""
+   },
+   {
+    "run": "A_fold3",
+    "check": "post-SMOTE train counts == 20000 x 5",
+    "ok": true,
+    "detail": "[20000, 20000, 20000, 20000, 20000]"
+   },
+   {
+    "run": "A_fold3",
+    "check": "train/val subjects == locked-fold definition",
+    "ok": true,
+    "detail": ""
+   },
+   {
+    "run": "A_fold3",
+    "check": "train, val, test subject sets pairwise disjoint",
+    "ok": true,
+    "detail": ""
+   },
+   {
+    "run": "A_fold3",
+    "check": "train subjects exclude test fold",
+    "ok": true,
+    "detail": ""
+   },
+   {
+    "run": "A_fold3",
+    "check": "val class counts == config.json",
+    "ok": true,
+    "detail": "[16790, 368, 970, 369, 2068]"
+   },
+   {
+    "run": "A_fold3",
+    "check": "val_classes_used == classes with >=10 val beats",
+    "ok": true,
+    "detail": "(['N', 'S', 'V', 'F', 'Q'], [16790, 368, 970, 369, 2068])"
+   },
+   {
+    "run": "A_fold3",
+    "check": "history lr=0.0001: full 15 epochs, contiguous (no early stop / truncation)",
+    "ok": true,
+    "detail": "15"
+   },
+   {
+    "run": "A_fold3",
+    "check": "history lr=0.0001: finite losses and F1",
+    "ok": true,
+    "detail": ""
+   },
+   {
+    "run": "A_fold3",
+    "check": "history lr=0.0001: val_macro_f1 == mean(per-class F1 over val classes)",
+    "ok": true,
+    "detail": ""
+   },
+   {
+    "run": "A_fold3",
+    "check": "history lr=0.0005: full 15 epochs, contiguous (no early stop / truncation)",
+    "ok": true,
+    "detail": "15"
+   },
+   {
+    "run": "A_fold3",
+    "check": "history lr=0.0005: finite losses and F1",
+    "ok": true,
+    "detail": ""
+   },
+   {
+    "run": "A_fold3",
+    "check": "history lr=0.0005: val_macro_f1 == mean(per-class F1 over val classes)",
+    "ok": true,
+    "detail": ""
+   },
+   {
+    "run": "A_fold3",
+    "check": "history lr=0.001: full 15 epochs, contiguous (no early stop / truncation)",
+    "ok": true,
+    "detail": "15"
+   },
+   {
+    "run": "A_fold3",
+    "check": "history lr=0.001: finite losses and F1",
+    "ok": true,
+    "detail": ""
+   },
+   {
+    "run": "A_fold3",
+    "check": "history lr=0.001: val_macro_f1 == mean(per-class F1 over val classes)",
+    "ok": true,
+    "detail": ""
+   },
+   {
+    "run": "A_fold3",
+    "check": "selected.json grid == recomputed (best F1, first-max epoch) per lr",
+    "ok": true,
+    "detail": "{0.0001: (0.4473974668343038, 1), 0.0005: (0.4605745346215996, 5), 0.001: (0.4730452743930333, 13)}"
+   },
+   {
+    "run": "A_fold3",
+    "check": "selected lr/epoch == argmax over (lr, epoch) of VALIDATION macro-F1 (ties -> first)",
+    "ok": true,
+    "detail": "(0.001, 13, 0.4730452743930333)"
+   },
+   {
+    "run": "A_fold3",
+    "check": "selected checkpoint filename matches selected lr",
+    "ok": true,
+    "detail": ""
+   },
+   {
+    "run": "A_fold3",
+    "check": "checkpoint lr=0.0001 loads (weights_only), keys/shapes match model, finite",
+    "ok": true,
+    "detail": ""
+   },
+   {
+    "run": "A_fold3",
+    "check": "checkpoint lr=0.0005 loads (weights_only), keys/shapes match model, finite",
+    "ok": true,
+    "detail": ""
+   },
+   {
+    "run": "A_fold3",
+    "check": "checkpoint lr=0.001 loads (weights_only), keys/shapes match model, finite",
+    "ok": true,
+    "detail": ""
+   },
+   {
+    "run": "A_fold3",
+    "check": "val_logits.npz loads; shape (n_val,5); finite",
+    "ok": true,
+    "detail": "(20565, 5)"
+   },
+   {
+    "run": "A_fold3",
+    "check": "val_logits labels/subject/record == data[val partition]",
+    "ok": true,
+    "detail": ""
+   },
+   {
+    "run": "A_fold3",
+    "check": "macro-F1 recomputed from saved selected-checkpoint val logits == recorded best val macro-F1",
+    "ok": true,
+    "detail": "(0.4730452743930333, 0.4730452743930333)"
+   },
+   {
+    "run": "A_fold3",
+    "check": "temperature re-fit from saved val logits == recorded T",
+    "ok": true,
+    "detail": "(5.150179862976074, 5.150179862976074)"
+   },
+   {
+    "run": "A_fold3",
+    "check": "train log present, 3 per-lr lines + SELECTED line",
+    "ok": true,
+    "detail": ""
+   },
+   {
+    "run": "A_fold4",
+    "check": "all 9 expected files present",
+    "ok": true,
+    "detail": "[]"
+   },
+   {
+    "run": "A_fold4",
+    "check": "seed == 1000+fold",
+    "ok": true,
+    "detail": "1004"
+   },
+   {
+    "run": "A_fold4",
+    "check": "config.json lock hash == current lock",
+    "ok": true,
+    "detail": ""
+   },
+   {
+    "run": "A_fold4",
+    "check": "config.json CONFIG == locked CONFIG",
+    "ok": true,
+    "detail": ""
+   },
+   {
+    "run": "A_fold4",
+    "check": "test_partition_used == \"no\"; SMOTE on training only",
+    "ok": true,
+    "detail": ""
+   },
+   {
+    "run": "A_fold4",
+    "check": "post-SMOTE train counts == 20000 x 5",
+    "ok": true,
+    "detail": "[20000, 20000, 20000, 20000, 20000]"
+   },
+   {
+    "run": "A_fold4",
+    "check": "train/val subjects == locked-fold definition",
+    "ok": true,
+    "detail": ""
+   },
+   {
+    "run": "A_fold4",
+    "check": "train, val, test subject sets pairwise disjoint",
+    "ok": true,
+    "detail": ""
+   },
+   {
+    "run": "A_fold4",
+    "check": "train subjects exclude test fold",
+    "ok": true,
+    "detail": ""
+   },
+   {
+    "run": "A_fold4",
+    "check": "val class counts == config.json",
+    "ok": true,
+    "detail": "[18922, 261, 1804, 36, 1798]"
+   },
+   {
+    "run": "A_fold4",
+    "check": "val_classes_used == classes with >=10 val beats",
+    "ok": true,
+    "detail": "(['N', 'S', 'V', 'F', 'Q'], [18922, 261, 1804, 36, 1798])"
+   },
+   {
+    "run": "A_fold4",
+    "check": "history lr=0.0001: full 15 epochs, contiguous (no early stop / truncation)",
+    "ok": true,
+    "detail": "15"
+   },
+   {
+    "run": "A_fold4",
+    "check": "history lr=0.0001: finite losses and F1",
+    "ok": true,
+    "detail": ""
+   },
+   {
+    "run": "A_fold4",
+    "check": "history lr=0.0001: val_macro_f1 == mean(per-class F1 over val classes)",
+    "ok": true,
+    "detail": ""
+   },
+   {
+    "run": "A_fold4",
+    "check": "history lr=0.0005: full 15 epochs, contiguous (no early stop / truncation)",
+    "ok": true,
+    "detail": "15"
+   },
+   {
+    "run": "A_fold4",
+    "check": "history lr=0.0005: finite losses and F1",
+    "ok": true,
+    "detail": ""
+   },
+   {
+    "run": "A_fold4",
+    "check": "history lr=0.0005: val_macro_f1 == mean(per-class F1 over val classes)",
+    "ok": true,
+    "detail": ""
+   },
+   {
+    "run": "A_fold4",
+    "check": "history lr=0.001: full 15 epochs, contiguous (no early stop / truncation)",
+    "ok": true,
+    "detail": "15"
+   },
+   {
+    "run": "A_fold4",
+    "check": "history lr=0.001: finite losses and F1",
+    "ok": true,
+    "detail": ""
+   },
+   {
+    "run": "A_fold4",
+    "check": "history lr=0.001: val_macro_f1 == mean(per-class F1 over val classes)",
+    "ok": true,
+    "detail": ""
+   },
+   {
+    "run": "A_fold4",
+    "check": "selected.json grid == recomputed (best F1, first-max epoch) per lr",
+    "ok": true,
+    "detail": "{0.0001: (0.3092308036486254, 2), 0.0005: (0.3944977077147551, 14), 0.001: (0.44188220345676743, 3)}"
+   },
+   {
+    "run": "A_fold4",
+    "check": "selected lr/epoch == argmax over (lr, epoch) of VALIDATION macro-F1 (ties -> first)",
+    "ok": true,
+    "detail": "(0.001, 3, 0.44188220345676743)"
+   },
+   {
+    "run": "A_fold4",
+    "check": "selected checkpoint filename matches selected lr",
+    "ok": true,
+    "detail": ""
+   },
+   {
+    "run": "A_fold4",
+    "check": "checkpoint lr=0.0001 loads (weights_only), keys/shapes match model, finite",
+    "ok": true,
+    "detail": ""
+   },
+   {
+    "run": "A_fold4",
+    "check": "checkpoint lr=0.0005 loads (weights_only), keys/shapes match model, finite",
+    "ok": true,
+    "detail": ""
+   },
+   {
+    "run": "A_fold4",
+    "check": "checkpoint lr=0.001 loads (weights_only), keys/shapes match model, finite",
+    "ok": true,
+    "detail": ""
+   },
+   {
+    "run": "A_fold4",
+    "check": "val_logits.npz loads; shape (n_val,5); finite",
+    "ok": true,
+    "detail": "(22821, 5)"
+   },
+   {
+    "run": "A_fold4",
+    "check": "val_logits labels/subject/record == data[val partition]",
+    "ok": true,
+    "detail": ""
+   },
+   {
+    "run": "A_fold4",
+    "check": "macro-F1 recomputed from saved selected-checkpoint val logits == recorded best val macro-F1",
+    "ok": true,
+    "detail": "(0.44188220345676743, 0.44188220345676743)"
+   },
+   {
+    "run": "A_fold4",
+    "check": "temperature re-fit from saved val logits == recorded T",
+    "ok": true,
+    "detail": "(1.827972173690796, 1.827972173690796)"
+   },
+   {
+    "run": "A_fold4",
+    "check": "train log present, 3 per-lr lines + SELECTED line",
+    "ok": true,
+    "detail": ""
+   },
+   {
+    "run": "B_fold0",
+    "check": "all 9 expected files present",
+    "ok": true,
+    "detail": "[]"
+   },
+   {
+    "run": "B_fold0",
+    "check": "seed == 1000+fold",
+    "ok": true,
+    "detail": "1000"
+   },
+   {
+    "run": "B_fold0",
+    "check": "config.json lock hash == current lock",
+    "ok": true,
+    "detail": ""
+   },
+   {
+    "run": "B_fold0",
+    "check": "config.json CONFIG == locked CONFIG",
+    "ok": true,
+    "detail": ""
+   },
+   {
+    "run": "B_fold0",
+    "check": "test_partition_used == \"no\"; SMOTE on training only",
+    "ok": true,
+    "detail": ""
+   },
+   {
+    "run": "B_fold0",
+    "check": "post-SMOTE train counts == 20000 x 5",
+    "ok": true,
+    "detail": "[20000, 20000, 20000, 20000, 20000]"
+   },
+   {
+    "run": "B_fold0",
+    "check": "train/val subjects == locked-fold definition",
+    "ok": true,
+    "detail": ""
+   },
+   {
+    "run": "B_fold0",
+    "check": "train, val, test subject sets pairwise disjoint",
+    "ok": true,
+    "detail": ""
+   },
+   {
+    "run": "B_fold0",
+    "check": "train subjects exclude test fold",
+    "ok": true,
+    "detail": ""
+   },
+   {
+    "run": "B_fold0",
+    "check": "val class counts == config.json",
+    "ok": true,
+    "detail": "[16838, 1396, 1667, 13, 2074]"
+   },
+   {
+    "run": "B_fold0",
+    "check": "val_classes_used == classes with >=10 val beats",
+    "ok": true,
+    "detail": "(['N', 'S', 'V', 'F', 'Q'], [16838, 1396, 1667, 13, 2074])"
+   },
+   {
+    "run": "B_fold0",
+    "check": "history lr=0.0001: full 20 epochs, contiguous (no early stop / truncation)",
+    "ok": true,
+    "detail": "20"
+   },
+   {
+    "run": "B_fold0",
+    "check": "history lr=0.0001: finite losses and F1",
+    "ok": true,
+    "detail": ""
+   },
+   {
+    "run": "B_fold0",
+    "check": "history lr=0.0001: val_macro_f1 == mean(per-class F1 over val classes)",
+    "ok": true,
+    "detail": ""
+   },
+   {
+    "run": "B_fold0",
+    "check": "history lr=0.0005: full 20 epochs, contiguous (no early stop / truncation)",
+    "ok": true,
+    "detail": "20"
+   },
+   {
+    "run": "B_fold0",
+    "check": "history lr=0.0005: finite losses and F1",
+    "ok": true,
+    "detail": ""
+   },
+   {
+    "run": "B_fold0",
+    "check": "history lr=0.0005: val_macro_f1 == mean(per-class F1 over val classes)",
+    "ok": true,
+    "detail": ""
+   },
+   {
+    "run": "B_fold0",
+    "check": "history lr=0.001: full 20 epochs, contiguous (no early stop / truncation)",
+    "ok": true,
+    "detail": "20"
+   },
+   {
+    "run": "B_fold0",
+    "check": "history lr=0.001: finite losses and F1",
+    "ok": true,
+    "detail": ""
+   },
+   {
+    "run": "B_fold0",
+    "check": "history lr=0.001: val_macro_f1 == mean(per-class F1 over val classes)",
+    "ok": true,
+    "detail": ""
+   },
+   {
+    "run": "B_fold0",
+    "check": "selected.json grid == recomputed (best F1, first-max epoch) per lr",
+    "ok": true,
+    "detail": "{0.0001: (0.5141695377434752, 19), 0.0005: (0.5605127158358785, 11), 0.001: (0.5450125259302919, 2)}"
+   },
+   {
+    "run": "B_fold0",
+    "check": "selected lr/epoch == argmax over (lr, epoch) of VALIDATION macro-F1 (ties -> first)",
+    "ok": true,
+    "detail": "(0.0005, 11, 0.5605127158358785)"
+   },
+   {
+    "run": "B_fold0",
+    "check": "selected checkpoint filename matches selected lr",
+    "ok": true,
+    "detail": ""
+   },
+   {
+    "run": "B_fold0",
+    "check": "checkpoint lr=0.0001 loads (weights_only), keys/shapes match model, finite",
+    "ok": true,
+    "detail": ""
+   },
+   {
+    "run": "B_fold0",
+    "check": "checkpoint lr=0.0005 loads (weights_only), keys/shapes match model, finite",
+    "ok": true,
+    "detail": ""
+   },
+   {
+    "run": "B_fold0",
+    "check": "checkpoint lr=0.001 loads (weights_only), keys/shapes match model, finite",
+    "ok": true,
+    "detail": ""
+   },
+   {
+    "run": "B_fold0",
+    "check": "val_logits.npz loads; shape (n_val,5); finite",
+    "ok": true,
+    "detail": "(21988, 5)"
+   },
+   {
+    "run": "B_fold0",
+    "check": "val_logits labels/subject/record == data[val partition]",
+    "ok": true,
+    "detail": ""
+   },
+   {
+    "run": "B_fold0",
+    "check": "macro-F1 recomputed from saved selected-checkpoint val logits == recorded best val macro-F1",
+    "ok": true,
+    "detail": "(0.5605127158358785, 0.5605127158358785)"
+   },
+   {
+    "run": "B_fold0",
+    "check": "temperature re-fit from saved val logits == recorded T",
+    "ok": true,
+    "detail": "(2.3070614337921143, 2.3070614337921143)"
+   },
+   {
+    "run": "B_fold0",
+    "check": "train log present, 3 per-lr lines + SELECTED line",
+    "ok": true,
+    "detail": ""
+   },
+   {
+    "run": "B_fold1",
+    "check": "all 9 expected files present",
+    "ok": true,
+    "detail": "[]"
+   },
+   {
+    "run": "B_fold1",
+    "check": "seed == 1000+fold",
+    "ok": true,
+    "detail": "1001"
+   },
+   {
+    "run": "B_fold1",
+    "check": "config.json lock hash == current lock",
+    "ok": true,
+    "detail": ""
+   },
+   {
+    "run": "B_fold1",
+    "check": "config.json CONFIG == locked CONFIG",
+    "ok": true,
+    "detail": ""
+   },
+   {
+    "run": "B_fold1",
+    "check": "test_partition_used == \"no\"; SMOTE on training only",
+    "ok": true,
+    "detail": ""
+   },
+   {
+    "run": "B_fold1",
+    "check": "post-SMOTE train counts == 20000 x 5",
+    "ok": true,
+    "detail": "[20000, 20000, 20000, 20000, 20000]"
+   },
+   {
+    "run": "B_fold1",
+    "check": "train/val subjects == locked-fold definition",
+    "ok": true,
+    "detail": ""
+   },
+   {
+    "run": "B_fold1",
+    "check": "train, val, test subject sets pairwise disjoint",
+    "ok": true,
+    "detail": ""
+   },
+   {
+    "run": "B_fold1",
+    "check": "train subjects exclude test fold",
+    "ok": true,
+    "detail": ""
+   },
+   {
+    "run": "B_fold1",
+    "check": "val class counts == config.json",
+    "ok": true,
+    "detail": "[18323, 427, 1162, 373, 2082]"
+   },
+   {
+    "run": "B_fold1",
+    "check": "val_classes_used == classes with >=10 val beats",
+    "ok": true,
+    "detail": "(['N', 'S', 'V', 'F', 'Q'], [18323, 427, 1162, 373, 2082])"
+   },
+   {
+    "run": "B_fold1",
+    "check": "history lr=0.0001: full 20 epochs, contiguous (no early stop / truncation)",
+    "ok": true,
+    "detail": "20"
+   },
+   {
+    "run": "B_fold1",
+    "check": "history lr=0.0001: finite losses and F1",
+    "ok": true,
+    "detail": ""
+   },
+   {
+    "run": "B_fold1",
+    "check": "history lr=0.0001: val_macro_f1 == mean(per-class F1 over val classes)",
+    "ok": true,
+    "detail": ""
+   },
+   {
+    "run": "B_fold1",
+    "check": "history lr=0.0005: full 20 epochs, contiguous (no early stop / truncation)",
+    "ok": true,
+    "detail": "20"
+   },
+   {
+    "run": "B_fold1",
+    "check": "history lr=0.0005: finite losses and F1",
+    "ok": true,
+    "detail": ""
+   },
+   {
+    "run": "B_fold1",
+    "check": "history lr=0.0005: val_macro_f1 == mean(per-class F1 over val classes)",
+    "ok": true,
+    "detail": ""
+   },
+   {
+    "run": "B_fold1",
+    "check": "history lr=0.001: full 20 epochs, contiguous (no early stop / truncation)",
+    "ok": true,
+    "detail": "20"
+   },
+   {
+    "run": "B_fold1",
+    "check": "history lr=0.001: finite losses and F1",
+    "ok": true,
+    "detail": ""
+   },
+   {
+    "run": "B_fold1",
+    "check": "history lr=0.001: val_macro_f1 == mean(per-class F1 over val classes)",
+    "ok": true,
+    "detail": ""
+   },
+   {
+    "run": "B_fold1",
+    "check": "selected.json grid == recomputed (best F1, first-max epoch) per lr",
+    "ok": true,
+    "detail": "{0.0001: (0.36994528048979325, 1), 0.0005: (0.3869704917594503, 16), 0.001: (0.4661048835896702, 20)}"
+   },
+   {
+    "run": "B_fold1",
+    "check": "selected lr/epoch == argmax over (lr, epoch) of VALIDATION macro-F1 (ties -> first)",
+    "ok": true,
+    "detail": "(0.001, 20, 0.4661048835896702)"
+   },
+   {
+    "run": "B_fold1",
+    "check": "selected checkpoint filename matches selected lr",
+    "ok": true,
+    "detail": ""
+   },
+   {
+    "run": "B_fold1",
+    "check": "checkpoint lr=0.0001 loads (weights_only), keys/shapes match model, finite",
+    "ok": true,
+    "detail": ""
+   },
+   {
+    "run": "B_fold1",
+    "check": "checkpoint lr=0.0005 loads (weights_only), keys/shapes match model, finite",
+    "ok": true,
+    "detail": ""
+   },
+   {
+    "run": "B_fold1",
+    "check": "checkpoint lr=0.001 loads (weights_only), keys/shapes match model, finite",
+    "ok": true,
+    "detail": ""
+   },
+   {
+    "run": "B_fold1",
+    "check": "val_logits.npz loads; shape (n_val,5); finite",
+    "ok": true,
+    "detail": "(22367, 5)"
+   },
+   {
+    "run": "B_fold1",
+    "check": "val_logits labels/subject/record == data[val partition]",
+    "ok": true,
+    "detail": ""
+   },
+   {
+    "run": "B_fold1",
+    "check": "macro-F1 recomputed from saved selected-checkpoint val logits == recorded best val macro-F1",
+    "ok": true,
+    "detail": "(0.4661048835896702, 0.4661048835896702)"
+   },
+   {
+    "run": "B_fold1",
+    "check": "temperature re-fit from saved val logits == recorded T",
+    "ok": true,
+    "detail": "(3.201087236404419, 3.201087236404419)"
+   },
+   {
+    "run": "B_fold1",
+    "check": "train log present, 3 per-lr lines + SELECTED line",
+    "ok": true,
+    "detail": ""
+   },
+   {
+    "run": "B_fold2",
+    "check": "all 9 expected files present",
+    "ok": true,
+    "detail": "[]"
+   },
+   {
+    "run": "B_fold2",
+    "check": "seed == 1000+fold",
+    "ok": true,
+    "detail": "1002"
+   },
+   {
+    "run": "B_fold2",
+    "check": "config.json lock hash == current lock",
+    "ok": true,
+    "detail": ""
+   },
+   {
+    "run": "B_fold2",
+    "check": "config.json CONFIG == locked CONFIG",
+    "ok": true,
+    "detail": ""
+   },
+   {
+    "run": "B_fold2",
+    "check": "test_partition_used == \"no\"; SMOTE on training only",
+    "ok": true,
+    "detail": ""
+   },
+   {
+    "run": "B_fold2",
+    "check": "post-SMOTE train counts == 20000 x 5",
+    "ok": true,
+    "detail": "[20000, 20000, 20000, 20000, 20000]"
+   },
+   {
+    "run": "B_fold2",
+    "check": "train/val subjects == locked-fold definition",
+    "ok": true,
+    "detail": ""
+   },
+   {
+    "run": "B_fold2",
+    "check": "train, val, test subject sets pairwise disjoint",
+    "ok": true,
+    "detail": ""
+   },
+   {
+    "run": "B_fold2",
+    "check": "train subjects exclude test fold",
+    "ok": true,
+    "detail": ""
+   },
+   {
+    "run": "B_fold2",
+    "check": "val class counts == config.json",
+    "ok": true,
+    "detail": "[19599, 323, 1626, 11, 5]"
+   },
+   {
+    "run": "B_fold2",
+    "check": "val_classes_used == classes with >=10 val beats",
+    "ok": true,
+    "detail": "(['N', 'S', 'V', 'F'], [19599, 323, 1626, 11, 5])"
+   },
+   {
+    "run": "B_fold2",
+    "check": "history lr=0.0001: full 20 epochs, contiguous (no early stop / truncation)",
+    "ok": true,
+    "detail": "20"
+   },
+   {
+    "run": "B_fold2",
+    "check": "history lr=0.0001: finite losses and F1",
+    "ok": true,
+    "detail": ""
+   },
+   {
+    "run": "B_fold2",
+    "check": "history lr=0.0001: val_macro_f1 == mean(per-class F1 over val classes)",
+    "ok": true,
+    "detail": ""
+   },
+   {
+    "run": "B_fold2",
+    "check": "history lr=0.0005: full 20 epochs, contiguous (no early stop / truncation)",
+    "ok": true,
+    "detail": "20"
+   },
+   {
+    "run": "B_fold2",
+    "check": "history lr=0.0005: finite losses and F1",
+    "ok": true,
+    "detail": ""
+   },
+   {
+    "run": "B_fold2",
+    "check": "history lr=0.0005: val_macro_f1 == mean(per-class F1 over val classes)",
+    "ok": true,
+    "detail": ""
+   },
+   {
+    "run": "B_fold2",
+    "check": "history lr=0.001: full 20 epochs, contiguous (no early stop / truncation)",
+    "ok": true,
+    "detail": "20"
+   },
+   {
+    "run": "B_fold2",
+    "check": "history lr=0.001: finite losses and F1",
+    "ok": true,
+    "detail": ""
+   },
+   {
+    "run": "B_fold2",
+    "check": "history lr=0.001: val_macro_f1 == mean(per-class F1 over val classes)",
+    "ok": true,
+    "detail": ""
+   },
+   {
+    "run": "B_fold2",
+    "check": "selected.json grid == recomputed (best F1, first-max epoch) per lr",
+    "ok": true,
+    "detail": "{0.0001: (0.3644546161761794, 17), 0.0005: (0.36962033280873685, 17), 0.001: (0.3794903776305491, 15)}"
+   },
+   {
+    "run": "B_fold2",
+    "check": "selected lr/epoch == argmax over (lr, epoch) of VALIDATION macro-F1 (ties -> first)",
+    "ok": true,
+    "detail": "(0.001, 15, 0.3794903776305491)"
+   },
+   {
+    "run": "B_fold2",
+    "check": "selected checkpoint filename matches selected lr",
+    "ok": true,
+    "detail": ""
+   },
+   {
+    "run": "B_fold2",
+    "check": "checkpoint lr=0.0001 loads (weights_only), keys/shapes match model, finite",
+    "ok": true,
+    "detail": ""
+   },
+   {
+    "run": "B_fold2",
+    "check": "checkpoint lr=0.0005 loads (weights_only), keys/shapes match model, finite",
+    "ok": true,
+    "detail": ""
+   },
+   {
+    "run": "B_fold2",
+    "check": "checkpoint lr=0.001 loads (weights_only), keys/shapes match model, finite",
+    "ok": true,
+    "detail": ""
+   },
+   {
+    "run": "B_fold2",
+    "check": "val_logits.npz loads; shape (n_val,5); finite",
+    "ok": true,
+    "detail": "(21564, 5)"
+   },
+   {
+    "run": "B_fold2",
+    "check": "val_logits labels/subject/record == data[val partition]",
+    "ok": true,
+    "detail": ""
+   },
+   {
+    "run": "B_fold2",
+    "check": "macro-F1 recomputed from saved selected-checkpoint val logits == recorded best val macro-F1",
+    "ok": true,
+    "detail": "(0.3794903776305491, 0.3794903776305491)"
+   },
+   {
+    "run": "B_fold2",
+    "check": "temperature re-fit from saved val logits == recorded T",
+    "ok": true,
+    "detail": "(3.009483575820923, 3.009483575820923)"
+   },
+   {
+    "run": "B_fold2",
+    "check": "train log present, 3 per-lr lines + SELECTED line",
+    "ok": true,
+    "detail": ""
+   },
+   {
+    "run": "B_fold3",
+    "check": "all 9 expected files present",
+    "ok": true,
+    "detail": "[]"
+   },
+   {
+    "run": "B_fold3",
+    "check": "seed == 1000+fold",
+    "ok": true,
+    "detail": "1003"
+   },
+   {
+    "run": "B_fold3",
+    "check": "config.json lock hash == current lock",
+    "ok": true,
+    "detail": ""
+   },
+   {
+    "run": "B_fold3",
+    "check": "config.json CONFIG == locked CONFIG",
+    "ok": true,
+    "detail": ""
+   },
+   {
+    "run": "B_fold3",
+    "check": "test_partition_used == \"no\"; SMOTE on training only",
+    "ok": true,
+    "detail": ""
+   },
+   {
+    "run": "B_fold3",
+    "check": "post-SMOTE train counts == 20000 x 5",
+    "ok": true,
+    "detail": "[20000, 20000, 20000, 20000, 20000]"
+   },
+   {
+    "run": "B_fold3",
+    "check": "train/val subjects == locked-fold definition",
+    "ok": true,
+    "detail": ""
+   },
+   {
+    "run": "B_fold3",
+    "check": "train, val, test subject sets pairwise disjoint",
+    "ok": true,
+    "detail": ""
+   },
+   {
+    "run": "B_fold3",
+    "check": "train subjects exclude test fold",
+    "ok": true,
+    "detail": ""
+   },
+   {
+    "run": "B_fold3",
+    "check": "val class counts == config.json",
+    "ok": true,
+    "detail": "[16790, 368, 970, 369, 2068]"
+   },
+   {
+    "run": "B_fold3",
+    "check": "val_classes_used == classes with >=10 val beats",
+    "ok": true,
+    "detail": "(['N', 'S', 'V', 'F', 'Q'], [16790, 368, 970, 369, 2068])"
+   },
+   {
+    "run": "B_fold3",
+    "check": "history lr=0.0001: full 20 epochs, contiguous (no early stop / truncation)",
+    "ok": true,
+    "detail": "20"
+   },
+   {
+    "run": "B_fold3",
+    "check": "history lr=0.0001: finite losses and F1",
+    "ok": true,
+    "detail": ""
+   },
+   {
+    "run": "B_fold3",
+    "check": "history lr=0.0001: val_macro_f1 == mean(per-class F1 over val classes)",
+    "ok": true,
+    "detail": ""
+   },
+   {
+    "run": "B_fold3",
+    "check": "history lr=0.0005: full 20 epochs, contiguous (no early stop / truncation)",
+    "ok": true,
+    "detail": "20"
+   },
+   {
+    "run": "B_fold3",
+    "check": "history lr=0.0005: finite losses and F1",
+    "ok": true,
+    "detail": ""
+   },
+   {
+    "run": "B_fold3",
+    "check": "history lr=0.0005: val_macro_f1 == mean(per-class F1 over val classes)",
+    "ok": true,
+    "detail": ""
+   },
+   {
+    "run": "B_fold3",
+    "check": "history lr=0.001: full 20 epochs, contiguous (no early stop / truncation)",
+    "ok": true,
+    "detail": "20"
+   },
+   {
+    "run": "B_fold3",
+    "check": "history lr=0.001: finite losses and F1",
+    "ok": true,
+    "detail": ""
+   },
+   {
+    "run": "B_fold3",
+    "check": "history lr=0.001: val_macro_f1 == mean(per-class F1 over val classes)",
+    "ok": true,
+    "detail": ""
+   },
+   {
+    "run": "B_fold3",
+    "check": "selected.json grid == recomputed (best F1, first-max epoch) per lr",
+    "ok": true,
+    "detail": "{0.0001: (0.45387269130592395, 18), 0.0005: (0.5083892950946766, 1), 0.001: (0.47819338958523555, 10)}"
+   },
+   {
+    "run": "B_fold3",
+    "check": "selected lr/epoch == argmax over (lr, epoch) of VALIDATION macro-F1 (ties -> first)",
+    "ok": true,
+    "detail": "(0.0005, 1, 0.5083892950946766)"
+   },
+   {
+    "run": "B_fold3",
+    "check": "selected checkpoint filename matches selected lr",
+    "ok": true,
+    "detail": ""
+   },
+   {
+    "run": "B_fold3",
+    "check": "checkpoint lr=0.0001 loads (weights_only), keys/shapes match model, finite",
+    "ok": true,
+    "detail": ""
+   },
+   {
+    "run": "B_fold3",
+    "check": "checkpoint lr=0.0005 loads (weights_only), keys/shapes match model, finite",
+    "ok": true,
+    "detail": ""
+   },
+   {
+    "run": "B_fold3",
+    "check": "checkpoint lr=0.001 loads (weights_only), keys/shapes match model, finite",
+    "ok": true,
+    "detail": ""
+   },
+   {
+    "run": "B_fold3",
+    "check": "val_logits.npz loads; shape (n_val,5); finite",
+    "ok": true,
+    "detail": "(20565, 5)"
+   },
+   {
+    "run": "B_fold3",
+    "check": "val_logits labels/subject/record == data[val partition]",
+    "ok": true,
+    "detail": ""
+   },
+   {
+    "run": "B_fold3",
+    "check": "macro-F1 recomputed from saved selected-checkpoint val logits == recorded best val macro-F1",
+    "ok": true,
+    "detail": "(0.5083892950946766, 0.5083892950946766)"
+   },
+   {
+    "run": "B_fold3",
+    "check": "temperature re-fit from saved val logits == recorded T",
+    "ok": true,
+    "detail": "(1.8151487112045288, 1.8151487112045288)"
+   },
+   {
+    "run": "B_fold3",
+    "check": "train log present, 3 per-lr lines + SELECTED line",
+    "ok": true,
+    "detail": ""
+   },
+   {
+    "run": "B_fold4",
+    "check": "all 9 expected files present",
+    "ok": true,
+    "detail": "[]"
+   },
+   {
+    "run": "B_fold4",
+    "check": "seed == 1000+fold",
+    "ok": true,
+    "detail": "1004"
+   },
+   {
+    "run": "B_fold4",
+    "check": "config.json lock hash == current lock",
+    "ok": true,
+    "detail": ""
+   },
+   {
+    "run": "B_fold4",
+    "check": "config.json CONFIG == locked CONFIG",
+    "ok": true,
+    "detail": ""
+   },
+   {
+    "run": "B_fold4",
+    "check": "test_partition_used == \"no\"; SMOTE on training only",
+    "ok": true,
+    "detail": ""
+   },
+   {
+    "run": "B_fold4",
+    "check": "post-SMOTE train counts == 20000 x 5",
+    "ok": true,
+    "detail": "[20000, 20000, 20000, 20000, 20000]"
+   },
+   {
+    "run": "B_fold4",
+    "check": "train/val subjects == locked-fold definition",
+    "ok": true,
+    "detail": ""
+   },
+   {
+    "run": "B_fold4",
+    "check": "train, val, test subject sets pairwise disjoint",
+    "ok": true,
+    "detail": ""
+   },
+   {
+    "run": "B_fold4",
+    "check": "train subjects exclude test fold",
+    "ok": true,
+    "detail": ""
+   },
+   {
+    "run": "B_fold4",
+    "check": "val class counts == config.json",
+    "ok": true,
+    "detail": "[18922, 261, 1804, 36, 1798]"
+   },
+   {
+    "run": "B_fold4",
+    "check": "val_classes_used == classes with >=10 val beats",
+    "ok": true,
+    "detail": "(['N', 'S', 'V', 'F', 'Q'], [18922, 261, 1804, 36, 1798])"
+   },
+   {
+    "run": "B_fold4",
+    "check": "history lr=0.0001: full 20 epochs, contiguous (no early stop / truncation)",
+    "ok": true,
+    "detail": "20"
+   },
+   {
+    "run": "B_fold4",
+    "check": "history lr=0.0001: finite losses and F1",
+    "ok": true,
+    "detail": ""
+   },
+   {
+    "run": "B_fold4",
+    "check": "history lr=0.0001: val_macro_f1 == mean(per-class F1 over val classes)",
+    "ok": true,
+    "detail": ""
+   },
+   {
+    "run": "B_fold4",
+    "check": "history lr=0.0005: full 20 epochs, contiguous (no early stop / truncation)",
+    "ok": true,
+    "detail": "20"
+   },
+   {
+    "run": "B_fold4",
+    "check": "history lr=0.0005: finite losses and F1",
+    "ok": true,
+    "detail": ""
+   },
+   {
+    "run": "B_fold4",
+    "check": "history lr=0.0005: val_macro_f1 == mean(per-class F1 over val classes)",
+    "ok": true,
+    "detail": ""
+   },
+   {
+    "run": "B_fold4",
+    "check": "history lr=0.001: full 20 epochs, contiguous (no early stop / truncation)",
+    "ok": true,
+    "detail": "20"
+   },
+   {
+    "run": "B_fold4",
+    "check": "history lr=0.001: finite losses and F1",
+    "ok": true,
+    "detail": ""
+   },
+   {
+    "run": "B_fold4",
+    "check": "history lr=0.001: val_macro_f1 == mean(per-class F1 over val classes)",
+    "ok": true,
+    "detail": ""
+   },
+   {
+    "run": "B_fold4",
+    "check": "selected.json grid == recomputed (best F1, first-max epoch) per lr",
+    "ok": true,
+    "detail": "{0.0001: (0.44966086012035883, 15), 0.0005: (0.4622111877084379, 2), 0.001: (0.5000703441941708, 4)}"
+   },
+   {
+    "run": "B_fold4",
+    "check": "selected lr/epoch == argmax over (lr, epoch) of VALIDATION macro-F1 (ties -> first)",
+    "ok": true,
+    "detail": "(0.001, 4, 0.5000703441941708)"
+   },
+   {
+    "run": "B_fold4",
+    "check": "selected checkpoint filename matches selected lr",
+    "ok": true,
+    "detail": ""
+   },
+   {
+    "run": "B_fold4",
+    "check": "checkpoint lr=0.0001 loads (weights_only), keys/shapes match model, finite",
+    "ok": true,
+    "detail": ""
+   },
+   {
+    "run": "B_fold4",
+    "check": "checkpoint lr=0.0005 loads (weights_only), keys/shapes match model, finite",
+    "ok": true,
+    "detail": ""
+   },
+   {
+    "run": "B_fold4",
+    "check": "checkpoint lr=0.001 loads (weights_only), keys/shapes match model, finite",
+    "ok": true,
+    "detail": ""
+   },
+   {
+    "run": "B_fold4",
+    "check": "val_logits.npz loads; shape (n_val,5); finite",
+    "ok": true,
+    "detail": "(22821, 5)"
+   },
+   {
+    "run": "B_fold4",
+    "check": "val_logits labels/subject/record == data[val partition]",
+    "ok": true,
+    "detail": ""
+   },
+   {
+    "run": "B_fold4",
+    "check": "macro-F1 recomputed from saved selected-checkpoint val logits == recorded best val macro-F1",
+    "ok": true,
+    "detail": "(0.5000703441941708, 0.5000703441941708)"
+   },
+   {
+    "run": "B_fold4",
+    "check": "temperature re-fit from saved val logits == recorded T",
+    "ok": true,
+    "detail": "(2.25559663772583, 2.25559663772583)"
+   },
+   {
+    "run": "B_fold4",
+    "check": "train log present, 3 per-lr lines + SELECTED line",
+    "ok": true,
+    "detail": ""
+   },
+   {
+    "run": "C_fold0",
+    "check": "all 9 expected files present",
+    "ok": true,
+    "detail": "[]"
+   },
+   {
+    "run": "C_fold0",
+    "check": "seed == 1000+fold",
+    "ok": true,
+    "detail": "1000"
+   },
+   {
+    "run": "C_fold0",
+    "check": "config.json lock hash == current lock",
+    "ok": true,
+    "detail": ""
+   },
+   {
+    "run": "C_fold0",
+    "check": "config.json CONFIG == locked CONFIG",
+    "ok": true,
+    "detail": ""
+   },
+   {
+    "run": "C_fold0",
+    "check": "test_partition_used == \"no\"; SMOTE on training only",
+    "ok": true,
+    "detail": ""
+   },
+   {
+    "run": "C_fold0",
+    "check": "post-SMOTE train counts == 20000 x 5",
+    "ok": true,
+    "detail": "[20000, 20000, 20000, 20000, 20000]"
+   },
+   {
+    "run": "C_fold0",
+    "check": "train/val subjects == locked-fold definition",
+    "ok": true,
+    "detail": ""
+   },
+   {
+    "run": "C_fold0",
+    "check": "train, val, test subject sets pairwise disjoint",
+    "ok": true,
+    "detail": ""
+   },
+   {
+    "run": "C_fold0",
+    "check": "train subjects exclude test fold",
+    "ok": true,
+    "detail": ""
+   },
+   {
+    "run": "C_fold0",
+    "check": "val class counts == config.json",
+    "ok": true,
+    "detail": "[16838, 1396, 1667, 13, 2074]"
+   },
+   {
+    "run": "C_fold0",
+    "check": "val_classes_used == classes with >=10 val beats",
+    "ok": true,
+    "detail": "(['N', 'S', 'V', 'F', 'Q'], [16838, 1396, 1667, 13, 2074])"
+   },
+   {
+    "run": "C_fold0",
+    "check": "history lr=0.0001: full 15 epochs, contiguous (no early stop / truncation)",
+    "ok": true,
+    "detail": "15"
+   },
+   {
+    "run": "C_fold0",
+    "check": "history lr=0.0001: finite losses and F1",
+    "ok": true,
+    "detail": ""
+   },
+   {
+    "run": "C_fold0",
+    "check": "history lr=0.0001: val_macro_f1 == mean(per-class F1 over val classes)",
+    "ok": true,
+    "detail": ""
+   },
+   {
+    "run": "C_fold0",
+    "check": "history lr=0.0005: full 15 epochs, contiguous (no early stop / truncation)",
+    "ok": true,
+    "detail": "15"
+   },
+   {
+    "run": "C_fold0",
+    "check": "history lr=0.0005: finite losses and F1",
+    "ok": true,
+    "detail": ""
+   },
+   {
+    "run": "C_fold0",
+    "check": "history lr=0.0005: val_macro_f1 == mean(per-class F1 over val classes)",
+    "ok": true,
+    "detail": ""
+   },
+   {
+    "run": "C_fold0",
+    "check": "history lr=0.001: full 15 epochs, contiguous (no early stop / truncation)",
+    "ok": true,
+    "detail": "15"
+   },
+   {
+    "run": "C_fold0",
+    "check": "history lr=0.001: finite losses and F1",
+    "ok": true,
+    "detail": ""
+   },
+   {
+    "run": "C_fold0",
+    "check": "history lr=0.001: val_macro_f1 == mean(per-class F1 over val classes)",
+    "ok": true,
+    "detail": ""
+   },
+   {
+    "run": "C_fold0",
+    "check": "selected.json grid == recomputed (best F1, first-max epoch) per lr",
+    "ok": true,
+    "detail": "{0.0001: (0.5170918462677687, 1), 0.0005: (0.5231559992182344, 14), 0.001: (0.5117146608763444, 2)}"
+   },
+   {
+    "run": "C_fold0",
+    "check": "selected lr/epoch == argmax over (lr, epoch) of VALIDATION macro-F1 (ties -> first)",
+    "ok": true,
+    "detail": "(0.0005, 14, 0.5231559992182344)"
+   },
+   {
+    "run": "C_fold0",
+    "check": "selected checkpoint filename matches selected lr",
+    "ok": true,
+    "detail": ""
+   },
+   {
+    "run": "C_fold0",
+    "check": "checkpoint lr=0.0001 loads (weights_only), keys/shapes match model, finite",
+    "ok": true,
+    "detail": ""
+   },
+   {
+    "run": "C_fold0",
+    "check": "checkpoint lr=0.0005 loads (weights_only), keys/shapes match model, finite",
+    "ok": true,
+    "detail": ""
+   },
+   {
+    "run": "C_fold0",
+    "check": "checkpoint lr=0.001 loads (weights_only), keys/shapes match model, finite",
+    "ok": true,
+    "detail": ""
+   },
+   {
+    "run": "C_fold0",
+    "check": "val_logits.npz loads; shape (n_val,5); finite",
+    "ok": true,
+    "detail": "(21988, 5)"
+   },
+   {
+    "run": "C_fold0",
+    "check": "val_logits labels/subject/record == data[val partition]",
+    "ok": true,
+    "detail": ""
+   },
+   {
+    "run": "C_fold0",
+    "check": "macro-F1 recomputed from saved selected-checkpoint val logits == recorded best val macro-F1",
+    "ok": true,
+    "detail": "(0.5231559992182344, 0.5231559992182344)"
+   },
+   {
+    "run": "C_fold0",
+    "check": "temperature re-fit from saved val logits == recorded T",
+    "ok": true,
+    "detail": "(3.230752944946289, 3.230752944946289)"
+   },
+   {
+    "run": "C_fold0",
+    "check": "train log present, 3 per-lr lines + SELECTED line",
+    "ok": true,
+    "detail": ""
+   },
+   {
+    "run": "C_fold1",
+    "check": "all 9 expected files present",
+    "ok": true,
+    "detail": "[]"
+   },
+   {
+    "run": "C_fold1",
+    "check": "seed == 1000+fold",
+    "ok": true,
+    "detail": "1001"
+   },
+   {
+    "run": "C_fold1",
+    "check": "config.json lock hash == current lock",
+    "ok": true,
+    "detail": ""
+   },
+   {
+    "run": "C_fold1",
+    "check": "config.json CONFIG == locked CONFIG",
+    "ok": true,
+    "detail": ""
+   },
+   {
+    "run": "C_fold1",
+    "check": "test_partition_used == \"no\"; SMOTE on training only",
+    "ok": true,
+    "detail": ""
+   },
+   {
+    "run": "C_fold1",
+    "check": "post-SMOTE train counts == 20000 x 5",
+    "ok": true,
+    "detail": "[20000, 20000, 20000, 20000, 20000]"
+   },
+   {
+    "run": "C_fold1",
+    "check": "train/val subjects == locked-fold definition",
+    "ok": true,
+    "detail": ""
+   },
+   {
+    "run": "C_fold1",
+    "check": "train, val, test subject sets pairwise disjoint",
+    "ok": true,
+    "detail": ""
+   },
+   {
+    "run": "C_fold1",
+    "check": "train subjects exclude test fold",
+    "ok": true,
+    "detail": ""
+   },
+   {
+    "run": "C_fold1",
+    "check": "val class counts == config.json",
+    "ok": true,
+    "detail": "[18323, 427, 1162, 373, 2082]"
+   },
+   {
+    "run": "C_fold1",
+    "check": "val_classes_used == classes with >=10 val beats",
+    "ok": true,
+    "detail": "(['N', 'S', 'V', 'F', 'Q'], [18323, 427, 1162, 373, 2082])"
+   },
+   {
+    "run": "C_fold1",
+    "check": "history lr=0.0001: full 15 epochs, contiguous (no early stop / truncation)",
+    "ok": true,
+    "detail": "15"
+   },
+   {
+    "run": "C_fold1",
+    "check": "history lr=0.0001: finite losses and F1",
+    "ok": true,
+    "detail": ""
+   },
+   {
+    "run": "C_fold1",
+    "check": "history lr=0.0001: val_macro_f1 == mean(per-class F1 over val classes)",
+    "ok": true,
+    "detail": ""
+   },
+   {
+    "run": "C_fold1",
+    "check": "history lr=0.0005: full 15 epochs, contiguous (no early stop / truncation)",
+    "ok": true,
+    "detail": "15"
+   },
+   {
+    "run": "C_fold1",
+    "check": "history lr=0.0005: finite losses and F1",
+    "ok": true,
+    "detail": ""
+   },
+   {
+    "run": "C_fold1",
+    "check": "history lr=0.0005: val_macro_f1 == mean(per-class F1 over val classes)",
+    "ok": true,
+    "detail": ""
+   },
+   {
+    "run": "C_fold1",
+    "check": "history lr=0.001: full 15 epochs, contiguous (no early stop / truncation)",
+    "ok": true,
+    "detail": "15"
+   },
+   {
+    "run": "C_fold1",
+    "check": "history lr=0.001: finite losses and F1",
+    "ok": true,
+    "detail": ""
+   },
+   {
+    "run": "C_fold1",
+    "check": "history lr=0.001: val_macro_f1 == mean(per-class F1 over val classes)",
+    "ok": true,
+    "detail": ""
+   },
+   {
+    "run": "C_fold1",
+    "check": "selected.json grid == recomputed (best F1, first-max epoch) per lr",
+    "ok": true,
+    "detail": "{0.0001: (0.5196052046232197, 1), 0.0005: (0.508277101635439, 11), 0.001: (0.5624468443844342, 8)}"
+   },
+   {
+    "run": "C_fold1",
+    "check": "selected lr/epoch == argmax over (lr, epoch) of VALIDATION macro-F1 (ties -> first)",
+    "ok": true,
+    "detail": "(0.001, 8, 0.5624468443844342)"
+   },
+   {
+    "run": "C_fold1",
+    "check": "selected checkpoint filename matches selected lr",
+    "ok": true,
+    "detail": ""
+   },
+   {
+    "run": "C_fold1",
+    "check": "checkpoint lr=0.0001 loads (weights_only), keys/shapes match model, finite",
+    "ok": true,
+    "detail": ""
+   },
+   {
+    "run": "C_fold1",
+    "check": "checkpoint lr=0.0005 loads (weights_only), keys/shapes match model, finite",
+    "ok": true,
+    "detail": ""
+   },
+   {
+    "run": "C_fold1",
+    "check": "checkpoint lr=0.001 loads (weights_only), keys/shapes match model, finite",
+    "ok": true,
+    "detail": ""
+   },
+   {
+    "run": "C_fold1",
+    "check": "val_logits.npz loads; shape (n_val,5); finite",
+    "ok": true,
+    "detail": "(22367, 5)"
+   },
+   {
+    "run": "C_fold1",
+    "check": "val_logits labels/subject/record == data[val partition]",
+    "ok": true,
+    "detail": ""
+   },
+   {
+    "run": "C_fold1",
+    "check": "macro-F1 recomputed from saved selected-checkpoint val logits == recorded best val macro-F1",
+    "ok": true,
+    "detail": "(0.5624468443844342, 0.5624468443844342)"
+   },
+   {
+    "run": "C_fold1",
+    "check": "temperature re-fit from saved val logits == recorded T",
+    "ok": true,
+    "detail": "(4.088082790374756, 4.088082790374756)"
+   },
+   {
+    "run": "C_fold1",
+    "check": "train log present, 3 per-lr lines + SELECTED line",
+    "ok": true,
+    "detail": ""
+   },
+   {
+    "run": "C_fold2",
+    "check": "all 9 expected files present",
+    "ok": true,
+    "detail": "[]"
+   },
+   {
+    "run": "C_fold2",
+    "check": "seed == 1000+fold",
+    "ok": true,
+    "detail": "1002"
+   },
+   {
+    "run": "C_fold2",
+    "check": "config.json lock hash == current lock",
+    "ok": true,
+    "detail": ""
+   },
+   {
+    "run": "C_fold2",
+    "check": "config.json CONFIG == locked CONFIG",
+    "ok": true,
+    "detail": ""
+   },
+   {
+    "run": "C_fold2",
+    "check": "test_partition_used == \"no\"; SMOTE on training only",
+    "ok": true,
+    "detail": ""
+   },
+   {
+    "run": "C_fold2",
+    "check": "post-SMOTE train counts == 20000 x 5",
+    "ok": true,
+    "detail": "[20000, 20000, 20000, 20000, 20000]"
+   },
+   {
+    "run": "C_fold2",
+    "check": "train/val subjects == locked-fold definition",
+    "ok": true,
+    "detail": ""
+   },
+   {
+    "run": "C_fold2",
+    "check": "train, val, test subject sets pairwise disjoint",
+    "ok": true,
+    "detail": ""
+   },
+   {
+    "run": "C_fold2",
+    "check": "train subjects exclude test fold",
+    "ok": true,
+    "detail": ""
+   },
+   {
+    "run": "C_fold2",
+    "check": "val class counts == config.json",
+    "ok": true,
+    "detail": "[19599, 323, 1626, 11, 5]"
+   },
+   {
+    "run": "C_fold2",
+    "check": "val_classes_used == classes with >=10 val beats",
+    "ok": true,
+    "detail": "(['N', 'S', 'V', 'F'], [19599, 323, 1626, 11, 5])"
+   },
+   {
+    "run": "C_fold2",
+    "check": "history lr=0.0001: full 15 epochs, contiguous (no early stop / truncation)",
+    "ok": true,
+    "detail": "15"
+   },
+   {
+    "run": "C_fold2",
+    "check": "history lr=0.0001: finite losses and F1",
+    "ok": true,
+    "detail": ""
+   },
+   {
+    "run": "C_fold2",
+    "check": "history lr=0.0001: val_macro_f1 == mean(per-class F1 over val classes)",
+    "ok": true,
+    "detail": ""
+   },
+   {
+    "run": "C_fold2",
+    "check": "history lr=0.0005: full 15 epochs, contiguous (no early stop / truncation)",
+    "ok": true,
+    "detail": "15"
+   },
+   {
+    "run": "C_fold2",
+    "check": "history lr=0.0005: finite losses and F1",
+    "ok": true,
+    "detail": ""
+   },
+   {
+    "run": "C_fold2",
+    "check": "history lr=0.0005: val_macro_f1 == mean(per-class F1 over val classes)",
+    "ok": true,
+    "detail": ""
+   },
+   {
+    "run": "C_fold2",
+    "check": "history lr=0.001: full 15 epochs, contiguous (no early stop / truncation)",
+    "ok": true,
+    "detail": "15"
+   },
+   {
+    "run": "C_fold2",
+    "check": "history lr=0.001: finite losses and F1",
+    "ok": true,
+    "detail": ""
+   },
+   {
+    "run": "C_fold2",
+    "check": "history lr=0.001: val_macro_f1 == mean(per-class F1 over val classes)",
+    "ok": true,
+    "detail": ""
+   },
+   {
+    "run": "C_fold2",
+    "check": "selected.json grid == recomputed (best F1, first-max epoch) per lr",
+    "ok": true,
+    "detail": "{0.0001: (0.3581467183013298, 12), 0.0005: (0.3726842284562509, 9), 0.001: (0.3608843562630475, 3)}"
+   },
+   {
+    "run": "C_fold2",
+    "check": "selected lr/epoch == argmax over (lr, epoch) of VALIDATION macro-F1 (ties -> first)",
+    "ok": true,
+    "detail": "(0.0005, 9, 0.3726842284562509)"
+   },
+   {
+    "run": "C_fold2",
+    "check": "selected checkpoint filename matches selected lr",
+    "ok": true,
+    "detail": ""
+   },
+   {
+    "run": "C_fold2",
+    "check": "checkpoint lr=0.0001 loads (weights_only), keys/shapes match model, finite",
+    "ok": true,
+    "detail": ""
+   },
+   {
+    "run": "C_fold2",
+    "check": "checkpoint lr=0.0005 loads (weights_only), keys/shapes match model, finite",
+    "ok": true,
+    "detail": ""
+   },
+   {
+    "run": "C_fold2",
+    "check": "checkpoint lr=0.001 loads (weights_only), keys/shapes match model, finite",
+    "ok": true,
+    "detail": ""
+   },
+   {
+    "run": "C_fold2",
+    "check": "val_logits.npz loads; shape (n_val,5); finite",
+    "ok": true,
+    "detail": "(21564, 5)"
+   },
+   {
+    "run": "C_fold2",
+    "check": "val_logits labels/subject/record == data[val partition]",
+    "ok": true,
+    "detail": ""
+   },
+   {
+    "run": "C_fold2",
+    "check": "macro-F1 recomputed from saved selected-checkpoint val logits == recorded best val macro-F1",
+    "ok": true,
+    "detail": "(0.3726842284562509, 0.3726842284562509)"
+   },
+   {
+    "run": "C_fold2",
+    "check": "temperature re-fit from saved val logits == recorded T",
+    "ok": true,
+    "detail": "(2.2873828411102295, 2.2873828411102295)"
+   },
+   {
+    "run": "C_fold2",
+    "check": "train log present, 3 per-lr lines + SELECTED line",
+    "ok": true,
+    "detail": ""
+   },
+   {
+    "run": "C_fold3",
+    "check": "all 9 expected files present",
+    "ok": true,
+    "detail": "[]"
+   },
+   {
+    "run": "C_fold3",
+    "check": "seed == 1000+fold",
+    "ok": true,
+    "detail": "1003"
+   },
+   {
+    "run": "C_fold3",
+    "check": "config.json lock hash == current lock",
+    "ok": true,
+    "detail": ""
+   },
+   {
+    "run": "C_fold3",
+    "check": "config.json CONFIG == locked CONFIG",
+    "ok": true,
+    "detail": ""
+   },
+   {
+    "run": "C_fold3",
+    "check": "test_partition_used == \"no\"; SMOTE on training only",
+    "ok": true,
+    "detail": ""
+   },
+   {
+    "run": "C_fold3",
+    "check": "post-SMOTE train counts == 20000 x 5",
+    "ok": true,
+    "detail": "[20000, 20000, 20000, 20000, 20000]"
+   },
+   {
+    "run": "C_fold3",
+    "check": "train/val subjects == locked-fold definition",
+    "ok": true,
+    "detail": ""
+   },
+   {
+    "run": "C_fold3",
+    "check": "train, val, test subject sets pairwise disjoint",
+    "ok": true,
+    "detail": ""
+   },
+   {
+    "run": "C_fold3",
+    "check": "train subjects exclude test fold",
+    "ok": true,
+    "detail": ""
+   },
+   {
+    "run": "C_fold3",
+    "check": "val class counts == config.json",
+    "ok": true,
+    "detail": "[16790, 368, 970, 369, 2068]"
+   },
+   {
+    "run": "C_fold3",
+    "check": "val_classes_used == classes with >=10 val beats",
+    "ok": true,
+    "detail": "(['N', 'S', 'V', 'F', 'Q'], [16790, 368, 970, 369, 2068])"
+   },
+   {
+    "run": "C_fold3",
+    "check": "history lr=0.0001: full 15 epochs, contiguous (no early stop / truncation)",
+    "ok": true,
+    "detail": "15"
+   },
+   {
+    "run": "C_fold3",
+    "check": "history lr=0.0001: finite losses and F1",
+    "ok": true,
+    "detail": ""
+   },
+   {
+    "run": "C_fold3",
+    "check": "history lr=0.0001: val_macro_f1 == mean(per-class F1 over val classes)",
+    "ok": true,
+    "detail": ""
+   },
+   {
+    "run": "C_fold3",
+    "check": "history lr=0.0005: full 15 epochs, contiguous (no early stop / truncation)",
+    "ok": true,
+    "detail": "15"
+   },
+   {
+    "run": "C_fold3",
+    "check": "history lr=0.0005: finite losses and F1",
+    "ok": true,
+    "detail": ""
+   },
+   {
+    "run": "C_fold3",
+    "check": "history lr=0.0005: val_macro_f1 == mean(per-class F1 over val classes)",
+    "ok": true,
+    "detail": ""
+   },
+   {
+    "run": "C_fold3",
+    "check": "history lr=0.001: full 15 epochs, contiguous (no early stop / truncation)",
+    "ok": true,
+    "detail": "15"
+   },
+   {
+    "run": "C_fold3",
+    "check": "history lr=0.001: finite losses and F1",
+    "ok": true,
+    "detail": ""
+   },
+   {
+    "run": "C_fold3",
+    "check": "history lr=0.001: val_macro_f1 == mean(per-class F1 over val classes)",
+    "ok": true,
+    "detail": ""
+   },
+   {
+    "run": "C_fold3",
+    "check": "selected.json grid == recomputed (best F1, first-max epoch) per lr",
+    "ok": true,
+    "detail": "{0.0001: (0.454484006142172, 7), 0.0005: (0.47436345813337777, 11), 0.001: (0.4726371180951513, 6)}"
+   },
+   {
+    "run": "C_fold3",
+    "check": "selected lr/epoch == argmax over (lr, epoch) of VALIDATION macro-F1 (ties -> first)",
+    "ok": true,
+    "detail": "(0.0005, 11, 0.47436345813337777)"
+   },
+   {
+    "run": "C_fold3",
+    "check": "selected checkpoint filename matches selected lr",
+    "ok": true,
+    "detail": ""
+   },
+   {
+    "run": "C_fold3",
+    "check": "checkpoint lr=0.0001 loads (weights_only), keys/shapes match model, finite",
+    "ok": true,
+    "detail": ""
+   },
+   {
+    "run": "C_fold3",
+    "check": "checkpoint lr=0.0005 loads (weights_only), keys/shapes match model, finite",
+    "ok": true,
+    "detail": ""
+   },
+   {
+    "run": "C_fold3",
+    "check": "checkpoint lr=0.001 loads (weights_only), keys/shapes match model, finite",
+    "ok": true,
+    "detail": ""
+   },
+   {
+    "run": "C_fold3",
+    "check": "val_logits.npz loads; shape (n_val,5); finite",
+    "ok": true,
+    "detail": "(20565, 5)"
+   },
+   {
+    "run": "C_fold3",
+    "check": "val_logits labels/subject/record == data[val partition]",
+    "ok": true,
+    "detail": ""
+   },
+   {
+    "run": "C_fold3",
+    "check": "macro-F1 recomputed from saved selected-checkpoint val logits == recorded best val macro-F1",
+    "ok": true,
+    "detail": "(0.47436345813337777, 0.47436345813337777)"
+   },
+   {
+    "run": "C_fold3",
+    "check": "temperature re-fit from saved val logits == recorded T",
+    "ok": true,
+    "detail": "(2.6048412322998047, 2.6048412322998047)"
+   },
+   {
+    "run": "C_fold3",
+    "check": "train log present, 3 per-lr lines + SELECTED line",
+    "ok": true,
+    "detail": ""
+   },
+   {
+    "run": "C_fold4",
+    "check": "all 9 expected files present",
+    "ok": true,
+    "detail": "[]"
+   },
+   {
+    "run": "C_fold4",
+    "check": "seed == 1000+fold",
+    "ok": true,
+    "detail": "1004"
+   },
+   {
+    "run": "C_fold4",
+    "check": "config.json lock hash == current lock",
+    "ok": true,
+    "detail": ""
+   },
+   {
+    "run": "C_fold4",
+    "check": "config.json CONFIG == locked CONFIG",
+    "ok": true,
+    "detail": ""
+   },
+   {
+    "run": "C_fold4",
+    "check": "test_partition_used == \"no\"; SMOTE on training only",
+    "ok": true,
+    "detail": ""
+   },
+   {
+    "run": "C_fold4",
+    "check": "post-SMOTE train counts == 20000 x 5",
+    "ok": true,
+    "detail": "[20000, 20000, 20000, 20000, 20000]"
+   },
+   {
+    "run": "C_fold4",
+    "check": "train/val subjects == locked-fold definition",
+    "ok": true,
+    "detail": ""
+   },
+   {
+    "run": "C_fold4",
+    "check": "train, val, test subject sets pairwise disjoint",
+    "ok": true,
+    "detail": ""
+   },
+   {
+    "run": "C_fold4",
+    "check": "train subjects exclude test fold",
+    "ok": true,
+    "detail": ""
+   },
+   {
+    "run": "C_fold4",
+    "check": "val class counts == config.json",
+    "ok": true,
+    "detail": "[18922, 261, 1804, 36, 1798]"
+   },
+   {
+    "run": "C_fold4",
+    "check": "val_classes_used == classes with >=10 val beats",
+    "ok": true,
+    "detail": "(['N', 'S', 'V', 'F', 'Q'], [18922, 261, 1804, 36, 1798])"
+   },
+   {
+    "run": "C_fold4",
+    "check": "history lr=0.0001: full 15 epochs, contiguous (no early stop / truncation)",
+    "ok": true,
+    "detail": "15"
+   },
+   {
+    "run": "C_fold4",
+    "check": "history lr=0.0001: finite losses and F1",
+    "ok": true,
+    "detail": ""
+   },
+   {
+    "run": "C_fold4",
+    "check": "history lr=0.0001: val_macro_f1 == mean(per-class F1 over val classes)",
+    "ok": true,
+    "detail": ""
+   },
+   {
+    "run": "C_fold4",
+    "check": "history lr=0.0005: full 15 epochs, contiguous (no early stop / truncation)",
+    "ok": true,
+    "detail": "15"
+   },
+   {
+    "run": "C_fold4",
+    "check": "history lr=0.0005: finite losses and F1",
+    "ok": true,
+    "detail": ""
+   },
+   {
+    "run": "C_fold4",
+    "check": "history lr=0.0005: val_macro_f1 == mean(per-class F1 over val classes)",
+    "ok": true,
+    "detail": ""
+   },
+   {
+    "run": "C_fold4",
+    "check": "history lr=0.001: full 15 epochs, contiguous (no early stop / truncation)",
+    "ok": true,
+    "detail": "15"
+   },
+   {
+    "run": "C_fold4",
+    "check": "history lr=0.001: finite losses and F1",
+    "ok": true,
+    "detail": ""
+   },
+   {
+    "run": "C_fold4",
+    "check": "history lr=0.001: val_macro_f1 == mean(per-class F1 over val classes)",
+    "ok": true,
+    "detail": ""
+   },
+   {
+    "run": "C_fold4",
+    "check": "selected.json grid == recomputed (best F1, first-max epoch) per lr",
+    "ok": true,
+    "detail": "{0.0001: (0.4837631498916653, 11), 0.0005: (0.496118065209453, 3), 0.001: (0.5153192378402367, 12)}"
+   },
+   {
+    "run": "C_fold4",
+    "check": "selected lr/epoch == argmax over (lr, epoch) of VALIDATION macro-F1 (ties -> first)",
+    "ok": true,
+    "detail": "(0.001, 12, 0.5153192378402367)"
+   },
+   {
+    "run": "C_fold4",
+    "check": "selected checkpoint filename matches selected lr",
+    "ok": true,
+    "detail": ""
+   },
+   {
+    "run": "C_fold4",
+    "check": "checkpoint lr=0.0001 loads (weights_only), keys/shapes match model, finite",
+    "ok": true,
+    "detail": ""
+   },
+   {
+    "run": "C_fold4",
+    "check": "checkpoint lr=0.0005 loads (weights_only), keys/shapes match model, finite",
+    "ok": true,
+    "detail": ""
+   },
+   {
+    "run": "C_fold4",
+    "check": "checkpoint lr=0.001 loads (weights_only), keys/shapes match model, finite",
+    "ok": true,
+    "detail": ""
+   },
+   {
+    "run": "C_fold4",
+    "check": "val_logits.npz loads; shape (n_val,5); finite",
+    "ok": true,
+    "detail": "(22821, 5)"
+   },
+   {
+    "run": "C_fold4",
+    "check": "val_logits labels/subject/record == data[val partition]",
+    "ok": true,
+    "detail": ""
+   },
+   {
+    "run": "C_fold4",
+    "check": "macro-F1 recomputed from saved selected-checkpoint val logits == recorded best val macro-F1",
+    "ok": true,
+    "detail": "(0.5153192378402367, 0.5153192378402367)"
+   },
+   {
+    "run": "C_fold4",
+    "check": "temperature re-fit from saved val logits == recorded T",
+    "ok": true,
+    "detail": "(2.3112642765045166, 2.3112642765045166)"
+   },
+   {
+    "run": "C_fold4",
+    "check": "train log present, 3 per-lr lines + SELECTED line",
+    "ok": true,
+    "detail": ""
+   },
+   {
+    "run": "C_fold2",
+    "check": "new lr=1e-4 history identical to preserved attempt-1 history (determinism)",
+    "ok": true,
+    "detail": ""
+   },
+   {
+    "run": "C_fold2",
+    "check": "new lr=1e-4 checkpoint byte-identical to preserved attempt-1 checkpoint",
+    "ok": true,
+    "detail": ""
+   },
+   {
+    "run": "C_fold2",
+    "check": "interrupted attempt preserved: 6 files",
+    "ok": true,
+    "detail": "['README.md', 'ckpt_lr0.0001.pt', 'config.json', 'history_lr0.0001.json', 'run_training_attempt1.log', 'train_C_fold2_attempt1.log']"
+   },
+   {
+    "run": "GLOBAL",
+    "check": "pre-resume manifest: all 87 recorded hashes still match current files",
+    "ok": true,
+    "detail": "[]"
+   },
+   {
+    "run": "EVAL",
+    "check": "absent: results/scores",
+    "ok": true,
+    "detail": ""
+   },
+   {
+    "run": "EVAL",
+    "check": "absent: results/scores/SCORED.json",
+    "ok": true,
+    "detail": ""
+   },
+   {
+    "run": "EVAL",
+    "check": "absent: logs/07_score.log",
+    "ok": true,
+    "detail": ""
+   },
+   {
+    "run": "EVAL",
+    "check": "absent: logs/08_evaluate.log",
+    "ok": true,
+    "detail": ""
+   },
+   {
+    "run": "EVAL",
+    "check": "absent: logs/09_posthoc.log",
+    "ok": true,
+    "detail": ""
+   },
+   {
+    "run": "EVAL",
+    "check": "absent: results/audits",
+    "ok": true,
+    "detail": ""
+   },
+   {
+    "run": "EVAL",
+    "check": "absent: results/manifests/manifest_post_training.json",
+    "ok": true,
+    "detail": ""
+   },
+   {
+    "run": "EVAL",
+    "check": "results/evaluation empty",
+    "ok": true,
+    "detail": ""
+   },
+   {
+    "run": "EVAL",
+    "check": "06_train.py: test mask `te` only assigned, never used afterwards",
+    "ok": true,
+    "detail": "[\"d = rc.load_mit(); tr, va, te = rc.partition(d['subject'], k)\"]"
+   },
+   {
+    "run": "EVAL",
+    "check": "diag_memory.py: discards test mask (`tr, va, _`)",
+    "ok": true,
+    "detail": ""
+   },
+   {
+    "run": "EVAL",
+    "check": "train_one(): gradient steps use only Xtr/ytr (SMOTE training partition); Xva only inside no_grad logits()",
+    "ok": true,
+    "detail": ""
+   },
+   {
+    "run": "EVAL",
+    "check": "resume script has no reference to 07/08/09/run_after_training",
+    "ok": true,
+    "detail": ""
+   },
+   {
+    "run": "EVAL",
+    "check": "resume log: 15/15 finished, no HALT, all END rc=0",
+    "ok": true,
+    "detail": "['=== END C fold2 rc=0 2026-11-05T14:17:06+05:30', '=== END B fold3 rc=0 2026-11-05T14:23:32+05:30', '=== END C fold3 rc=0 2026-11-05T22:43:09+05:30', '=== END A fold4 rc=0 2026-11-05T22:44:36+05:30', '=== END B fold4 rc=0 2026-11-05T22:51:21+05:30', '=== END C fold4 rc=0 2026-11-06T00:50:47+05:30']"
+   },
+   {
+    "run": "EVAL",
+    "check": "no process of 06/07/08/09 or chain scripts alive",
+    "ok": true,
+    "detail": ""
+   },
+   {
+    "run": "ENV",
+    "check": "driver version unchanged vs pre-resume manifest",
+    "ok": true,
+    "detail": "('617.42', '617.42')"
+   },
+   {
+    "run": "ENV",
+    "check": "all package versions == lock environment block",
+    "ok": true,
+    "detail": ""
+   },
+   {
+    "run": "ENV",
+    "check": "no package directory changed in either site-packages since 2026-11-01",
+    "ok": true,
+    "detail": "[]"
+   }
+  ]
+ }
+}

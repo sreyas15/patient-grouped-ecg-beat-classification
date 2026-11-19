@@ -1,0 +1,287 @@
+{
+ "A": {
+  "test_fold": 3,
+  "n": 21564,
+  "actual_F": 11,
+  "predicted_F": 998,
+  "true_positive_F": 2,
+  "false_positive_F": 996,
+  "precision_F": 0.002004008016032064,
+  "recall_F": 0.18181818181818182,
+  "f1_F": 0.003964321110009911,
+  "predicted_F_over_actual_F": 90.72727272727273,
+  "false_positive_F_by_true_class": {
+   "N": 978,
+   "S": 5,
+   "V": 13,
+   "Q": 0
+  },
+  "top_subjects_by_false_positive_F": [
+   {
+    "subject": "201_202",
+    "n_beats": 4092,
+    "actual_F": 3,
+    "predicted_F": 672,
+    "false_positive_F": 671,
+    "share_of_false_positive_F": 0.6736947791164659
+   },
+   {
+    "subject": "114",
+    "n_beats": 1875,
+    "actual_F": 4,
+    "predicted_F": 213,
+    "false_positive_F": 213,
+    "share_of_false_positive_F": 0.21385542168674698
+   },
+   {
+    "subject": "105",
+    "n_beats": 2568,
+    "actual_F": 0,
+    "predicted_F": 100,
+    "false_positive_F": 100,
+    "share_of_false_positive_F": 0.10040160642570281
+   },
+   {
+    "subject": "200",
+    "n_beats": 2597,
+    "actual_F": 2,
+    "predicted_F": 10,
+    "false_positive_F": 9,
+    "share_of_false_positive_F": 0.009036144578313253
+   },
+   {
+    "subject": "119",
+    "n_beats": 1983,
+    "actual_F": 0,
+    "predicted_F": 3,
+    "false_positive_F": 3,
+    "share_of_false_positive_F": 0.0030120481927710845
+   },
+   {
+    "subject": "103",
+    "n_beats": 2080,
+    "actual_F": 0,
+    "predicted_F": 0,
+    "false_positive_F": 0,
+    "share_of_false_positive_F": 0.0
+   },
+   {
+    "subject": "109",
+    "n_beats": 2528,
+    "actual_F": 2,
+    "predicted_F": 0,
+    "false_positive_F": 0,
+    "share_of_false_positive_F": 0.0
+   },
+   {
+    "subject": "118",
+    "n_beats": 2274,
+    "actual_F": 0,
+    "predicted_F": 0,
+    "false_positive_F": 0,
+    "share_of_false_positive_F": 0.0
+   },
+   {
+    "subject": "231",
+    "n_beats": 1567,
+    "actual_F": 0,
+    "predicted_F": 0,
+    "false_positive_F": 0,
+    "share_of_false_positive_F": 0.0
+   }
+  ],
+  "validation_fold4_actual_F": 369,
+  "validation_fold4_predicted_F": 1323,
+  "note": "descriptive only; validation numbers are those of the model for outer fold 3 on its validation partition (fold 4 subjects)"
+ },
+ "B": {
+  "test_fold": 3,
+  "n": 21564,
+  "actual_F": 11,
+  "predicted_F": 3028,
+  "true_positive_F": 1,
+  "false_positive_F": 3027,
+  "precision_F": 0.00033025099075297226,
+  "recall_F": 0.09090909090909091,
+  "f1_F": 0.0006581112207963146,
+  "predicted_F_over_actual_F": 275.27272727272725,
+  "false_positive_F_by_true_class": {
+   "N": 2940,
+   "S": 24,
+   "V": 63,
+   "Q": 0
+  },
+  "top_subjects_by_false_positive_F": [
+   {
+    "subject": "109",
+    "n_beats": 2528,
+    "actual_F": 2,
+    "predicted_F": 1033,
+    "false_positive_F": 1033,
+    "share_of_false_positive_F": 0.34126197555335314
+   },
+   {
+    "subject": "105",
+    "n_beats": 2568,
+    "actual_F": 0,
+    "predicted_F": 957,
+    "false_positive_F": 957,
+    "share_of_false_positive_F": 0.31615460852329036
+   },
+   {
+    "subject": "201_202",
+    "n_beats": 4092,
+    "actual_F": 3,
+    "predicted_F": 534,
+    "false_positive_F": 534,
+    "share_of_false_positive_F": 0.17641228939544104
+   },
+   {
+    "subject": "114",
+    "n_beats": 1875,
+    "actual_F": 4,
+    "predicted_F": 461,
+    "false_positive_F": 461,
+    "share_of_false_positive_F": 0.15229600264288073
+   },
+   {
+    "subject": "200",
+    "n_beats": 2597,
+    "actual_F": 2,
+    "predicted_F": 42,
+    "false_positive_F": 41,
+    "share_of_false_positive_F": 0.013544763792533861
+   },
+   {
+    "subject": "118",
+    "n_beats": 2274,
+    "actual_F": 0,
+    "predicted_F": 1,
+    "false_positive_F": 1,
+    "share_of_false_positive_F": 0.0003303600925008259
+   },
+   {
+    "subject": "103",
+    "n_beats": 2080,
+    "actual_F": 0,
+    "predicted_F": 0,
+    "false_positive_F": 0,
+    "share_of_false_positive_F": 0.0
+   },
+   {
+    "subject": "119",
+    "n_beats": 1983,
+    "actual_F": 0,
+    "predicted_F": 0,
+    "false_positive_F": 0,
+    "share_of_false_positive_F": 0.0
+   },
+   {
+    "subject": "231",
+    "n_beats": 1567,
+    "actual_F": 0,
+    "predicted_F": 0,
+    "false_positive_F": 0,
+    "share_of_false_positive_F": 0.0
+   }
+  ],
+  "validation_fold4_actual_F": 369,
+  "validation_fold4_predicted_F": 3951,
+  "note": "descriptive only; validation numbers are those of the model for outer fold 3 on its validation partition (fold 4 subjects)"
+ },
+ "C": {
+  "test_fold": 3,
+  "n": 21564,
+  "actual_F": 11,
+  "predicted_F": 76,
+  "true_positive_F": 2,
+  "false_positive_F": 74,
+  "precision_F": 0.02631578947368421,
+  "recall_F": 0.18181818181818182,
+  "f1_F": 0.04597701149425287,
+  "predicted_F_over_actual_F": 6.909090909090909,
+  "false_positive_F_by_true_class": {
+   "N": 66,
+   "S": 0,
+   "V": 8,
+   "Q": 0
+  },
+  "top_subjects_by_false_positive_F": [
+   {
+    "subject": "105",
+    "n_beats": 2568,
+    "actual_F": 0,
+    "predicted_F": 46,
+    "false_positive_F": 46,
+    "share_of_false_positive_F": 0.6216216216216216
+   },
+   {
+    "subject": "114",
+    "n_beats": 1875,
+    "actual_F": 4,
+    "predicted_F": 16,
+    "false_positive_F": 16,
+    "share_of_false_positive_F": 0.21621621621621623
+   },
+   {
+    "subject": "200",
+    "n_beats": 2597,
+    "actual_F": 2,
+    "predicted_F": 8,
+    "false_positive_F": 6,
+    "share_of_false_positive_F": 0.08108108108108109
+   },
+   {
+    "subject": "201_202",
+    "n_beats": 4092,
+    "actual_F": 3,
+    "predicted_F": 5,
+    "false_positive_F": 5,
+    "share_of_false_positive_F": 0.06756756756756757
+   },
+   {
+    "subject": "109",
+    "n_beats": 2528,
+    "actual_F": 2,
+    "predicted_F": 1,
+    "false_positive_F": 1,
+    "share_of_false_positive_F": 0.013513513513513514
+   },
+   {
+    "subject": "103",
+    "n_beats": 2080,
+    "actual_F": 0,
+    "predicted_F": 0,
+    "false_positive_F": 0,
+    "share_of_false_positive_F": 0.0
+   },
+   {
+    "subject": "118",
+    "n_beats": 2274,
+    "actual_F": 0,
+    "predicted_F": 0,
+    "false_positive_F": 0,
+    "share_of_false_positive_F": 0.0
+   },
+   {
+    "subject": "119",
+    "n_beats": 1983,
+    "actual_F": 0,
+    "predicted_F": 0,
+    "false_positive_F": 0,
+    "share_of_false_positive_F": 0.0
+   },
+   {
+    "subject": "231",
+    "n_beats": 1567,
+    "actual_F": 0,
+    "predicted_F": 0,
+    "false_positive_F": 0,
+    "share_of_false_positive_F": 0.0
+   }
+  ],
+  "validation_fold4_actual_F": 369,
+  "validation_fold4_predicted_F": 302,
+  "note": "descriptive only; validation numbers are those of the model for outer fold 3 on its validation partition (fold 4 subjects)"
+ }
+}

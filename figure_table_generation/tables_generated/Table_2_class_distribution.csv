@@ -1,0 +1,7 @@
+AAMI,Description,Count,Proportion
+N,"Normal sinus, LBBB, RBBB, atrial/nodal escape","90,472",82.8%
+V,"PVC, ventricular escape","7,229",6.6%
+S,"APB, aberrated APB, nodal, SV premature","2,775",2.5%
+F,Fusion (ventricular + normal),802,0.7%
+Q,"Paced, fusion of paced and normal, unclassifiable","8,027",7.3%
+Total,,"109,305",100%

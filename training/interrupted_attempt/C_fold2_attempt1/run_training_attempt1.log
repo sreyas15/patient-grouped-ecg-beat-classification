@@ -1,0 +1,31 @@
+=== START A fold0 2026-11-02T14:26:56+05:30
+=== END A fold0 rc=0 2026-11-02T14:28:16+05:30
+SELECTED {"model": "A", "fold": 0, "selected_lr": 0.0001, "selected_epoch": 1, "val_macro_f1": 0.54870167647823, "val_classes_used": ["N", "S", "V", "F", "Q"], "temperature": 1.0049266815185547, "checkpoint": "ckpt_lr0.0001.pt"}
+=== START B fold0 2026-11-02T14:28:16+05:30
+=== END B fold0 rc=0 2026-11-02T14:34:26+05:30
+SELECTED {"model": "B", "fold": 0, "selected_lr": 0.0005, "selected_epoch": 11, "val_macro_f1": 0.5605127158358785, "val_classes_used": ["N", "S", "V", "F", "Q"], "temperature": 2.3070614337921143, "checkpoint": "ckpt_lr0.0005.pt"}
+=== START C fold0 2026-11-02T14:34:26+05:30
+=== END C fold0 rc=0 2026-11-02T16:35:33+05:30
+SELECTED {"model": "C", "fold": 0, "selected_lr": 0.0005, "selected_epoch": 14, "val_macro_f1": 0.5231559992182344, "val_classes_used": ["N", "S", "V", "F", "Q"], "temperature": 3.230752944946289, "checkpoint": "ckpt_lr0.0005.pt"}
+=== FOLD 0 COMPLETE 2026-11-02T16:35:33+05:30
+=== START A fold1 2026-11-02T16:35:33+05:30
+=== END A fold1 rc=0 2026-11-02T16:36:49+05:30
+SELECTED {"model": "A", "fold": 1, "selected_lr": 0.001, "selected_epoch": 4, "val_macro_f1": 0.5554381604300532, "val_classes_used": ["N", "S", "V", "F", "Q"], "temperature": 3.6086792945861816, "checkpoint": "ckpt_lr0.001.pt"}
+=== START B fold1 2026-11-02T16:36:49+05:30
+=== END B fold1 rc=0 2026-11-02T16:42:52+05:30
+SELECTED {"model": "B", "fold": 1, "selected_lr": 0.001, "selected_epoch": 20, "val_macro_f1": 0.4661048835896702, "val_classes_used": ["N", "S", "V", "F", "Q"], "temperature": 3.201087236404419, "checkpoint": "ckpt_lr0.001.pt"}
+=== START C fold1 2026-11-02T16:42:52+05:30
+=== END C fold1 rc=0 2026-11-02T18:54:25+05:30
+SELECTED {"model": "C", "fold": 1, "selected_lr": 0.001, "selected_epoch": 8, "val_macro_f1": 0.5624468443844342, "val_classes_used": ["N", "S", "V", "F", "Q"], "temperature": 4.088082790374756, "checkpoint": "ckpt_lr0.001.pt"}
+=== FOLD 1 COMPLETE 2026-11-02T18:54:25+05:30
+=== START A fold2 2026-11-02T18:54:25+05:30
+=== END A fold2 rc=0 2026-11-02T18:55:50+05:30
+SELECTED {"model": "A", "fold": 2, "selected_lr": 0.001, "selected_epoch": 3, "val_macro_f1": 0.4259137845733672, "val_classes_used": ["N", "S", "V", "F"], "temperature": 1.8478223085403442, "checkpoint": "ckpt_lr0.001.pt"}
+=== START B fold2 2026-11-02T18:55:50+05:30
+=== END B fold2 rc=0 2026-11-02T19:02:10+05:30
+SELECTED {"model": "B", "fold": 2, "selected_lr": 0.001, "selected_epoch": 15, "val_macro_f1": 0.3794903776305491, "val_classes_used": ["N", "S", "V", "F"], "temperature": 3.009483575820923, "checkpoint": "ckpt_lr0.001.pt"}
+=== START C fold2 2026-11-02T19:02:10+05:30
+=== END C fold2 rc=1 2026-11-03T13:45:20+05:30
+RuntimeError: cuDNN error: CUDNN_STATUS_EXECUTION_FAILED
+=== FOLD 2 COMPLETE 2026-11-03T13:45:20+05:30
+=== START A fold3 2026-11-03T13:45:20+05:30

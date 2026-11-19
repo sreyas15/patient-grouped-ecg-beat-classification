@@ -1,0 +1,157 @@
+{
+ "locked_at": "2026-11-02T14:26:40",
+ "status": "LOCKED",
+ "protocol": "experimental_protocol_LOCKED.md",
+ "primary_model": "B",
+ "comparators": [
+  "A",
+  "C"
+ ],
+ "prespecified_comparisons": [
+  "B-A",
+  "B-C"
+ ],
+ "exploratory": [
+  "C-A",
+  "any ranking of models"
+ ],
+ "internal_evaluation": "MIT-BIH, nested subject-grouped 5-fold CV, pooled out-of-fold predictions (internal; records previously exposed in earlier analyses)",
+ "external_evaluation": "INCART, ensemble of the five locked fold models, primary macro-F1 over N,S,V,F; as-given annotations primary, peak-recentred sensitivity",
+ "config": {
+  "input_len": 186,
+  "smote_target": 20000,
+  "smote_k": 5,
+  "loss": "unweighted cross-entropy",
+  "optimizer": "Adam",
+  "batch_size": 128,
+  "weight_decay": 0.0001,
+  "lr_grid": [
+   0.0001,
+   0.0005,
+   0.001
+  ],
+  "epochs": {
+   "A": 15,
+   "B": 20,
+   "C": 15
+  },
+  "fold_seed_base": 1000,
+  "checkpoint_rule": "max validation macro-F1 over classes with >=10 validation beats (per epoch); lr chosen by the same criterion",
+  "temperature": "single scalar T, NLL on the selected checkpoint validation logits (LBFGS on log T)",
+  "primary_model": "B",
+  "comparators": [
+   "A",
+   "C"
+  ],
+  "primary_model_reason": "Model B is the backbone of the manuscript clinical pipeline (pre-specified before any R2 result)",
+  "scheme": "outer fold k: test=fold k, val=fold (k+1)%5, train=other 3 folds"
+ },
+ "folds": {
+  "0": [
+   "106",
+   "116",
+   "117",
+   "205",
+   "207",
+   "210",
+   "217",
+   "219",
+   "223",
+   "234"
+  ],
+  "1": [
+   "107",
+   "108",
+   "112",
+   "122",
+   "123",
+   "221",
+   "228",
+   "230",
+   "232",
+   "233"
+  ],
+  "2": [
+   "100",
+   "102",
+   "111",
+   "113",
+   "115",
+   "208",
+   "209",
+   "212",
+   "215"
+  ],
+  "3": [
+   "103",
+   "105",
+   "109",
+   "114",
+   "118",
+   "119",
+   "200",
+   "201+202",
+   "231"
+  ],
+  "4": [
+   "101",
+   "104",
+   "121",
+   "124",
+   "203",
+   "213",
+   "214",
+   "220",
+   "222"
+  ]
+ },
+ "n_subjects": 47,
+ "fold_seeds": {
+  "0": 1000,
+  "1": 1001,
+  "2": 1002,
+  "3": 1003,
+  "4": 1004
+ },
+ "bootstrap": {
+  "resamples": 2000,
+  "seed": 20261102,
+  "unit": "subject/patient"
+ },
+ "decisions": [
+  "D1 identical 186-sample input",
+  "D2 SMOTE 20,000/class (compute; not optimised)",
+  "D3 MLII where available, V5 for 102/104",
+  "D4 INCART = ensemble of 5 fold models",
+  "D5 folds frozen, never redrawn",
+  "D6 INCART external, macro-F1 N,S,V,F",
+  "D7 as-given primary, recentred sensitivity"
+ ],
+ "environment": {
+  "python": "3.13.7",
+  "torch": "2.6.0+cu124",
+  "cuda": "12.4",
+  "gpu": "NVIDIA GeForce RTX 4060 Laptop GPU",
+  "numpy": "2.5.2",
+  "sklearn": "1.7.2",
+  "imblearn": "0.14.2",
+  "scipy": "1.16.3",
+  "wfdb": "4.3.1",
+  "pywt": "1.8.0"
+ },
+ "frozen_files": {
+  "experimental_protocol_LOCKED.md": "49fc7b15bbfc69fd0c63b169aade1ca37d6b2ec0cc23af962772716662fa1d6e",
+  "results/splits/folds_LOCKED.json": "ec15d8ce2f51ff42491dfff58844b9e965a1fd7ea99a0a47cf675efe8b912a3a",
+  "data/mitbih_beats_r2.npz": "34d6101c910142a4aadfb2f8d7b452ab4f7ef6391603bcdf724da54d7ee828a9",
+  "data/incart_beats_r2.npz": "cb8a028200078db217ee7a98456f59b00c89ef170fb26856cad3419351f879b0",
+  "experiments/04_extract_beats.py": "d277bd5f2b30afd45f22da11324112e177fb0187eea6d28e68dc4cc7b0d01c92",
+  "experiments/r2common.py": "19c422dddb0636415870d022e6ea0da7b9cbf2ff40bd4b92883d3aab3d9c5989",
+  "experiments/06_train.py": "cb7ebee5b7f49abdf4e94c3c3a27d0aabcff6632a2172bd59e199c45833e0eaa",
+  "experiments/07_score.py": "dfb163c4d6296c74002765aadbf2bf4d26ffbfce077f99c7003b683b378bdd90",
+  "experiments/08_evaluate.py": "5dd5f9e2a09eb5ed10665618c02b43aba9e41fb91db809d4899320c89219bd56",
+  "experiments/verify_lock.py": "66296e5752d68b17dd6cb3604209153ad329be0d35182bcc05d55d1f24cf6ba5",
+  "D:\\explainable_ai\\Journel paper project\\ECGTransForm\\models.py": "a168b2b8bdfeba73e362618d58d925ea593c0109ab3f7841bac1ebbf5b53fca0",
+  "D:\\explainable_ai\\Journel paper project\\ECGTransForm\\configs\\data_configs.py": "04dd867e88b4053ae43cb5790ef80b14b4966cb30ca0b9831b35f597a73334a2",
+  "D:\\explainable_ai\\Journel paper project\\ECGTransForm\\configs\\hparams.py": "0292a448cbbffe42097a98f8fd14d54ec89ccbfbfb39038278a4ed348beb77bb"
+ }
+}

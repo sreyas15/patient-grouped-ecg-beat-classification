@@ -1,0 +1,678 @@
+{
+ "mode": "mit",
+ "created": "2026-11-06T03:38:01",
+ "seconds": 610,
+ "n_checks": 43,
+ "n_failed": 1,
+ "checks": [
+  {
+   "check": "A: pooled predictions = 109,305, every beat index exactly once (0..109304)",
+   "ok": true,
+   "detail": "109305"
+  },
+  {
+   "check": "A: stored labels / subjects / records equal the source data at those beat indices",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "check": "A: each fold's test subjects == locked fold k; subjects are disjoint across folds; 201/202 grouped as 201_202",
+   "ok": true,
+   "detail": "[10, 10, 9, 9, 9]"
+  },
+  {
+   "check": "A: every record belongs to exactly one subject (48 records, 47 subjects)",
+   "ok": true,
+   "detail": "(48, 47)"
+  },
+  {
+   "check": "A: true-label counts == data-audit counts and == frozen protocol (N 90,472 / S 2,775 / V 7,229 / F 802 / Q 8,027)",
+   "ok": true,
+   "detail": "[90472, 2775, 7229, 802, 8027]"
+  },
+  {
+   "check": "A: predicted-label counts",
+   "ok": true,
+   "detail": "[70475, 8933, 19075, 3843, 6979]"
+  },
+  {
+   "check": "B: pooled predictions = 109,305, every beat index exactly once (0..109304)",
+   "ok": true,
+   "detail": "109305"
+  },
+  {
+   "check": "B: stored labels / subjects / records equal the source data at those beat indices",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "check": "B: each fold's test subjects == locked fold k; subjects are disjoint across folds; 201/202 grouped as 201_202",
+   "ok": true,
+   "detail": "[10, 10, 9, 9, 9]"
+  },
+  {
+   "check": "B: every record belongs to exactly one subject (48 records, 47 subjects)",
+   "ok": true,
+   "detail": "(48, 47)"
+  },
+  {
+   "check": "B: true-label counts == data-audit counts and == frozen protocol (N 90,472 / S 2,775 / V 7,229 / F 802 / Q 8,027)",
+   "ok": true,
+   "detail": "[90472, 2775, 7229, 802, 8027]"
+  },
+  {
+   "check": "B: predicted-label counts",
+   "ok": true,
+   "detail": "[70910, 10723, 13973, 6287, 7412]"
+  },
+  {
+   "check": "C: pooled predictions = 109,305, every beat index exactly once (0..109304)",
+   "ok": true,
+   "detail": "109305"
+  },
+  {
+   "check": "C: stored labels / subjects / records equal the source data at those beat indices",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "check": "C: each fold's test subjects == locked fold k; subjects are disjoint across folds; 201/202 grouped as 201_202",
+   "ok": true,
+   "detail": "[10, 10, 9, 9, 9]"
+  },
+  {
+   "check": "C: every record belongs to exactly one subject (48 records, 47 subjects)",
+   "ok": true,
+   "detail": "(48, 47)"
+  },
+  {
+   "check": "C: true-label counts == data-audit counts and == frozen protocol (N 90,472 / S 2,775 / V 7,229 / F 802 / Q 8,027)",
+   "ok": true,
+   "detail": "[90472, 2775, 7229, 802, 8027]"
+  },
+  {
+   "check": "C: predicted-label counts",
+   "ok": true,
+   "detail": "[72969, 10654, 16605, 2550, 6527]"
+  },
+  {
+   "check": "per-fold table (n, accuracy, macro-F1 over classes present, per-class sensitivity, per-class counts) == independent",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "check": "[mit_internal] A: point metrics (accuracy, macro-F1, balanced acc., macro AUROC/AUPRC, ECE, signed gap, MCE, class-wise ECE, Brier, NLL, raw-score calibration) == independent",
+   "ok": true,
+   "detail": "max abs diff 4.87e-11 over 17 metrics"
+  },
+  {
+   "check": "[mit_internal] A: 5x5 confusion matrix == independent",
+   "ok": true,
+   "detail": "109305"
+  },
+  {
+   "check": "[mit_internal] A: row-normalised confusion matrix",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "check": "[mit_internal] A: reliability bins (n, confidence, accuracy, signed gap)",
+   "ok": true,
+   "detail": "12"
+  },
+  {
+   "check": "[mit_internal] A: per-class sensitivity, specificity, PPV, F1, AUROC, AUPRC, beat and cluster support, primary-macro flags == independent",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "check": "[mit_internal] B: point metrics (accuracy, macro-F1, balanced acc., macro AUROC/AUPRC, ECE, signed gap, MCE, class-wise ECE, Brier, NLL, raw-score calibration) == independent",
+   "ok": true,
+   "detail": "max abs diff 4.84e-11 over 17 metrics"
+  },
+  {
+   "check": "[mit_internal] B: 5x5 confusion matrix == independent",
+   "ok": true,
+   "detail": "109305"
+  },
+  {
+   "check": "[mit_internal] B: row-normalised confusion matrix",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "check": "[mit_internal] B: reliability bins (n, confidence, accuracy, signed gap)",
+   "ok": true,
+   "detail": "12"
+  },
+  {
+   "check": "[mit_internal] B: per-class sensitivity, specificity, PPV, F1, AUROC, AUPRC, beat and cluster support, primary-macro flags == independent",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "check": "[mit_internal] C: point metrics (accuracy, macro-F1, balanced acc., macro AUROC/AUPRC, ECE, signed gap, MCE, class-wise ECE, Brier, NLL, raw-score calibration) == independent",
+   "ok": true,
+   "detail": "max abs diff 4.09e-11 over 17 metrics"
+  },
+  {
+   "check": "[mit_internal] C: 5x5 confusion matrix == independent",
+   "ok": true,
+   "detail": "109305"
+  },
+  {
+   "check": "[mit_internal] C: row-normalised confusion matrix",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "check": "[mit_internal] C: reliability bins (n, confidence, accuracy, signed gap)",
+   "ok": true,
+   "detail": "12"
+  },
+  {
+   "check": "[mit_internal] C: per-class sensitivity, specificity, PPV, F1, AUROC, AUPRC, beat and cluster support, primary-macro flags == independent",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "check": "[mit_internal] A: 95% subject-cluster bootstrap CIs (accuracy, macro-F1, balanced acc., macro AUROC, ECE, signed gap, Brier) == independent bootstrap (B=2000)",
+   "ok": true,
+   "detail": "[]"
+  },
+  {
+   "check": "[mit_internal] A: per-class sensitivity / PPV / F1 CIs and number of valid resamples == independent",
+   "ok": true,
+   "detail": "[]"
+  },
+  {
+   "check": "[mit_internal] B: 95% subject-cluster bootstrap CIs (accuracy, macro-F1, balanced acc., macro AUROC, ECE, signed gap, Brier) == independent bootstrap (B=2000)",
+   "ok": true,
+   "detail": "[]"
+  },
+  {
+   "check": "[mit_internal] B: per-class sensitivity / PPV / F1 CIs and number of valid resamples == independent",
+   "ok": true,
+   "detail": "[]"
+  },
+  {
+   "check": "[mit_internal] C: 95% subject-cluster bootstrap CIs (accuracy, macro-F1, balanced acc., macro AUROC, ECE, signed gap, Brier) == independent bootstrap (B=2000)",
+   "ok": true,
+   "detail": "[]"
+  },
+  {
+   "check": "[mit_internal] C: per-class sensitivity / PPV / F1 CIs and number of valid resamples == independent",
+   "ok": true,
+   "detail": "[]"
+  },
+  {
+   "check": "[mit_internal] paired B - A: delta macro-F1 + paired CI, per-class delta-sensitivity CIs, McNemar discordant counts and exact p == independent",
+   "ok": true,
+   "detail": "n01=14196 n10=12749 p=1.24e-18"
+  },
+  {
+   "check": "[mit_internal] paired B - C: delta macro-F1 + paired CI, per-class delta-sensitivity CIs, McNemar discordant counts and exact p == independent",
+   "ok": false,
+   "detail": "n01=13012 n10=13473 p=0.0047"
+  },
+  {
+   "check": "[mit_internal] paired C - A: delta macro-F1 + paired CI, per-class delta-sensitivity CIs, McNemar discordant counts and exact p == independent",
+   "ok": true,
+   "detail": "n01=10692 n10=8784 p=1.42e-42"
+  }
+ ],
+ "independent_results": {
+  "mit_internal": {
+   "A": {
+    "point": {
+     "accuracy": 0.7272860344906454,
+     "macro_f1": 0.432413258871161,
+     "balanced_accuracy": 0.5032305353420002,
+     "macro_auroc": 0.7758188978372089,
+     "macro_auprc": 0.4885162917643531,
+     "ece_top": 0.056194621134697434,
+     "signed_gap": 0.050123679431062884,
+     "mce": 0.0928863469071346,
+     "ece_classwise": 0.10694256038230324,
+     "brier": 0.39223620432973033,
+     "nll": 0.800941044476137,
+     "raw_ece_top": 0.16451858504573977,
+     "raw_signed_gap": 0.16348964605134675,
+     "raw_mce": 0.4076652626196543,
+     "raw_ece_classwise": 0.10362119507658876,
+     "raw_brier": 0.453477782538775,
+     "raw_nll": 1.4636691808700562
+    },
+    "cm": [
+     [
+      67041,
+      7998,
+      10726,
+      3599,
+      1108
+     ],
+     [
+      1883,
+      476,
+      378,
+      12,
+      26
+     ],
+     [
+      474,
+      262,
+      6214,
+      178,
+      101
+     ],
+     [
+      547,
+      7,
+      223,
+      23,
+      2
+     ],
+     [
+      530,
+      190,
+      1534,
+      31,
+      5742
+     ]
+    ],
+    "per_class": {
+     "sens": [
+      0.7410137943231055,
+      0.17153153153153153,
+      0.859593304744778,
+      0.028678304239401497,
+      0.7153357418711848
+     ],
+     "spec": [
+      0.817660489566187,
+      0.9206139115742045,
+      0.8740056428543438,
+      0.9647936001769536,
+      0.9877860937222299
+     ],
+     "ppv": [
+      0.9512735012415751,
+      0.05328557035710288,
+      0.32576671035386634,
+      0.0059849076242518865,
+      0.8227539762143573
+     ],
+     "f1": [
+      0.8330816977017279,
+      0.08131192347113085,
+      0.4724756690997567,
+      0.009903121636167923,
+      0.7652938824470212
+     ],
+     "auroc": [
+      0.8619259359495329,
+      0.592884572547766,
+      0.937789109106161,
+      0.5746851340263113,
+      0.9118097375562733
+     ],
+     "auprc": [
+      0.9522004718013081,
+      0.07380585201335205,
+      0.6200889111892453,
+      0.008624132143409697,
+      0.7878620916744502
+     ]
+    },
+    "support": [
+     90472,
+     2775,
+     7229,
+     802,
+     8027
+    ],
+    "ci": {
+     "accuracy": [
+      0.6358662600217635,
+      0.8106145300642431
+     ],
+     "macro_f1": [
+      0.28536586751288123,
+      0.5030244614886179
+     ],
+     "balanced_accuracy": [
+      0.3724253696556676,
+      0.5951950020508828
+     ],
+     "macro_auroc": [
+      0.7034471292272712,
+      0.8549909429091558
+     ],
+     "ece_top": [
+      0.019565575662655686,
+      0.1338649887132405
+     ],
+     "signed_gap": [
+      -0.02141319386576417,
+      0.13226342369594132
+     ],
+     "brier": [
+      0.285888008930597,
+      0.5147798551626571
+     ]
+    }
+   },
+   "B": {
+    "point": {
+     "accuracy": 0.7405242212158639,
+     "macro_f1": 0.48316781296950195,
+     "balanced_accuracy": 0.5642778188950489,
+     "macro_auroc": 0.7958249321784272,
+     "macro_auprc": 0.5269897813869392,
+     "ece_top": 0.0725043419424524,
+     "signed_gap": 0.017974053411596302,
+     "mce": 0.1254355043515517,
+     "ece_classwise": 0.11344261142013512,
+     "brier": 0.39299233024387475,
+     "nll": 0.7545806342829152,
+     "raw_ece_top": 0.16349059172984498,
+     "raw_signed_gap": 0.1629927270072501,
+     "raw_mce": 0.7383815944194794,
+     "raw_ece_classwise": 0.1001432958849749,
+     "raw_brier": 0.4393827050520969,
+     "raw_nll": 1.2228846549987793
+    },
+    "cm": [
+     [
+      67368,
+      9887,
+      7240,
+      5627,
+      350
+     ],
+     [
+      1695,
+      596,
+      260,
+      198,
+      26
+     ],
+     [
+      565,
+      196,
+      5987,
+      305,
+      176
+     ],
+     [
+      492,
+      12,
+      140,
+      145,
+      13
+     ],
+     [
+      790,
+      32,
+      346,
+      12,
+      6847
+     ]
+    ],
+    "per_class": {
+     "sens": [
+      0.7446281722521885,
+      0.21477477477477477,
+      0.828192004426615,
+      0.18079800498753118,
+      0.8529961380341348
+     ],
+     "spec": [
+      0.8119258747942442,
+      0.9049375762695954,
+      0.9217641757122145,
+      0.9433932702321595,
+      0.9944212958391754
+     ],
+     "ppv": [
+      0.9500493583415597,
+      0.05558146041219808,
+      0.4284691905818364,
+      0.02306346429139494,
+      0.9237722611980572
+     ],
+     "f1": [
+      0.8348886492917426,
+      0.08830937916728404,
+      0.5647580416941798,
+      0.040908449710819576,
+      0.8869745449834834
+     ],
+     "auroc": [
+      0.8536288529516362,
+      0.5652091438101012,
+      0.9585377218955239,
+      0.6502524276021834,
+      0.9514965146326915
+     ],
+     "auprc": [
+      0.954625353683155,
+      0.039744154780332976,
+      0.7179669600405268,
+      0.013853812438300632,
+      0.9087586259923803
+     ]
+    },
+    "support": [
+     90472,
+     2775,
+     7229,
+     802,
+     8027
+    ],
+    "ci": {
+     "accuracy": [
+      0.6567740268670784,
+      0.8114589920572891
+     ],
+     "macro_f1": [
+      0.40570124211958586,
+      0.5383887627940462
+     ],
+     "balanced_accuracy": [
+      0.48015371212490904,
+      0.6592253050917275
+     ],
+     "macro_auroc": [
+      0.728829504462489,
+      0.873546473402784
+     ],
+     "ece_top": [
+      0.041682624731155665,
+      0.132267203436823
+     ],
+     "signed_gap": [
+      -0.04805610587089198,
+      0.09519383965612334
+     ],
+     "brier": [
+      0.2916126273615608,
+      0.5112970411354345
+     ]
+    }
+   },
+   "C": {
+    "point": {
+     "accuracy": 0.7447417775948035,
+     "macro_f1": 0.45564202072136606,
+     "balanced_accuracy": 0.5214591033974629,
+     "macro_auroc": 0.8200779982014321,
+     "macro_auprc": 0.5183083156013202,
+     "ece_top": 0.04457022533808723,
+     "signed_gap": 0.02406260851688613,
+     "mce": 0.10305312460664551,
+     "ece_classwise": 0.10294777779556138,
+     "brier": 0.3695114017779582,
+     "nll": 0.7028757089590781,
+     "raw_ece_top": 0.18429852043233824,
+     "raw_signed_gap": 0.18429853517222528,
+     "raw_mce": 0.289169552529278,
+     "raw_ece_classwise": 0.08963828257205095,
+     "raw_brier": 0.43088032927269115,
+     "raw_nll": 1.2913120985031128
+    },
+    "cm": [
+     [
+      68701,
+      9483,
+      9481,
+      2314,
+      493
+     ],
+     [
+      1722,
+      515,
+      489,
+      11,
+      38
+     ],
+     [
+      508,
+      87,
+      6307,
+      167,
+      160
+     ],
+     [
+      496,
+      5,
+      244,
+      51,
+      6
+     ],
+     [
+      1542,
+      564,
+      84,
+      7,
+      5830
+     ]
+    ],
+    "per_class": {
+     "sens": [
+      0.759362012556371,
+      0.18558558558558558,
+      0.8724581546548623,
+      0.06359102244389027,
+      0.7262987417466052
+     ],
+     "spec": [
+      0.773376519938406,
+      0.9048249319440533,
+      0.8991143853599279,
+      0.9769683787545045,
+      0.9931179525662039
+     ],
+     "ppv": [
+      0.9415094081048117,
+      0.048338652149427445,
+      0.37982535380909366,
+      0.02,
+      0.89321280833461
+     ],
+     "f1": [
+      0.8406825704688542,
+      0.07669967979745328,
+      0.5292439372325249,
+      0.030429594272076373,
+      0.8011543218359214
+     ],
+     "auroc": [
+      0.8598252705598013,
+      0.7024180305340542,
+      0.9535056216890866,
+      0.602483163353241,
+      0.9821579048709775
+     ],
+     "auprc": [
+      0.9600074748275563,
+      0.04957579214967936,
+      0.6652371215411479,
+      0.014877061590404918,
+      0.9018441278978125
+     ]
+    },
+    "support": [
+     90472,
+     2775,
+     7229,
+     802,
+     8027
+    ],
+    "ci": {
+     "accuracy": [
+      0.6631015015957339,
+      0.8181643765305704
+     ],
+     "macro_f1": [
+      0.3577506488002252,
+      0.5101666089799796
+     ],
+     "balanced_accuracy": [
+      0.4376102354255956,
+      0.5849360944484499
+     ],
+     "macro_auroc": [
+      0.7711954387038937,
+      0.8662448739972801
+     ],
+     "ece_top": [
+      0.017052897149751993,
+      0.10480214480427084
+     ],
+     "signed_gap": [
+      -0.04071650453538527,
+      0.09706178623195859
+     ],
+     "brier": [
+      0.2748762933332802,
+      0.4786059936310383
+     ]
+    }
+   },
+   "B-A": {
+    "delta_macro_f1": 0.050754554098340954,
+    "ci": [
+     -0.004760806431671866,
+     0.16261168922184327
+    ],
+    "n01": 14196,
+    "n10": 12749,
+    "mcnemar_p": 1.2387782729871756e-18,
+    "kind": "pre-specified"
+   },
+   "B-C": {
+    "delta_macro_f1": 0.027525792248135894,
+    "ci": [
+     -0.00959093945435273,
+     0.07460402630969495
+    ],
+    "n01": 13012,
+    "n10": 13473,
+    "mcnemar_p": 0.004704214593638442,
+    "kind": "pre-specified"
+   },
+   "C-A": {
+    "delta_macro_f1": 0.02322876185020506,
+    "ci": [
+     -0.017089416249408594,
+     0.09271148272358742
+    ],
+    "n01": 10692,
+    "n10": 8784,
+    "mcnemar_p": 1.4199409953606867e-42,
+    "kind": "exploratory"
+   }
+  }
+ }
+}

@@ -1,0 +1,1650 @@
+{
+ "created": "2026-11-05T12:22:30",
+ "purpose": "Pre-resume environment and checkpoint manifest (9/15 runs complete)",
+ "protocol_lock": {
+  "lock_file_sha256": "ed0717f26f2d7f86d5a49c69b03de44588d35112ab8c9177186b4c4e5b61478c",
+  "frozen_files_verified": 13,
+  "status": "verify_lock.verify() passed at manifest time"
+ },
+ "environment": {
+  "interpreter": "C:\\Python313\\python.exe",
+  "python": "3.13.7",
+  "platform": "Windows-11-10.0.26300-SP0",
+  "user_site_enabled": true,
+  "modules_as_seen_by_training_interpreter": {
+   "numpy": {
+    "version": "2.5.2",
+    "file": "<user-site-packages>\\numpy\\__init__.py"
+   },
+   "torch": {
+    "version": "2.6.0+cu124",
+    "cuda": "12.4",
+    "cudnn": 90100,
+    "file": "C:\\Python313\\Lib\\site-packages\\torch\\__init__.py"
+   },
+   "sklearn": {
+    "version": "1.7.2"
+   },
+   "imblearn": {
+    "version": "0.14.2"
+   },
+   "scipy": {
+    "version": "1.16.3"
+   },
+   "wfdb": {
+    "version": "4.3.1"
+   },
+   "pywt": {
+    "module_version": "1.8.0",
+    "file": "C:\\Python313\\Lib\\site-packages\\pywt\\__init__.py"
+   }
+  },
+  "pip_metadata_versions": {
+   "numpy": "2.5.2",
+   "torch": "2.6.0+cu124",
+   "scikit-learn": "1.7.2",
+   "imbalanced-learn": "0.14.2",
+   "scipy": "1.16.3",
+   "wfdb": "4.3.1",
+   "PyWavelets": "1.10.0"
+  },
+  "pywavelets_note": "pywt.__version__ (module) and pip metadata (dist-info) are reported separately; they differ on this machine and are NOT reconciled here.",
+  "gpu": {
+   "name": "NVIDIA GeForce RTX 4060 Laptop GPU",
+   "nvidia_smi_name": "NVIDIA GeForce RTX 4060 Laptop GPU",
+   "driver_version": "617.42",
+   "memory_total": "8188 MiB",
+   "torch_total_gb": 7.996
+  },
+  "lock_environment_block": {
+   "python": "3.13.7",
+   "torch": "2.6.0+cu124",
+   "cuda": "12.4",
+   "gpu": "NVIDIA GeForce RTX 4060 Laptop GPU",
+   "numpy": "2.5.2",
+   "sklearn": "1.7.2",
+   "imblearn": "0.14.2",
+   "scipy": "1.16.3",
+   "wfdb": "4.3.1",
+   "pywt": "1.8.0"
+  },
+  "matches_lock_environment_block": {
+   "python": "True",
+   "numpy": "True",
+   "torch": "True",
+   "cuda": "True",
+   "sklearn": "True",
+   "imblearn": "True",
+   "scipy": "True",
+   "wfdb": "True",
+   "pywt": "True"
+  }
+ },
+ "completed_runs": {
+  "count": 9,
+  "total_checkpoints": 27,
+  "runs": [
+   {
+    "run": "A_fold0",
+    "model": "A",
+    "fold": 0,
+    "status": "COMPLETE (selected.json present)",
+    "seed": 1000,
+    "lock_sha256_in_config": "ed0717f26f2d7f86d5a49c69b03de44588d35112ab8c9177186b4c4e5b61478c",
+    "lock_matches_current": true,
+    "test_partition_used": "no",
+    "n_train_real": 64496,
+    "n_val": 21988,
+    "train_subjects": [
+     "100",
+     "101",
+     "102",
+     "103",
+     "104",
+     "105",
+     "109",
+     "111",
+     "113",
+     "114",
+     "115",
+     "118",
+     "119",
+     "121",
+     "124",
+     "200",
+     "201_202",
+     "203",
+     "208",
+     "209",
+     "212",
+     "213",
+     "214",
+     "215",
+     "220",
+     "222",
+     "231"
+    ],
+    "val_subjects": [
+     "107",
+     "108",
+     "112",
+     "122",
+     "123",
+     "221",
+     "228",
+     "230",
+     "232",
+     "233"
+    ],
+    "selection": {
+     "selected_lr": 0.0001,
+     "selected_epoch": 1,
+     "val_macro_f1": 0.54870167647823,
+     "val_classes_used": [
+      "N",
+      "S",
+      "V",
+      "F",
+      "Q"
+     ],
+     "temperature": 1.0049266815185547,
+     "checkpoint": "ckpt_lr0.0001.pt",
+     "grid": [
+      {
+       "lr": 0.0001,
+       "best_val_macro_f1": 0.54870167647823,
+       "best_epoch": 1,
+       "val_classes_used": [
+        "N",
+        "S",
+        "V",
+        "F",
+        "Q"
+       ],
+       "sec": 26.8
+      },
+      {
+       "lr": 0.0005,
+       "best_val_macro_f1": 0.5193422870635354,
+       "best_epoch": 4,
+       "val_classes_used": [
+        "N",
+        "S",
+        "V",
+        "F",
+        "Q"
+       ],
+       "sec": 24.3
+      },
+      {
+       "lr": 0.001,
+       "best_val_macro_f1": 0.48874921821607364,
+       "best_epoch": 3,
+       "val_classes_used": [
+        "N",
+        "S",
+        "V",
+        "F",
+        "Q"
+       ],
+       "sec": 23.2
+      }
+     ]
+    },
+    "n_checkpoints": 3,
+    "files": [
+     {
+      "file": "results/runs/A_fold0/ckpt_lr0.0001.pt",
+      "bytes": 1458188,
+      "sha256": "262f5b25be1efa04ea5a2952eb0dfbd765d6f027003da1242b90f6262eeccb12",
+      "mtime": "2026-11-02T14:27:28"
+     },
+     {
+      "file": "results/runs/A_fold0/ckpt_lr0.0005.pt",
+      "bytes": 1458188,
+      "sha256": "38759e90c18d70f39e4117b10f42ec75e54913f109fe962016d2a3f7f23460b8",
+      "mtime": "2026-11-02T14:27:52"
+     },
+     {
+      "file": "results/runs/A_fold0/ckpt_lr0.001.pt",
+      "bytes": 1458174,
+      "sha256": "3c4640e1a0d39eb47b05db43f3e646c2be54f15ed2dc2a7cba9597ade210aed2",
+      "mtime": "2026-11-02T14:28:15"
+     },
+     {
+      "file": "results/runs/A_fold0/config.json",
+      "bytes": 1802,
+      "sha256": "a66486b21b9729c3df5206eebf75e8c4d8e2aa8222c2549f82dfce657f7a5fdf",
+      "mtime": "2026-11-02T14:27:01"
+     },
+     {
+      "file": "results/runs/A_fold0/history_lr0.0001.json",
+      "bytes": 4304,
+      "sha256": "762cc6e44f36233495234587530cdfdb4bdc23864abb3534023c300adae26d78",
+      "mtime": "2026-11-02T14:27:28"
+     },
+     {
+      "file": "results/runs/A_fold0/history_lr0.0005.json",
+      "bytes": 4302,
+      "sha256": "4ee924fe6dd9b238289d551a8f1e1baa19af994467725febb19dfbbc0a2be6d1",
+      "mtime": "2026-11-02T14:27:52"
+     },
+     {
+      "file": "results/runs/A_fold0/history_lr0.001.json",
+      "bytes": 4339,
+      "sha256": "9782fed272be473182c50d2fb56b9d71e4d97ebf2bfbce5f87f92814b4fbeddb",
+      "mtime": "2026-11-02T14:28:15"
+     },
+     {
+      "file": "results/runs/A_fold0/selected.json",
+      "bytes": 850,
+      "sha256": "283762d7ec888a5c282ba8920df214ec6a077dcec4bdf303b6d09f5c5df75dfb",
+      "mtime": "2026-11-02T14:28:15"
+     },
+     {
+      "file": "results/runs/A_fold0/val_logits.npz",
+      "bytes": 408855,
+      "sha256": "32ebdf49141c9888fd5a9f6d223d3da5c71b8b4979012a1e10a218d421b4e52f",
+      "mtime": "2026-11-02T14:28:15"
+     }
+    ]
+   },
+   {
+    "run": "A_fold1",
+    "model": "A",
+    "fold": 1,
+    "status": "COMPLETE (selected.json present)",
+    "seed": 1001,
+    "lock_sha256_in_config": "ed0717f26f2d7f86d5a49c69b03de44588d35112ab8c9177186b4c4e5b61478c",
+    "lock_matches_current": true,
+    "test_partition_used": "no",
+    "n_train_real": 64950,
+    "n_val": 22367,
+    "train_subjects": [
+     "101",
+     "103",
+     "104",
+     "105",
+     "106",
+     "109",
+     "114",
+     "116",
+     "117",
+     "118",
+     "119",
+     "121",
+     "124",
+     "200",
+     "201_202",
+     "203",
+     "205",
+     "207",
+     "210",
+     "213",
+     "214",
+     "217",
+     "219",
+     "220",
+     "222",
+     "223",
+     "231",
+     "234"
+    ],
+    "val_subjects": [
+     "100",
+     "102",
+     "111",
+     "113",
+     "115",
+     "208",
+     "209",
+     "212",
+     "215"
+    ],
+    "selection": {
+     "selected_lr": 0.001,
+     "selected_epoch": 4,
+     "val_macro_f1": 0.5554381604300532,
+     "val_classes_used": [
+      "N",
+      "S",
+      "V",
+      "F",
+      "Q"
+     ],
+     "temperature": 3.6086792945861816,
+     "checkpoint": "ckpt_lr0.001.pt",
+     "grid": [
+      {
+       "lr": 0.0001,
+       "best_val_macro_f1": 0.4690842009959188,
+       "best_epoch": 1,
+       "val_classes_used": [
+        "N",
+        "S",
+        "V",
+        "F",
+        "Q"
+       ],
+       "sec": 25.7
+      },
+      {
+       "lr": 0.0005,
+       "best_val_macro_f1": 0.5311862891186967,
+       "best_epoch": 13,
+       "val_classes_used": [
+        "N",
+        "S",
+        "V",
+        "F",
+        "Q"
+       ],
+       "sec": 21.6
+      },
+      {
+       "lr": 0.001,
+       "best_val_macro_f1": 0.5554381604300532,
+       "best_epoch": 4,
+       "val_classes_used": [
+        "N",
+        "S",
+        "V",
+        "F",
+        "Q"
+       ],
+       "sec": 22.4
+      }
+     ]
+    },
+    "n_checkpoints": 3,
+    "files": [
+     {
+      "file": "results/runs/A_fold1/ckpt_lr0.0001.pt",
+      "bytes": 1458188,
+      "sha256": "333c659d9879fe1e9adcf0c1a3d93be68f26f39ddb698c0e4b635a8fda3b0646",
+      "mtime": "2026-11-02T16:36:04"
+     },
+     {
+      "file": "results/runs/A_fold1/ckpt_lr0.0005.pt",
+      "bytes": 1458188,
+      "sha256": "5da23f4c9cc11b57f30b8ccc40f4d87cb487537747fbc7685e480c1fc4182ddd",
+      "mtime": "2026-11-02T16:36:26"
+     },
+     {
+      "file": "results/runs/A_fold1/ckpt_lr0.001.pt",
+      "bytes": 1458174,
+      "sha256": "12e2fcab0ac7687d82c4218a52fc265ef393b3ae4b9af04ece25bee16ddc347f",
+      "mtime": "2026-11-02T16:36:48"
+     },
+     {
+      "file": "results/runs/A_fold1/config.json",
+      "bytes": 1801,
+      "sha256": "11ae92c4d377a289b2c519a20525dd4097900cb93e3394d75d4b58e6663bcc03",
+      "mtime": "2026-11-02T16:35:39"
+     },
+     {
+      "file": "results/runs/A_fold1/history_lr0.0001.json",
+      "bytes": 4286,
+      "sha256": "f559598483738f9605ee29d0c335cb0472ffa7fb1dbfa9a0895c09a122f4c85e",
+      "mtime": "2026-11-02T16:36:04"
+     },
+     {
+      "file": "results/runs/A_fold1/history_lr0.0005.json",
+      "bytes": 4277,
+      "sha256": "8ea5a2d197e16c85c1f8cbc779fda15c4b51d08a9739b80d374be16c1f93ddb8",
+      "mtime": "2026-11-02T16:36:26"
+     },
+     {
+      "file": "results/runs/A_fold1/history_lr0.001.json",
+      "bytes": 4294,
+      "sha256": "10a896c34470021e48d6d8e544f8b55fc23dd0d7777177ec65df56144a9cb246",
+      "mtime": "2026-11-02T16:36:48"
+     },
+     {
+      "file": "results/runs/A_fold1/selected.json",
+      "bytes": 852,
+      "sha256": "3855eaffc630b37eef1bb3bcd86dc33d0f5c7875cc159cb8e21788cd5874fac5",
+      "mtime": "2026-11-02T16:36:49"
+     },
+     {
+      "file": "results/runs/A_fold1/val_logits.npz",
+      "bytes": 415440,
+      "sha256": "494994f7d4d46c7ce9a06970cacc37ba3895954201dcd653f3a3ff837ed399a6",
+      "mtime": "2026-11-02T16:36:49"
+     }
+    ]
+   },
+   {
+    "run": "A_fold2",
+    "model": "A",
+    "fold": 2,
+    "status": "COMPLETE (selected.json present)",
+    "seed": 1002,
+    "lock_sha256_in_config": "ed0717f26f2d7f86d5a49c69b03de44588d35112ab8c9177186b4c4e5b61478c",
+    "lock_matches_current": true,
+    "test_partition_used": "no",
+    "n_train_real": 65374,
+    "n_val": 21564,
+    "train_subjects": [
+     "101",
+     "104",
+     "106",
+     "107",
+     "108",
+     "112",
+     "116",
+     "117",
+     "121",
+     "122",
+     "123",
+     "124",
+     "203",
+     "205",
+     "207",
+     "210",
+     "213",
+     "214",
+     "217",
+     "219",
+     "220",
+     "221",
+     "222",
+     "223",
+     "228",
+     "230",
+     "232",
+     "233",
+     "234"
+    ],
+    "val_subjects": [
+     "103",
+     "105",
+     "109",
+     "114",
+     "118",
+     "119",
+     "200",
+     "201_202",
+     "231"
+    ],
+    "selection": {
+     "selected_lr": 0.001,
+     "selected_epoch": 3,
+     "val_macro_f1": 0.4259137845733672,
+     "val_classes_used": [
+      "N",
+      "S",
+      "V",
+      "F"
+     ],
+     "temperature": 1.8478223085403442,
+     "checkpoint": "ckpt_lr0.001.pt",
+     "grid": [
+      {
+       "lr": 0.0001,
+       "best_val_macro_f1": 0.35733037657474553,
+       "best_epoch": 1,
+       "val_classes_used": [
+        "N",
+        "S",
+        "V",
+        "F"
+       ],
+       "sec": 26.9
+      },
+      {
+       "lr": 0.0005,
+       "best_val_macro_f1": 0.3969463289201581,
+       "best_epoch": 15,
+       "val_classes_used": [
+        "N",
+        "S",
+        "V",
+        "F"
+       ],
+       "sec": 25.8
+      },
+      {
+       "lr": 0.001,
+       "best_val_macro_f1": 0.4259137845733672,
+       "best_epoch": 3,
+       "val_classes_used": [
+        "N",
+        "S",
+        "V",
+        "F"
+       ],
+       "sec": 25.4
+      }
+     ]
+    },
+    "n_checkpoints": 3,
+    "files": [
+     {
+      "file": "results/runs/A_fold2/ckpt_lr0.0001.pt",
+      "bytes": 1458188,
+      "sha256": "97b340376b350bb453a8020801a1aeb01feeadddf15afb2f5c1e00dd7def7ee0",
+      "mtime": "2026-11-02T18:54:58"
+     },
+     {
+      "file": "results/runs/A_fold2/ckpt_lr0.0005.pt",
+      "bytes": 1458188,
+      "sha256": "2e4dad05395d9a09555b462876de2b809b97c152a2fa789cdb1bb7dac58ff327",
+      "mtime": "2026-11-02T18:55:23"
+     },
+     {
+      "file": "results/runs/A_fold2/ckpt_lr0.001.pt",
+      "bytes": 1458174,
+      "sha256": "0e16dfe97632cd2066d922ad19493cb55071d46fa5a94f7fdbac85ac89c30672",
+      "mtime": "2026-11-02T18:55:49"
+     },
+     {
+      "file": "results/runs/A_fold2/config.json",
+      "bytes": 1808,
+      "sha256": "a75a3e7e85617eec620d743f43c1e6c95c4503ac578f7ff78f0020cd8aafc5cf",
+      "mtime": "2026-11-02T18:54:31"
+     },
+     {
+      "file": "results/runs/A_fold2/history_lr0.0001.json",
+      "bytes": 4245,
+      "sha256": "ac11bf365ea0877b0c4c5d6ab0a434a00154d41994595e16e86bc4041dcea726",
+      "mtime": "2026-11-02T18:54:58"
+     },
+     {
+      "file": "results/runs/A_fold2/history_lr0.0005.json",
+      "bytes": 4113,
+      "sha256": "5326aa030e24d839986bf8e62cae3f1986b36b77ec6b7bde5027c6be7c285be6",
+      "mtime": "2026-11-02T18:55:23"
+     },
+     {
+      "file": "results/runs/A_fold2/history_lr0.001.json",
+      "bytes": 4022,
+      "sha256": "c8d5498c3ea6537628fa83417cd22b9c2092348e59a19650423500b2721458e2",
+      "mtime": "2026-11-02T18:55:49"
+     },
+     {
+      "file": "results/runs/A_fold2/selected.json",
+      "bytes": 815,
+      "sha256": "5060284e5b1f9a907a5ebc71bfa8f9fcc058a2a8baf48ef3f18ae96bf4b5438e",
+      "mtime": "2026-11-02T18:55:49"
+     },
+     {
+      "file": "results/runs/A_fold2/val_logits.npz",
+      "bytes": 401933,
+      "sha256": "c7b65fa7ed4972b9ad12285cfab609071047a187818a4b7781e56db81e1b010e",
+      "mtime": "2026-11-02T18:55:49"
+     }
+    ]
+   },
+   {
+    "run": "A_fold3",
+    "model": "A",
+    "fold": 3,
+    "status": "COMPLETE (selected.json present)",
+    "seed": 1003,
+    "lock_sha256_in_config": "ed0717f26f2d7f86d5a49c69b03de44588d35112ab8c9177186b4c4e5b61478c",
+    "lock_matches_current": true,
+    "test_partition_used": "no",
+    "n_train_real": 67176,
+    "n_val": 20565,
+    "train_subjects": [
+     "100",
+     "102",
+     "106",
+     "107",
+     "108",
+     "111",
+     "112",
+     "113",
+     "115",
+     "116",
+     "117",
+     "122",
+     "123",
+     "205",
+     "207",
+     "208",
+     "209",
+     "210",
+     "212",
+     "215",
+     "217",
+     "219",
+     "221",
+     "223",
+     "228",
+     "230",
+     "232",
+     "233",
+     "234"
+    ],
+    "val_subjects": [
+     "101",
+     "104",
+     "121",
+     "124",
+     "203",
+     "213",
+     "214",
+     "220",
+     "222"
+    ],
+    "selection": {
+     "selected_lr": 0.001,
+     "selected_epoch": 13,
+     "val_macro_f1": 0.4730452743930333,
+     "val_classes_used": [
+      "N",
+      "S",
+      "V",
+      "F",
+      "Q"
+     ],
+     "temperature": 5.150179862976074,
+     "checkpoint": "ckpt_lr0.001.pt",
+     "grid": [
+      {
+       "lr": 0.0001,
+       "best_val_macro_f1": 0.4473974668343038,
+       "best_epoch": 1,
+       "val_classes_used": [
+        "N",
+        "S",
+        "V",
+        "F",
+        "Q"
+       ],
+       "sec": 27.1
+      },
+      {
+       "lr": 0.0005,
+       "best_val_macro_f1": 0.4605745346215996,
+       "best_epoch": 5,
+       "val_classes_used": [
+        "N",
+        "S",
+        "V",
+        "F",
+        "Q"
+       ],
+       "sec": 37.5
+      },
+      {
+       "lr": 0.001,
+       "best_val_macro_f1": 0.4730452743930333,
+       "best_epoch": 13,
+       "val_classes_used": [
+        "N",
+        "S",
+        "V",
+        "F",
+        "Q"
+       ],
+       "sec": 98.5
+      }
+     ]
+    },
+    "n_checkpoints": 3,
+    "files": [
+     {
+      "file": "results/runs/A_fold3/ckpt_lr0.0001.pt",
+      "bytes": 1458188,
+      "sha256": "1dbcc3fb3c5b72cc431a1eb29801197ebd5e945ba8fb0aa1c65e70cf3579f3b7",
+      "mtime": "2026-11-03T13:45:55"
+     },
+     {
+      "file": "results/runs/A_fold3/ckpt_lr0.0005.pt",
+      "bytes": 1458188,
+      "sha256": "92bfa6a71a5125c82e038af50c50942db6d125fb652289cb2964c7366c05eebe",
+      "mtime": "2026-11-03T13:46:32"
+     },
+     {
+      "file": "results/runs/A_fold3/ckpt_lr0.001.pt",
+      "bytes": 1458174,
+      "sha256": "5ad001f9438529626131d963c0619d1ec29b16584d1aaffb400ae971491de9be",
+      "mtime": "2026-11-03T13:48:11"
+     },
+     {
+      "file": "results/runs/A_fold3/config.json",
+      "bytes": 1807,
+      "sha256": "49390735780ac46755026a570f412087d9b9de0f229a1fbdbd2acda25f2f16fd",
+      "mtime": "2026-11-03T13:45:28"
+     },
+     {
+      "file": "results/runs/A_fold3/history_lr0.0001.json",
+      "bytes": 4264,
+      "sha256": "a969a0269f3fe814efe839c9673964547f43cf4c2c53cd342c6bf59ac7a9d29b",
+      "mtime": "2026-11-03T13:45:55"
+     },
+     {
+      "file": "results/runs/A_fold3/history_lr0.0005.json",
+      "bytes": 4323,
+      "sha256": "990a4a22d209c95c989329f7254241c99c2f8d44ab78b84482c0c6e996912a53",
+      "mtime": "2026-11-03T13:46:32"
+     },
+     {
+      "file": "results/runs/A_fold3/history_lr0.001.json",
+      "bytes": 4290,
+      "sha256": "e1cc0a22e8070f6b6ef8810a4ca280d31ece0e81d7aa193cc2b482c69aaa70c1",
+      "mtime": "2026-11-03T13:48:11"
+     },
+     {
+      "file": "results/runs/A_fold3/selected.json",
+      "bytes": 852,
+      "sha256": "c6f52a69f88da24758a3c85df842934832fa861b6e3ae7f4c9b09ef22e186504",
+      "mtime": "2026-11-03T13:48:12"
+     },
+     {
+      "file": "results/runs/A_fold3/val_logits.npz",
+      "bytes": 381061,
+      "sha256": "e0e866ad52ccdd983ae0a358de3c3d2f0ec79ecc62281c87acad2c26a0ec872a",
+      "mtime": "2026-11-03T13:48:12"
+     }
+    ]
+   },
+   {
+    "run": "B_fold0",
+    "model": "B",
+    "fold": 0,
+    "status": "COMPLETE (selected.json present)",
+    "seed": 1000,
+    "lock_sha256_in_config": "ed0717f26f2d7f86d5a49c69b03de44588d35112ab8c9177186b4c4e5b61478c",
+    "lock_matches_current": true,
+    "test_partition_used": "no",
+    "n_train_real": 64496,
+    "n_val": 21988,
+    "train_subjects": [
+     "100",
+     "101",
+     "102",
+     "103",
+     "104",
+     "105",
+     "109",
+     "111",
+     "113",
+     "114",
+     "115",
+     "118",
+     "119",
+     "121",
+     "124",
+     "200",
+     "201_202",
+     "203",
+     "208",
+     "209",
+     "212",
+     "213",
+     "214",
+     "215",
+     "220",
+     "222",
+     "231"
+    ],
+    "val_subjects": [
+     "107",
+     "108",
+     "112",
+     "122",
+     "123",
+     "221",
+     "228",
+     "230",
+     "232",
+     "233"
+    ],
+    "selection": {
+     "selected_lr": 0.0005,
+     "selected_epoch": 11,
+     "val_macro_f1": 0.5605127158358785,
+     "val_classes_used": [
+      "N",
+      "S",
+      "V",
+      "F",
+      "Q"
+     ],
+     "temperature": 2.3070614337921143,
+     "checkpoint": "ckpt_lr0.0005.pt",
+     "grid": [
+      {
+       "lr": 0.0001,
+       "best_val_macro_f1": 0.5141695377434752,
+       "best_epoch": 19,
+       "val_classes_used": [
+        "N",
+        "S",
+        "V",
+        "F",
+        "Q"
+       ],
+       "sec": 122.3
+      },
+      {
+       "lr": 0.0005,
+       "best_val_macro_f1": 0.5605127158358785,
+       "best_epoch": 11,
+       "val_classes_used": [
+        "N",
+        "S",
+        "V",
+        "F",
+        "Q"
+       ],
+       "sec": 121.3
+      },
+      {
+       "lr": 0.001,
+       "best_val_macro_f1": 0.5450125259302919,
+       "best_epoch": 2,
+       "val_classes_used": [
+        "N",
+        "S",
+        "V",
+        "F",
+        "Q"
+       ],
+       "sec": 120.0
+      }
+     ]
+    },
+    "n_checkpoints": 3,
+    "files": [
+     {
+      "file": "results/runs/B_fold0/ckpt_lr0.0001.pt",
+      "bytes": 1817821,
+      "sha256": "c7e50d757facb4005f2e456923e16ce5b3a67d0c08e3bfb44582b3eb2c59e50f",
+      "mtime": "2026-11-02T14:30:23"
+     },
+     {
+      "file": "results/runs/B_fold0/ckpt_lr0.0005.pt",
+      "bytes": 1817821,
+      "sha256": "9c7f02da80d5f8cfc19542b14ff51e7fb2531af1d6ff5ca450dfadf74206847d",
+      "mtime": "2026-11-02T14:32:25"
+     },
+     {
+      "file": "results/runs/B_fold0/ckpt_lr0.001.pt",
+      "bytes": 1817780,
+      "sha256": "db875f1885ca6eab5c96208574c3ac2082f6703a77790f91a920404ba6c0c7b0",
+      "mtime": "2026-11-02T14:34:24"
+     },
+     {
+      "file": "results/runs/B_fold0/config.json",
+      "bytes": 1802,
+      "sha256": "4a0260a5f5b19c86da4d1eaf763e75983f0420cbe58b96bd71b025d4bc4d506c",
+      "mtime": "2026-11-02T14:28:21"
+     },
+     {
+      "file": "results/runs/B_fold0/history_lr0.0001.json",
+      "bytes": 5735,
+      "sha256": "45bff2ff646b49bd2fff323931599cc8039f8a3390fcda95180502c26b9a1171",
+      "mtime": "2026-11-02T14:30:23"
+     },
+     {
+      "file": "results/runs/B_fold0/history_lr0.0005.json",
+      "bytes": 5670,
+      "sha256": "6e76729c89c4b02b524247f6bb22af164ecef609df1359c48735a7b747472049",
+      "mtime": "2026-11-02T14:32:25"
+     },
+     {
+      "file": "results/runs/B_fold0/history_lr0.001.json",
+      "bytes": 5698,
+      "sha256": "6f82301e8287fc1997e839bed59ae7807953ddeb0f9cec98467921d5903ede7e",
+      "mtime": "2026-11-02T14:34:24"
+     },
+     {
+      "file": "results/runs/B_fold0/selected.json",
+      "bytes": 859,
+      "sha256": "a92efde9e4479af0d3ca61261f86cfd8a4cb2d58635f354e100d33139a31207c",
+      "mtime": "2026-11-02T14:34:25"
+     },
+     {
+      "file": "results/runs/B_fold0/val_logits.npz",
+      "bytes": 403019,
+      "sha256": "6ff5ab1bccbf5ec34558c2b668072842bbbcdebaac4d788cb93d9ab801729ebf",
+      "mtime": "2026-11-02T14:34:25"
+     }
+    ]
+   },
+   {
+    "run": "B_fold1",
+    "model": "B",
+    "fold": 1,
+    "status": "COMPLETE (selected.json present)",
+    "seed": 1001,
+    "lock_sha256_in_config": "ed0717f26f2d7f86d5a49c69b03de44588d35112ab8c9177186b4c4e5b61478c",
+    "lock_matches_current": true,
+    "test_partition_used": "no",
+    "n_train_real": 64950,
+    "n_val": 22367,
+    "train_subjects": [
+     "101",
+     "103",
+     "104",
+     "105",
+     "106",
+     "109",
+     "114",
+     "116",
+     "117",
+     "118",
+     "119",
+     "121",
+     "124",
+     "200",
+     "201_202",
+     "203",
+     "205",
+     "207",
+     "210",
+     "213",
+     "214",
+     "217",
+     "219",
+     "220",
+     "222",
+     "223",
+     "231",
+     "234"
+    ],
+    "val_subjects": [
+     "100",
+     "102",
+     "111",
+     "113",
+     "115",
+     "208",
+     "209",
+     "212",
+     "215"
+    ],
+    "selection": {
+     "selected_lr": 0.001,
+     "selected_epoch": 20,
+     "val_macro_f1": 0.4661048835896702,
+     "val_classes_used": [
+      "N",
+      "S",
+      "V",
+      "F",
+      "Q"
+     ],
+     "temperature": 3.201087236404419,
+     "checkpoint": "ckpt_lr0.001.pt",
+     "grid": [
+      {
+       "lr": 0.0001,
+       "best_val_macro_f1": 0.36994528048979325,
+       "best_epoch": 1,
+       "val_classes_used": [
+        "N",
+        "S",
+        "V",
+        "F",
+        "Q"
+       ],
+       "sec": 117.7
+      },
+      {
+       "lr": 0.0005,
+       "best_val_macro_f1": 0.3869704917594503,
+       "best_epoch": 16,
+       "val_classes_used": [
+        "N",
+        "S",
+        "V",
+        "F",
+        "Q"
+       ],
+       "sec": 119.3
+      },
+      {
+       "lr": 0.001,
+       "best_val_macro_f1": 0.4661048835896702,
+       "best_epoch": 20,
+       "val_classes_used": [
+        "N",
+        "S",
+        "V",
+        "F",
+        "Q"
+       ],
+       "sec": 119.1
+      }
+     ]
+    },
+    "n_checkpoints": 3,
+    "files": [
+     {
+      "file": "results/runs/B_fold1/ckpt_lr0.0001.pt",
+      "bytes": 1817821,
+      "sha256": "5cd81bb99f37d30661a4939f438121ba4ff73a19ba35288a6fdcbf3213acb5a1",
+      "mtime": "2026-11-02T16:38:52"
+     },
+     {
+      "file": "results/runs/B_fold1/ckpt_lr0.0005.pt",
+      "bytes": 1817821,
+      "sha256": "ad8a0e5a894a6791ad8b09c3a36cbf846d433f50b852db5d334ac51dc0fe8f1f",
+      "mtime": "2026-11-02T16:40:51"
+     },
+     {
+      "file": "results/runs/B_fold1/ckpt_lr0.001.pt",
+      "bytes": 1817780,
+      "sha256": "db3bcad3f1939b61dbe594d5fac277b22a8de1a29295b0c37409bed8439e489a",
+      "mtime": "2026-11-02T16:42:50"
+     },
+     {
+      "file": "results/runs/B_fold1/config.json",
+      "bytes": 1801,
+      "sha256": "2bbd34b8b05ebc23b438e4141d3c59a1d8c6ed99c6c6acdde7c6fe7342b211d8",
+      "mtime": "2026-11-02T16:36:54"
+     },
+     {
+      "file": "results/runs/B_fold1/history_lr0.0001.json",
+      "bytes": 5748,
+      "sha256": "2497bc8a20a8e968b6d768fac97cc39b65c273c9da9526167308fd488702dfeb",
+      "mtime": "2026-11-02T16:38:52"
+     },
+     {
+      "file": "results/runs/B_fold1/history_lr0.0005.json",
+      "bytes": 5764,
+      "sha256": "5836b356ba897bbe367352455e4bd04456a2536ce73fc5d97192b492dba01c18",
+      "mtime": "2026-11-02T16:40:51"
+     },
+     {
+      "file": "results/runs/B_fold1/history_lr0.001.json",
+      "bytes": 5744,
+      "sha256": "f63bf8262a7e84ead4088dad93a0dfc6a6611f2b7106e28ab73e4bcf66ab0745",
+      "mtime": "2026-11-02T16:42:50"
+     },
+     {
+      "file": "results/runs/B_fold1/selected.json",
+      "bytes": 857,
+      "sha256": "c65815115c48e3bca6cb01d68deda4a77db0e7cbf42d3c49903acd29118ddeb3",
+      "mtime": "2026-11-02T16:42:51"
+     },
+     {
+      "file": "results/runs/B_fold1/val_logits.npz",
+      "bytes": 410556,
+      "sha256": "5ea1f2e1f0abaff77dc73dc36de1a82873cb99668426717f98b7641ee55d2129",
+      "mtime": "2026-11-02T16:42:51"
+     }
+    ]
+   },
+   {
+    "run": "B_fold2",
+    "model": "B",
+    "fold": 2,
+    "status": "COMPLETE (selected.json present)",
+    "seed": 1002,
+    "lock_sha256_in_config": "ed0717f26f2d7f86d5a49c69b03de44588d35112ab8c9177186b4c4e5b61478c",
+    "lock_matches_current": true,
+    "test_partition_used": "no",
+    "n_train_real": 65374,
+    "n_val": 21564,
+    "train_subjects": [
+     "101",
+     "104",
+     "106",
+     "107",
+     "108",
+     "112",
+     "116",
+     "117",
+     "121",
+     "122",
+     "123",
+     "124",
+     "203",
+     "205",
+     "207",
+     "210",
+     "213",
+     "214",
+     "217",
+     "219",
+     "220",
+     "221",
+     "222",
+     "223",
+     "228",
+     "230",
+     "232",
+     "233",
+     "234"
+    ],
+    "val_subjects": [
+     "103",
+     "105",
+     "109",
+     "114",
+     "118",
+     "119",
+     "200",
+     "201_202",
+     "231"
+    ],
+    "selection": {
+     "selected_lr": 0.001,
+     "selected_epoch": 15,
+     "val_macro_f1": 0.3794903776305491,
+     "val_classes_used": [
+      "N",
+      "S",
+      "V",
+      "F"
+     ],
+     "temperature": 3.009483575820923,
+     "checkpoint": "ckpt_lr0.001.pt",
+     "grid": [
+      {
+       "lr": 0.0001,
+       "best_val_macro_f1": 0.3644546161761794,
+       "best_epoch": 17,
+       "val_classes_used": [
+        "N",
+        "S",
+        "V",
+        "F"
+       ],
+       "sec": 125.1
+      },
+      {
+       "lr": 0.0005,
+       "best_val_macro_f1": 0.36962033280873685,
+       "best_epoch": 17,
+       "val_classes_used": [
+        "N",
+        "S",
+        "V",
+        "F"
+       ],
+       "sec": 125.4
+      },
+      {
+       "lr": 0.001,
+       "best_val_macro_f1": 0.3794903776305491,
+       "best_epoch": 15,
+       "val_classes_used": [
+        "N",
+        "S",
+        "V",
+        "F"
+       ],
+       "sec": 124.0
+      }
+     ]
+    },
+    "n_checkpoints": 3,
+    "files": [
+     {
+      "file": "results/runs/B_fold2/ckpt_lr0.0001.pt",
+      "bytes": 1817821,
+      "sha256": "6c5f9429a4431a2be5c94f646d43e14fd2bc6763d6556816d82d505e99fd5ee7",
+      "mtime": "2026-11-02T18:58:00"
+     },
+     {
+      "file": "results/runs/B_fold2/ckpt_lr0.0005.pt",
+      "bytes": 1817821,
+      "sha256": "30eb8eb87c41ca591db4acded442be806e49f53eb4449324967be4c273ca5fbe",
+      "mtime": "2026-11-02T19:00:05"
+     },
+     {
+      "file": "results/runs/B_fold2/ckpt_lr0.001.pt",
+      "bytes": 1817780,
+      "sha256": "63b57a5840998b44d7d31438e9b1dcbea6e583628b7ecd527a6990f28ee8dd30",
+      "mtime": "2026-11-02T19:02:09"
+     },
+     {
+      "file": "results/runs/B_fold2/config.json",
+      "bytes": 1808,
+      "sha256": "597fdfad80c116dd846ed5e38b048ca00847351eb4b50b13835e53e736fba6bd",
+      "mtime": "2026-11-02T18:55:55"
+     },
+     {
+      "file": "results/runs/B_fold2/history_lr0.0001.json",
+      "bytes": 5522,
+      "sha256": "d46c5a059e5d4c7fc098fd2a675e1bd7a69141fc26555dcb5d9f02de0cdd76f9",
+      "mtime": "2026-11-02T18:58:00"
+     },
+     {
+      "file": "results/runs/B_fold2/history_lr0.0005.json",
+      "bytes": 5247,
+      "sha256": "1b6488ed9bbf49a6a7f3785b50d2b93865cad47e37f75ea30d0aa8fb76478386",
+      "mtime": "2026-11-02T19:00:05"
+     },
+     {
+      "file": "results/runs/B_fold2/history_lr0.001.json",
+      "bytes": 5308,
+      "sha256": "0c6372350e753ec2db3bcb05a7a51a99629bef179be2dca17328969e18b60e7a",
+      "mtime": "2026-11-02T19:02:09"
+     },
+     {
+      "file": "results/runs/B_fold2/selected.json",
+      "bytes": 820,
+      "sha256": "09b7f518a8efc119604336bfc06df6b214064aa7c3caa0da981ec1a0956c7eee",
+      "mtime": "2026-11-02T19:02:09"
+     },
+     {
+      "file": "results/runs/B_fold2/val_logits.npz",
+      "bytes": 396338,
+      "sha256": "e58a28419e8da8a1b735c281e9613f0636358e270f761ff1ab3fb764b0443c22",
+      "mtime": "2026-11-02T19:02:09"
+     }
+    ]
+   },
+   {
+    "run": "C_fold0",
+    "model": "C",
+    "fold": 0,
+    "status": "COMPLETE (selected.json present)",
+    "seed": 1000,
+    "lock_sha256_in_config": "ed0717f26f2d7f86d5a49c69b03de44588d35112ab8c9177186b4c4e5b61478c",
+    "lock_matches_current": true,
+    "test_partition_used": "no",
+    "n_train_real": 64496,
+    "n_val": 21988,
+    "train_subjects": [
+     "100",
+     "101",
+     "102",
+     "103",
+     "104",
+     "105",
+     "109",
+     "111",
+     "113",
+     "114",
+     "115",
+     "118",
+     "119",
+     "121",
+     "124",
+     "200",
+     "201_202",
+     "203",
+     "208",
+     "209",
+     "212",
+     "213",
+     "214",
+     "215",
+     "220",
+     "222",
+     "231"
+    ],
+    "val_subjects": [
+     "107",
+     "108",
+     "112",
+     "122",
+     "123",
+     "221",
+     "228",
+     "230",
+     "232",
+     "233"
+    ],
+    "selection": {
+     "selected_lr": 0.0005,
+     "selected_epoch": 14,
+     "val_macro_f1": 0.5231559992182344,
+     "val_classes_used": [
+      "N",
+      "S",
+      "V",
+      "F",
+      "Q"
+     ],
+     "temperature": 3.230752944946289,
+     "checkpoint": "ckpt_lr0.0005.pt",
+     "grid": [
+      {
+       "lr": 0.0001,
+       "best_val_macro_f1": 0.5170918462677687,
+       "best_epoch": 1,
+       "val_classes_used": [
+        "N",
+        "S",
+        "V",
+        "F",
+        "Q"
+       ],
+       "sec": 2393.9
+      },
+      {
+       "lr": 0.0005,
+       "best_val_macro_f1": 0.5231559992182344,
+       "best_epoch": 14,
+       "val_classes_used": [
+        "N",
+        "S",
+        "V",
+        "F",
+        "Q"
+       ],
+       "sec": 2394.4
+      },
+      {
+       "lr": 0.001,
+       "best_val_macro_f1": 0.5117146608763444,
+       "best_epoch": 2,
+       "val_classes_used": [
+        "N",
+        "S",
+        "V",
+        "F",
+        "Q"
+       ],
+       "sec": 2390.5
+      }
+     ]
+    },
+    "n_checkpoints": 3,
+    "files": [
+     {
+      "file": "results/runs/C_fold0/ckpt_lr0.0001.pt",
+      "bytes": 2593826,
+      "sha256": "15bc051f49e93ff6800b732ffe69fdb52907b9e2e44430b3b5fddc75f31b71d1",
+      "mtime": "2026-11-02T15:14:25"
+     },
+     {
+      "file": "results/runs/C_fold0/ckpt_lr0.0005.pt",
+      "bytes": 2593826,
+      "sha256": "5b87bf7a517d63c2f6229dd278ca2531525e53bf2c25c34306f8284218d7e6a1",
+      "mtime": "2026-11-02T15:54:19"
+     },
+     {
+      "file": "results/runs/C_fold0/ckpt_lr0.001.pt",
+      "bytes": 2593704,
+      "sha256": "3ec56605e28005b0af70eb30ce6227518dcb8c2c0f8f444bf864d09a7db6ff47",
+      "mtime": "2026-11-02T16:34:10"
+     },
+     {
+      "file": "results/runs/C_fold0/config.json",
+      "bytes": 1802,
+      "sha256": "5ae638eb305248d7c119bb981bf20b6e0f0b4c3147729d3b9f488f884a0e12d3",
+      "mtime": "2026-11-02T14:34:31"
+     },
+     {
+      "file": "results/runs/C_fold0/history_lr0.0001.json",
+      "bytes": 4323,
+      "sha256": "5c56440b49ab7fe32f258ce040966a0c7dfcb229b85cd5a959f49bc7769d829a",
+      "mtime": "2026-11-02T15:14:25"
+     },
+     {
+      "file": "results/runs/C_fold0/history_lr0.0005.json",
+      "bytes": 4311,
+      "sha256": "dd5736deb5cf0e5b80795706f2406924f2ee9480f5a9d8d9be61b4220a759879",
+      "mtime": "2026-11-02T15:54:19"
+     },
+     {
+      "file": "results/runs/C_fold0/history_lr0.001.json",
+      "bytes": 4293,
+      "sha256": "a941e50df0aa0f85a51bb1459c71d2193b4fc1ee8f0889112cabd453fd5f82a5",
+      "mtime": "2026-11-02T16:34:10"
+     },
+     {
+      "file": "results/runs/C_fold0/selected.json",
+      "bytes": 860,
+      "sha256": "b692e298f1eac2a01ac68a31c96c3666c40885c407425f01439ad232535ef1cb",
+      "mtime": "2026-11-02T16:35:32"
+     },
+     {
+      "file": "results/runs/C_fold0/val_logits.npz",
+      "bytes": 409251,
+      "sha256": "9640acbe79edacc7164c2ce7f55bb09c6e2b228783deaa1c7aeb2ccbe731734d",
+      "mtime": "2026-11-02T16:35:32"
+     }
+    ]
+   },
+   {
+    "run": "C_fold1",
+    "model": "C",
+    "fold": 1,
+    "status": "COMPLETE (selected.json present)",
+    "seed": 1001,
+    "lock_sha256_in_config": "ed0717f26f2d7f86d5a49c69b03de44588d35112ab8c9177186b4c4e5b61478c",
+    "lock_matches_current": true,
+    "test_partition_used": "no",
+    "n_train_real": 64950,
+    "n_val": 22367,
+    "train_subjects": [
+     "101",
+     "103",
+     "104",
+     "105",
+     "106",
+     "109",
+     "114",
+     "116",
+     "117",
+     "118",
+     "119",
+     "121",
+     "124",
+     "200",
+     "201_202",
+     "203",
+     "205",
+     "207",
+     "210",
+     "213",
+     "214",
+     "217",
+     "219",
+     "220",
+     "222",
+     "223",
+     "231",
+     "234"
+    ],
+    "val_subjects": [
+     "100",
+     "102",
+     "111",
+     "113",
+     "115",
+     "208",
+     "209",
+     "212",
+     "215"
+    ],
+    "selection": {
+     "selected_lr": 0.001,
+     "selected_epoch": 8,
+     "val_macro_f1": 0.5624468443844342,
+     "val_classes_used": [
+      "N",
+      "S",
+      "V",
+      "F",
+      "Q"
+     ],
+     "temperature": 4.088082790374756,
+     "checkpoint": "ckpt_lr0.001.pt",
+     "grid": [
+      {
+       "lr": 0.0001,
+       "best_val_macro_f1": 0.5196052046232197,
+       "best_epoch": 1,
+       "val_classes_used": [
+        "N",
+        "S",
+        "V",
+        "F",
+        "Q"
+       ],
+       "sec": 2628.2
+      },
+      {
+       "lr": 0.0005,
+       "best_val_macro_f1": 0.508277101635439,
+       "best_epoch": 11,
+       "val_classes_used": [
+        "N",
+        "S",
+        "V",
+        "F",
+        "Q"
+       ],
+       "sec": 2581.6
+      },
+      {
+       "lr": 0.001,
+       "best_val_macro_f1": 0.5624468443844342,
+       "best_epoch": 8,
+       "val_classes_used": [
+        "N",
+        "S",
+        "V",
+        "F",
+        "Q"
+       ],
+       "sec": 2582.1
+      }
+     ]
+    },
+    "n_checkpoints": 3,
+    "files": [
+     {
+      "file": "results/runs/C_fold1/ckpt_lr0.0001.pt",
+      "bytes": 2593826,
+      "sha256": "40f560ea277aa21482d6ac4d50c47f6518c355b56f42442a772cd6a424101afc",
+      "mtime": "2026-11-02T17:26:45"
+     },
+     {
+      "file": "results/runs/C_fold1/ckpt_lr0.0005.pt",
+      "bytes": 2593826,
+      "sha256": "cf160d41097705a35d51200cf77f0472fc583bb9638cd5e6c6a6957f8ab0d931",
+      "mtime": "2026-11-02T18:09:46"
+     },
+     {
+      "file": "results/runs/C_fold1/ckpt_lr0.001.pt",
+      "bytes": 2593704,
+      "sha256": "3b10ead6bcbd0e4ae4f9c744229b7b343223b567fae3de4d8947e9fb1b888b7b",
+      "mtime": "2026-11-02T18:52:49"
+     },
+     {
+      "file": "results/runs/C_fold1/config.json",
+      "bytes": 1801,
+      "sha256": "1ed29bc51028823d534cb56cfdebc2e9db763b915838c576bfbe13e6bbfeae47",
+      "mtime": "2026-11-02T16:42:57"
+     },
+     {
+      "file": "results/runs/C_fold1/history_lr0.0001.json",
+      "bytes": 4314,
+      "sha256": "eddb76d76c00d9b6e46396c1cd72a36f395f0159fedc17b217cd38d26a8b1c2b",
+      "mtime": "2026-11-02T17:26:45"
+     },
+     {
+      "file": "results/runs/C_fold1/history_lr0.0005.json",
+      "bytes": 4295,
+      "sha256": "b66c08a14b9221ee80a2033db7ccee53d5466496efee415a157164fb983dff81",
+      "mtime": "2026-11-02T18:09:46"
+     },
+     {
+      "file": "results/runs/C_fold1/history_lr0.001.json",
+      "bytes": 4292,
+      "sha256": "cc24daecefef13f2684a0ea2752dad7f85fb29a8e5e4e16ad05562a6cb3cd135",
+      "mtime": "2026-11-02T18:52:49"
+     },
+     {
+      "file": "results/runs/C_fold1/selected.json",
+      "bytes": 856,
+      "sha256": "a2d881538c47a82ac0312310ddf3feac6377da9187e8cc2a15cf58523ea038b4",
+      "mtime": "2026-11-02T18:54:24"
+     },
+     {
+      "file": "results/runs/C_fold1/val_logits.npz",
+      "bytes": 413145,
+      "sha256": "17d33217a63c8627be176f0cf0943cc9182aebfb200597873a7099f1647a7cb1",
+      "mtime": "2026-11-02T18:54:24"
+     }
+    ]
+   }
+  ]
+ },
+ "pending_runs": [
+  "C fold 2 (seed 1002; restart from scratch)",
+  "B fold 3 (1003)",
+  "C fold 3 (1003)",
+  "A fold 4 (1004)",
+  "B fold 4 (1004)",
+  "C fold 4 (1004)"
+ ],
+ "interrupted_attempt": {
+  "path": "results/runs_interrupted/C_fold2_attempt1",
+  "status": "INTERRUPTED (not used for any result)",
+  "files": [
+   {
+    "file": "results/runs_interrupted/C_fold2_attempt1/README.md",
+    "bytes": 977,
+    "sha256": "63eb93b7c7481421776ca14033171c14df1f3a42d10579fbd1b475396c079c7d",
+    "mtime": "2026-11-03T13:48:41"
+   },
+   {
+    "file": "results/runs_interrupted/C_fold2_attempt1/ckpt_lr0.0001.pt",
+    "bytes": 2593826,
+    "sha256": "6ea2090b1d04579ef0ac0f209a8aff7c5b266d301ff1337ad9af95f9cc8f304b",
+    "mtime": "2026-11-02T19:40:20"
+   },
+   {
+    "file": "results/runs_interrupted/C_fold2_attempt1/config.json",
+    "bytes": 1808,
+    "sha256": "c19640017a14b2e3a1b3326439ae9d1772b179b8f31a3faf780696fba2d988b3",
+    "mtime": "2026-11-02T19:02:15"
+   },
+   {
+    "file": "results/runs_interrupted/C_fold2_attempt1/history_lr0.0001.json",
+    "bytes": 4194,
+    "sha256": "edf984f66b11532b17800b21e616c0d3af530974168eac8fdf3aa1cad146bdfe",
+    "mtime": "2026-11-02T19:40:20"
+   },
+   {
+    "file": "results/runs_interrupted/C_fold2_attempt1/run_training_attempt1.log",
+    "bytes": 2893,
+    "sha256": "ce79eb209958bed7895478966346600ffc937f1820fe210696cde0cea2d8f583",
+    "mtime": "2026-11-03T13:48:41"
+   },
+   {
+    "file": "results/runs_interrupted/C_fold2_attempt1/train_C_fold2_attempt1.log",
+    "bytes": 2129,
+    "sha256": "db05a8ac95760699eeced64e33f7d2eb28c5d179282e8d934607fa627dfa491d",
+    "mtime": "2026-11-03T13:45:17"
+   }
+  ]
+ },
+ "unfrozen_helper_scripts_at_manifest_time": [
+  {
+   "file": "experiments/run_training_resume.sh",
+   "bytes": 2693,
+   "sha256": "d8cd66026d214312b039b02b16bbfea305d393bda018710bbe5ebce1ddb47564",
+   "mtime": "2026-11-05T12:21:16"
+  },
+  {
+   "file": "experiments/run_training.sh",
+   "bytes": 540,
+   "sha256": "f49871abbf0b148c820863ac046a9ceb4ff27044524a4397acdfcdd44f55e812",
+   "mtime": "2026-11-02T14:26:56"
+  },
+  {
+   "file": "experiments/run_after_training.sh",
+   "bytes": 995,
+   "sha256": "3c1e9167ed2f78c73a7c88157b319749d475dde3d5c398caa507ec1faed90d3a",
+   "mtime": "2026-11-02T17:03:30"
+  },
+  {
+   "file": "experiments/diag_memory.py",
+   "bytes": 3196,
+   "sha256": "bc8d01652e78f6bb4865be30380a535237945fad3a93e1d70583f4664a21d9ec",
+   "mtime": "2026-11-03T13:49:21"
+  }
+ ],
+ "evaluation_status": {
+  "results_scores_exists": false,
+  "scored_flag_exists": false,
+  "note": "test folds and INCART not scored; one-time evaluation flag unused"
+ }
+}

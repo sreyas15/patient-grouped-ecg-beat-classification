@@ -1,0 +1,38 @@
+{
+ "addendum_id": "A1",
+ "created": "2026-11-06T02:53:26",
+ "purpose": "Separated, staged scoring and evaluation (MIT-BIH first; INCART separately authorised). See protocol_addendum_A1.md. Prepared and hashed BEFORE any test scoring.",
+ "original_lock_sha256": "ed0717f26f2d7f86d5a49c69b03de44588d35112ab8c9177186b4c4e5b61478c",
+ "frozen_scripts_unchanged": {
+  "experiments/07_score.py": "dfb163c4d6296c74002765aadbf2bf4d26ffbfce077f99c7003b683b378bdd90",
+  "experiments/08_evaluate.py": "5dd5f9e2a09eb5ed10665618c02b43aba9e41fb91db809d4899320c89219bd56",
+  "experiments/r2common.py": "19c422dddb0636415870d022e6ea0da7b9cbf2ff40bd4b92883d3aab3d9c5989",
+  "experiments/verify_lock.py": "66296e5752d68b17dd6cb3604209153ad329be0d35182bcc05d55d1f24cf6ba5"
+ },
+ "files": {
+  "experiments/a1common.py": "9eabce2a66fac5d658eabb480339a7d16f7102f3a45385bbbddf52aa0bc1e154",
+  "experiments/07a_score_mit.py": "e19b6c648045df3091876dd61fc39f4b8861e755ac04c7e73801fbae2a92712f",
+  "experiments/07b_score_incart.py": "f6e9b405d883eaff4e5a10c6aceccce099c558718a1c0390abc3e8b2ba49928b",
+  "experiments/08a_evaluate_mit.py": "219d83e355d590e0c324f15d0c11dcc70cb8ab77a71718e3a62dd816029e418a",
+  "experiments/08b_evaluate_incart.py": "9ed4fc2c458fbc06a4ac181852193a6a2399516d78ddde935a946cc47ebbade1",
+  "experiments/10_per_fold_diagnostics.py": "98a81cc362ecc092b97b4e6b3367bc58696f7602c4a7c464acecc153223b2322",
+  "experiments/pre_scoring_checks.py": "fdc99690fe781fabf7aee8a3ef3284076a0692cb4b27200e97ea0a2f447ea4d5",
+  "protocol_addendum_A1.md": "ca37926185b82a2462d32a42cfee0ced0b6cd03af493e0b70aada90ecd273e62"
+ },
+ "output_locations": {
+  "mit_scores": "results/scores_mit",
+  "mit_evaluation": "results/evaluation_mit",
+  "incart_scores": "results/scores_incart",
+  "incart_evaluation": "results/evaluation_incart"
+ },
+ "authorisation_flags": [
+  "--authorised-mit-test-scoring",
+  "--authorised-mit-evaluation",
+  "--authorised-incart-scoring",
+  "--authorised-incart-evaluation"
+ ],
+ "not_executed": [
+  "experiments/07_score.py",
+  "experiments/08_evaluate.py (as an executable; its metric functions and main-section statements are reused by 08a/08b)"
+ ]
+}

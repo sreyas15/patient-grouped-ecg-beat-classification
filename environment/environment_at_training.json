@@ -1,0 +1,51 @@
+{
+ "as_seen_by_training_interpreter": {
+  "interpreter": "C:\\Python313\\python.exe",
+  "python": "3.13.7",
+  "user_site_enabled": true,
+  "numpy": {
+   "version": "2.5.2",
+   "file": "<user-site-packages>\\numpy\\__init__.py"
+  },
+  "torch": "2.6.0+cu124",
+  "cuda": "12.4",
+  "cudnn": 90100,
+  "sklearn": "1.7.2",
+  "imblearn": "0.14.2",
+  "scipy": "1.16.3",
+  "wfdb": "4.3.1",
+  "pywt_module_version": "1.8.0"
+ },
+ "pip_metadata_versions": {
+  "numpy": "2.5.2",
+  "torch": "2.6.0+cu124",
+  "scikit-learn": "1.7.2",
+  "imbalanced-learn": "0.14.2",
+  "scipy": "1.16.3",
+  "wfdb": "4.3.1",
+  "PyWavelets": "1.10.0"
+ },
+ "gpu": {
+  "name": "NVIDIA GeForce RTX 4060 Laptop GPU",
+  "driver": "617.42",
+  "memory_total": "8188 MiB"
+ },
+ "lock_environment_block": {
+  "python": "3.13.7",
+  "torch": "2.6.0+cu124",
+  "cuda": "12.4",
+  "gpu": "NVIDIA GeForce RTX 4060 Laptop GPU",
+  "numpy": "2.5.2",
+  "sklearn": "1.7.2",
+  "imblearn": "0.14.2",
+  "scipy": "1.16.3",
+  "wfdb": "4.3.1",
+  "pywt": "1.8.0"
+ },
+ "discrepancies": [
+  "PyWavelets: module pywt.__version__ = 1.8.0 (matches the lock) but pip metadata reports 1.10.0; not reconciled; preprocessing outputs are hash-frozen so training is unaffected.",
+  "NumPy 2.5.2 is loaded from the per-user site-packages and shadows the system-wide numpy 2.4.4 (C:\\Python313\\Lib\\site-packages). Matches the lock; isolated mode (-I) or PYTHONNOUSERSITE would load 2.4.4 instead.",
+  "Per-run config.json files record the lock hash, seed and configuration but not package versions; the NVIDIA driver version is not in the lock (617.42 at manifest time, identical to the pre-resume manifest)."
+ ],
+ "package_changes_since_2026_11_01": "none (no entry in either site-packages directory modified)"
+}

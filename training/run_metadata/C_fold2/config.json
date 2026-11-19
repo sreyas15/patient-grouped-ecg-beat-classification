@@ -1,0 +1,103 @@
+{
+ "model": "C",
+ "fold": 2,
+ "seed": 1002,
+ "lock_sha256": "ed0717f26f2d7f86d5a49c69b03de44588d35112ab8c9177186b4c4e5b61478c",
+ "config": {
+  "input_len": 186,
+  "smote_target": 20000,
+  "smote_k": 5,
+  "loss": "unweighted cross-entropy",
+  "optimizer": "Adam",
+  "batch_size": 128,
+  "weight_decay": 0.0001,
+  "lr_grid": [
+   0.0001,
+   0.0005,
+   0.001
+  ],
+  "epochs": {
+   "A": 15,
+   "B": 20,
+   "C": 15
+  },
+  "fold_seed_base": 1000,
+  "checkpoint_rule": "max validation macro-F1 over classes with >=10 validation beats (per epoch); lr chosen by the same criterion",
+  "temperature": "single scalar T, NLL on the selected checkpoint validation logits (LBFGS on log T)",
+  "primary_model": "B",
+  "comparators": [
+   "A",
+   "C"
+  ],
+  "primary_model_reason": "Model B is the backbone of the manuscript clinical pipeline (pre-specified before any R2 result)",
+  "scheme": "outer fold k: test=fold k, val=fold (k+1)%5, train=other 3 folds"
+ },
+ "n_params": 637689,
+ "train_subjects": [
+  "101",
+  "104",
+  "106",
+  "107",
+  "108",
+  "112",
+  "116",
+  "117",
+  "121",
+  "122",
+  "123",
+  "124",
+  "203",
+  "205",
+  "207",
+  "210",
+  "213",
+  "214",
+  "217",
+  "219",
+  "220",
+  "221",
+  "222",
+  "223",
+  "228",
+  "230",
+  "232",
+  "233",
+  "234"
+ ],
+ "val_subjects": [
+  "103",
+  "105",
+  "109",
+  "114",
+  "118",
+  "119",
+  "200",
+  "201_202",
+  "231"
+ ],
+ "n_train_beats_real": 65374,
+ "train_real_class_counts": [
+  52550,
+  2025,
+  4441,
+  418,
+  5940
+ ],
+ "train_after_smote_class_counts": [
+  20000,
+  20000,
+  20000,
+  20000,
+  20000
+ ],
+ "n_val": 21564,
+ "val_class_counts": [
+  19599,
+  323,
+  1626,
+  11,
+  5
+ ],
+ "smote_applied_to": "training partition only",
+ "test_partition_used": "no"
+}

@@ -1,0 +1,57 @@
+{
+ "model": "B",
+ "fold": 0,
+ "selected_lr": 0.0005,
+ "selected_epoch": 11,
+ "val_macro_f1": 0.5605127158358785,
+ "val_classes_used": [
+  "N",
+  "S",
+  "V",
+  "F",
+  "Q"
+ ],
+ "temperature": 2.3070614337921143,
+ "checkpoint": "ckpt_lr0.0005.pt",
+ "grid": [
+  {
+   "lr": 0.0001,
+   "best_val_macro_f1": 0.5141695377434752,
+   "best_epoch": 19,
+   "val_classes_used": [
+    "N",
+    "S",
+    "V",
+    "F",
+    "Q"
+   ],
+   "sec": 122.3
+  },
+  {
+   "lr": 0.0005,
+   "best_val_macro_f1": 0.5605127158358785,
+   "best_epoch": 11,
+   "val_classes_used": [
+    "N",
+    "S",
+    "V",
+    "F",
+    "Q"
+   ],
+   "sec": 121.3
+  },
+  {
+   "lr": 0.001,
+   "best_val_macro_f1": 0.5450125259302919,
+   "best_epoch": 2,
+   "val_classes_used": [
+    "N",
+    "S",
+    "V",
+    "F",
+    "Q"
+   ],
+   "sec": 120.0
+  }
+ ]
+}

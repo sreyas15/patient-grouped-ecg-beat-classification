@@ -1,0 +1,277 @@
+{
+ "records": 75,
+ "patients": 32,
+ "patients_with_class": {
+  "N": 32,
+  "S": 19,
+  "V": 31,
+  "F": 14,
+  "Q": 4
+ },
+ "fs": [
+  257
+ ],
+ "duration_min": [
+  30.0
+ ],
+ "lead_sets": {
+  "I,II,III,AVR,AVL,AVF,V1,V2,V3,V4,V5,V6": 75
+ },
+ "lead_II_in_all": true,
+ "class_totals": {
+  "N": 153676,
+  "S": 1960,
+  "V": 20013,
+  "F": 219,
+  "Q": 6
+ },
+ "total_mapped": 175874,
+ "records_with_class": {
+  "N": 75,
+  "S": 36,
+  "V": 70,
+  "F": 22,
+  "Q": 5
+ },
+ "unmapped_symbol_totals": {
+  "n": 32,
+  "B": 1,
+  "+": 12
+ },
+ "paced_symbols_present": 0,
+ "r_alignment_ms": {
+  "MITBIH_ch0_360Hz_reference": {
+   "p05": -8.33,
+   "median": 0.0,
+   "p95": 8.33,
+   "mean": 1.71,
+   "frac_abs_le_14ms": 0.937,
+   "n": 109491
+  },
+  "INCART_leadII_resampled_360Hz": {
+   "p05": -19.44,
+   "median": 0.0,
+   "p95": 22.22,
+   "mean": 1.36,
+   "frac_abs_le_14ms": 0.816,
+   "n": 175856
+  },
+  "INCART_by_class": {
+   "N": {
+    "p05": -19.44,
+    "median": 0.0,
+    "p95": 19.44,
+    "mean": -0.41,
+    "frac_abs_le_14ms": 0.853,
+    "n": 153661
+   },
+   "V": {
+    "p05": -16.67,
+    "median": 13.89,
+    "p95": 75.0,
+    "mean": 15.38,
+    "frac_abs_le_14ms": 0.514,
+    "n": 20011
+   },
+   "S": {
+    "p05": -11.11,
+    "median": -5.56,
+    "p95": 2.78,
+    "mean": -3.51,
+    "frac_abs_le_14ms": 0.974,
+    "n": 1959
+   },
+   "F": {
+    "p05": -19.44,
+    "median": 5.56,
+    "p95": 27.78,
+    "mean": 5.19,
+    "frac_abs_le_14ms": 0.658,
+    "n": 219
+   },
+   "Q": {
+    "p05": -75.0,
+    "median": -23.61,
+    "p95": 41.67,
+    "mean": -23.61,
+    "frac_abs_le_14ms": 0.333,
+    "n": 6
+   }
+  }
+ },
+ "alignment_note": "offset = argmax |x - median| within +-75 ms of the annotation, minus annotation position; positive = peak after annotation; 14 ms = 5 samples at 360 Hz"
+}
+record  fs  duration_min  n_N  n_S  n_V  n_F  n_Q unmapped_symbols                                                                                                                                                                                                                              header_comment
+   I01 257          30.0 2413    0  344    0    0               {}                                                                                                                                     <age>: 65 <sex>: F <diagnoses> Coronary artery disease, arterial hypertension | patient 1 | PVCs, noise
+   I02 257          30.0 2445    0  229    0    0               {}                                                                                                     <age>: 65 <sex>: F <diagnoses> Coronary artery disease, arterial hypertension | patient 1 | ventricular trigeminy, ventricular couplets
+   I03 257          30.0 2325    2  125    0    0               {}                                                                                                                                                                    <age>: 59 <sex>: M <diagnoses> Acute MI | patient 2 | ST elevation, PVCs
+   I04 257          30.0 2270   16  121   17    0               {}                                                                                                                   <age>: 59 <sex>: M <diagnoses> Acute MI | patient 2 | bradycardia, tachycardia, PVCs, ventricular couplets, paroxysmal VT
+   I05 257          30.0 1520    0  247    9    0               {}                                                                                                                                                                         <age>: 59 <sex>: M <diagnoses> Acute MI | patient 2 | paroxysmal VT
+   I06 257          30.0 2436   48    9    0    0               {}                                                                                                                                                     <age>: 80 <sex>: M <diagnoses> Transient ischemic attack | patient 3 | ST changes, PVCs
+   I07 257          30.0 2640   65    1    0    0               {}                                                                                                                                      <age>: 80 <sex>: M <diagnoses> Transient ischemic attack | patient 3 | PVCs, supraventricular triplets
+   I08 257          30.0 1777    2  351    0    1               {}                                                                                                                                                                 <age>: 51 <sex>: F | patient 4 | ventricular bigeminy, ventricular couplets
+   I09 257          30.0 2948    0   41    0    0         {'n': 8}                                                                                                                          <age>: 68 <sex>: M | patient 5 | ventricular couplets, ventricular escape beats, AV nodal block 2 degree Moebits 1
+   I10 257          30.0 3599    0   83    0    0               {}                                                                                                                                                      <age>: 68 <sex>: M | patient 5 | tachycardia, AV nodal block 2 degree Moebits 1, noise
+   I11 257          30.0 2078    0    4    0    0        {'n': 24}                                                                                                                                                                    <age>: 68 <sex>: M | patient 5 | PVCs, AV nodal block 2 degree Moebits 1
+   I12 257          30.0 2800    1    6    2    0               {}                                                                                                                                                                        <age>: 39 <sex>: F | patient 6 | ST depression, ventricular couplets
+   I13 257          30.0 1793    0  230    0    0               {}                                                                                                                                                                                                       <age>: 39 <sex>: F | patient 6 | PVCs
+   I14 257          30.0 1802    0   64    0    0               {}                                                                                                                                                                                      <age>: 39 <sex>: F | patient 6 | PVCs, baseline wander
+   I15 257          30.0 2632    0    3    0    0               {}                                                                                                                                                  <age>: 57 <sex>: M <diagnoses> Transient ischemic attack | patient 7 | ST depression, PVCs
+   I16 257          30.0 1520    0    2    0    0               {}                                                                                                                   <age>: 64 <sex>: M <diagnoses> Transient ischemic attack | patient 8 | right bundle branch block, polymorphic PVCs, noise
+   I17 257          30.0 1646    0   27    0    0               {}                                                                                                                        <age>: 64 <sex>: M <diagnoses> Transient ischemic attack | patient 8 | bradycardia, PVCs, right bundle branch block,
+   I18 257          30.0 2662    0  366   56    0               {}                                                                                                                                                                                <age>: 18 <sex>: F | patient 9 | PVCs, numerous fusion beats
+   I19 257          30.0 1212    0  850    0    0         {'B': 1}                                                                                                                                                                                <age>: 18 <sex>: F | patient 9 | ventricular trigeminy, PVCs
+   I20 257          30.0 2361  179  111    1    0               {} <age>: 59 <sex>: F <diagnoses> Coronary artery disease, arterial hypertension, left ventricular hypertrophy | patient 10 | ventricular couplets, fusion beats; APCs, atrial couplets, blocked APCs, paroxysmal supraventricular tachycardia
+   I21 257          30.0 2072  104    8    0    0               {}                                                                        <age>: 59 <sex>: F <diagnoses> Coronary artery disease, arterial hypertension, left ventricular hypertrophy | patient 10 | PVCs, APCs, atrial couplets, blocked APCs
+   I22 257          30.0 2816  124  185    1    0               {}                                                               <age>: 59 <sex>: F <diagnoses> Coronary artery disease, arterial hypertension, left ventricular hypertrophy | patient 10 | paroxysmal VT, APCs, atrial couplets, blocked APCs
+   I23 257          30.0 2192    0   13    0    0               {}                                                                                                                                           <age>: 52 <sex>: M <diagnoses> Earlier MI | patient 11 | polymorphic PVCs, intraventricular block
+   I24 257          30.0 2565    0    6    0    0               {}                                                                                                                                                              <age>: 52 <sex>: M <diagnoses> Earlier MI | patient 11 | PVCs,   ST depression
+   I25 257          30.0 1705    2    5    0    0               {}                                                                                                                                                          <age>: 66 <sex>: F <diagnoses> Sinus node dysfunction | patient 12 | paroxysmal VT
+   I26 257          30.0 1498    7    4    0    0               {}                                                                                                          <age>: 66 <sex>: F <diagnoses> Sinus node dysfunction | patient 12 | ventricular couplets, paroxysmal supraventricular tachycardia
+   I27 257          30.0 1885    0  720    0    0               {}                                                                                                                                                                     <age>: 60 <sex>: M | patient 13 | ventricular bigeminy, trigeminy, PVCs
+   I28 257          30.0 1713    0    4    0    0               {}                                                                                                                                                                                       <age>: 60 <sex>: M | patient 13 | PVCs on bradycardia
+   I29 257          30.0 1837    0  783    0    1               {}                                                                                                                                                                      <age>: 41 <sex>: F | patient 14 | PVCs, couplets, paroxysmal VT, noise
+   I30 257          30.0 1706    0  756    0    0               {}                                                                                                                                                                                                        <age>: 41 <sex>: F | patient 14 | VT
+   I31 257          30.0 1844    0 1365    0    1               {}                                                                                                                                                                            <age>: 41 <sex>: F | patient 14 | paroxysmal VT, baseline wander
+   I32 257          30.0 1562    0   57    0    0               {}                                                                                                                                                                                      <age>: 41 <sex>: F | patient 14 | ventricular bigeminy
+   I33 257          30.0 1245  591    1    0    0               {}                                                                                                                                                                   <age>: 40 <sex>: M | patient 15 | PVCs, SVEBs,  supraventricular couplets
+   I34 257          30.0 1429  536    0    0    0               {}                                                                                                                              <age>: 40 <sex>: M | patient 15 | SVEBs, couplets,  paroxysmal supraventricular tachycardia with aberrated QRS
+   I35 257          30.0 3200    0  458   18    0               {}                                                                <age>: 38 <sex>: F <diagnoses> Coronary artery disease, arterial hypertension, left ventricular hypertrophy | patient 16 | ventricular couplets, fusion beats on tachycardia
+   I36 257          30.0 3449    0  450   12    0               {}                                                                           <age>: 38 <sex>: F <diagnoses> Coronary artery disease, arterial hypertension, left ventricular hypertrophy | patient 16 | PVCs, ventricular couplets as bigeminy
+   I37 257          30.0 2009    0  452    0    0               {}                                                                                              <age>: 38 <sex>: F <diagnoses> Coronary artery disease, arterial hypertension, left ventricular hypertrophy | patient 16 | PVCs on bradycardia
+   I38 257          30.0 2153    0  545    0    1               {}                                                                                                        <age>: 60 <sex>: F <diagnoses> Coronary artery disease, arterial hypertension | patient 17 | PVCs, couplets, triplets on tachycardia
+   I39 257          30.0 1462    0  313    0    0               {}                                                                                                               <age>: 60 <sex>: F <diagnoses> Coronary artery disease, arterial hypertension | patient 17 | PVCs and couplets on bradycardia
+   I40 257          30.0 2568    6   92    0    0               {}                                                                                                                               <age>: 66 <sex>: M <diagnoses> Transient ischemic attack | patient 18 | PVCs, ventricular bigeminy, ST change
+   I41 257          30.0 1624    5    1    0    0               {}                                                                                                                                       <age>: 66 <sex>: M <diagnoses> Transient ischemic attack | patient 18 | PVCs, sinus arrhythmia, noise
+   I42 257          30.0 1546    0 1554    9    0               {}                                                                                                                                           <age>: 19 <sex>: M | patient 19 | PVCs, ventricular couplets, ventricular bigeminy, paroxysmal VT
+   I43 257          30.0 1087    0 1120    2    0               {}                                                                                                                       <age>: 19 <sex>: M | patient 19 | PVCs, ventricular couplets, ventricular bigeminy, paroxysmal VT, ventricular rhythm
+   I44 257          30.0 1803    8  684    0    0               {}                                                                                              <age>: 53 <sex>: F <diagnoses> Coronary artery disease, arterial hypertension, left ventricular hypertrophy | patient 20 | PVCs, paroxysmal VT
+   I45 257          30.0 1437    0  491    0    0               {}                                                                                             <age>: 53 <sex>: F <diagnoses> Coronary artery disease, arterial hypertension, left ventricular hypertrophy | patient 20 | ventricular couplets
+   I46 257          30.0 2232    1  422    3    0               {}                                                                                <age>: 53 <sex>: F <diagnoses> Coronary artery disease, arterial hypertension, left ventricular hypertrophy | patient 20 | PVCs on tachycardia, fusion beats
+   I47 257          30.0 1859    1   93    0    0               {}                                                                                                                                     <age>: 68 <sex>: F <diagnoses> Earlier MI | patient 21 | PVCs on sinus arrhythmia, ventricular bigeminy
+   I48 257          30.0 2119    2  235    1    0               {}                                                                                                                                                         <age>: 68 <sex>: F <diagnoses> Earlier MI | patient 21 | PVCs, ventricular couplets
+   I49 257          30.0 2120    0   27    0    0         {'+': 1}                                                                                                                                                                  <age>: 70 <sex>: M | patient 22 | PVCs on bradycardia, atrial fibrillation
+   I50 257          30.0 2994    0    4    0    0         {'+': 1}                                                                                                                                                     <age>: 70 <sex>: M | patient 22 | PVCs, tachycardia, atrial fibrillation, ST depression
+   I51 257          30.0 1970    3  803    1    0               {}                                                                                                                                                                  <age>: 56 <sex>: M | patient 23 | PVCs on tachycardia, bigeminy, trigeminy
+   I52 257          30.0 1610    0  137    0    0               {}                                                                                                                                                                 <age>: 56 <sex>: M | patient 23 | PVCs on bradycardia, ventricular bigeminy
+   I53 257          30.0 1151    0 1111    0    0               {}                                                                                                                                                                     <age>: 56 <sex>: M | patient 23 | PVCs, ventricular couplets and R-on-T
+   I54 257          30.0 2340    1   22    0    0               {}                                                                                                                                   <age>: 74 <sex>: M <diagnoses> Earlier MI | patient 24 | PVCs, ventricular couplets, paroxysmal VT, noise
+   I55 257          30.0 2148    1   17    0    0               {}                                                                                                                                                                      <age>: 74 <sex>: M <diagnoses> Earlier MI | patient 24 | paroxysmal VT
+   I56 257          30.0 1672   26    7    0    0               {}                                                                                                                                               <age>: 74 <sex>: M <diagnoses> Earlier MI | patient 24 | PVCs , positional form and HR change
+   I57 257          30.0 2842    3   21    3    2               {}                                                                                              <age>: 45 <sex>: F <diagnoses> Coronary artery disease, arterial hypertension | patient 25 | fusion beats, ventricular couplets on tachycardia
+   I58 257          30.0 2313    0   12    0    0               {}                                                                                                                            <age>: 45 <sex>: F <diagnoses> Coronary artery disease, arterial hypertension | patient 25 | PVCs on bradycardia
+   I59 257          30.0 2067    0   81    0    0               {}                                                                                                                                                                  <age>: 49 <sex>: F | patient 26 | PVCs, ventricular couplets, ST elevation
+   I60 257          30.0 2475    0    0    0    0               {}                                                                                                                                                                                              <age>: 49 <sex>: F | patient 26 | ST elevation
+   I61 257          30.0 1453    1    0    0    0               {}                                                                                                                                                                           <age>: 49 <sex>: F | patient 26 | positional changes, bradycardia
+   I62 257          30.0 1453    9  795   12    0               {}                                                                                                                                                     <age>: 58 <sex>: M <diagnoses> Acute MI | patient 27 | ventricular rhythm, ST elevation
+   I63 257          30.0 1847    1  138    8    0               {}                                                                                                                                                                                 <age>: 58 <sex>: M <diagnoses> Acute MI | patient 27 | PVCs
+   I64 257          30.0 1887    0   23    3    0               {}                                                                                                                                                                     <age>: 58 <sex>: M <diagnoses> Acute MI | patient 27 | PVCs, negative T
+   I65 257          30.0 2273    5  382    4    0               {}                                                                                                                                                <age>: 58 <sex>: F | patient 28 | PVCs, couplets, paroxysmal VT, fusion beats on tachycardia
+   I66 257          30.0 2139    1  200    0    0               {}                                                                                                                                                                                      <age>: 58 <sex>: F | patient 28 | paroxysmal VT, noise
+   I67 257          30.0 2438    5  531    1    0               {}                                                                                                                                                                              <age>: 58 <sex>: F | patient 28 | paroxysmal VT on tachycardia
+   I68 257          30.0 2481    2  161    0    0         {'+': 1}                                                                                                                                                                                                 <age>: 62 <sex>: M | patient 29 | PVCs, WPW
+   I69 257          30.0 2000    1  167    1    0         {'+': 1}                                                                                                                                                         <age>: 62 <sex>: M | patient 29 | PVCs and ventricular couplets on bradycardia, WPW
+   I70 257          30.0 1540  126    0    0    0         {'+': 1}                                                                                                                                                                                  <age>: 64 <sex>: M | patient 30 | SVEBs with wide QRS, WPW
+   I71 257          30.0 1635   35    0    0    0         {'+': 7}                                                                                                                                                 <age>: 64 <sex>: M | patient 30 | paroxysmal atrial fibrillation, WPW, bundle-branch blocks
+   I72 257          30.0 1876    8  386    0    0               {}                                                                                 <age>: 73 <sex>: M <diagnoses> Coronary artery disease, arterial hypertension, left ventricular hypertrophy | patient 31 | PVCs and couplets on tachycardia
+   I73 257          30.0 1890   32   70    0    0               {}                                                                             <age>: 73 <sex>: M <diagnoses> Coronary artery disease, arterial hypertension, left ventricular hypertrophy | patient 31 | PVCs on bradycardia, SVEBs, couplets
+   I74 257          30.0 2083    0  274   48    0               {}                                                                                                                                      <age>: 66 <sex>: M <diagnoses> Earlier MI | patient 32 | numerous fusion beats and PVCs on tachycardia
+   I75 257          30.0 1483    0  613    7    0               {}                                                                                                                                              <age>: 66 <sex>: M <diagnoses> Earlier MI | patient 32 | PVCs and paroxysmal VT on bradycardia
+---- files-patients-diagnoses.txt (verbatim, first 4000 chars) ----
+patient 1
+I01 I02
+Coronary artery disease, arterial hypertension
+patient 2
+I03 I04 I05
+Acute MI
+patient 3
+I06 I07
+Transient ischemic attack
+patient 4
+I08
+
+patient 5
+I09 I10 I11
+
+patient 6
+I12 I13 I14
+
+patient 7
+I15
+Transient ischemic attack
+patient 8
+I16 I17
+Transient ischemic attack
+patient 9
+I18 I19
+
+patient 10
+I20 I21 I22
+Coronary artery disease, arterial hypertension, left ventricular hypertrophy
+patient 11
+I23 I24
+Earlier MI
+patient 12
+I25 I26
+Sinus node dysfunction
+patient 13
+I27 I28
+
+patient 14
+I29 I30 I31 I32
+
+patient 15
+I33 I34
+
+patient 16
+I35 I36 I37
+Coronary artery disease, arterial hypertension, left ventricular hypertrophy
+patient 17
+I38 I39
+Coronary artery disease, arterial hypertension
+patient 18
+I40 I41
+Transient ischemic attack
+patient 19
+I42 I43
+
+patient 20
+I44 I45 I46
+Coronary artery disease, arterial hypertension, left ventricular hypertrophy
+patient 21
+I47 I48
+Earlier MI
+patient 22
+I49 I50
+
+patient 23
+I51 I52 I53
+
+patient 24
+I54 I55 I56
+Earlier MI
+patient 25
+I57 I58
+Coronary artery disease, arterial hypertension
+patient 26
+I59 I60 I61
+
+patient 27
+I62 I63 I64
+Acute MI
+patient 28
+I65 I66 I67
+
+patient 29
+I68 I69
+
+patient 30
+I70 I71
+
+patient 31
+I72 I73
+Coronary artery disease, arterial hypertension, left ventricular hypertrophy
+patient 32
+I74 I75
+Earlier MI
+
